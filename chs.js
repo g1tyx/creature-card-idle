@@ -160,7 +160,7 @@ var cnItems = {
     '/sec. Not affected by any bonuses, nor by any disables/penalties': '/秒。 不受任何奖金或任何禁用/处罚的影响',
     'Golem': '傀儡',
     'Meteor': '流星',
-    'Naga': '那迦',
+    'Naga': '娜迦',
     'production for all other cards.': '所有其他卡的生产。',
     'Sheep': '羊',
     'production for the card left of this': '左面的卡的生产',
