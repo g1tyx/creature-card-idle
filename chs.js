@@ -255,7 +255,7 @@ var cnExcludePostfix = [
 var cnRegReplace = new Map([
     [/^(.+) \(\+(.+)\/sec$/, '$1 \(\+$2\/秒'],
     [/^Contains a random Tier (.+) card. Hopefully not a Ghoul.$/, '包含一张随机的$1级卡片。 希望不是食尸鬼。'],
-    [/^Contains (.+) random Tier (.+) cards. There are (.+) card possibilities in Tier (.+).$/, '包含$1张随机第$2层卡。 第$3层有$4种可能。'],
+    [/^Contains (.+) random Tier (.+) cards. There are (.+) card possibilities in Tier (.+).$/, '包含$1张随机第$2层卡。 第$4层有$3种可能。'],
     [/^(.+)achievement boost(.+)Goal(.+)$/, '$1成就提升$2目标$3'],
     [/^(.+) hours, (.+) minutes, (.+) seconds$/, '$1 小时, $2 分钟, $3 秒'],
     [/^Earnings:(.+)$/, '收益：$1'],
