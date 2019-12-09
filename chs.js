@@ -153,7 +153,7 @@ var cnItems = {
     'Carrot': '胡萝卜',
     'Cultist': '信徒',
     'Skeleton': '骷髅',
-    '': '',
+    'Error exporting data.  Please ensure you\'re logged into Kongregate and connected to the internet.  If the problem persists, please try again in a minute.': '导出数据时出错。 请确保您已登录Kongregate并已连接到Internet。 如果问题仍然存在，请稍后再试。',
     '': '',
     '': '',
     '': '',
