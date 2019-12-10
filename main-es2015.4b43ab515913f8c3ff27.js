@@ -211,58 +211,58 @@
                     this._hash = new l.init([new i.init(1779033703,4089235720), new i.init(3144134277,2227873595), new i.init(1013904242,4271175723), new i.init(2773480762,1595750129), new i.init(1359893119,2917565137), new i.init(2600822924,725511199), new i.init(528734635,4215389547), new i.init(1541459225,327033209)])
                 },
                 _doProcessBlock: function(e, t) {
-                    for (var n = this._hash.words, r = n[0], i = n[1], l = n[2], s = n[3], o = n[4], c = n[5], d = n[6], h = n[7], f = r.high, p = r.low, m = i.high, g = i.low, y = l.high, b = l.low, v = s.high, w = s.low, _ = o.high, C = o.low, x = c.high, k = c.low, S = d.high, I = d.low, E = h.high, T = h.low, A = f, O = p, N = m, R = g, M = y, P = b, D = v, V = w, F = _, j = C, B = x, H = k, L = S, U = I, z = E, $ = T, G = 0; G < 80; G++) {
-                        var W = u[G];
-                        if (G < 16)
-                            var Y = W.high = 0 | e[t + 2 * G]
-                              , q = W.low = 0 | e[t + 2 * G + 1];
+                    for (var n = this._hash.words, r = n[0], i = n[1], l = n[2], s = n[3], o = n[4], c = n[5], d = n[6], h = n[7], f = r.high, p = r.low, m = i.high, g = i.low, y = l.high, b = l.low, v = s.high, w = s.low, C = o.high, _ = o.low, S = c.high, k = c.low, x = d.high, I = d.low, E = h.high, T = h.low, A = f, M = p, O = m, R = g, N = y, P = b, D = v, F = w, V = C, j = _, B = S, H = k, L = x, U = I, z = E, G = T, $ = 0; $ < 80; $++) {
+                        var W = u[$];
+                        if ($ < 16)
+                            var K = W.high = 0 | e[t + 2 * $]
+                              , Y = W.low = 0 | e[t + 2 * $ + 1];
                         else {
-                            var K = u[G - 15]
-                              , Q = K.high
-                              , Z = K.low
+                            var q = u[$ - 15]
+                              , Q = q.high
+                              , Z = q.low
                               , X = (Z >>> 1 | Q << 31) ^ (Z >>> 8 | Q << 24) ^ (Z >>> 7 | Q << 25)
-                              , J = u[G - 2]
+                              , J = u[$ - 2]
                               , ee = J.high
                               , te = J.low
                               , ne = (te >>> 19 | ee << 13) ^ (te << 3 | ee >>> 29) ^ (te >>> 6 | ee << 26)
-                              , re = u[G - 7]
-                              , ie = u[G - 16]
+                              , re = u[$ - 7]
+                              , ie = u[$ - 16]
                               , le = ie.low;
-                            W.high = Y = (Y = (Y = ((Q >>> 1 | Z << 31) ^ (Q >>> 8 | Z << 24) ^ Q >>> 7) + re.high + ((q = X + re.low) >>> 0 < X >>> 0 ? 1 : 0)) + ((ee >>> 19 | te << 13) ^ (ee << 3 | te >>> 29) ^ ee >>> 6) + ((q += ne) >>> 0 < ne >>> 0 ? 1 : 0)) + ie.high + ((q += le) >>> 0 < le >>> 0 ? 1 : 0),
-                            W.low = q
+                            W.high = K = (K = (K = ((Q >>> 1 | Z << 31) ^ (Q >>> 8 | Z << 24) ^ Q >>> 7) + re.high + ((Y = X + re.low) >>> 0 < X >>> 0 ? 1 : 0)) + ((ee >>> 19 | te << 13) ^ (ee << 3 | te >>> 29) ^ ee >>> 6) + ((Y += ne) >>> 0 < ne >>> 0 ? 1 : 0)) + ie.high + ((Y += le) >>> 0 < le >>> 0 ? 1 : 0),
+                            W.low = Y
                         }
-                        var se, oe = F & B ^ ~F & L, ae = j & H ^ ~j & U, ue = A & N ^ A & M ^ N & M, ce = (O >>> 28 | A << 4) ^ (O << 30 | A >>> 2) ^ (O << 25 | A >>> 7), de = a[G], he = de.low, fe = z + ((F >>> 14 | j << 18) ^ (F >>> 18 | j << 14) ^ (F << 23 | j >>> 9)) + ((se = $ + ((j >>> 14 | F << 18) ^ (j >>> 18 | F << 14) ^ (j << 23 | F >>> 9))) >>> 0 < $ >>> 0 ? 1 : 0), pe = ce + (O & R ^ O & P ^ R & P);
+                        var se, oe = V & B ^ ~V & L, ae = j & H ^ ~j & U, ue = A & O ^ A & N ^ O & N, ce = (M >>> 28 | A << 4) ^ (M << 30 | A >>> 2) ^ (M << 25 | A >>> 7), de = a[$], he = de.low, fe = z + ((V >>> 14 | j << 18) ^ (V >>> 18 | j << 14) ^ (V << 23 | j >>> 9)) + ((se = G + ((j >>> 14 | V << 18) ^ (j >>> 18 | V << 14) ^ (j << 23 | V >>> 9))) >>> 0 < G >>> 0 ? 1 : 0), pe = ce + (M & R ^ M & P ^ R & P);
                         z = L,
-                        $ = U,
+                        G = U,
                         L = B,
                         U = H,
-                        B = F,
+                        B = V,
                         H = j,
-                        F = D + (fe = (fe = (fe = fe + oe + ((se += ae) >>> 0 < ae >>> 0 ? 1 : 0)) + de.high + ((se += he) >>> 0 < he >>> 0 ? 1 : 0)) + Y + ((se += q) >>> 0 < q >>> 0 ? 1 : 0)) + ((j = V + se | 0) >>> 0 < V >>> 0 ? 1 : 0) | 0,
-                        D = M,
-                        V = P,
-                        M = N,
+                        V = D + (fe = (fe = (fe = fe + oe + ((se += ae) >>> 0 < ae >>> 0 ? 1 : 0)) + de.high + ((se += he) >>> 0 < he >>> 0 ? 1 : 0)) + K + ((se += Y) >>> 0 < Y >>> 0 ? 1 : 0)) + ((j = F + se | 0) >>> 0 < F >>> 0 ? 1 : 0) | 0,
+                        D = N,
+                        F = P,
+                        N = O,
                         P = R,
-                        N = A,
-                        R = O,
-                        A = fe + (((A >>> 28 | O << 4) ^ (A << 30 | O >>> 2) ^ (A << 25 | O >>> 7)) + ue + (pe >>> 0 < ce >>> 0 ? 1 : 0)) + ((O = se + pe | 0) >>> 0 < se >>> 0 ? 1 : 0) | 0
+                        O = A,
+                        R = M,
+                        A = fe + (((A >>> 28 | M << 4) ^ (A << 30 | M >>> 2) ^ (A << 25 | M >>> 7)) + ue + (pe >>> 0 < ce >>> 0 ? 1 : 0)) + ((M = se + pe | 0) >>> 0 < se >>> 0 ? 1 : 0) | 0
                     }
-                    p = r.low = p + O,
-                    r.high = f + A + (p >>> 0 < O >>> 0 ? 1 : 0),
+                    p = r.low = p + M,
+                    r.high = f + A + (p >>> 0 < M >>> 0 ? 1 : 0),
                     g = i.low = g + R,
-                    i.high = m + N + (g >>> 0 < R >>> 0 ? 1 : 0),
+                    i.high = m + O + (g >>> 0 < R >>> 0 ? 1 : 0),
                     b = l.low = b + P,
-                    l.high = y + M + (b >>> 0 < P >>> 0 ? 1 : 0),
-                    w = s.low = w + V,
-                    s.high = v + D + (w >>> 0 < V >>> 0 ? 1 : 0),
-                    C = o.low = C + j,
-                    o.high = _ + F + (C >>> 0 < j >>> 0 ? 1 : 0),
+                    l.high = y + N + (b >>> 0 < P >>> 0 ? 1 : 0),
+                    w = s.low = w + F,
+                    s.high = v + D + (w >>> 0 < F >>> 0 ? 1 : 0),
+                    _ = o.low = _ + j,
+                    o.high = C + V + (_ >>> 0 < j >>> 0 ? 1 : 0),
                     k = c.low = k + H,
-                    c.high = x + B + (k >>> 0 < H >>> 0 ? 1 : 0),
+                    c.high = S + B + (k >>> 0 < H >>> 0 ? 1 : 0),
                     I = d.low = I + U,
-                    d.high = S + L + (I >>> 0 < U >>> 0 ? 1 : 0),
-                    T = h.low = T + $,
-                    h.high = E + z + (T >>> 0 < $ >>> 0 ? 1 : 0)
+                    d.high = x + L + (I >>> 0 < U >>> 0 ? 1 : 0),
+                    T = h.low = T + G,
+                    h.high = E + z + (T >>> 0 < G >>> 0 ? 1 : 0)
                 },
                 _doFinalize: function() {
                     var e = this._data
@@ -673,14 +673,14 @@
                         var l = e[t + 2 * i]
                           , s = e[t + 2 * i + 1];
                         l = 16711935 & (l << 8 | l >>> 24) | 4278255360 & (l << 24 | l >>> 8),
-                        (N = n[i]).high ^= s = 16711935 & (s << 8 | s >>> 24) | 4278255360 & (s << 24 | s >>> 8),
-                        N.low ^= l
+                        (O = n[i]).high ^= s = 16711935 & (s << 8 | s >>> 24) | 4278255360 & (s << 24 | s >>> 8),
+                        O.low ^= l
                     }
                     for (var o = 0; o < 24; o++) {
                         for (var h = 0; h < 5; h++) {
                             for (var f = 0, p = 0, m = 0; m < 5; m++)
-                                f ^= (N = n[h + 5 * m]).high,
-                                p ^= N.low;
+                                f ^= (O = n[h + 5 * m]).high,
+                                p ^= O.low;
                             var g = d[h];
                             g.high = f,
                             g.low = p
@@ -693,19 +693,19 @@
                             for (f = y.high ^ (v << 1 | w >>> 31),
                             p = y.low ^ (w << 1 | v >>> 31),
                             m = 0; m < 5; m++)
-                                (N = n[h + 5 * m]).high ^= f,
-                                N.low ^= p
+                                (O = n[h + 5 * m]).high ^= f,
+                                O.low ^= p
                         }
-                        for (var _ = 1; _ < 25; _++) {
-                            var C = (N = n[_]).high
-                              , x = N.low
-                              , k = a[_];
-                            k < 32 ? (f = C << k | x >>> 32 - k,
-                            p = x << k | C >>> 32 - k) : (f = x << k - 32 | C >>> 64 - k,
-                            p = C << k - 32 | x >>> 64 - k);
-                            var S = d[u[_]];
-                            S.high = f,
-                            S.low = p
+                        for (var C = 1; C < 25; C++) {
+                            var _ = (O = n[C]).high
+                              , S = O.low
+                              , k = a[C];
+                            k < 32 ? (f = _ << k | S >>> 32 - k,
+                            p = S << k | _ >>> 32 - k) : (f = S << k - 32 | _ >>> 64 - k,
+                            p = _ << k - 32 | S >>> 64 - k);
+                            var x = d[u[C]];
+                            x.high = f,
+                            x.low = p
                         }
                         var I = d[0]
                           , E = n[0];
@@ -713,15 +713,15 @@
                         I.low = E.low,
                         h = 0; h < 5; h++)
                             for (m = 0; m < 5; m++) {
-                                var T = d[_ = h + 5 * m]
+                                var T = d[C = h + 5 * m]
                                   , A = d[(h + 1) % 5 + 5 * m]
-                                  , O = d[(h + 2) % 5 + 5 * m];
-                                (N = n[_]).high = T.high ^ ~A.high & O.high,
-                                N.low = T.low ^ ~A.low & O.low
+                                  , M = d[(h + 2) % 5 + 5 * m];
+                                (O = n[C]).high = T.high ^ ~A.high & M.high,
+                                O.low = T.low ^ ~A.low & M.low
                             }
-                        var N, R = c[o];
-                        (N = n[0]).high ^= R.high,
-                        N.low ^= R.low
+                        var O, R = c[o];
+                        (O = n[0]).high ^= R.high,
+                        O.low ^= R.low
                     }
                 },
                 _doFinalize: function() {
@@ -1012,19 +1012,19 @@
             return zb
         }),
         n.d(t, "\u0275angular_packages_core_core_p", function() {
-            return $b
-        }),
-        n.d(t, "\u0275angular_packages_core_core_q", function() {
             return Gb
         }),
+        n.d(t, "\u0275angular_packages_core_core_q", function() {
+            return $b
+        }),
         n.d(t, "\u0275angular_packages_core_core_s", function() {
-            return Yb
+            return Kb
         }),
         n.d(t, "\u0275angular_packages_core_core_f", function() {
             return sy
         }),
         n.d(t, "\u0275angular_packages_core_core_m", function() {
-            return $d
+            return Gd
         }),
         n.d(t, "\u0275angular_packages_core_core_n", function() {
             return Zd
@@ -1033,7 +1033,7 @@
             return kb
         }),
         n.d(t, "\u0275angular_packages_core_core_k", function() {
-            return xb
+            return Sb
         }),
         n.d(t, "\u0275angular_packages_core_core_a", function() {
             return ke
@@ -1057,16 +1057,16 @@
             return Py
         }),
         n.d(t, "\u0275angular_packages_core_core_v", function() {
-            return Oy
+            return My
         }),
         n.d(t, "\u0275angular_packages_core_core_u", function() {
             return Ay
         }),
         n.d(t, "\u0275angular_packages_core_core_y", function() {
-            return My
+            return Ny
         }),
         n.d(t, "\u0275angular_packages_core_core_w", function() {
-            return Ny
+            return Oy
         }),
         n.d(t, "\u0275angular_packages_core_core_x", function() {
             return Ry
@@ -1117,7 +1117,7 @@
             return p
         }),
         n.d(t, "\u0275angular_packages_core_core_bq", function() {
-            return C
+            return _
         }),
         n.d(t, "\u0275angular_packages_core_core_z", function() {
             return Jf
@@ -1177,25 +1177,25 @@
             return iy
         }),
         n.d(t, "DebugElement", function() {
-            return Fb
-        }),
-        n.d(t, "DebugEventListener", function() {
-            return Cb
-        }),
-        n.d(t, "DebugNode", function() {
             return Vb
         }),
+        n.d(t, "DebugEventListener", function() {
+            return _b
+        }),
+        n.d(t, "DebugNode", function() {
+            return Fb
+        }),
         n.d(t, "asNativeElements", function() {
-            return Sb
+            return xb
         }),
         n.d(t, "getDebugNode", function() {
             return Pb
         }),
         n.d(t, "Testability", function() {
-            return qy
+            return Yy
         }),
         n.d(t, "TestabilityRegistry", function() {
-            return Ky
+            return qy
         }),
         n.d(t, "setTestabilityGetter", function() {
             return Zy
@@ -1213,34 +1213,34 @@
             return Ub
         }),
         n.d(t, "ApplicationModule", function() {
-            return qb
+            return Yb
         }),
         n.d(t, "wtfCreateScope", function() {
             return Dy
         }),
         n.d(t, "wtfLeave", function() {
-            return Vy
+            return Fy
         }),
         n.d(t, "wtfStartTimeRange", function() {
-            return Fy
+            return Vy
         }),
         n.d(t, "wtfEndTimeRange", function() {
             return jy
         }),
         n.d(t, "Type", function() {
-            return q
+            return Y
         }),
         n.d(t, "EventEmitter", function() {
-            return Mm
+            return Nm
         }),
         n.d(t, "ErrorHandler", function() {
             return Xi
         }),
         n.d(t, "Sanitizer", function() {
-            return Fl
+            return Vl
         }),
         n.d(t, "SecurityContext", function() {
-            return Vl
+            return Fl
         }),
         n.d(t, "Attribute", function() {
             return w
@@ -1273,13 +1273,13 @@
             return Wg
         }),
         n.d(t, "HostListener", function() {
-            return Yg
+            return Kg
         }),
         n.d(t, "Input", function() {
-            return $g
+            return Gg
         }),
         n.d(t, "Output", function() {
-            return Gg
+            return $g
         }),
         n.d(t, "Pipe", function() {
             return zg
@@ -1303,19 +1303,19 @@
             return zd
         }),
         n.d(t, "InjectFlags", function() {
-            return _
+            return C
         }),
         n.d(t, "\u0275\u0275defineInjectable", function() {
             return k
         }),
         n.d(t, "defineInjectable", function() {
-            return S
+            return x
         }),
         n.d(t, "\u0275\u0275defineInjector", function() {
             return I
         }),
         n.d(t, "forwardRef", function() {
-            return M
+            return N
         }),
         n.d(t, "resolveForwardRef", function() {
             return P
@@ -1324,16 +1324,16 @@
             return ge
         }),
         n.d(t, "INJECTOR", function() {
-            return xe
+            return Se
         }),
         n.d(t, "Injector", function() {
-            return Se
+            return xe
         }),
         n.d(t, "\u0275\u0275inject", function() {
             return z
         }),
         n.d(t, "inject", function() {
-            return $
+            return G
         }),
         n.d(t, "ReflectiveInjector", function() {
             return ut
@@ -1342,7 +1342,7 @@
             return tt
         }),
         n.d(t, "ReflectiveKey", function() {
-            return Ye
+            return Ke
         }),
         n.d(t, "InjectionToken", function() {
             return ve
@@ -1366,10 +1366,10 @@
             return Ly
         }),
         n.d(t, "\u0275NoopNgZone", function() {
-            return Yy
+            return Ky
         }),
         n.d(t, "RenderComponentType", function() {
-            return Md
+            return Nd
         }),
         n.d(t, "Renderer", function() {
             return Dd
@@ -1378,16 +1378,16 @@
             return Bd
         }),
         n.d(t, "RendererFactory2", function() {
-            return Fd
+            return Vd
         }),
         n.d(t, "RendererStyleFlags2", function() {
             return jd
         }),
         n.d(t, "RootRenderer", function() {
-            return Vd
+            return Fd
         }),
         n.d(t, "COMPILER_OPTIONS", function() {
-            return Sy
+            return xy
         }),
         n.d(t, "Compiler", function() {
             return ky
@@ -1411,7 +1411,7 @@
             return gd
         }),
         n.d(t, "ElementRef", function() {
-            return Od
+            return Md
         }),
         n.d(t, "NgModuleFactory", function() {
             return wd
@@ -1441,7 +1441,7 @@
             return dh
         }),
         n.d(t, "EmbeddedViewRef", function() {
-            return _b
+            return Cb
         }),
         n.d(t, "ViewRef", function() {
             return wb
@@ -1486,7 +1486,7 @@
             return Tu
         }),
         n.d(t, "\u0275isListLikeIterable", function() {
-            return Ou
+            return Mu
         }),
         n.d(t, "\u0275ChangeDetectorStatus", function() {
             return bt
@@ -1504,7 +1504,7 @@
             return E
         }),
         n.d(t, "\u0275APP_ROOT", function() {
-            return $c
+            return Gc
         }),
         n.d(t, "\u0275ivyEnabled", function() {
             return mb
@@ -1534,13 +1534,13 @@
             return gl
         }),
         n.d(t, "\u0275global", function() {
-            return V
+            return F
         }),
         n.d(t, "\u0275looseIdentical", function() {
             return Eu
         }),
         n.d(t, "\u0275stringify", function() {
-            return N
+            return O
         }),
         n.d(t, "\u0275makeDecorator", function() {
             return d
@@ -1552,28 +1552,28 @@
             return pu
         }),
         n.d(t, "\u0275clearOverrides", function() {
-            return xw
+            return Sw
         }),
         n.d(t, "\u0275initServicesIfNeeded", function() {
             return jv
         }),
         n.d(t, "\u0275overrideComponentView", function() {
-            return Cw
+            return _w
         }),
         n.d(t, "\u0275overrideProvider", function() {
-            return _w
+            return Cw
         }),
         n.d(t, "\u0275NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR", function() {
             return sp
         }),
         n.d(t, "\u0275\u0275defineBase", function() {
-            return $t
+            return Gt
         }),
         n.d(t, "\u0275\u0275defineComponent", function() {
-            return Ft
+            return Vt
         }),
         n.d(t, "\u0275\u0275defineDirective", function() {
-            return Gt
+            return $t
         }),
         n.d(t, "\u0275\u0275definePipe", function() {
             return Wt
@@ -1600,10 +1600,10 @@
             return La
         }),
         n.d(t, "\u0275\u0275getFactoryOf", function() {
-            return Yi
+            return Ki
         }),
         n.d(t, "\u0275\u0275getInheritedFactory", function() {
-            return qi
+            return Yi
         }),
         n.d(t, "\u0275\u0275setComponentScope", function() {
             return jt
@@ -1639,22 +1639,22 @@
             return ts
         }),
         n.d(t, "\u0275\u0275container", function() {
-            return Na
+            return Oa
         }),
         n.d(t, "\u0275\u0275nextContext", function() {
-            return _u
+            return Cu
         }),
         n.d(t, "\u0275\u0275elementStart", function() {
             return iu
         }),
         n.d(t, "\u0275\u0275namespaceHTML", function() {
-            return Kr
-        }),
-        n.d(t, "\u0275\u0275namespaceMathML", function() {
             return qr
         }),
-        n.d(t, "\u0275\u0275namespaceSVG", function() {
+        n.d(t, "\u0275\u0275namespaceMathML", function() {
             return Yr
+        }),
+        n.d(t, "\u0275\u0275namespaceSVG", function() {
+            return Kr
         }),
         n.d(t, "\u0275\u0275element", function() {
             return su
@@ -1678,22 +1678,22 @@
             return zu
         }),
         n.d(t, "\u0275\u0275interpolation2", function() {
-            return $u
+            return Gu
         }),
         n.d(t, "\u0275\u0275interpolation3", function() {
-            return Gu
+            return $u
         }),
         n.d(t, "\u0275\u0275interpolation4", function() {
             return Wu
         }),
         n.d(t, "\u0275\u0275interpolation5", function() {
-            return Yu
+            return Ku
         }),
         n.d(t, "\u0275\u0275interpolation6", function() {
-            return qu
+            return Yu
         }),
         n.d(t, "\u0275\u0275interpolation7", function() {
-            return Ku
+            return qu
         }),
         n.d(t, "\u0275\u0275interpolation8", function() {
             return Qu
@@ -1714,7 +1714,7 @@
             return Am
         }),
         n.d(t, "\u0275\u0275pipeBindV", function() {
-            return Om
+            return Mm
         }),
         n.d(t, "\u0275\u0275pureFunction0", function() {
             return mm
@@ -1735,13 +1735,13 @@
             return wm
         }),
         n.d(t, "\u0275\u0275pureFunction6", function() {
-            return _m
-        }),
-        n.d(t, "\u0275\u0275pureFunction7", function() {
             return Cm
         }),
+        n.d(t, "\u0275\u0275pureFunction7", function() {
+            return _m
+        }),
         n.d(t, "\u0275\u0275pureFunction8", function() {
-            return xm
+            return Sm
         }),
         n.d(t, "\u0275\u0275pureFunctionV", function() {
             return km
@@ -1756,16 +1756,16 @@
             return vc
         }),
         n.d(t, "\u0275\u0275restoreView", function() {
-            return xr
+            return Sr
         }),
         n.d(t, "\u0275\u0275containerRefreshStart", function() {
-            return Ma
+            return Na
         }),
         n.d(t, "\u0275\u0275containerRefreshEnd", function() {
             return Pa
         }),
         n.d(t, "\u0275\u0275queryRefresh", function() {
-            return Km
+            return qm
         }),
         n.d(t, "\u0275\u0275viewQuery", function() {
             return Zm
@@ -1831,7 +1831,7 @@
             return yu
         }),
         n.d(t, "\u0275\u0275projectionDef", function() {
-            return xu
+            return Su
         }),
         n.d(t, "\u0275\u0275reference", function() {
             return ja
@@ -1861,13 +1861,13 @@
             return Za
         }),
         n.d(t, "\u0275\u0275elementStyleProp", function() {
-            return Ga
+            return $a
         }),
         n.d(t, "\u0275\u0275elementStylingApply", function() {
             return Ja
         }),
         n.d(t, "\u0275\u0275elementClassProp", function() {
-            return qa
+            return Ya
         }),
         n.d(t, "\u0275\u0275elementHostAttrs", function() {
             return au
@@ -1882,7 +1882,7 @@
             return Wa
         }),
         n.d(t, "\u0275\u0275elementHostClassProp", function() {
-            return Ka
+            return qa
         }),
         n.d(t, "\u0275\u0275elementHostStylingApply", function() {
             return eu
@@ -1900,16 +1900,16 @@
             return hu
         }),
         n.d(t, "\u0275store", function() {
-            return Fa
+            return Va
         }),
         n.d(t, "\u0275\u0275load", function() {
             return Ba
         }),
         n.d(t, "\u0275\u0275pipe", function() {
-            return Sm
+            return xm
         }),
         n.d(t, "\u0275whenRendered", function() {
-            return Mc
+            return Nc
         }),
         n.d(t, "\u0275\u0275i18n", function() {
             return Qp
@@ -1930,7 +1930,7 @@
             return tm
         }),
         n.d(t, "\u0275\u0275i18nPostprocess", function() {
-            return Gp
+            return $p
         }),
         n.d(t, "\u0275i18nConfigureLocalize", function() {
             return am
@@ -1966,13 +1966,13 @@
             return kg
         }),
         n.d(t, "\u0275resetCompiledComponents", function() {
-            return Cg
+            return _g
         }),
         n.d(t, "\u0275flushModuleScopingQueueAsMuchAsPossible", function() {
             return gg
         }),
         n.d(t, "\u0275transitiveScopesFor", function() {
-            return Sg
+            return xg
         }),
         n.d(t, "\u0275compilePipe", function() {
             return Hg
@@ -1984,19 +1984,19 @@
             return Ul
         }),
         n.d(t, "\u0275\u0275defaultStyleSanitizer", function() {
-            return ql
+            return Yl
         }),
         n.d(t, "\u0275\u0275sanitizeScript", function() {
-            return Gl
+            return $l
         }),
         n.d(t, "\u0275\u0275sanitizeUrl", function() {
             return zl
         }),
         n.d(t, "\u0275\u0275sanitizeResourceUrl", function() {
-            return $l
+            return Gl
         }),
         n.d(t, "\u0275\u0275sanitizeUrlOrResourceUrl", function() {
-            return Yl
+            return Kl
         }),
         n.d(t, "\u0275bypassSanitizationTrustHtml", function() {
             return rl
@@ -2020,16 +2020,16 @@
             return Dt
         }),
         n.d(t, "\u0275NG_COMPONENT_DEF", function() {
-            return Ot
+            return Mt
         }),
         n.d(t, "\u0275NG_DIRECTIVE_DEF", function() {
-            return Nt
+            return Ot
         }),
         n.d(t, "\u0275NG_PIPE_DEF", function() {
             return Rt
         }),
         n.d(t, "\u0275NG_MODULE_DEF", function() {
-            return Mt
+            return Nt
         }),
         n.d(t, "\u0275NG_BASE_DEF", function() {
             return Pt
@@ -2038,7 +2038,7 @@
             return A
         }),
         n.d(t, "\u0275NG_INJECTOR_DEF", function() {
-            return O
+            return M
         }),
         n.d(t, "\u0275bindPlayerFactory", function() {
             return rs
@@ -2056,10 +2056,10 @@
             return nb
         }),
         n.d(t, "\u0275SWITCH_COMPILE_COMPONENT__POST_R3__", function() {
-            return qg
+            return Yg
         }),
         n.d(t, "\u0275SWITCH_COMPILE_DIRECTIVE__POST_R3__", function() {
-            return Kg
+            return qg
         }),
         n.d(t, "\u0275SWITCH_COMPILE_PIPE__POST_R3__", function() {
             return Qg
@@ -2068,7 +2068,7 @@
             return ty
         }),
         n.d(t, "\u0275getDebugNode__POST_R3__", function() {
-            return Mb
+            return Nb
         }),
         n.d(t, "\u0275SWITCH_COMPILE_INJECTABLE__POST_R3__", function() {
             return ye
@@ -2089,10 +2089,10 @@
             return wy
         }),
         n.d(t, "\u0275Compiler_compileModuleAndAllComponentsAsync__POST_R3__", function() {
-            return Cy
+            return _y
         }),
         n.d(t, "\u0275SWITCH_ELEMENT_REF_FACTORY__POST_R3__", function() {
-            return Nd
+            return Od
         }),
         n.d(t, "\u0275SWITCH_TEMPLATE_REF_FACTORY__POST_R3__", function() {
             return uh
@@ -2128,10 +2128,10 @@
             return cf
         }),
         n.d(t, "\u0275and", function() {
-            return Kb
+            return qb
         }),
         n.d(t, "\u0275ccf", function() {
-            return Sf
+            return xf
         }),
         n.d(t, "\u0275cmf", function() {
             return kw
@@ -2164,7 +2164,7 @@
             return sv
         }),
         n.d(t, "\u0275nov", function() {
-            return Ff
+            return Vf
         }),
         n.d(t, "\u0275pid", function() {
             return Zf
@@ -2287,7 +2287,7 @@
           , w = f("Attribute", e=>({
             attributeName: e
         }));
-        var _ = function(e) {
+        var C = function(e) {
             return e[e.Default = 0] = "Default",
             e[e.Host = 1] = "Host",
             e[e.Self = 2] = "Self",
@@ -2295,13 +2295,13 @@
             e[e.Optional = 8] = "Optional",
             e
         }({});
-        function C(e) {
+        function _(e) {
             for (let t in e)
-                if (e[t] === C)
+                if (e[t] === _)
                     return t;
             throw Error("Could not find renamed property on target object.")
         }
-        function x(e, t) {
+        function S(e, t) {
             for (const n in t)
                 t.hasOwnProperty(n) && !e.hasOwnProperty(n) && (e[n] = t[n])
         }
@@ -2312,7 +2312,7 @@
                 value: void 0
             }
         }
-        const S = k;
+        const x = k;
         function I(e) {
             return {
                 factory: e.factory,
@@ -2324,19 +2324,19 @@
             return e && e.hasOwnProperty(A) ? e[A] : null
         }
         function T(e) {
-            return e && e.hasOwnProperty(O) ? e[O] : null
+            return e && e.hasOwnProperty(M) ? e[M] : null
         }
-        const A = C({
-            ngInjectableDef: C
+        const A = _({
+            ngInjectableDef: _
         })
-          , O = C({
-            ngInjectorDef: C
+          , M = _({
+            ngInjectorDef: _
         });
-        function N(e) {
+        function O(e) {
             if ("string" == typeof e)
                 return e;
             if (e instanceof Array)
-                return "[" + e.map(N).join(", ") + "]";
+                return "[" + e.map(O).join(", ") + "]";
             if (null == e)
                 return "" + e;
             if (e.overriddenName)
@@ -2349,20 +2349,20 @@
             const n = t.indexOf("\n");
             return -1 === n ? t : t.substring(0, n)
         }
-        const R = C({
-            __forward_ref__: C
+        const R = _({
+            __forward_ref__: _
         });
-        function M(e) {
-            return e.__forward_ref__ = M,
+        function N(e) {
+            return e.__forward_ref__ = N,
             e.toString = function() {
-                return N(this())
+                return O(this())
             }
             ,
             e
         }
         function P(e) {
             const t = e;
-            return "function" == typeof t && t.hasOwnProperty(R) && t.__forward_ref__ === M ? t() : e
+            return "function" == typeof t && t.hasOwnProperty(R) && t.__forward_ref__ === N ? t() : e
         }
         function D() {
             const e = "undefined" != typeof globalThis && globalThis
@@ -2371,9 +2371,9 @@
               , r = "undefined" != typeof global && global;
             return e || r || t || n
         }
-        const V = D();
-        function F() {
-            const e = V.ng;
+        const F = D();
+        function V() {
+            const e = F.ng;
             if (!e || !e.\u0275compilerFacade)
                 throw new Error("Angular JIT compilation failed: '@angular/compiler' not loaded!\n  - JIT compilation is discouraged for production use-cases! Consider AOT mode instead.\n  - Did you bootstrap using '@angular/platform-browser-dynamic' or '@angular/platform-server'?\n  - Alternatively provide the compiler with 'import \"@angular/compiler\";' before bootstrapping.");
             return e.\u0275compilerFacade
@@ -2389,24 +2389,24 @@
             return j = e,
             t
         }
-        function U(e, t=_.Default) {
+        function U(e, t=C.Default) {
             if (void 0 === B)
                 throw new Error("inject() must be called from an injection context");
-            return null === B ? G(e, void 0, t) : B.get(e, t & _.Optional ? null : void 0, t)
+            return null === B ? $(e, void 0, t) : B.get(e, t & C.Optional ? null : void 0, t)
         }
-        function z(e, t=_.Default) {
+        function z(e, t=C.Default) {
             return (j || U)(e, t)
         }
-        const $ = z;
-        function G(e, t, n) {
+        const G = z;
+        function $(e, t, n) {
             const r = E(e);
             if (r && "root" == r.providedIn)
                 return void 0 === r.value ? r.value = r.factory() : r.value;
-            if (n & _.Optional)
+            if (n & C.Optional)
                 return null;
             if (void 0 !== t)
                 return t;
-            throw new Error(`Injector: NOT_FOUND [${N(e)}]`)
+            throw new Error(`Injector: NOT_FOUND [${O(e)}]`)
         }
         function W(e) {
             const t = [];
@@ -2416,10 +2416,10 @@
                     if (0 === r.length)
                         throw new Error("Arguments array must have arguments.");
                     let e = void 0
-                      , n = _.Default;
+                      , n = C.Default;
                     for (let t = 0; t < r.length; t++) {
                         const i = r[t];
-                        i instanceof g || "Optional" === i.ngMetadataName ? n |= _.Optional : i instanceof b || "SkipSelf" === i.ngMetadataName ? n |= _.SkipSelf : i instanceof y || "Self" === i.ngMetadataName ? n |= _.Self : e = i instanceof m ? i.token : i
+                        i instanceof g || "Optional" === i.ngMetadataName ? n |= C.Optional : i instanceof b || "SkipSelf" === i.ngMetadataName ? n |= C.SkipSelf : i instanceof y || "Self" === i.ngMetadataName ? n |= C.Self : e = i instanceof m ? i.token : i
                     }
                     t.push(z(e, n))
                 } else
@@ -2427,7 +2427,7 @@
             }
             return t
         }
-        const Y = {
+        const K = {
             "\u0275\u0275defineInjectable": k,
             "\u0275\u0275defineInjector": I,
             "\u0275\u0275inject": z,
@@ -2437,8 +2437,8 @@
                 return n && void 0 !== n.factory ? n.factory : null
             }
         }
-          , q = Function;
-        function K(e) {
+          , Y = Function;
+        function q(e) {
             return "function" == typeof e
         }
         const Q = /^function\s+\S+\(\)\s*{[\s\S]+\.apply\(this,\s*arguments\)/
@@ -2447,7 +2447,7 @@
           , J = /^class\s+[A-Za-z\d$_]*\s*extends\s+[^{]+{[\s\S]*constructor\s*\(\)\s*{\s+super\(\.\.\.arguments\)/;
         class ee {
             constructor(e) {
-                this._reflect = e || V.Reflect
+                this._reflect = e || F.Reflect
             }
             isReflectionEnabled() {
                 return !0
@@ -2481,7 +2481,7 @@
                 return l || i ? this._zipTypesAndAnnotations(l, i) : new Array(e.length).fill(void 0)
             }
             parameters(e) {
-                if (!K(e))
+                if (!q(e))
                     return [];
                 const t = ne(e);
                 let n = this._ownParameters(e, t);
@@ -2497,7 +2497,7 @@
                 return e.decorators && e.decorators !== t.decorators ? te(e.decorators) : e.hasOwnProperty(a) ? e[a] : null
             }
             annotations(e) {
-                if (!K(e))
+                if (!q(e))
                     return [];
                 const t = ne(e)
                   , n = this._ownAnnotations(e, t) || [];
@@ -2521,7 +2521,7 @@
                 return e.hasOwnProperty(c) ? e[c] : null
             }
             propMetadata(e) {
-                if (!K(e))
+                if (!q(e))
                     return {};
                 const t = ne(e)
                   , n = {};
@@ -2543,10 +2543,10 @@
                 n
             }
             ownPropMetadata(e) {
-                return K(e) && this._ownPropMetadata(e, ne(e)) || {}
+                return q(e) && this._ownPropMetadata(e, ne(e)) || {}
             }
             hasLifecycleHook(e, t) {
-                return e instanceof q && t in e.prototype
+                return e instanceof Y && t in e.prototype
             }
             guards(e) {
                 return {}
@@ -2561,10 +2561,10 @@
                 return new Function("o","args",`if (!o.${e}) throw new Error('"${e}" is undefined');\n        return o.${e}.apply(o, args);`)
             }
             importUri(e) {
-                return "object" == typeof e && e.filePath ? e.filePath : `./${N(e)}`
+                return "object" == typeof e && e.filePath ? e.filePath : `./${O(e)}`
             }
             resourceUri(e) {
-                return `./${N(e)}`
+                return `./${O(e)}`
             }
             resolveIdentifier(e, t, n, r) {
                 return r
@@ -2589,7 +2589,7 @@
             return se(ie().parameters(e))
         }
         function se(e) {
-            const t = F();
+            const t = V();
             return e.map(e=>(function(e, t) {
                 const n = {
                     token: null,
@@ -2665,15 +2665,15 @@
                             }
                         else
                             l.useClass = e;
-                        n = F().compileInjectable(Y, `ng:///${e.name}/ngInjectableDef.js`, l)
+                        n = V().compileInjectable(K, `ng:///${e.name}/ngInjectableDef.js`, l)
                     }
                     return n
                 }
             })
         }
-        const ae = C({
+        const ae = _({
             provide: String,
-            useValue: C
+            useValue: _
         });
         function ue(e) {
             return void 0 !== e.useClass
@@ -2687,9 +2687,9 @@
         function he(e) {
             return void 0 !== e.useExisting
         }
-        const fe = C({
+        const fe = _({
             provide: String,
-            useValue: C
+            useValue: _
         })
           , pe = [];
         function me(e, t) {
@@ -2750,30 +2750,30 @@
             }
         }
         const we = "__source"
-          , _e = new Object
-          , Ce = _e
-          , xe = new ve("INJECTOR",-1);
+          , Ce = new Object
+          , _e = Ce
+          , Se = new ve("INJECTOR",-1);
         class ke {
-            get(e, t=_e) {
-                if (t === _e) {
-                    const t = new Error(`NullInjectorError: No provider for ${N(e)}!`);
+            get(e, t=Ce) {
+                if (t === Ce) {
+                    const t = new Error(`NullInjectorError: No provider for ${O(e)}!`);
                     throw t.name = "NullInjectorError",
                     t
                 }
                 return t
             }
         }
-        const Se = (()=>{
+        const xe = (()=>{
             class e {
                 static create(e, t) {
                     return Array.isArray(e) ? new De(e,t) : new De(e.providers,e.parent,e.name || null)
                 }
             }
-            return e.THROW_IF_NOT_FOUND = _e,
+            return e.THROW_IF_NOT_FOUND = Ce,
             e.NULL = new ke,
             e.ngInjectableDef = k({
                 providedIn: "any",
-                factory: ()=>z(xe)
+                factory: ()=>z(Se)
             }),
             e.__NG_ELEMENT_ID__ = -1,
             e
@@ -2787,28 +2787,28 @@
           , Ae = function() {
             return Array.prototype.slice.call(arguments)
         }
-          , Oe = C({
+          , Me = _({
             provide: String,
-            useValue: C
+            useValue: _
         })
-          , Ne = "ngTokenPath"
+          , Oe = "ngTokenPath"
           , Re = "ngTempTokenPath"
-          , Me = /\n/gm
+          , Ne = /\n/gm
           , Pe = "\u0275";
         class De {
-            constructor(e, t=Se.NULL, n=null) {
+            constructor(e, t=xe.NULL, n=null) {
                 this.parent = t,
                 this.source = n;
                 const r = this._records = new Map;
-                r.set(Se, {
-                    token: Se,
+                r.set(xe, {
+                    token: xe,
                     fn: Ie,
                     deps: Ee,
                     value: this,
                     useNew: !1
                 }),
-                r.set(xe, {
-                    token: xe,
+                r.set(Se, {
+                    token: Se,
                     fn: Ie,
                     deps: Ee,
                     value: this,
@@ -2850,7 +2850,7 @@
                                                 token: P(e.useExisting),
                                                 options: 6
                                             }];
-                                        else if (!(n || Oe in e))
+                                        else if (!(n || Me in e))
                                             throw Be("'deps' required", e);
                                         return t
                                     }(e);
@@ -2858,7 +2858,7 @@
                                       , r = Ee
                                       , i = !1
                                       , l = P(e.provide);
-                                    if (Oe in e)
+                                    if (Me in e)
                                         r = e.useValue;
                                     else if (e.useFactory)
                                         n = e.useFactory;
@@ -2884,7 +2884,7 @@
                                     let r = t.get(e);
                                     if (r) {
                                         if (r.fn !== Ae)
-                                            throw Ve(e)
+                                            throw Fe(e)
                                     } else
                                         t.set(e, r = {
                                             token: n.provide,
@@ -2900,21 +2900,21 @@
                                 }
                                 const i = t.get(e);
                                 if (i && i.fn == Ae)
-                                    throw Ve(e);
+                                    throw Fe(e);
                                 t.set(e, r)
                             }
                         }
                 }(r, e)
             }
-            get(e, t, n=_.Default) {
+            get(e, t, n=C.Default) {
                 const r = this._records.get(e);
                 try {
                     return function e(t, n, r, i, l, s) {
                         try {
                             return function(t, n, r, i, l, s) {
                                 let o;
-                                if (!n || s & _.SkipSelf)
-                                    s & _.Self || (o = i.get(t, l, _.Default));
+                                if (!n || s & C.SkipSelf)
+                                    s & C.Self || (o = i.get(t, l, C.Default));
                                 else {
                                     if ((o = n.value) == Te)
                                         throw Error(Pe + "Circular dependency");
@@ -2931,7 +2931,7 @@
                                                 const n = a[t]
                                                   , l = n.options
                                                   , s = 2 & l ? r.get(n.token) : void 0;
-                                                u.push(e(n.token, s, r, s || 4 & l ? i : Se.NULL, 1 & l ? null : Se.THROW_IF_NOT_FOUND, _.Default))
+                                                u.push(e(n.token, s, r, s || 4 & l ? i : xe.NULL, 1 & l ? null : xe.THROW_IF_NOT_FOUND, C.Default))
                                             }
                                         }
                                         n.value = o = l ? new s(...u) : s.apply(t, u)
@@ -2947,41 +2947,41 @@
                         }
                     }(e, r, this._records, this.parent, t, n)
                 } catch (i) {
-                    return Fe(i, e, "StaticInjectorError", this.source)
+                    return Ve(i, e, "StaticInjectorError", this.source)
                 }
             }
             toString() {
                 const e = [];
-                return this._records.forEach((t,n)=>e.push(N(n))),
+                return this._records.forEach((t,n)=>e.push(O(n))),
                 `StaticInjector[${e.join(", ")}]`
             }
         }
-        function Ve(e) {
+        function Fe(e) {
             return Be("Cannot mix multi providers and regular providers", e)
         }
-        function Fe(e, t, n, r) {
+        function Ve(e, t, n, r) {
             const i = e[Re];
             throw t[we] && i.unshift(t[we]),
             e.message = je("\n" + e.message, i, n, r),
-            e[Ne] = i,
+            e[Oe] = i,
             e[Re] = null,
             e
         }
         function je(e, t, n, r=null) {
             e = e && "\n" === e.charAt(0) && e.charAt(1) == Pe ? e.substr(2) : e;
-            let i = N(t);
+            let i = O(t);
             if (t instanceof Array)
-                i = t.map(N).join(" -> ");
+                i = t.map(O).join(" -> ");
             else if ("object" == typeof t) {
                 let e = [];
                 for (let n in t)
                     if (t.hasOwnProperty(n)) {
                         let r = t[n];
-                        e.push(n + ":" + ("string" == typeof r ? JSON.stringify(r) : N(r)))
+                        e.push(n + ":" + ("string" == typeof r ? JSON.stringify(r) : O(r)))
                     }
                 i = `{${e.join(", ")}}`
             }
-            return `${n}${r ? "(" + r + ")" : ""}[${i}]: ${e.replace(Me, "\n  ")}`
+            return `${n}${r ? "(" + r + ")" : ""}[${i}]: ${e.replace(Ne, "\n  ")}`
         }
         function Be(e, t) {
             return new Error(je(e, t, "StaticInjectorError"))
@@ -2999,9 +2999,9 @@
                     t.push(e[n])
                 }
                 return t
-            }(e.slice().reverse()).map(e=>N(e.token)).join(" -> ") + ")" : ""
+            }(e.slice().reverse()).map(e=>O(e.token)).join(" -> ") + ")" : ""
         }
-        function $e(e, t, n, r) {
+        function Ge(e, t, n, r) {
             const i = [t]
               , l = n(i)
               , s = r ? function(e, t) {
@@ -3010,14 +3010,14 @@
                 return r[Le] = t,
                 r
             }(0, r) : Error(l);
-            return s.addKey = Ge,
+            return s.addKey = $e,
             s.keys = i,
             s.injectors = [e],
             s.constructResolvingMessage = n,
             s[Le] = r,
             s
         }
-        function Ge(e, t) {
+        function $e(e, t) {
             this.injectors.push(e),
             this.keys.push(t),
             this.message = this.constructResolvingMessage(this.keys)
@@ -3026,35 +3026,35 @@
             const n = [];
             for (let r = 0, i = t.length; r < i; r++) {
                 const e = t[r];
-                n.push(e && 0 != e.length ? e.map(N).join(" ") : "?")
+                n.push(e && 0 != e.length ? e.map(O).join(" ") : "?")
             }
-            return Error("Cannot resolve all parameters for '" + N(e) + "'(" + n.join(", ") + "). Make sure that all the parameters are decorated with Inject or have valid type annotations and that '" + N(e) + "' is decorated with Injectable.")
+            return Error("Cannot resolve all parameters for '" + O(e) + "'(" + n.join(", ") + "). Make sure that all the parameters are decorated with Inject or have valid type annotations and that '" + O(e) + "' is decorated with Injectable.")
         }
-        class Ye {
+        class Ke {
             constructor(e, t) {
                 if (this.token = e,
                 this.id = t,
                 !e)
                     throw new Error("Token must be defined!");
-                this.displayName = N(this.token)
+                this.displayName = O(this.token)
             }
             static get(e) {
-                return Ke.get(P(e))
+                return qe.get(P(e))
             }
             static get numberOfKeys() {
-                return Ke.numberOfKeys
+                return qe.numberOfKeys
             }
         }
-        class qe {
+        class Ye {
             constructor() {
                 this._allKeys = new Map
             }
             get(e) {
-                if (e instanceof Ye)
+                if (e instanceof Ke)
                     return e;
                 if (this._allKeys.has(e))
                     return this._allKeys.get(e);
-                const t = new Ye(e,Ye.numberOfKeys);
+                const t = new Ke(e,Ke.numberOfKeys);
                 return this._allKeys.set(e, t),
                 t
             }
@@ -3062,7 +3062,7 @@
                 return this._allKeys.size
             }
         }
-        const Ke = new qe;
+        const qe = new Ye;
         class Qe {
             constructor(e) {
                 this.reflectionCapabilities = e
@@ -3141,7 +3141,7 @@
                 n = lt(r)
             } else
                 e.useExisting ? (t = (e=>e),
-                n = [Xe.fromKey(Ye.get(e.useExisting))]) : e.useFactory ? (t = e.useFactory,
+                n = [Xe.fromKey(Ke.get(e.useExisting))]) : e.useFactory ? (t = e.useFactory,
                 n = function(e, t) {
                     if (t) {
                         const n = t.map(e=>[e]);
@@ -3153,7 +3153,7 @@
             return new tt(t,n)
         }
         function rt(e) {
-            return new et(Ye.get(e.provide),[nt(e)],e.multi || !1)
+            return new et(Ke.get(e.provide),[nt(e)],e.multi || !1)
         }
         function it(e) {
             const t = function(e, t) {
@@ -3177,7 +3177,7 @@
                 return t
             }(function e(t, n) {
                 return t.forEach(t=>{
-                    if (t instanceof q)
+                    if (t instanceof Y)
                         n.push({
                             provide: t,
                             useClass: t
@@ -3213,14 +3213,14 @@
             let l = null;
             for (let s = 0; s < t.length; ++s) {
                 const e = t[s];
-                e instanceof q ? r = e : e instanceof m ? r = e.token : e instanceof g ? i = !0 : e instanceof y || e instanceof b ? l = e : e instanceof ve && (r = e)
+                e instanceof Y ? r = e : e instanceof m ? r = e.token : e instanceof g ? i = !0 : e instanceof y || e instanceof b ? l = e : e instanceof ve && (r = e)
             }
             if (null != (r = P(r)))
                 return ot(r, i, l);
             throw We(e, n)
         }
         function ot(e, t, n) {
-            return new Xe(Ye.get(e),t,n)
+            return new Xe(Ke.get(e),t,n)
         }
         const at = new Object;
         class ut {
@@ -3248,8 +3248,8 @@
                         this.keyIds[r] = e[r].key.id,
                         this.objs[r] = at
                 }
-                get(e, t=Ce) {
-                    return this._getByKey(Ye.get(e), null, t)
+                get(e, t=_e) {
+                    return this._getByKey(Ke.get(e), null, t)
                 }
                 resolveAndCreateChild(e) {
                     const t = ut.resolve(e);
@@ -3275,7 +3275,7 @@
                 }
                 _new(e) {
                     if (this._constructionCounter++ > this._getMaxNumberOfObjects())
-                        throw $e(this, e.key, function(e) {
+                        throw Ge(this, e.key, function(e) {
                             return `Cannot instantiate cyclic dependency!${ze(e)}`
                         });
                     return this._instantiateProvider(e)
@@ -3304,8 +3304,8 @@
                     try {
                         i = n(...r)
                     } catch (s) {
-                        throw $e(this, e.key, function(e) {
-                            const t = N(e[0].token);
+                        throw Ge(this, e.key, function(e) {
+                            const t = O(e[0].token);
                             return `${l.message}: Error during instantiation of ${t}!${ze(e)}.`
                         }, l = s)
                     }
@@ -3313,7 +3313,7 @@
                     return i
                 }
                 _getByReflectiveDependency(e) {
-                    return this._getByKey(e.key, e.visibility, e.optional ? null : Ce)
+                    return this._getByKey(e.key, e.visibility, e.optional ? null : _e)
                 }
                 _getByKey(t, n, r) {
                     return t === e.INJECTOR_KEY ? this : n instanceof y ? this._getByKeySelf(t, r) : this._getByKeyDefault(t, r, n)
@@ -3326,11 +3326,11 @@
                     return at
                 }
                 _throwOrNull(e, t) {
-                    if (t !== Ce)
+                    if (t !== _e)
                         return t;
                     throw function(e, t) {
-                        return $e(e, t, function(e) {
-                            return `No provider for ${N(e[0].token)}!${ze(e)}`
+                        return Ge(e, t, function(e) {
+                            return `No provider for ${O(e[0].token)}!${ze(e)}`
                         })
                     }(this, e)
                 }
@@ -3361,7 +3361,7 @@
                     return this.displayName
                 }
             }
-            return e.INJECTOR_KEY = Ye.get(Se),
+            return e.INJECTOR_KEY = Ke.get(xe),
             e
         }
         )()
@@ -3428,11 +3428,11 @@
                 let r = n.get(t);
                 if (!r) {
                     const i = e(t);
-                    n.set(t, r = i.then(St))
+                    n.set(t, r = i.then(xt))
                 }
                 return r
             }
-            return _t.forEach((e,n)=>{
+            return Ct.forEach((e,n)=>{
                 const i = [];
                 e.templateUrl && i.push(r(e.templateUrl).then(t=>{
                     e.template = t
@@ -3452,7 +3452,7 @@
                 }
                 );
                 const a = Promise.all(i).then(()=>(function(e) {
-                    Ct.delete(e)
+                    _t.delete(e)
                 }
                 )(n));
                 t.push(a)
@@ -3461,17 +3461,17 @@
             kt(),
             Promise.all(t).then(()=>void 0)
         }
-        let _t = new Map;
-        const Ct = new Set;
-        function xt(e) {
+        let Ct = new Map;
+        const _t = new Set;
+        function St(e) {
             return !!(e.templateUrl && !e.template || e.styleUrls && e.styleUrls.length)
         }
         function kt() {
-            const e = _t;
-            return _t = new Map,
+            const e = Ct;
+            return Ct = new Map,
             e
         }
-        function St(e) {
+        function xt(e) {
             return "string" == typeof e ? e : e.text()
         }
         const It = function() {
@@ -3494,26 +3494,26 @@
         }
         const Tt = {}
           , At = []
-          , Ot = C({
-            ngComponentDef: C
+          , Mt = _({
+            ngComponentDef: _
         })
-          , Nt = C({
-            ngDirectiveDef: C
+          , Ot = _({
+            ngDirectiveDef: _
         })
-          , Rt = C({
-            ngPipeDef: C
+          , Rt = _({
+            ngPipeDef: _
         })
-          , Mt = C({
-            ngModuleDef: C
+          , Nt = _({
+            ngModuleDef: _
         })
-          , Pt = C({
-            ngBaseDef: C
+          , Pt = _({
+            ngBaseDef: _
         })
-          , Dt = C({
-            __NG_ELEMENT_ID__: C
+          , Dt = _({
+            __NG_ELEMENT_ID__: _
         });
-        let Vt = 0;
-        function Ft(e) {
+        let Ft = 0;
+        function Vt(e) {
             const t = e.type
               , n = t.prototype
               , r = {}
@@ -3557,7 +3557,7 @@
                 const n = e.directives
                   , l = e.features
                   , s = e.pipes;
-                i.id += Vt++,
+                i.id += Ft++,
                 i.inputs = zt(e.inputs, r),
                 i.outputs = zt(e.outputs),
                 l && l.forEach(e=>e(i)),
@@ -3576,10 +3576,10 @@
             r.pipeDefs = (()=>n.map(Ht))
         }
         function Bt(e) {
-            return Yt(e) || qt(e)
+            return Kt(e) || Yt(e)
         }
         function Ht(e) {
-            return Kt(e)
+            return qt(e)
         }
         function Lt(e) {
             return {
@@ -3616,7 +3616,7 @@
                 }
             return n
         }
-        function $t(e) {
+        function Gt(e) {
             const t = {};
             return {
                 inputs: zt(e.inputs, t),
@@ -3626,7 +3626,7 @@
                 contentQueries: e.contentQueries || null
             }
         }
-        const Gt = Ft;
+        const $t = Vt;
         function Wt(e) {
             return {
                 name: e.name,
@@ -3635,22 +3635,22 @@
                 onDestroy: e.type.prototype.ngOnDestroy || null
             }
         }
+        function Kt(e) {
+            return e[Mt] || null
+        }
         function Yt(e) {
             return e[Ot] || null
         }
         function qt(e) {
-            return e[Nt] || null
-        }
-        function Kt(e) {
             return e[Rt] || null
         }
         function Qt(e) {
             return e[Pt] || null
         }
         function Zt(e, t) {
-            const n = e[Mt] || null;
+            const n = e[Nt] || null;
             if (!n && !0 === t)
-                throw new Error(`Type ${N(e)} does not have 'ngModuleDef' property.`);
+                throw new Error(`Type ${O(e)} does not have 'ngModuleDef' property.`);
             return n
         }
         function Xt(e) {
@@ -3659,7 +3659,7 @@
         function Jt(e) {
             return "object" == typeof e && null != e && "function" == typeof e.type ? e.type.name || e.type : Xt(e)
         }
-        const en = (()=>("undefined" != typeof requestAnimationFrame && requestAnimationFrame || setTimeout).bind(V))();
+        const en = (()=>("undefined" != typeof requestAnimationFrame && requestAnimationFrame || setTimeout).bind(F))();
         function tn(e) {
             return {
                 name: "window",
@@ -3698,19 +3698,19 @@
           , bn = 10
           , vn = 11
           , wn = 12
-          , _n = 13
-          , Cn = 14
-          , xn = 15
+          , Cn = 13
+          , _n = 14
+          , Sn = 15
           , kn = 16
-          , Sn = 17
+          , xn = 17
           , In = 18
           , En = 20
           , Tn = 1
           , An = 2
-          , On = 7
-          , Nn = 8
+          , Mn = 7
+          , On = 8
           , Rn = "__ngContext__";
-        function Mn(e) {
+        function Nn(e) {
             for (; Array.isArray(e); )
                 e = e[an];
             return e
@@ -3721,11 +3721,11 @@
         function Dn(e) {
             return Array.isArray(e) && !0 === e[Tn]
         }
-        function Vn(e, t) {
-            return Mn(t[e + En])
-        }
         function Fn(e, t) {
-            return Mn(t[e.index])
+            return Nn(t[e + En])
+        }
+        function Vn(e, t) {
+            return Nn(t[e.index])
         }
         function jn(e, t) {
             return t[un].data[e + En]
@@ -3746,21 +3746,21 @@
         function zn(e) {
             return 0 != (512 & e[cn])
         }
-        function $n(e) {
+        function Gn(e) {
             return e[Rn]
         }
-        function Gn(e) {
-            const t = $n(e);
+        function $n(e) {
+            const t = Gn(e);
             return t ? Array.isArray(t) ? t : t.lView : null
         }
         function Wn(e) {
             return Dn(e[dn])
         }
-        function Yn(e) {
+        function Kn(e) {
             e[In] = 0
         }
-        const qn = 8
-          , Kn = 8
+        const Yn = 8
+          , qn = 8
           , Qn = 9
           , Zn = -1;
         class Xn {
@@ -3845,27 +3845,27 @@
         const fr = 1;
         let pr, mr, gr, yr = fr, br = 0, vr = 0;
         function wr(e=null) {
-            zr !== e && (Gr(null == e ? -1 : e),
+            zr !== e && ($r(null == e ? -1 : e),
             yr = fr,
             br = 0,
             vr = 0)
         }
-        function _r() {
+        function Cr() {
             yr += 1 + vr,
             br = 0,
             vr = 0
         }
-        function Cr(e) {
+        function _r(e) {
             br += e,
             vr = Math.max(vr, br)
         }
-        function xr(e) {
-            Or = e
+        function Sr(e) {
+            Mr = e
         }
         function kr() {
             return pr
         }
-        function Sr(e) {
+        function xr(e) {
             pr = e
         }
         function Ir(e, t) {
@@ -3881,43 +3881,43 @@
         function Ar(e=gr) {
             return 4 == (4 & e[cn])
         }
-        let Or = null
-          , Nr = !1;
+        let Mr = null
+          , Or = !1;
         function Rr() {
-            return Nr
+            return Or
         }
-        function Mr(e) {
-            Nr = e
+        function Nr(e) {
+            Or = e
         }
         let Pr = -1;
         function Dr() {
             return Pr
         }
-        function Vr(e) {
+        function Fr(e) {
             Pr = e
         }
-        let Fr = 0;
+        let Vr = 0;
         function jr() {
-            return Fr
+            return Vr
         }
         function Br(e) {
-            Fr = e
+            Vr = e
         }
         function Hr(e, t) {
             const n = gr;
             return e && (Pr = e[un].bindingStartIndex),
             pr = t,
             mr = !0,
-            gr = Or = e,
+            gr = Mr = e,
             n
         }
         function Lr(e=1) {
-            return (Or = function(e, t) {
+            return (Mr = function(e, t) {
                 for (; e > 0; )
-                    t = t[Sn],
+                    t = t[xn],
                     e--;
                 return t
-            }(e, Or))[yn]
+            }(e, Mr))[yn]
         }
         function Ur(e) {
             const t = gr[un];
@@ -3925,8 +3925,8 @@
                 gr[cn] &= -5;
             else
                 try {
-                    Yn(gr),
-                    nr(gr, t.viewHooks, t.viewCheckHooks, Nr, 2, void 0)
+                    Kn(gr),
+                    nr(gr, t.viewHooks, t.viewCheckHooks, Or, 2, void 0)
                 } finally {
                     gr[cn] &= -73,
                     gr[mn] = t.bindingStartIndex
@@ -3935,21 +3935,21 @@
             Hr(e, null)
         }
         let zr = -1;
-        function $r() {
+        function Gr() {
             return zr
         }
-        function Gr(e) {
+        function $r(e) {
             zr = e,
             sr(null)
         }
         let Wr = null;
-        function Yr() {
+        function Kr() {
             Wr = "http://www.w3.org/2000/svg"
         }
-        function qr() {
+        function Yr() {
             Wr = "http://www.w3.org/1998/MathML/"
         }
-        function Kr() {
+        function qr() {
             Wr = null
         }
         const Qr = function() {
@@ -3968,7 +3968,7 @@
             createRenderer: (e,t)=>document
         };
         function Jr(e) {
-            let t = $n(e);
+            let t = Gn(e);
             if (t) {
                 if (Array.isArray(t)) {
                     const r = t;
@@ -3993,8 +3993,8 @@
                         s = si(i, r, !1)
                     } else if (-1 == (i = ri(r, e)))
                         return null;
-                    const o = Mn(r[i])
-                      , a = $n(o)
+                    const o = Nn(r[i])
+                      , a = Gn(o)
                       , u = a && !Array.isArray(a) ? a : ei(r, i, o);
                     if (l && void 0 === u.component && (u.component = l,
                     ni(u.component, u)),
@@ -4010,14 +4010,14 @@
                 const n = e;
                 let r = n;
                 for (; r = r.parentNode; ) {
-                    const e = $n(r);
+                    const e = Gn(r);
                     if (e) {
                         let r;
                         if (!(r = Array.isArray(e) ? e : e.lView))
                             return null;
                         const i = ri(r, n);
                         if (i >= 0) {
-                            const e = Mn(r[i])
+                            const e = Nn(r[i])
                               , n = ei(r, i, e);
                             ni(e, n),
                             t = n;
@@ -4040,7 +4040,7 @@
             }
         }
         function ti(e) {
-            let t, n = $n(e);
+            let t, n = Gn(e);
             if (Array.isArray(n)) {
                 const r = li(n, e)
                   , i = ei(n, r, (t = Hn(r, n))[an]);
@@ -4057,7 +4057,7 @@
         function ri(e, t) {
             let n = e[un].firstChild;
             for (; n; ) {
-                if (Fn(n, e) === t)
+                if (Vn(n, e) === t)
                     return n.index;
                 n = ii(n)
             }
@@ -4206,23 +4206,23 @@
             }
             return -1
         }
-        function _i(e) {
+        function Ci(e) {
             return 3 === e || 4 === e
         }
-        function Ci(e) {
+        function _i(e) {
             return e !== Zn
         }
-        function xi(e) {
+        function Si(e) {
             return 32767 & e
         }
         function ki(e) {
             return e >> 16
         }
-        function Si(e, t) {
+        function xi(e, t) {
             let n = ki(e)
               , r = t;
             for (; n > 0; )
-                r = r[Sn],
+                r = r[xn],
                 n--;
             return r
         }
@@ -4233,26 +4233,26 @@
         function Ei(e) {
             let t = e[pn];
             for (; t && 2 === t.type; )
-                t = (e = e[Sn])[pn];
+                t = (e = e[xn])[pn];
             return e
         }
         function Ti(e) {
             return function(e) {
-                let t = Pn(e) ? e : Gn(e);
+                let t = Pn(e) ? e : $n(e);
                 for (; t && !(512 & t[cn]); )
                     t = Ii(t);
                 return t
             }(e)[yn]
         }
         let Ai = !0;
-        function Oi(e) {
+        function Mi(e) {
             const t = Ai;
             return Ai = e,
             t
         }
-        const Ni = 255;
+        const Oi = 255;
         let Ri = 0;
-        function Mi(e, t) {
+        function Ni(e, t) {
             const n = Di(e, t);
             if (-1 !== n)
                 return n;
@@ -4261,39 +4261,39 @@
             Pi(r.data, e),
             Pi(t, null),
             Pi(r.blueprint, null));
-            const i = Vi(e, t)
-              , l = xi(i)
-              , s = Si(i, t)
+            const i = Fi(e, t)
+              , l = Si(i)
+              , s = xi(i, t)
               , o = e.injectorIndex;
-            if (Ci(i)) {
+            if (_i(i)) {
                 const e = s[un].data;
                 for (let n = 0; n < 8; n++)
                     t[o + n] = s[l + n] | e[l + n]
             }
-            return t[o + Kn] = i,
+            return t[o + qn] = i,
             o
         }
         function Pi(e, t) {
             e.push(0, 0, 0, 0, 0, 0, 0, 0, t)
         }
         function Di(e, t) {
-            return -1 === e.injectorIndex || e.parent && e.parent.injectorIndex === e.injectorIndex || null == t[e.injectorIndex + Kn] ? -1 : e.injectorIndex
+            return -1 === e.injectorIndex || e.parent && e.parent.injectorIndex === e.injectorIndex || null == t[e.injectorIndex + qn] ? -1 : e.injectorIndex
         }
-        function Vi(e, t) {
+        function Fi(e, t) {
             if (e.parent && -1 !== e.parent.injectorIndex)
                 return e.parent.injectorIndex;
             let n = t[pn]
               , r = 1;
             for (; n && -1 === n.injectorIndex; )
-                n = (t = t[Sn]) ? t[pn] : null,
+                n = (t = t[xn]) ? t[pn] : null,
                 r++;
             return n ? n.injectorIndex | r << 16 : -1
         }
-        function Fi(e, t, n) {
+        function Vi(e, t, n) {
             !function(e, t, n) {
                 let r = "string" != typeof n ? n[Dt] : n.charCodeAt(0) || 0;
                 null == r && (r = n[Dt] = Ri++);
-                const i = r & Ni
+                const i = r & Oi
                   , l = 1 << i
                   , s = 64 & i
                   , o = 32 & i
@@ -4308,7 +4308,7 @@
                 let r = 0;
                 for (; r < e; ) {
                     const i = n[r];
-                    if (_i(i))
+                    if (Ci(i))
                         break;
                     if (0 === i)
                         r += 2;
@@ -4337,13 +4337,13 @@
             }
             return null
         }
-        function Bi(e, t, n, r=_.Default, i) {
+        function Bi(e, t, n, r=C.Default, i) {
             if (e) {
                 const i = function(e) {
                     if ("string" == typeof e)
                         return e.charCodeAt(0) || 0;
                     const t = e[Dt];
-                    return "number" == typeof t && t > 0 ? t & Ni : t
+                    return "number" == typeof t && t > 0 ? t & Oi : t
                 }(n);
                 if ("function" == typeof i) {
                     const l = kr()
@@ -4351,7 +4351,7 @@
                     Ir(e, t);
                     try {
                         const e = i();
-                        if (null != e || r & _.Optional)
+                        if (null != e || r & C.Optional)
                             return e;
                         throw new Error(`No provider for ${Jt(n)}!`)
                     } finally {
@@ -4363,43 +4363,43 @@
                     let l = null
                       , s = Di(e, t)
                       , o = Zn
-                      , a = r & _.Host ? Ei(t)[pn] : null;
-                    for ((-1 === s || r & _.SkipSelf) && (o = -1 === s ? Vi(e, t) : t[s + Kn],
-                    Gi(r, !1) ? (l = t[un],
-                    s = xi(o),
-                    t = Si(o, t)) : s = -1); -1 !== s; ) {
-                        o = t[s + Kn];
+                      , a = r & C.Host ? Ei(t)[pn] : null;
+                    for ((-1 === s || r & C.SkipSelf) && (o = -1 === s ? Fi(e, t) : t[s + qn],
+                    $i(r, !1) ? (l = t[un],
+                    s = Si(o),
+                    t = xi(o, t)) : s = -1); -1 !== s; ) {
+                        o = t[s + qn];
                         const e = t[un];
-                        if ($i(i, s, e.data)) {
+                        if (Gi(i, s, e.data)) {
                             const e = Li(s, t, n, l, r, a);
                             if (e !== Hi)
                                 return e
                         }
-                        Gi(r, t[un].data[s + qn] === a) && $i(i, s, t) ? (l = e,
-                        s = xi(o),
-                        t = Si(o, t)) : s = -1
+                        $i(r, t[un].data[s + Yn] === a) && Gi(i, s, t) ? (l = e,
+                        s = Si(o),
+                        t = xi(o, t)) : s = -1
                     }
                 }
             }
-            if (r & _.Optional && void 0 === i && (i = null),
-            0 == (r & (_.Self | _.Host))) {
+            if (r & C.Optional && void 0 === i && (i = null),
+            0 == (r & (C.Self | C.Host))) {
                 const e = t[bn]
                   , l = L(void 0);
                 try {
-                    return e ? e.get(n, i, r & _.Optional) : G(n, i, r & _.Optional)
+                    return e ? e.get(n, i, r & C.Optional) : $(n, i, r & C.Optional)
                 } finally {
                     L(l)
                 }
             }
-            if (r & _.Optional)
+            if (r & C.Optional)
                 return i;
             throw new Error(`NodeInjector: NOT_FOUND [${Jt(n)}]`)
         }
         const Hi = {};
         function Li(e, t, n, r, i, l) {
             const s = t[un]
-              , o = s.data[e + qn]
-              , a = Ui(o, t, n, null == r ? Ln(o) && Ai : r != s && 3 === o.type, i & _.Host && l === o);
+              , o = s.data[e + Yn]
+              , a = Ui(o, t, n, null == r ? Ln(o) && Ai : r != s && 3 === o.type, i & C.Host && l === o);
             return null !== a ? zi(s.data, t, a, o) : Hi
         }
         function Ui(e, t, n, r, i) {
@@ -4427,7 +4427,7 @@
                 const l = i;
                 if (l.resolving)
                     throw new Error(`Circular dep for ${Jt(e[n])}`);
-                const s = Oi(l.canSeeViewProviders);
+                const s = Mi(l.canSeeViewProviders);
                 let o;
                 l.resolving = !0,
                 l.injectImpl && (o = L(l.injectImpl));
@@ -4438,7 +4438,7 @@
                     i = t[n] = l.factory(null, e, t, r)
                 } finally {
                     l.injectImpl && L(o),
-                    Oi(s),
+                    Mi(s),
                     l.resolving = !1,
                     Ir(a, u)
                 }
@@ -4446,14 +4446,14 @@
             var l;
             return i
         }
-        function $i(e, t, n) {
+        function Gi(e, t, n) {
             const r = 64 & e
               , i = 32 & e;
             let l;
             return !!((l = 128 & e ? r ? i ? n[t + 7] : n[t + 6] : i ? n[t + 5] : n[t + 4] : r ? i ? n[t + 3] : n[t + 2] : i ? n[t + 1] : n[t]) & 1 << e)
         }
-        function Gi(e, t) {
-            return !(e & _.Self || e & _.Host && t)
+        function $i(e, t) {
+            return !(e & C.Self || e & C.Host && t)
         }
         class Wi {
             constructor(e, t) {
@@ -4464,16 +4464,16 @@
                 return Bi(this._tNode, this._lView, e, void 0, t)
             }
         }
-        function Yi(e) {
+        function Ki(e) {
             const t = e
-              , n = Yt(t) || qt(t) || Kt(t) || E(t) || T(t);
+              , n = Kt(t) || Yt(t) || qt(t) || E(t) || T(t);
             return n && void 0 !== n.factory ? n.factory : null
         }
-        function qi(e) {
-            const t = Yi(Object.getPrototypeOf(e.prototype).constructor);
+        function Yi(e) {
+            const t = Ki(Object.getPrototypeOf(e.prototype).constructor);
             return null !== t ? t : e=>new e
         }
-        function Ki(e) {
+        function qi(e) {
             return e[He]
         }
         function Qi(e) {
@@ -4497,7 +4497,7 @@
                 n && r(this._console, "ERROR CONTEXT", n)
             }
             _findContext(e) {
-                return e ? Ki(e) ? Ki(e) : this._findContext(Qi(e)) : null
+                return e ? qi(e) ? qi(e) : this._findContext(Qi(e)) : null
             }
             _findOriginalError(e) {
                 let t = Qi(e);
@@ -4612,7 +4612,7 @@
                     n = n.nextSibling
             }
         }
-        const pl = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:\/?#]*(?:[\/?#]|$))/gi
+        const pl = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi
           , ml = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+\/]+=*$/i;
         function gl(e) {
             return (e = String(e)).match(pl) || e.match(ml) ? e : (dl() && console.warn(`WARNING: sanitizing unsafe URL value ${e} (see http://g.co/ng/security#xss)`),
@@ -4635,13 +4635,13 @@
             return t
         }
         const wl = bl("area,br,col,hr,img,wbr")
-          , _l = bl("colgroup,dd,dt,li,p,tbody,td,tfoot,th,thead,tr")
-          , Cl = bl("rp,rt")
-          , xl = vl(Cl, _l)
-          , kl = vl(wl, vl(_l, bl("address,article,aside,blockquote,caption,center,del,details,dialog,dir,div,dl,figure,figcaption,footer,h1,h2,h3,h4,h5,h6,header,hgroup,hr,ins,main,map,menu,nav,ol,pre,section,summary,table,ul")), vl(Cl, bl("a,abbr,acronym,audio,b,bdi,bdo,big,br,cite,code,del,dfn,em,font,i,img,ins,kbd,label,map,mark,picture,q,ruby,rp,rt,s,samp,small,source,span,strike,strong,sub,sup,time,track,tt,u,var,video")), xl)
-          , Sl = bl("background,cite,href,itemtype,longdesc,poster,src,xlink:href")
+          , Cl = bl("colgroup,dd,dt,li,p,tbody,td,tfoot,th,thead,tr")
+          , _l = bl("rp,rt")
+          , Sl = vl(_l, Cl)
+          , kl = vl(wl, vl(Cl, bl("address,article,aside,blockquote,caption,center,del,details,dialog,dir,div,dl,figure,figcaption,footer,h1,h2,h3,h4,h5,h6,header,hgroup,hr,ins,main,map,menu,nav,ol,pre,section,summary,table,ul")), vl(_l, bl("a,abbr,acronym,audio,b,bdi,bdo,big,br,cite,code,del,dfn,em,font,i,img,ins,kbd,label,map,mark,picture,q,ruby,rp,rt,s,samp,small,source,span,strike,strong,sub,sup,time,track,tt,u,var,video")), Sl)
+          , xl = bl("background,cite,href,itemtype,longdesc,poster,src,xlink:href")
           , Il = bl("srcset")
-          , El = vl(Sl, Il, bl("abbr,accesskey,align,alt,autoplay,axis,bgcolor,border,cellpadding,cellspacing,class,clear,color,cols,colspan,compact,controls,coords,datetime,default,dir,download,face,headers,height,hidden,hreflang,hspace,ismap,itemscope,itemprop,kind,label,lang,language,loop,media,muted,nohref,nowrap,open,preload,rel,rev,role,rows,rowspan,rules,scope,scrolling,shape,size,sizes,span,srclang,start,summary,tabindex,target,title,translate,type,usemap,valign,value,vspace,width"), bl("aria-activedescendant,aria-atomic,aria-autocomplete,aria-busy,aria-checked,aria-colcount,aria-colindex,aria-colspan,aria-controls,aria-current,aria-describedby,aria-details,aria-disabled,aria-dropeffect,aria-errormessage,aria-expanded,aria-flowto,aria-grabbed,aria-haspopup,aria-hidden,aria-invalid,aria-keyshortcuts,aria-label,aria-labelledby,aria-level,aria-live,aria-modal,aria-multiline,aria-multiselectable,aria-orientation,aria-owns,aria-placeholder,aria-posinset,aria-pressed,aria-readonly,aria-relevant,aria-required,aria-roledescription,aria-rowcount,aria-rowindex,aria-rowspan,aria-selected,aria-setsize,aria-sort,aria-valuemax,aria-valuemin,aria-valuenow,aria-valuetext"))
+          , El = vl(xl, Il, bl("abbr,accesskey,align,alt,autoplay,axis,bgcolor,border,cellpadding,cellspacing,class,clear,color,cols,colspan,compact,controls,coords,datetime,default,dir,download,face,headers,height,hidden,hreflang,hspace,ismap,itemscope,itemprop,kind,label,lang,language,loop,media,muted,nohref,nowrap,open,preload,rel,rev,role,rows,rowspan,rules,scope,scrolling,shape,size,sizes,span,srclang,start,summary,tabindex,target,title,translate,type,usemap,valign,value,vspace,width"), bl("aria-activedescendant,aria-atomic,aria-autocomplete,aria-busy,aria-checked,aria-colcount,aria-colindex,aria-colspan,aria-controls,aria-current,aria-describedby,aria-details,aria-disabled,aria-dropeffect,aria-errormessage,aria-expanded,aria-flowto,aria-grabbed,aria-haspopup,aria-hidden,aria-invalid,aria-keyshortcuts,aria-label,aria-labelledby,aria-level,aria-live,aria-modal,aria-multiline,aria-multiselectable,aria-orientation,aria-owns,aria-placeholder,aria-posinset,aria-pressed,aria-readonly,aria-relevant,aria-required,aria-roledescription,aria-rowcount,aria-rowindex,aria-rowspan,aria-selected,aria-setsize,aria-sort,aria-valuemax,aria-valuemin,aria-valuenow,aria-valuetext"))
           , Tl = bl("script,style,template");
         class Al {
             constructor() {
@@ -4684,7 +4684,7 @@
                         continue
                     }
                     let l = e.value;
-                    Sl[i] && (l = gl(l)),
+                    xl[i] && (l = gl(l)),
                     Il[i] && (l = yl(l)),
                     this.buf.push(" ", t, '="', Rl(l), '"')
                 }
@@ -4706,22 +4706,22 @@
                 return t
             }
         }
-        const Ol = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g
-          , Nl = /([^\#-~ |!])/g;
+        const Ml = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g
+          , Ol = /([^\#-~ |!])/g;
         function Rl(e) {
-            return e.replace(/&/g, "&amp;").replace(Ol, function(e) {
+            return e.replace(/&/g, "&amp;").replace(Ml, function(e) {
                 return "&#" + (1024 * (e.charCodeAt(0) - 55296) + (e.charCodeAt(1) - 56320) + 65536) + ";"
-            }).replace(Nl, function(e) {
+            }).replace(Ol, function(e) {
                 return "&#" + e.charCodeAt(0) + ";"
             }).replace(/</g, "&lt;").replace(/>/g, "&gt;")
         }
-        let Ml;
+        let Nl;
         function Pl(e, t) {
             let n = null;
             try {
-                Ml = Ml || new fl(e);
+                Nl = Nl || new fl(e);
                 let r = t ? String(t) : "";
-                n = Ml.getInertBodyElement(r);
+                n = Nl.getInertBodyElement(r);
                 let i = 5
                   , l = r;
                 do {
@@ -4730,7 +4730,7 @@
                     i--,
                     r = l,
                     l = n.innerHTML,
-                    n = Ml.getInertBodyElement(r)
+                    n = Nl.getInertBodyElement(r)
                 } while (r !== l);const s = new Al
                   , o = s.sanitizeChildren(Dl(n) || n);
                 return dl() && s.sanitizedSomething && console.warn("WARNING: sanitizing HTML stripped some content, see http://g.co/ng/security#xss"),
@@ -4748,7 +4748,7 @@
                 return e.nodeType === Node.ELEMENT_NODE && "TEMPLATE" === e.nodeName
             }(e) ? e.content : null
         }
-        const Vl = function() {
+        const Fl = function() {
             var e = {
                 NONE: 0,
                 HTML: 1,
@@ -4765,7 +4765,7 @@
             e[e.RESOURCE_URL] = "RESOURCE_URL",
             e
         }();
-        class Fl {
+        class Vl {
         }
         const jl = new RegExp("^([-,.\"'%_!# a-zA-Z0-9]+|(?:(?:matrix|translate|scale|rotate|skew|perspective)(?:X|Y|3d)?|(?:rgb|hsl)a?|(?:repeating-)?(?:linear|radial)-gradient|(?:calc|attr))\\([-0-9.%, #a-zA-Z]+\\))$","g")
           , Bl = /^url\(([^)]+)\)$/;
@@ -4785,45 +4785,45 @@
             "unsafe")
         }
         function Ll(e) {
-            const t = Kl();
-            return t ? t.sanitize(Vl.HTML, e) || "" : nl(e, "Html") ? e.toString() : Pl(document, Xt(e))
+            const t = ql();
+            return t ? t.sanitize(Fl.HTML, e) || "" : nl(e, "Html") ? e.toString() : Pl(document, Xt(e))
         }
         function Ul(e) {
-            const t = Kl();
-            return t ? t.sanitize(Vl.STYLE, e) || "" : nl(e, "Style") ? e.toString() : Hl(Xt(e))
+            const t = ql();
+            return t ? t.sanitize(Fl.STYLE, e) || "" : nl(e, "Style") ? e.toString() : Hl(Xt(e))
         }
         function zl(e) {
-            const t = Kl();
-            return t ? t.sanitize(Vl.URL, e) || "" : nl(e, "Url") ? e.toString() : gl(Xt(e))
+            const t = ql();
+            return t ? t.sanitize(Fl.URL, e) || "" : nl(e, "Url") ? e.toString() : gl(Xt(e))
         }
-        function $l(e) {
-            const t = Kl();
+        function Gl(e) {
+            const t = ql();
             if (t)
-                return t.sanitize(Vl.RESOURCE_URL, e) || "";
+                return t.sanitize(Fl.RESOURCE_URL, e) || "";
             if (nl(e, "ResourceUrl"))
                 return e.toString();
             throw new Error("unsafe value used in a resource URL context (see http://g.co/ng/security#xss)")
         }
-        function Gl(e) {
-            const t = Kl();
+        function $l(e) {
+            const t = ql();
             if (t)
-                return t.sanitize(Vl.SCRIPT, e) || "";
+                return t.sanitize(Fl.SCRIPT, e) || "";
             if (nl(e, "Script"))
                 return e.toString();
             throw new Error("unsafe value used in a script context")
         }
         function Wl(e, t) {
-            return "src" === t && ("embed" === e || "frame" === e || "iframe" === e || "media" === e || "script" === e) || "href" === t && ("base" === e || "link" === e) ? $l : zl
+            return "src" === t && ("embed" === e || "frame" === e || "iframe" === e || "media" === e || "script" === e) || "href" === t && ("base" === e || "link" === e) ? Gl : zl
         }
-        function Yl(e, t, n) {
+        function Kl(e, t, n) {
             return Wl(t, n)(e)
         }
-        const ql = function(e, t) {
+        const Yl = function(e, t) {
             return void 0 === t ? "background-image" === e || "background" === e || "border-image" === e || "filter" === e || "list-style" === e || "list-style-image" === e : Ul(t)
         };
-        function Kl() {
+        function ql() {
             const e = hr();
-            return e && e[_n]
+            return e && e[Cn]
         }
         const Ql = /([A-Z])/g;
         function Zl(e) {
@@ -4905,7 +4905,7 @@
         }
         function cs(e, t, n, r) {
             for (let i = n; i < r; i += 4)
-                if (Fs(e, i) === t)
+                if (Vs(e, i) === t)
                     return i;
             return -1
         }
@@ -4926,10 +4926,10 @@
               , h = !1
               , f = !1;
             const p = o ? 1 : 0;
-            As(e, o, 1) && (Os(e, o, 1),
+            As(e, o, 1) && (Ms(e, o, 1),
             f = !0);
             const m = a ? 3 : 0;
-            As(e, a, 3) && (Os(e, a, 3),
+            As(e, a, 3) && (Ms(e, a, 3),
             f = !0),
             i || ("string" == typeof u ? (d = u.split(/\s+/),
             h = !0) : d = u ? Object.keys(u) : At);
@@ -4962,19 +4962,19 @@
             let b = r
               , v = l.length;
             for (; b < h; ) {
-                const r = Fs(e, b);
+                const r = Vs(e, b);
                 if (v)
                     for (let i = 0; i < l.length; i++) {
                         const o = l[i]
                           , c = o ? a ? o : eo(o) : null;
                         if (c && r === c) {
-                            const r = Vs(e, b)
-                              , o = Ys(e, b)
+                            const r = Fs(e, b)
+                              , o = Ks(e, b)
                               , a = !!y || s[c]
                               , d = Ds(e, b);
-                            Gs(d, r, a) && Qs(r, a, o, t) && (Ts(e, b, a),
-                            Ns(e, b, n, t),
-                            $s(e, d, a) && (bs(e, b, !0),
+                            $s(d, r, a) && Qs(r, a, o, t) && (Ts(e, b, a),
+                            Os(e, b, n, t),
+                            Gs(e, d, a) && (bs(e, b, !0),
                             u = !0)),
                             l[i] = null,
                             v--;
@@ -4984,7 +4984,7 @@
                 b += 4
             }
             if (v) {
-                const r = a ? null : Ks(e, t);
+                const r = a ? null : qs(e, t);
                 e: for (let o = 0; o < l.length; o++) {
                     const c = l[o];
                     if (!c)
@@ -4993,18 +4993,18 @@
                       , f = a ? c : eo(c)
                       , v = b >= h;
                     for (let r = b; r < i; r += 4)
-                        if (Fs(e, r) === f) {
-                            const i = Ys(e, r)
+                        if (Vs(e, r) === f) {
+                            const i = Ks(e, r)
                               , l = Rs(e, r)
-                              , s = Vs(e, r)
+                              , s = Fs(e, r)
                               , o = Ds(e, r);
                             Qs(s, d, i, t) && (v && (Hs(e, b, r),
                             m++),
-                            Gs(o, s, d) && ((null === d || void 0 === d && d !== s) && (p = !0),
+                            $s(o, s, d) && ((null === d || void 0 === d && d !== s) && (p = !0),
                             Ts(e, b, d),
-                            (null !== s || $s(e, o, d)) && (bs(e, b, !0),
+                            (null !== s || Gs(e, o, d)) && (bs(e, b, !0),
                             u = !0)),
-                            i === t && n === l || Ns(e, b, n, t)),
+                            i === t && n === l || Os(e, b, n, t)),
                             b += 4;
                             continue e
                         }
@@ -5019,14 +5019,14 @@
             }
             for (; b < i; ) {
                 p = !0;
-                const r = Vs(e, b)
+                const r = Fs(e, b)
                   , i = Ds(e, b);
-                Ys(e, b),
+                Ks(e, b),
                 null != r && (p = !0),
-                Gs(i, r, null) && (Ts(e, b, null),
-                $s(e, i, r) && (bs(e, b, !0),
+                $s(i, r, null) && (Ts(e, b, null),
+                Gs(e, i, r) && (bs(e, b, !0),
                 u = !0),
-                Ns(e, b, n, t)),
+                Os(e, b, n, t)),
                 b += 4
             }
             return function(e, t, n, r, i, l, s, o) {
@@ -5068,11 +5068,11 @@
                   , l = e[5];
                 return l[i + 2 + (r ? l[i + 0] : 0) + n]
             }(e, i, t, r)
-              , o = Vs(e, s)
+              , o = Fs(e, s)
               , a = Ds(e, s)
-              , u = Ys(e, s)
+              , u = Ks(e, s)
               , c = n instanceof is ? n.value : n;
-            if (Gs(a, o, c) && (l || Qs(o, c, u, i))) {
+            if ($s(a, o, c) && (l || Qs(o, c, u, i))) {
                 const t = 2 == (2 & a)
                   , r = e[0]
                   , l = n instanceof is ? new Ws(n,r,t ? 1 : 2) : null
@@ -5081,22 +5081,22 @@
                 let d = !1
                   , h = l ? c : 0;
                 if (As(e, l, c)) {
-                    const t = Os(e, l, c);
+                    const t = Ms(e, l, c);
                     h = l ? t : 0,
                     d = !0
                 }
-                if ((d || u !== i) && Ns(e, s, h, i),
+                if ((d || u !== i) && Os(e, s, h, i),
                 u !== i) {
-                    const t = Fs(e, s)
-                      , n = Ks(e, i);
+                    const t = Vs(e, s)
+                      , n = qs(e, i);
                     !function(e, r, i) {
                         n && n(t) ? e[r] |= 4 : e[r] &= -5
                     }(e, s)
                 }
                 Ts(e, s, o);
-                const f = Ss(a)
-                  , p = Vs(e, f);
-                if (!p || Gs(a, p, o)) {
+                const f = xs(a)
+                  , p = Fs(e, f);
+                if (!p || $s(a, p, o)) {
                     let t = !1
                       , n = !0;
                     !Us(o) && Us(p) && (t = !0,
@@ -5128,20 +5128,20 @@
         function ws(e, t) {
             return 2 == (2 & e[t >= 10 ? t + 0 : t])
         }
-        function _s(e, t) {
+        function Cs(e, t) {
             return 4 == (4 & e[t >= 10 ? t + 0 : t])
         }
-        function Cs(e, t, n) {
+        function _s(e, t, n) {
             return 31 & e | t << 5 | n << 19
         }
-        function xs(e, t) {
+        function Ss(e, t) {
             const n = ks(t);
             return (2 & t ? e[4] : e[3])[n]
         }
         function ks(e) {
             return e >> 5 & 16383
         }
-        function Ss(e) {
+        function xs(e) {
             const t = e >> 19 & 16383;
             return t >= 10 ? t : -1
         }
@@ -5163,13 +5163,13 @@
                 return !1;
             return r[n] !== t
         }
-        function Os(e, t, n) {
+        function Ms(e, t, n) {
             let r = e[9] || bi(e);
             return n > 0 ? r[n] = t : (r.splice(n = r[0], 0, t, null),
             r[0] += 2),
             n
         }
-        function Ns(e, t, n, r) {
+        function Os(e, t, n, r) {
             const i = function(e, t) {
                 return n << 16 | e
             }(r);
@@ -5178,7 +5178,7 @@
         function Rs(e, t) {
             return e[t + 3] >> 16 & 65535
         }
-        function Ms(e, t) {
+        function Ns(e, t) {
             const n = Rs(e, t);
             if (n) {
                 const t = e[9];
@@ -5193,10 +5193,10 @@
         function Ds(e, t) {
             return e[1 === t ? t : t + 0]
         }
-        function Vs(e, t) {
+        function Fs(e, t) {
             return e[t + 2]
         }
-        function Fs(e, t) {
+        function Vs(e, t) {
             return e[t + 1]
         }
         function js(e, t) {
@@ -5208,42 +5208,42 @@
         function Hs(e, t, n) {
             if (t === n)
                 return;
-            const r = Vs(e, t)
-              , i = Fs(e, t)
+            const r = Fs(e, t)
+              , i = Vs(e, t)
               , l = Ds(e, t)
               , s = Rs(e, t)
-              , o = Ys(e, t);
+              , o = Ks(e, t);
             let a = l
               , u = Ds(e, n);
-            const c = Ss(a);
+            const c = xs(a);
             if (c >= 0) {
                 const t = Ds(e, c);
-                Ps(e, c, Cs(t, ks(t), n))
+                Ps(e, c, _s(t, ks(t), n))
             }
-            const d = Ss(u);
+            const d = xs(u);
             if (d >= 0) {
                 const n = Ds(e, d);
-                Ps(e, d, Cs(n, ks(n), t))
+                Ps(e, d, _s(n, ks(n), t))
             }
-            Ts(e, t, Vs(e, n)),
-            Es(e, t, Fs(e, n)),
+            Ts(e, t, Fs(e, n)),
+            Es(e, t, Vs(e, n)),
             Ps(e, t, Ds(e, n)),
-            Ns(e, t, Rs(e, n), Ys(e, n)),
+            Os(e, t, Rs(e, n), Ks(e, n)),
             Ts(e, n, r),
             Es(e, n, i),
             Ps(e, n, l),
-            Ns(e, n, s, o)
+            Os(e, n, s, o)
         }
         function Ls(e, t, n, r, i, l, s, o) {
             const a = t < e.length;
             e.splice(t, 0, 1 | i | (n ? 2 : 0), r, l, 0),
-            Ns(e, t, o, s),
+            Os(e, t, o, s),
             a && function(e, n) {
                 for (let r = t + 4; r < e.length; r += 4) {
-                    const t = Ss(Ds(e, r));
+                    const t = xs(Ds(e, r));
                     if (t > 0) {
                         const n = ks(Ds(e, t));
-                        Ps(e, t, Cs((vs(e, t) ? 1 : 0) | (ws(e, t) ? 2 : 0) | (_s(e, t) ? 4 : 0), n, r))
+                        Ps(e, t, _s((vs(e, t) ? 1 : 0) | (ws(e, t) ? 2 : 0) | (Cs(e, t) ? 4 : 0), n, r))
                     }
                 }
             }(e)
@@ -5254,14 +5254,14 @@
         function zs(e, t, n, r) {
             let i, l = r && r(t) ? 4 : 0;
             return n ? (l |= 2,
-            i = qs(e[4], t)) : i = qs(e[3], t),
-            Cs(l, i = i > 0 ? i + 1 : 0, 0)
-        }
-        function $s(e, t, n) {
-            const r = xs(e, t);
-            return !r || Gs(t, r, n)
+            i = Ys(e[4], t)) : i = Ys(e[3], t),
+            _s(l, i = i > 0 ? i + 1 : 0, 0)
         }
         function Gs(e, t, n) {
+            const r = Ss(e, t);
+            return !r || $s(t, r, n)
+        }
+        function $s(e, t, n) {
             return !(2 & e) && t && n && 4 & e ? t.toString() !== n.toString() : t !== n
         }
         class Ws {
@@ -5285,16 +5285,16 @@
                 }
             }
         }
-        function Ys(e, t) {
+        function Ks(e, t) {
             return 65535 & e[t + 3]
         }
-        function qs(e, t) {
+        function Ys(e, t) {
             for (let n = 2; n < e.length; n += 3)
                 if (e[n] === t)
                     return n;
             return -1
         }
-        function Ks(e, t) {
+        function qs(e, t) {
             const n = e[2];
             return n[2 * t + 1] || n[1] || null
         }
@@ -5353,7 +5353,7 @@
             const i = e.attrs || []
               , l = function(e) {
                 for (let t = 0; t < e.length; t++)
-                    if (_i(e[t]))
+                    if (Ci(e[t]))
                         return t;
                 return e.length
             }(i);
@@ -5483,24 +5483,24 @@
                 const n = Rr();
                 tr(e, t, n, void 0),
                 function(e) {
-                    for (let t = e[Cn]; null !== t; t = t[hn])
+                    for (let t = e[_n]; null !== t; t = t[hn])
                         if (t.length < En && -1 === t[An]) {
                             const e = t;
-                            for (let t = 0; t < e[Nn].length; t++) {
-                                const n = e[Nn][t];
+                            for (let t = 0; t < e[On].length; t++) {
+                                const n = e[On][t];
                                 wo(n, n[un], n[yn])
                             }
                         }
                 }(e),
                 mo(t, e),
-                Yn(e),
+                Kn(e),
                 nr(e, t.contentHooks, t.contentCheckHooks, n, 1, void 0),
                 function(e, t) {
-                    const n = $r();
+                    const n = Gr();
                     try {
                         if (e.expandoInstructions) {
                             let n = t[mn] = e.expandoStartIndex;
-                            Vr(n);
+                            Fr(n);
                             let r = -1
                               , i = -1;
                             for (let l = 0; l < e.expandoInstructions.length; l++) {
@@ -5512,11 +5512,11 @@
                                         r = n += Qn + t
                                     } else
                                         n += s;
-                                    Vr(n)
+                                    Fr(n)
                                 } else
                                     null !== s && (t[mn] = n,
-                                    s(2, Mn(t[r]), i),
-                                    _r()),
+                                    s(2, Nn(t[r]), i),
+                                    Cr()),
                                     r++
                             }
                         }
@@ -5529,7 +5529,7 @@
             function(e) {
                 if (null != e)
                     for (let t = 0; t < e.length; t++)
-                        $o(e[t])
+                        Go(e[t])
             }(t.components)
         }
         function mo(e, t) {
@@ -5550,12 +5550,12 @@
             const c = t.blueprint.slice();
             return c[an] = i,
             c[cn] = 140 | r,
-            Yn(c),
-            c[dn] = c[Sn] = e,
+            Kn(c),
+            c[dn] = c[xn] = e,
             c[yn] = n,
             c[vn] = s || e && e[vn],
             c[wn] = o || e && e[wn],
-            c[_n] = a || e && e[_n] || null,
+            c[Cn] = a || e && e[Cn] || null,
             c[bn] = u || e && e[bn] || null,
             c[pn] = l,
             c
@@ -5570,17 +5570,17 @@
             let c = s.data[o];
             if (null == c) {
                 const e = u ? a : a && a.parent;
-                c = s.data[o] = Oo(e && e !== l[pn] ? e : null, t, o, r, i)
+                c = s.data[o] = Mo(e && e !== l[pn] ? e : null, t, o, r, i)
             }
             return a && (!u || null != a.child || null === c.parent && 2 !== a.type ? u || (a.next = c) : a.child = c),
             null == s.firstChild && (s.firstChild = c),
-            Sr(c),
+            xr(c),
             Tr(!0),
             c
         }
         function vo(e, t, n, r) {
             let i = e.node;
-            return null == i && (e.node = i = Oo(t, 2, n, null, null)),
+            return null == i && (e.node = i = Mo(t, 2, n, null, null)),
             r[pn] = i
         }
         function wo(e, t, n) {
@@ -5588,51 +5588,51 @@
               , i = kr();
             let l;
             if (512 & e[cn])
-                qo(Ti(e));
+                Yo(Ti(e));
             else
                 try {
                     Tr(!0),
-                    Sr(null),
+                    xr(null),
                     l = Hr(e, e[pn]),
-                    Yn(e),
-                    Co(t.template, xo(e), n),
+                    Kn(e),
+                    _o(t.template, So(e), n),
                     e[un].firstTemplatePass = !1,
                     po(e)
                 } finally {
                     Ur(l),
                     Tr(r),
-                    Sr(i)
+                    xr(i)
                 }
         }
-        function _o(e, t, n) {
+        function Co(e, t, n) {
             const r = e[vn]
               , i = Hr(e, e[pn])
               , l = !Rr()
               , s = Ar(e);
             try {
                 l && !s && r.begin && r.begin(),
-                s && (n && Co(n, 1, t),
+                s && (n && _o(n, 1, t),
                 po(e),
                 e[cn] &= -5),
-                Yn(e),
-                n && Co(n, 2, t),
+                Kn(e),
+                n && _o(n, 2, t),
                 po(e)
             } finally {
                 l && !s && r.end && r.end(),
                 Ur(i)
             }
         }
-        function Co(e, t, n) {
-            Kr();
-            const r = $r();
+        function _o(e, t, n) {
+            qr();
+            const r = Gr();
             try {
                 wr(null),
                 e(t, n)
             } finally {
-                Gr(r)
+                $r(r)
             }
         }
-        function xo(e) {
+        function So(e) {
             return Ar(e) ? 1 : 2
         }
         function ko(e, t, n, r) {
@@ -5641,7 +5641,7 @@
                 e >= 0 && (t.stylingTemplate = ls(n, e))
             }
         }
-        function So(e, t, n) {
+        function xo(e, t, n) {
             if (function(e) {
                 return 0 != (4 & e.flags)
             }(t)) {
@@ -5652,7 +5652,7 @@
                 }
             }
         }
-        function Io(e, t, n, r=Fn) {
+        function Io(e, t, n, r=Vn) {
             if (!or)
                 return;
             const i = kr();
@@ -5696,7 +5696,7 @@
                     for (let l = 0; l < r.length; l++) {
                         const e = r[l];
                         co(n, e.selectors, !1) && (i || (i = []),
-                        Fi(Mi(kr(), t), t, e.type),
+                        Vi(Ni(kr(), t), t, e.type),
                         Un(e) ? (1 & n.flags && es(n),
                         n.flags = 1,
                         i.unshift(e)) : i.push(e))
@@ -5706,11 +5706,11 @@
             function(e, t, n) {
                 const r = n.directiveStart
                   , i = n.directiveEnd;
-                !e.firstTemplatePass && r < i && Mi(n, t);
+                !e.firstTemplatePass && r < i && Ni(n, t);
                 for (let l = r; l < i; l++) {
                     const r = e.data[l];
                     Un(r) && Uo(t, n, r),
-                    Vo(t, zi(e.data, t, l, n), r, l)
+                    Fo(t, zi(e.data, t, l, n), r, l)
                 }
             }(e, t, i),
             function(e, t, n) {
@@ -5719,14 +5719,14 @@
                   , l = e.expandoInstructions
                   , s = e.firstTemplatePass
                   , o = n.index - En
-                  , a = $r();
+                  , a = Gr();
                 try {
                     wr(o);
                     for (let o = r; o < i; o++) {
                         const r = e.data[o]
                           , i = t[o];
                         r.hostBindings ? (Po(r, l, i, n, s),
-                        _r()) : s && l.push(null)
+                        Cr()) : s && l.push(null)
                     }
                 } finally {
                     wr(a)
@@ -5789,7 +5789,7 @@
             const n = e.createRenderer(null, null);
             return "string" == typeof t ? Zr(n) ? n.selectRootElement(t) : n.querySelector(t) : t
         }
-        function Oo(e, t, n, r, i) {
+        function Mo(e, t, n, r, i) {
             return {
                 type: t,
                 index: n,
@@ -5816,7 +5816,7 @@
                 onElementCreationFns: null
             }
         }
-        function No(e, t) {
+        function Oo(e, t) {
             const n = hr()[un];
             let r = null;
             const i = e.directiveStart
@@ -5844,11 +5844,11 @@
             readonly: "readOnly",
             tabindex: "tabIndex"
         };
-        function Mo(e, t, n, r, i, l) {
+        function No(e, t, n, r, i, l) {
             if (n === ts)
                 return;
             const s = hr()
-              , o = Vn(e, s)
+              , o = Fn(e, s)
               , a = jn(e, s);
             let u, c;
             if (!i && (u = ta(a)) && (c = u[t]))
@@ -5882,9 +5882,9 @@
               , i = e.data.length - (65535 & t.providerIndexes);
             (e.expandoInstructions || (e.expandoInstructions = [])).push(r, i, n)
         }
-        function Vo(e, t, n, r) {
+        function Fo(e, t, n, r) {
             const i = kr();
-            Fo(e, i, t),
+            Vo(e, i, t),
             i && i.attrs && function(e, t, n, r) {
                 let l = i.initialInputs;
                 (void 0 === l || e >= l.length) && (l = function(e, t, n) {
@@ -5925,8 +5925,8 @@
             e[un].firstTemplatePass && n.contentQueries && (i.flags |= 4),
             Un(n) && (Hn(i.index, e)[yn] = t)
         }
-        function Fo(e, t, n) {
-            const r = Fn(t, e);
+        function Vo(e, t, n) {
+            const r = Vn(t, e);
             ni(n, e),
             r && ni(r, e)
         }
@@ -5955,8 +5955,8 @@
             t.push(i)
         }
         function Uo(e, t, n) {
-            const r = Fn(t, e)
-              , i = Go(e, yo(e, Eo(n.template, n.consts, n.vars, n.directiveDefs, n.pipeDefs, n.viewQuery, n.schemas), null, n.onPush ? 64 : 16, e[t.index], t, e[vn], e[vn].createRenderer(r, n)));
+            const r = Vn(t, e)
+              , i = $o(e, yo(e, Eo(n.template, n.consts, n.vars, n.directiveDefs, n.pipeDefs, n.viewQuery, n.schemas), null, n.onPush ? 64 : 16, e[t.index], t, e[vn], e[vn].createRenderer(r, n)));
             i[pn] = t,
             e[t.index] = i,
             e[un].firstTemplatePass && jo(t)
@@ -5964,7 +5964,7 @@
         function zo(e, t, n, r, i) {
             return [e, !0, i ? -1 : 0, t, null, null, r, n, []]
         }
-        function $o(e) {
+        function Go(e) {
             const t = hr()
               , n = Hn(e, t);
             (128 == (128 & n[cn]) || Ar(t)) && 80 & n[cn] && (function(e) {
@@ -5974,9 +5974,9 @@
             }(n),
             Zo(n, n[yn]))
         }
-        function Go(e, t) {
-            return e[Cn] ? e[xn][hn] = t : e[Cn] = t,
-            e[xn] = t,
+        function $o(e, t) {
+            return e[_n] ? e[Sn][hn] = t : e[_n] = t,
+            e[Sn] = t,
             t
         }
         function Wo(e) {
@@ -5989,7 +5989,7 @@
             }
             return null
         }
-        function Yo(e, t) {
+        function Ko(e, t) {
             const n = 0 === e.flags;
             if (e.flags |= t,
             n && e.clean == fo) {
@@ -5997,7 +5997,7 @@
                 e.clean = new Promise(e=>t = e),
                 e.scheduler(()=>{
                     if (1 & e.flags && (e.flags &= -2,
-                    qo(e)),
+                    Yo(e)),
                     2 & e.flags) {
                         e.flags &= -3;
                         const t = e.playerHandler;
@@ -6009,13 +6009,13 @@
                 )
             }
         }
-        function qo(e) {
+        function Yo(e) {
             for (let t = 0; t < e.components.length; t++) {
                 const n = e.components[t];
-                _o(Gn(n), n)
+                Co($n(n), n)
             }
         }
-        function Ko(e, t) {
+        function qo(e, t) {
             const n = e[vn];
             n.begin && n.begin();
             try {
@@ -6029,7 +6029,7 @@
             }
         }
         function Qo(e) {
-            qo(e[yn])
+            Yo(e[yn])
         }
         function Zo(e, t) {
             const n = e[un]
@@ -6037,9 +6037,9 @@
               , i = n.template
               , l = Ar(e);
             try {
-                Yn(e),
+                Kn(e),
                 l && Xo(1, n, t),
-                Co(i, xo(e), t),
+                _o(i, So(e), t),
                 po(e),
                 l && !n.staticViewQueries || Xo(2, n, t)
             } finally {
@@ -6058,7 +6058,7 @@
         }
         const ea = fo;
         function ta(e) {
-            return e ? (void 0 === e.inputs && (e.inputs = No(e, 0)),
+            return e ? (void 0 === e.inputs && (e.inputs = Oo(e, 0)),
             e.inputs) : null
         }
         function na(e) {
@@ -6110,10 +6110,10 @@
             }(n, t, e))
         }
         function ua(e) {
-            Ko(ti(e), e)
+            qo(ti(e), e)
         }
         function ca(e) {
-            Yo(Wo(ti(e))[yn], 1)
+            Ko(Wo(ti(e))[yn], 1)
         }
         function da(e, t) {
             const n = t[dn];
@@ -6121,7 +6121,7 @@
         }
         function ha(e, t) {
             const n = da(e, t);
-            return n ? Ia(t[wn], n[On]) : null
+            return n ? Ia(t[wn], n[Mn]) : null
         }
         const fa = [];
         function pa(e, t, n, r, i) {
@@ -6132,16 +6132,16 @@
             for (; a; ) {
                 let e = null;
                 if (3 === a.type || 4 === a.type) {
-                    ma(t, n, r, Fn(a, o), a, i);
+                    ma(t, n, r, Vn(a, o), a, i);
                     const l = o[a.index];
-                    Dn(l) && (ma(t, n, r, l[On], a, i),
-                    l[Nn].length && (e = (o = l[Nn][0])[un].node,
-                    i = l[On]))
+                    Dn(l) && (ma(t, n, r, l[Mn], a, i),
+                    l[On].length && (e = (o = l[On][0])[un].node,
+                    i = l[Mn]))
                 } else if (0 === a.type) {
                     const l = o[a.index];
-                    ma(t, n, r, l[On], a, i),
-                    l[Nn].length && (e = (o = l[Nn][0])[un].node,
-                    i = l[On])
+                    ma(t, n, r, l[Mn], a, i),
+                    l[On].length && (e = (o = l[On][0])[un].node,
+                    i = l[Mn])
                 } else if (1 === a.type) {
                     const l = Ei(o)
                       , u = l[pn].projection[a.projection];
@@ -6160,14 +6160,14 @@
                     e = 2 & a.flags ? a.projectionNext : 4 === a.type && a.child || a.next; !e; ) {
                         if (null === (a = a.parent || o[pn]) || a === l)
                             return;
-                        if (0 === a.type && (i = (o = Ii(o))[a.index][On]),
+                        if (0 === a.type && (i = (o = Ii(o))[a.index][Mn]),
                         2 === a.type) {
                             for (; !o[hn] && o[dn] && (!a.parent || !a.parent.next); ) {
                                 if (a === l)
                                     return;
                                 if (Dn(o = o[dn])) {
                                     a = o[pn],
-                                    i = (o = o[dn])[a.index][On];
+                                    i = (o = o[dn])[a.index][Mn];
                                     break
                                 }
                                 a = o[pn]
@@ -6190,7 +6190,7 @@
             r && pa(e, t ? 0 : 1, e[wn], r, n)
         }
         function ba(e, t, n) {
-            const r = t[Nn];
+            const r = t[On];
             n > 0 && (r[n - 1][hn] = e),
             n < r.length ? (e[hn] = r[n],
             r.splice(n, 0, e)) : (r.push(e),
@@ -6200,7 +6200,7 @@
             e[cn] |= 128
         }
         function va(e, t) {
-            const n = e[Nn]
+            const n = e[On]
               , r = n[t];
             return r && (t > 0 && (n[t - 1][hn] = r[hn]),
             n.splice(t, 1),
@@ -6212,31 +6212,31 @@
             r
         }
         function wa(e, t) {
-            const n = e[Nn][t];
+            const n = e[On][t];
             n && (va(e, t),
-            _a(n))
+            Ca(n))
         }
-        function _a(e) {
+        function Ca(e) {
             if (!(256 & e[cn])) {
                 const t = e[wn];
                 Zr(t) && t.destroyNode && pa(e, 2, t, null),
                 function(e) {
-                    let t = e[Cn];
+                    let t = e[_n];
                     if (!t)
-                        return xa(e);
+                        return Sa(e);
                     for (; t; ) {
                         let n = null;
                         if (Pn(t))
-                            n = t[Cn];
+                            n = t[_n];
                         else {
-                            const e = t[Nn];
+                            const e = t[On];
                             e.length > 0 && (n = e[0])
                         }
                         if (!n) {
                             for (; t && !t[hn] && t !== e; )
-                                xa(t),
-                                t = Ca(t, e);
-                            xa(t || e),
+                                Sa(t),
+                                t = _a(t, e);
+                            Sa(t || e),
                             n = t && t[hn]
                         }
                         t = n
@@ -6244,11 +6244,11 @@
                 }(e)
             }
         }
-        function Ca(e, t) {
+        function _a(e, t) {
             let n;
             return Pn(e) && (n = e[pn]) && 2 === n.type ? da(n, e) : e[dn] === t ? null : e[dn]
         }
-        function xa(e) {
+        function Sa(e) {
             if (Pn(e) && !(256 & e[cn])) {
                 e[cn] &= -129,
                 e[cn] |= 256,
@@ -6268,7 +6268,7 @@
                         for (let r = 0; r < t.length - 1; r += 2)
                             if ("string" == typeof t[r]) {
                                 const i = t[r + 1]
-                                  , l = "function" == typeof i ? i(e) : Mn(e[i])
+                                  , l = "function" == typeof i ? i(e) : Nn(e[i])
                                   , s = n[t[r + 2]]
                                   , o = t[r + 3];
                                 "boolean" == typeof o ? l.removeEventListener(t[r], s, o) : o >= 0 ? n[o]() : n[-o].unsubscribe(),
@@ -6286,7 +6286,7 @@
         function ka(e, t, n, r) {
             Zr(e) ? e.insertBefore(t, n, r) : t.insertBefore(n, r, !0)
         }
-        function Sa(e, t, n, r) {
+        function xa(e, t, n, r) {
             r ? ka(e, t, n, r) : function(e, t, n) {
                 Zr(e) ? e.appendChild(t, n) : t.appendChild(n)
             }(e, t, n)
@@ -6297,7 +6297,7 @@
         function Ea(e, t, n) {
             const r = function(e, t) {
                 if (zn(t))
-                    return Ia(t[wn], Fn(e, t));
+                    return Ia(t[wn], Vn(e, t));
                 const n = function(e) {
                     for (; null != e.parent && (4 === e.parent.type || 5 === e.parent.type); )
                         e = e.parent;
@@ -6307,7 +6307,7 @@
                     const e = t[pn];
                     return 2 === e.type ? ha(e, t) : function(e) {
                         const t = e[pn];
-                        return t && 3 === t.type ? Fn(t, Ii(e)) : null
+                        return t && 3 === t.type ? Vn(t, Ii(e)) : null
                     }(t)
                 }
                 if (1 & n.flags) {
@@ -6316,30 +6316,30 @@
                     if (r !== It.ShadowDom && r !== It.Native)
                         return null
                 }
-                return Fn(n, t)
+                return Vn(n, t)
             }(t, n);
             if (null != r) {
                 const i = n[wn]
                   , l = function(e, t) {
                     if (2 === e.type) {
                         const n = da(e, t)
-                          , r = n[Nn];
-                        return Ta(r.indexOf(t), r, n[On])
+                          , r = n[On];
+                        return Ta(r.indexOf(t), r, n[Mn])
                     }
-                    return 4 === e.type || 5 === e.type ? Fn(e, t) : null
+                    return 4 === e.type || 5 === e.type ? Vn(e, t) : null
                 }(t.parent || n[pn], n);
                 if (Array.isArray(e))
                     for (let t of e)
-                        Sa(i, r, t, l);
+                        xa(i, r, t, l);
                 else
-                    Sa(i, r, e, l)
+                    xa(i, r, e, l)
             }
         }
         function Ta(e, t, n) {
             if (e + 1 < t.length) {
                 const r = t[e + 1]
                   , i = r[pn];
-                return i.child ? Fn(i.child, r) : n
+                return i.child ? Vn(i.child, r) : n
             }
             return n
         }
@@ -6349,27 +6349,27 @@
                 Zr(e) ? e.removeChild(t, n, r) : t.removeChild(n)
             }(e, r, t, n)
         }
-        function Oa(e, t, n, r) {
-            const i = Fn(e, r);
+        function Ma(e, t, n, r) {
+            const i = Vn(e, r);
             Ea(i, t, n),
             ni(i, r);
             const l = r[e.index];
             if (0 === e.type) {
-                const e = l[Nn];
+                const e = l[On];
                 for (let t = 0; t < e.length; t++)
-                    ya(e[t], !0, l[On])
+                    ya(e[t], !0, l[Mn])
             } else {
                 if (4 === e.type) {
                     let i = e.child;
                     for (; i; )
-                        Oa(i, t, n, r),
+                        Ma(i, t, n, r),
                         i = i.next
                 }
-                Dn(l) && Ea(l[On], t, n)
+                Dn(l) && Ea(l[Mn], t, n)
             }
         }
-        function Na(e) {
-            const t = Va(e, null, null)
+        function Oa(e) {
+            const t = Fa(e, null, null)
               , n = hr();
             n[un].firstTemplatePass && (t.tViews = []),
             Da(n, t),
@@ -6378,28 +6378,28 @@
         function Ra(e, t, n, r, i, l, s, o) {
             const a = hr()
               , u = a[un]
-              , c = Va(e, i || null, l || null);
+              , c = Fa(e, i || null, l || null);
             u.firstTemplatePass && (c.tViews = To(-1, t, n, r, u.directiveRegistry, u.pipeRegistry, null, null)),
             Io(u, a, s, o),
             Da(a, c),
-            ni(Fn(c, a), a),
+            ni(Vn(c, a), a),
             er(u, c),
             Tr(!1)
         }
-        function Ma(e) {
+        function Na(e) {
             const t = hr()
               , n = t[un];
-            Sr(Bn(n.data, e)),
+            xr(Bn(n.data, e)),
             Tr(!0),
             t[e + En][An] = 0,
             tr(t, n, Rr(), void 0)
         }
         function Pa() {
             let e = kr();
-            Er() ? Tr(!1) : Sr(e = e.parent);
+            Er() ? Tr(!1) : xr(e = e.parent);
             const t = hr()[e.index]
               , n = t[An];
-            for (; n < t[Nn].length; )
+            for (; n < t[On].length; )
                 wa(t, n)
         }
         function Da(e, t) {
@@ -6410,17 +6410,17 @@
                 r[fn] = n.container())
             }
         }
-        function Va(e, t, n) {
+        function Fa(e, t, n) {
             const r = hr()
               , i = e + En
               , l = r[wn].createComment("")
               , s = bo(e, 0, l, t, n)
               , o = r[i] = zo(r[i], r, l, s);
             return Ea(l, s, r),
-            Go(r, o),
+            $o(r, o),
             s
         }
-        function Fa(e, t) {
+        function Va(e, t) {
             const n = hr()
               , r = n[un]
               , i = e + En;
@@ -6429,12 +6429,12 @@
             n[i] = t
         }
         function ja(e) {
-            return Bn(Or, e)
+            return Bn(Mr, e)
         }
         function Ba(e) {
             return Bn(hr(), e)
         }
-        function Ha(e, t=_.Default) {
+        function Ha(e, t=C.Default) {
             e = P(e);
             const n = hr();
             return null == n ? z(e, t) : Bi(kr(), n, e, t)
@@ -6445,7 +6445,7 @@
         function Ua(e, t, n) {
             const r = kr();
             r.stylingTemplate || (r.stylingTemplate = ci()),
-            $a(r, e, t, n, ai)
+            Ga(r, e, t, n, ai)
         }
         function za(e, t, n) {
             const r = kr();
@@ -6453,7 +6453,7 @@
             const i = nu();
             di(r.stylingTemplate, i),
             (r.onElementCreationFns = r.onElementCreationFns || []).push(()=>{
-                $a(r, e, t, n, i),
+                Ga(r, e, t, n, i),
                 function(e, t) {
                     let n = e[8];
                     n || (n = e[8] = [ai]),
@@ -6462,7 +6462,7 @@
             }
             )
         }
-        function $a(e, t, n, r, i) {
+        function Ga(e, t, n, r, i) {
             !function(e, t, n, r, i) {
                 if (16 & e[1])
                     return;
@@ -6529,8 +6529,8 @@
                       , n = I >= (t ? f : d)
                       , r = Ds(e, I)
                       , i = ks(r);
-                    let l = Ss(r);
-                    Ps(e, I, Cs(r, i, l += t ? n ? 4 * g.length : 0 : 4 * v + 4 * (n ? g.length : 0)))
+                    let l = xs(r);
+                    Ps(e, I, _s(r, i, l += t ? n ? 4 * g.length : 0 : 4 * v + 4 * (n ? g.length : 0)))
                 }
                 for (let I = 0; I < 4 * g.length; I++)
                     e.splice(f, 0, null),
@@ -6544,7 +6544,7 @@
                     h++,
                     f++;
                 const w = e[4]
-                  , _ = e[3];
+                  , C = e[3];
                 for (let I = 0; I < v; I++) {
                     const n = I >= g.length
                       , r = n ? I - g.length : I
@@ -6553,57 +6553,57 @@
                     n ? (a = f + 4 * (s + r),
                     u = d + 4 * (s + r)) : (a = h + 4 * (o + r),
                     u = 10 + 4 * (o + r));
-                    let c = n ? w : _
-                      , p = qs(c, l);
+                    let c = n ? w : C
+                      , p = Ys(c, l);
                     -1 === p ? p = no(null, c, l, !n && null, t) + 1 : p += 1;
                     const m = zs(e, l, n, i || null);
-                    Ps(e, u, Cs(m, p, a)),
+                    Ps(e, u, _s(m, p, a)),
                     Es(e, u, l),
                     Ts(e, u, null),
-                    Ns(e, u, 0, t),
-                    Ps(e, a, Cs(m, p, u)),
+                    Os(e, u, 0, t),
+                    Ps(e, a, _s(m, p, u)),
                     Es(e, a, l),
                     Ts(e, a, null),
-                    Ns(e, a, 0, t)
+                    Os(e, a, 0, t)
                 }
                 l[1] = s + y.length,
                 l[0] = o + g.length,
                 a[0] += y.length,
                 u[0] += g.length;
-                const C = 4 * g.length
-                  , x = 4 * y.length
+                const _ = 4 * g.length
+                  , S = 4 * y.length
                   , k = u.length;
                 to(e, t, !1, h + 4 * o, g.length);
                 for (let I = 1; I < k; I += 4)
-                    u[I + 1] += x + C;
-                const S = a.length;
+                    u[I + 1] += S + _;
+                const x = a.length;
                 to(e, t, !0, f + 4 * s, y.length);
-                for (let I = 1; I < S; I += 4)
-                    a[I + 1] += 2 * C + x;
-                Ps(e, 1, Cs(0, 0, h))
+                for (let I = 1; I < x; I += 4)
+                    a[I + 1] += 2 * _ + S;
+                Ps(e, 1, _s(0, 0, h))
             }(e.stylingTemplate, i, t, n, r)
         }
-        function Ga(e, t, n, r, i) {
-            const l = Ya(n, r);
+        function $a(e, t, n, r, i) {
+            const l = Ka(n, r);
             ps(ru(e, hr()), t, l, ai, i)
         }
         function Wa(e, t, n, r) {
             const i = nu()
-              , l = ru($r(), hr());
-            ns(l, i, ps, [l, e, Ya(t, n), i, r])
+              , l = ru(Gr(), hr());
+            ns(l, i, ps, [l, e, Ka(t, n), i, r])
         }
-        function Ya(e, t) {
+        function Ka(e, t) {
             let n = null;
             return null !== e && (n = t ? Xt(e) + t : e),
             n
         }
-        function qa(e, t, n, r) {
+        function Ya(e, t, n, r) {
             const i = n instanceof is ? n : Qa(n);
             fs(ru(e, hr()), t, i, ai, r)
         }
-        function Ka(e, t, n) {
+        function qa(e, t, n) {
             const r = nu()
-              , i = ru($r(), hr());
+              , i = ru(Gr(), hr());
             ns(i, r, fs, [i, e, t instanceof is ? t : Qa(t), r, n])
         }
         function Qa(e) {
@@ -6642,14 +6642,14 @@
         }
         function Xa(e, t) {
             const n = nu()
-              , r = ru($r(), hr());
+              , r = ru(Gr(), hr());
             ns(r, n, ds, [r, e, t, n])
         }
         function Ja(e) {
             tu(ai, e)
         }
         function eu() {
-            tu(nu(), $r())
+            tu(nu(), Gr())
         }
         function tu(e, t) {
             const n = hr()
@@ -6677,15 +6677,15 @@
                     for (let n = 10; n < e.length; n += 4)
                         if (vs(e, n)) {
                             const l = Ds(e, n)
-                              , o = Ys(e, n)
-                              , a = Fs(e, n)
-                              , u = Vs(e, n)
-                              , c = 4 & l ? Ks(e, o) : null
-                              , d = Ms(e, n)
+                              , o = Ks(e, n)
+                              , a = Vs(e, n)
+                              , u = Fs(e, n)
+                              , c = 4 & l ? qs(e, o) : null
+                              , d = Ns(e, n)
                               , h = !!(2 & l);
                             let f = u;
-                            n < s && !Us(f) && (f = Vs(e, Ss(l))),
-                            Us(f) || (f = xs(e, l)),
+                            n < s && !Us(f) && (f = Fs(e, xs(l))),
+                            Us(f) || (f = Ss(e, l)),
                             t && (!r || f) && (h ? ys(i, a, !!f, t, null, d) : gs(i, a, f, t, c, null, d)),
                             bs(e, n, !1)
                         }
@@ -6710,7 +6710,7 @@
                 }
                 return o
             }
-            )(ru(t, n), r, n, i, 0, 0, e) > 0 && Yo(Ti(n), 2),
+            )(ru(t, n), r, n, i, 0, 0, e) > 0 && Ko(Ti(n), 2),
             sr(null)
         }
         function nu() {
@@ -6746,11 +6746,11 @@
             const d = i[fn];
             d && (d.addNode(a),
             i[fn] = d.clone()),
-            So(l, a, i)
+            xo(l, a, i)
         }
         function lu() {
             let e = kr();
-            Er() ? Tr(!1) : Sr(e = e.parent),
+            Er() ? Tr(!1) : xr(e = e.parent),
             e.onElementCreationFns && oa(e);
             const t = hr()
               , n = t[fn];
@@ -6783,7 +6783,7 @@
             if (n !== ts) {
                 const l = hr()
                   , s = l[wn]
-                  , o = Vn(e, l);
+                  , o = Fn(e, l);
                 if (null == n)
                     Zr(s) ? s.removeAttribute(o, t, i) : o.removeAttribute(t);
                 else {
@@ -6794,11 +6794,11 @@
             }
         }
         function au(e) {
-            const t = $r()
+            const t = Gr()
               , n = hr()
               , r = jn(t, n);
             if (3 === r.type) {
-                const t = wi(e, vi(Fn(r, n), e));
+                const t = wi(e, vi(Vn(r, n), e));
                 if (t >= 0) {
                     const n = nu();
                     r.stylingTemplate ? ss(r.stylingTemplate, e, t, n) : r.stylingTemplate = ls(e, t, n)
@@ -6817,13 +6817,13 @@
             const o = r[fn];
             o && (o.addNode(s),
             r[fn] = o.clone()),
-            So(i, s, r)
+            xo(i, s, r)
         }
         function cu() {
             let e = kr();
             const t = hr()
               , n = t[un];
-            Er() ? Tr(!1) : Sr(e = e.parent);
+            Er() ? Tr(!1) : xr(e = e.parent);
             const r = t[fn];
             r && (t[fn] = r.parent),
             e.onElementCreationFns && oa(e),
@@ -6835,7 +6835,7 @@
               , l = 2 === i.type ? i.parent : i
               , s = r[l.index];
             let o = function(e, t, n) {
-                const r = e[Nn];
+                const r = e[On];
                 for (let i = t; i < r.length; i++) {
                     const t = r[i][un].id;
                     if (t === n)
@@ -6870,10 +6870,10 @@
               , t = e[pn];
             Ar(e) && (po(e),
             e[cn] &= -5),
-            Yn(e),
+            Kn(e),
             po(e),
             Ur(e[dn][dn]),
-            Sr(t),
+            xr(t),
             Tr(!1)
         }
         function fu() {
@@ -6898,13 +6898,13 @@
               , a = o.firstTemplatePass && (o.cleanup || (o.cleanup = []));
             let u = !0;
             if (3 === s.type) {
-                const o = Fn(s, l)
+                const o = Vn(s, l)
                   , c = r ? r(o) : {}
                   , d = c.target || o
                   , h = i ? i(s, l) : l[wn]
                   , f = na(l)
                   , p = f.length
-                  , m = r ? e=>r(Mn(e[s.index])).target : s.index;
+                  , m = r ? e=>r(Nn(e[s.index])).target : s.index;
                 if (Zr(h)) {
                     let n = null;
                     if (!r && function(e) {
@@ -6939,7 +6939,7 @@
                     f.push(t),
                     a && a.push(e, m, p, n)
             }
-            void 0 === s.outputs && (s.outputs = No(s, 1));
+            void 0 === s.outputs && (s.outputs = Oo(s, 1));
             const c = s.outputs;
             let d;
             if (u && c && (d = c[e])) {
@@ -6977,10 +6977,10 @@
                 o
             }
         }
-        function _u(e=1) {
+        function Cu(e=1) {
             return Lr(e)
         }
-        function Cu(e, t) {
+        function _u(e, t) {
             let n = null;
             const r = function(e) {
                 const t = e.attrs;
@@ -7001,14 +7001,14 @@
             }
             return n
         }
-        function xu(e) {
+        function Su(e) {
             const t = Ei(hr())[pn];
             if (!t.projection) {
                 const n = t.projection = new Array(e ? e.length : 1).fill(null)
                   , r = n.slice();
                 let i = t.child;
                 for (; null !== i; ) {
-                    const t = e ? Cu(i, e) : 0;
+                    const t = e ? _u(i, e) : 0;
                     null !== t && (r[t] ? r[t].projectionNext = i : n[t] = i,
                     r[t] = i),
                     i = i.next
@@ -7028,32 +7028,32 @@
                 else
                     for (; s; )
                         1 === s.type ? e(t, n, s.projection, Ei(l)) : (s.flags |= 2,
-                        Oa(s, n, t, l)),
+                        Ma(s, n, t, l)),
                         s = s.projectionNext
             }(r, i, t, Ei(r))
         }
-        let Su = null;
+        let xu = null;
         function Iu() {
-            if (!Su) {
-                const e = V.Symbol;
+            if (!xu) {
+                const e = F.Symbol;
                 if (e && e.iterator)
-                    Su = e.iterator;
+                    xu = e.iterator;
                 else {
                     const e = Object.getOwnPropertyNames(Map.prototype);
                     for (let t = 0; t < e.length; ++t) {
                         const n = e[t];
-                        "entries" !== n && "size" !== n && Map.prototype[n] === Map.prototype.entries && (Su = n)
+                        "entries" !== n && "size" !== n && Map.prototype[n] === Map.prototype.entries && (xu = n)
                     }
                 }
             }
-            return Su
+            return xu
         }
         function Eu(e, t) {
             return e === t || "number" == typeof e && "number" == typeof t && isNaN(e) && isNaN(t)
         }
         function Tu(e, t) {
-            const n = Ou(e)
-              , r = Ou(t);
+            const n = Mu(e)
+              , r = Mu(t);
             if (n && r)
                 return function(e, t, n) {
                     const r = e[Iu()]()
@@ -7089,16 +7089,16 @@
                 return e instanceof Au
             }
         }
-        function Ou(e) {
-            return !!Nu(e) && (Array.isArray(e) || !(e instanceof Map) && Iu()in e)
+        function Mu(e) {
+            return !!Ou(e) && (Array.isArray(e) || !(e instanceof Map) && Iu()in e)
         }
-        function Nu(e) {
+        function Ou(e) {
             return null !== e && ("function" == typeof e || "object" == typeof e)
         }
         function Ru(e, t, n) {
             return e[t] = n
         }
-        function Mu(e, t) {
+        function Nu(e, t) {
             return e[t]
         }
         function Pu(e, t, n) {
@@ -7111,16 +7111,16 @@
             const i = Pu(e, t, n);
             return Pu(e, t + 1, r) || i
         }
-        function Vu(e, t, n, r, i) {
+        function Fu(e, t, n, r, i) {
             const l = Du(e, t, n, r);
             return Pu(e, t + 2, i) || l
         }
-        function Fu(e, t, n, r, i, l) {
+        function Vu(e, t, n, r, i, l) {
             const s = Du(e, t, n, r);
             return Du(e, t + 2, i, l) || s
         }
         function ju(e, t, n, r) {
-            return Mo($r(), e, Bu(t), n, r),
+            return No(Gr(), e, Bu(t), n, r),
             ju
         }
         function Bu(e) {
@@ -7130,10 +7130,10 @@
             Pu(t, n, e) ? e : ts
         }
         function Hu(e, t, n, r, i) {
-            Mo(e, t, n, r, i)
+            No(e, t, n, r, i)
         }
         function Lu(e, t, n, r, i) {
-            Mo(e, t, n, r, i, ia)
+            No(e, t, n, r, i, ia)
         }
         function Uu(e) {
             let t = !1;
@@ -7162,7 +7162,7 @@
             return Jo(r, e, n),
             i ? e + Xt(t) + n : ts
         }
-        function $u(e, t, n, r, i) {
+        function Gu(e, t, n, r, i) {
             const l = hr()
               , s = l[mn]
               , o = Du(l, s, t, r);
@@ -7170,10 +7170,10 @@
             Jo(l, e, i) && (l[un].data[s] = n),
             o ? e + Xt(t) + n + Xt(r) + i : ts
         }
-        function Gu(e, t, n, r, i, l, s) {
+        function $u(e, t, n, r, i, l, s) {
             const o = hr()
               , a = o[mn]
-              , u = Vu(o, a, t, r, l);
+              , u = Fu(o, a, t, r, l);
             if (o[mn] += 3,
             Jo(o, e, s)) {
                 const e = o[un].data;
@@ -7185,7 +7185,7 @@
         function Wu(e, t, n, r, i, l, s, o, a) {
             const u = hr()
               , c = u[mn]
-              , d = Fu(u, c, t, r, l, o);
+              , d = Vu(u, c, t, r, l, o);
             if (u[mn] += 4,
             Jo(u, e, a)) {
                 const e = u[un].data;
@@ -7195,10 +7195,10 @@
             }
             return d ? e + Xt(t) + n + Xt(r) + i + Xt(l) + s + Xt(o) + a : ts
         }
-        function Yu(e, t, n, r, i, l, s, o, a, u, c) {
+        function Ku(e, t, n, r, i, l, s, o, a, u, c) {
             const d = hr()
               , h = d[mn];
-            let f = Fu(d, h, t, r, l, o);
+            let f = Vu(d, h, t, r, l, o);
             if (f = Pu(d, h + 4, u) || f,
             d[mn] += 5,
             Jo(d, e, c)) {
@@ -7210,10 +7210,10 @@
             }
             return f ? e + Xt(t) + n + Xt(r) + i + Xt(l) + s + Xt(o) + a + Xt(u) + c : ts
         }
-        function qu(e, t, n, r, i, l, s, o, a, u, c, d, h) {
+        function Yu(e, t, n, r, i, l, s, o, a, u, c, d, h) {
             const f = hr()
               , p = f[mn];
-            let m = Fu(f, p, t, r, l, o);
+            let m = Vu(f, p, t, r, l, o);
             if (m = Du(f, p + 4, u, d) || m,
             f[mn] += 6,
             Jo(f, e, h)) {
@@ -7226,11 +7226,11 @@
             }
             return m ? e + Xt(t) + n + Xt(r) + i + Xt(l) + s + Xt(o) + a + Xt(u) + c + Xt(d) + h : ts
         }
-        function Ku(e, t, n, r, i, l, s, o, a, u, c, d, h, f, p) {
+        function qu(e, t, n, r, i, l, s, o, a, u, c, d, h, f, p) {
             const m = hr()
               , g = m[mn];
-            let y = Fu(m, g, t, r, l, o);
-            if (y = Vu(m, g + 4, u, d, f) || y,
+            let y = Vu(m, g, t, r, l, o);
+            if (y = Fu(m, g + 4, u, d, f) || y,
             m[mn] += 7,
             Jo(m, e, p)) {
                 const e = m[un].data;
@@ -7246,8 +7246,8 @@
         function Qu(e, t, n, r, i, l, s, o, a, u, c, d, h, f, p, m, g) {
             const y = hr()
               , b = y[mn];
-            let v = Fu(y, b, t, r, l, o);
-            if (v = Fu(y, b + 4, u, d, f, m) || v,
+            let v = Vu(y, b, t, r, l, o);
+            if (v = Vu(y, b + 4, u, d, f, m) || v,
             y[mn] += 8,
             Jo(y, e, g)) {
                 const e = y[un].data;
@@ -7266,45 +7266,45 @@
             Zu
         }
         function Xu(e, t, n, r, i) {
-            return Mo($r(), e, zu(t, n, r), i),
+            return No(Gr(), e, zu(t, n, r), i),
             Xu
         }
         function Ju(e, t, n, r, i, l, s) {
-            return Mo($r(), e, $u(t, n, r, i, l), s),
+            return No(Gr(), e, Gu(t, n, r, i, l), s),
             Ju
         }
         function ec(e, t, n, r, i, l, s, o, a) {
-            return Mo($r(), e, Gu(t, n, r, i, l, s, o), a),
+            return No(Gr(), e, $u(t, n, r, i, l, s, o), a),
             ec
         }
         function tc(e, t, n, r, i, l, s, o, a, u, c) {
-            return Mo($r(), e, Wu(t, n, r, i, l, s, o, a, u), c),
+            return No(Gr(), e, Wu(t, n, r, i, l, s, o, a, u), c),
             tc
         }
         function nc(e, t, n, r, i, l, s, o, a, u, c, d, h) {
-            return Mo($r(), e, Yu(t, n, r, i, l, s, o, a, u, c, d), h),
+            return No(Gr(), e, Ku(t, n, r, i, l, s, o, a, u, c, d), h),
             nc
         }
         function rc(e, t, n, r, i, l, s, o, a, u, c, d, h, f, p) {
-            return Mo($r(), e, qu(t, n, r, i, l, s, o, a, u, c, d, h, f), p),
+            return No(Gr(), e, Yu(t, n, r, i, l, s, o, a, u, c, d, h, f), p),
             rc
         }
         function ic(e, t, n, r, i, l, s, o, a, u, c, d, h, f, p, m, g) {
-            return Mo($r(), e, Ku(t, n, r, i, l, s, o, a, u, c, d, h, f, p, m), g),
+            return No(Gr(), e, qu(t, n, r, i, l, s, o, a, u, c, d, h, f, p, m), g),
             ic
         }
         function lc(e, t, n, r, i, l, s, o, a, u, c, d, h, f, p, m, g, y, b) {
-            return Mo($r(), e, Qu(t, n, r, i, l, s, o, a, u, c, d, h, f, p, m, g, y), b),
+            return No(Gr(), e, Qu(t, n, r, i, l, s, o, a, u, c, d, h, f, p, m, g, y), b),
             lc
         }
         function sc(e, t, n) {
-            return Mo($r(), e, Uu(t), n),
+            return No(Gr(), e, Uu(t), n),
             sc
         }
         function oc(e) {
             const t = hr();
             tr(t, t[un], Rr(), e),
-            Gr(e)
+            $r(e)
         }
         function ac(e, t) {
             const n = hr()
@@ -7316,7 +7316,7 @@
         function uc(e, t) {
             if (t !== ts) {
                 const n = hr()
-                  , r = Vn(e, n)
+                  , r = Fn(e, n)
                   , i = n[wn];
                 Zr(i) ? i.setValue(r, Xt(t)) : r.textContent = Xt(t)
             }
@@ -7336,7 +7336,7 @@
             }(0, n)
               , s = Ti(i);
             gi(l, s, r, t, 0, e),
-            Yo(s, 2)
+            Ko(s, 2)
         }
         function dc(e) {
             const t = Jr(e);
@@ -7399,10 +7399,10 @@
                 throw new Error("Expecting instance of DOM Node");
             return bc(e)
         }
-        function _c(e) {
+        function Cc(e) {
             return "boolean" == typeof e.useCapture
         }
-        function Cc(e) {
+        function _c(e) {
             const t = wc(e).lView
               , n = t[gn]
               , r = t[un].cleanup
@@ -7413,7 +7413,7 @@
                       , o = r[l++];
                     if ("string" == typeof s) {
                         const a = s
-                          , u = Mn(t[o])
+                          , u = Nn(t[o])
                           , c = n[r[l++]]
                           , d = r[l++]
                           , h = "boolean" == typeof d ? d : !(d >= 0) && null;
@@ -7425,19 +7425,19 @@
                         })
                     }
                 }
-            return i.sort(xc),
+            return i.sort(Sc),
             i
         }
-        function xc(e, t) {
+        function Sc(e, t) {
             return e.name == t.name ? 0 : e.name < t.name ? -1 : 1
         }
         const kc = "ng";
-        let Sc = !1;
+        let xc = !1;
         function Ic() {
-            Sc || (Sc = !0,
+            xc || (xc = !0,
             Ec("getComponent", hc),
             Ec("getContext", fc),
-            Ec("getListeners", Cc),
+            Ec("getListeners", _c),
             Ec("getViewComponent", pc),
             Ec("getHostElement", vc),
             Ec("getInjector", gc),
@@ -7447,20 +7447,20 @@
             Ec("markDirty", ca))
         }
         function Ec(e, t) {
-            if (V) {
-                let n = V[kc];
-                n || (n = V[kc] = {}),
+            if (F) {
+                let n = F[kc];
+                n || (n = F[kc] = {}),
                 n[e] = t
             }
         }
         function Tc(e, t={}) {
             const n = t.rendererFactory || Xr
               , r = t.sanitizer || null
-              , i = Yt(e);
+              , i = Kt(e);
             i.type != e && (i.type = e);
             const l = Ao(n, t.host || i.selectors[0][0])
               , s = i.onPush ? 576 : 528
-              , o = Nc(t.scheduler, t.playerHandler)
+              , o = Oc(t.scheduler, t.playerHandler)
               , a = n.createRenderer(l, i)
               , u = yo(null, To(-1, null, 1, 0, null, null, null, null), o, s, null, null, n, a, void 0, t.injector || null)
               , c = Hr(u, null);
@@ -7468,11 +7468,11 @@
             try {
                 n.begin && n.begin();
                 const e = Ac(l, i, u, n, a, r);
-                d = Oc(e, i, u, o, t.hostFeatures || null),
-                Go(u, e),
+                d = Mc(e, i, u, o, t.hostFeatures || null),
+                $o(u, e),
                 po(u),
                 u[cn] &= -5,
-                Yn(u),
+                Kn(u),
                 po(u)
             } finally {
                 Ur(c),
@@ -7488,13 +7488,13 @@
             const s = n[un]
               , o = bo(0, 3, e, null, null)
               , a = yo(n, Eo(t.template, t.consts, t.vars, t.directiveDefs, t.pipeDefs, t.viewQuery, t.schemas), null, t.onPush ? 64 : 16, n[En], o, r, i, l);
-            return s.firstTemplatePass && (Fi(Mi(o, n), n, t.type),
+            return s.firstTemplatePass && (Vi(Ni(o, n), n, t.type),
             o.flags = 1,
             Ho(o, n.length, 1),
             jo(o)),
             n[En] = a
         }
-        function Oc(e, t, n, r, i) {
+        function Mc(e, t, n, r, i) {
             const l = n[un]
               , s = function(e, t, n) {
                 const r = kr();
@@ -7502,7 +7502,7 @@
                 Do(e, r, 1),
                 Lo(e, t, n, n.factory));
                 const i = zi(e.data, t, t.length - 1, r);
-                return Fo(t, r, i),
+                return Vo(t, r, i),
                 i
             }(l, n, t);
             r.components.push(s),
@@ -7521,7 +7521,7 @@
             }
             return s
         }
-        function Nc(e, t) {
+        function Oc(e, t) {
             return {
                 components: [],
                 scheduler: e || en,
@@ -7531,7 +7531,7 @@
             }
         }
         function Rc(e, t) {
-            const n = Gn(e)[un]
+            const n = $n(e)[un]
               , r = n.data.length - 1;
             Jn(r, t, n, -1, -1, -1),
             er(n, {
@@ -7539,7 +7539,7 @@
                 directiveEnd: r + 1
             })
         }
-        function Mc(e) {
+        function Nc(e) {
             return Ti(e).clean
         }
         class Pc {
@@ -7553,11 +7553,11 @@
             }
         }
         function Dc() {
-            return Vc.ngInherit = !0,
-            Vc
+            return Fc.ngInherit = !0,
+            Fc
         }
-        function Vc(e) {
-            e.type.prototype.ngOnChanges && (e.setInput = Fc,
+        function Fc(e) {
+            e.type.prototype.ngOnChanges && (e.setInput = Vc,
             e.onChanges = function() {
                 const e = Bc(this)
                   , t = e && e.current;
@@ -7574,7 +7574,7 @@
             }
             )
         }
-        function Fc(e, t, n, r) {
+        function Vc(e, t, n, r) {
             const i = Bc(e) || function(e, t) {
                 return e[jc] = {
                     previous: Tt,
@@ -7615,19 +7615,19 @@
                       , n = r.contentQueries;
                     t && Uc(e, t),
                     n && zc(e, n),
-                    x(e.inputs, r.inputs),
-                    x(e.declaredInputs, r.declaredInputs),
-                    x(e.outputs, r.outputs)
+                    S(e.inputs, r.inputs),
+                    S(e.declaredInputs, r.declaredInputs),
+                    S(e.outputs, r.outputs)
                 }
                 if (n) {
                     const t = e.hostBindings
                       , r = n.hostBindings;
                     r && (e.hostBindings = t ? (e,n,i)=>{
-                        Cr(1);
+                        _r(1);
                         try {
                             r(e, n, i)
                         } finally {
-                            Cr(-1)
+                            _r(-1)
                         }
                         t(e, n, i)
                     }
@@ -7636,9 +7636,9 @@
                       , l = n.contentQueries;
                     i && Uc(e, i),
                     l && zc(e, l),
-                    x(e.inputs, n.inputs),
-                    x(e.declaredInputs, n.declaredInputs),
-                    x(e.outputs, n.outputs),
+                    S(e.inputs, n.inputs),
+                    S(e.declaredInputs, n.declaredInputs),
+                    S(e.outputs, n.outputs),
                     e.afterContentChecked = e.afterContentChecked || n.afterContentChecked,
                     e.afterContentInit = e.afterContentInit || n.afterContentInit,
                     e.afterViewChecked = e.afterViewChecked || n.afterViewChecked,
@@ -7683,17 +7683,17 @@
             }
             : t
         }
-        const $c = new ve("The presence of this token marks an injector as being the root injector.")
-          , Gc = {}
+        const Gc = new ve("The presence of this token marks an injector as being the root injector.")
+          , $c = {}
           , Wc = {}
-          , Yc = [];
-        let qc = void 0;
-        function Kc() {
-            return void 0 === qc && (qc = new ke),
-            qc
+          , Kc = [];
+        let Yc = void 0;
+        function qc() {
+            return void 0 === Yc && (Yc = new ke),
+            Yc
         }
         function Qc(e, t=null, n=null, r) {
-            return t = t || Kc(),
+            return t = t || qc(),
             new Zc(e,n,t,r)
         }
         class Zc {
@@ -7706,10 +7706,10 @@
                 const i = [];
                 td([e], e=>this.processInjectorType(e, [], i)),
                 t && td(t, n=>this.processProvider(n, e, t)),
-                this.records.set(xe, ed(void 0, this)),
-                this.isRootInjector = this.records.has($c),
+                this.records.set(Se, ed(void 0, this)),
+                this.isRootInjector = this.records.has(Gc),
                 this.injectorDefTypes.forEach(e=>this.get(e)),
-                this.source = r || (e instanceof Array ? null : N(e))
+                this.source = r || (e instanceof Array ? null : O(e))
             }
             get destroyed() {
                 return this._destroyed
@@ -7725,27 +7725,27 @@
                     this.injectorDefTypes.clear()
                 }
             }
-            get(e, t=Se.THROW_IF_NOT_FOUND, n=_.Default) {
+            get(e, t=xe.THROW_IF_NOT_FOUND, n=C.Default) {
                 this.assertNotDestroyed();
                 const r = H(this);
                 try {
-                    if (!(n & _.SkipSelf)) {
+                    if (!(n & C.SkipSelf)) {
                         let t = this.records.get(e);
                         if (void 0 === t) {
                             const n = ("function" == typeof (i = e) || "object" == typeof i && i instanceof ve) && E(e);
-                            n && this.injectableDefInScope(n) && (t = ed(Xc(e), Gc),
+                            n && this.injectableDefInScope(n) && (t = ed(Xc(e), $c),
                             this.records.set(e, t))
                         }
                         if (void 0 !== t)
                             return this.hydrate(e, t)
                     }
-                    return (n & _.Self ? Kc() : this.parent).get(e, n & _.Optional ? null : t)
+                    return (n & C.Self ? qc() : this.parent).get(e, n & C.Optional ? null : t)
                 } catch (l) {
                     if ("NullInjectorError" === l.name) {
-                        if ((l[Re] = l[Re] || []).unshift(N(e)),
+                        if ((l[Re] = l[Re] || []).unshift(O(e)),
                         r)
                             throw l;
-                        return Fe(l, e, "R3InjectorError", this.source)
+                        return Ve(l, e, "R3InjectorError", this.source)
                     }
                     throw l
                 } finally {
@@ -7764,12 +7764,12 @@
                 const i = null == r && e.ngModule || void 0
                   , l = void 0 === i ? e : i
                   , s = -1 !== n.indexOf(l)
-                  , o = void 0 !== i && e.providers || Yc;
+                  , o = void 0 !== i && e.providers || Kc;
                 if (void 0 !== i && (r = T(i)),
                 null == r)
                     return;
                 if (this.injectorDefTypes.add(l),
-                this.records.set(l, ed(r.factory, Gc)),
+                this.records.set(l, ed(r.factory, $c)),
                 null != r.imports && !s) {
                     n.push(l);
                     try {
@@ -7788,19 +7788,19 @@
                 let r = rd(e = P(e)) ? e : P(e && e.provide);
                 const i = function(e, t, n) {
                     let r = Jc(e, t, n);
-                    return nd(e) ? ed(void 0, e.useValue) : ed(r, Gc)
+                    return nd(e) ? ed(void 0, e.useValue) : ed(r, $c)
                 }(e, t, n);
                 if (rd(e) || !0 !== e.multi) {
                     const e = this.records.get(r);
                     if (e && void 0 !== e.multi)
-                        throw new Error(`Mixed multi-provider for ${N(r)}`)
+                        throw new Error(`Mixed multi-provider for ${O(r)}`)
                 } else {
                     let t = this.records.get(r);
                     if (t) {
                         if (void 0 === t.multi)
                             throw new Error(`Mixed multi-provider for ${r}.`)
                     } else
-                        (t = ed(void 0, Gc, !0)).factory = (()=>W(t.multi)),
+                        (t = ed(void 0, $c, !0)).factory = (()=>W(t.multi)),
                         this.records.set(r, t);
                     r = e,
                     t.multi.push(e)
@@ -7809,9 +7809,9 @@
             }
             hydrate(e, t) {
                 if (t.value === Wc)
-                    throw new Error(`Cannot instantiate cyclic dependency! ${N(e)}`);
+                    throw new Error(`Cannot instantiate cyclic dependency! ${O(e)}`);
                 var n;
-                return t.value === Gc && (t.value = Wc,
+                return t.value === $c && (t.value = Wc,
                 t.value = t.factory()),
                 "object" == typeof t.value && t.value && null !== (n = t.value) && "object" == typeof n && "function" == typeof n.ngOnDestroy && this.onDestroy.add(t.value),
                 t.value
@@ -7827,12 +7827,12 @@
                 if (null !== t)
                     return t.factory;
                 if (e instanceof ve)
-                    throw new Error(`Token ${N(e)} is missing an ngInjectableDef definition.`);
+                    throw new Error(`Token ${O(e)} is missing an ngInjectableDef definition.`);
                 if (e instanceof Function) {
                     const t = e.length;
                     if (t > 0) {
                         const n = new Array(t).fill("?");
-                        throw new Error(`Can't resolve all parameters for ${N(e)}: (${n.join(", ")}).`)
+                        throw new Error(`Can't resolve all parameters for ${O(e)}: (${n.join(", ")}).`)
                     }
                     return ()=>new e
                 }
@@ -7855,7 +7855,7 @@
                 if (!i) {
                     let r = "";
                     throw t && n && (r = ` - only instances of Provider and Type are allowed, got: [${n.map(t=>t == e ? "?" + e + "?" : "...").join(", ")}]`),
-                    new Error(`Invalid provider for the NgModule '${N(t)}'` + r)
+                    new Error(`Invalid provider for the NgModule '${O(t)}'` + r)
                 }
                 if (!e.deps)
                     return Xc(i);
@@ -7875,7 +7875,7 @@
             e.forEach(e=>Array.isArray(e) ? td(e, t) : t(e))
         }
         function nd(e) {
-            return null !== e && "object" == typeof e && Oe in e
+            return null !== e && "object" == typeof e && Me in e
         }
         function rd(e) {
             return "function" == typeof e
@@ -7903,7 +7903,7 @@
                 if (rd(e) || !e.multi) {
                     const e = new Xn(o,i,Ha)
                       , r = sd(s, t, i ? u : u + d, c);
-                    -1 == r ? (Fi(Mi(a, l), l, s),
+                    -1 == r ? (Vi(Ni(a, l), l, s),
                     t.push(s),
                     a.directiveStart++,
                     a.directiveEnd++,
@@ -7917,7 +7917,7 @@
                       , f = e >= 0 && n[e]
                       , p = h >= 0 && n[h];
                     if (i && !p || !i && !f) {
-                        Fi(Mi(a, l), l, s);
+                        Vi(Ni(a, l), l, s);
                         const e = function(e, t, n, r, i) {
                             const l = new Xn(e,n,Ha);
                             return l.multi = [],
@@ -7989,7 +7989,7 @@
         class hd {
         }
         function fd(e) {
-            const t = Error(`No component factory found for ${N(e)}. Did you add it to @NgModule.entryComponents?`);
+            const t = Error(`No component factory found for ${O(e)}. Did you add it to @NgModule.entryComponents?`);
             return t[pd] = e,
             t
         }
@@ -8043,7 +8043,7 @@
         }
         class wd {
         }
-        class _d {
+        class Cd {
             constructor(e, t, n) {
                 this._context = t,
                 this._componentIndex = n,
@@ -8056,7 +8056,7 @@
                 return null == this._lView[an] ? function e(t, n, r) {
                     let i = n.child;
                     for (; i; ) {
-                        const n = Fn(i, t);
+                        const n = Vn(i, t);
                         if (n && r.push(n),
                         4 === i.type)
                             e(t, i, r);
@@ -8066,7 +8066,7 @@
                               , l = Ii(e);
                             let s = n.projection[i.projection];
                             for (; s && l; )
-                                r.push(Fn(s, l)),
+                                r.push(Vn(s, l)),
                                 s = s.next
                         }
                         i = i.next
@@ -8088,7 +8088,7 @@
                     e > -1 && this._viewContainerRef.detach(e),
                     this._viewContainerRef = null
                 }
-                _a(this._lView)
+                Ca(this._lView)
             }
             onDestroy(e) {
                 var t, n;
@@ -8106,15 +8106,15 @@
                 this._lView[cn] |= 128
             }
             detectChanges() {
-                Ko(this._lView, this.context)
+                qo(this._lView, this.context)
             }
             checkNoChanges() {
                 !function(e, t) {
-                    Mr(!0);
+                    Nr(!0);
                     try {
-                        Ko(e, t)
+                        qo(e, t)
                     } finally {
-                        Mr(!1)
+                        Nr(!1)
                     }
                 }(this._lView, this.context)
             }
@@ -8137,7 +8137,7 @@
                 return this._context = Ii(this._lView)[this._componentIndex]
             }
         }
-        class Cd extends _d {
+        class _d extends Cd {
             constructor(e) {
                 super(e, null, -1),
                 this._view = e
@@ -8147,11 +8147,11 @@
             }
             checkNoChanges() {
                 !function(e) {
-                    Mr(!0);
+                    Nr(!0);
                     try {
                         Qo(e)
                     } finally {
-                        Mr(!1)
+                        Nr(!1)
                     }
                 }(this._view)
             }
@@ -8159,12 +8159,12 @@
                 return null
             }
         }
-        let xd, kd, Sd;
+        let Sd, kd, xd;
         function Id(e, t, n) {
-            return xd || (xd = class extends e {
+            return Sd || (Sd = class extends e {
             }
             ),
-            new xd(Fn(t, n))
+            new Sd(Vn(t, n))
         }
         function Ed(e, t, n, r) {
             if (kd || (kd = class extends e {
@@ -8183,19 +8183,19 @@
                         const l = Er()
                           , s = kr();
                         Tr(!0),
-                        Sr(null);
+                        xr(null);
                         const o = yo(n, e, t, 16, null, null);
-                        return o[Sn] = n,
+                        return o[xn] = n,
                         r && (o[fn] = r.createView()),
                         vo(e, null, -1, o),
                         e.firstTemplatePass && (e.node.injectorIndex = i),
                         Tr(l),
-                        Sr(s),
+                        xr(s),
                         o
                     }(this._tView, e, this._declarationParentView, this._hostLContainer[fn], this._injectorIndex);
                     t && ba(i, t, n),
                     wo(i, this._tView, e);
-                    const l = new _d(i,e,-1);
+                    const l = new Cd(i,e,-1);
                     return l._tViewNode = i[pn],
                     l
                 }
@@ -8211,16 +8211,16 @@
             if (Ln(e)) {
                 const r = e.directiveStart
                   , i = Hn(e.index, t);
-                return new _d(i,n,r)
+                return new Cd(i,n,r)
             }
             if (3 === e.type || 0 === e.type || 4 === e.type) {
                 const e = Ei(t);
-                return new _d(e,e[yn],-1)
+                return new Cd(e,e[yn],-1)
             }
             return null
         }
         function Ad(...e) {}
-        const Od = (()=>{
+        const Md = (()=>{
             class e {
                 constructor(e) {
                     this.nativeElement = e
@@ -8230,11 +8230,11 @@
             e
         }
         )()
-          , Nd = function(e) {
+          , Od = function(e) {
             return Id(e, kr(), hr())
         }
           , Rd = Ad;
-        class Md {
+        class Nd {
             constructor(e, t, n, r, i, l) {
                 this.id = e,
                 this.templateUrl = t,
@@ -8248,9 +8248,9 @@
         }
         class Dd {
         }
-        class Vd {
-        }
         class Fd {
+        }
+        class Vd {
         }
         const jd = function() {
             var e = {
@@ -8286,16 +8286,16 @@
             }
         }
         const zd = new Ud("8.0.3");
-        class $d {
+        class Gd {
             constructor() {}
             supports(e) {
-                return Ou(e)
+                return Mu(e)
             }
             create(e) {
                 return new Wd(e)
             }
         }
-        const Gd = (e,t)=>t;
+        const $d = (e,t)=>t;
         class Wd {
             constructor(e) {
                 this.length = 0,
@@ -8312,7 +8312,7 @@
                 this._removalsTail = null,
                 this._identityChangesHead = null,
                 this._identityChangesTail = null,
-                this._trackByFn = e || Gd
+                this._trackByFn = e || $d
             }
             forEachItem(e) {
                 let t;
@@ -8377,8 +8377,8 @@
             }
             diff(e) {
                 if (null == e && (e = []),
-                !Ou(e))
-                    throw new Error(`Error trying to diff '${N(e)}'. Only arrays and iterables are allowed`);
+                !Mu(e))
+                    throw new Error(`Error trying to diff '${O(e)}'. Only arrays and iterables are allowed`);
                 return this.check(e) ? this : null
             }
             onDestroy() {}
@@ -8444,7 +8444,7 @@
                 this._remove(e)),
                 null !== (e = null === this._linkedRecords ? null : this._linkedRecords.get(n, r)) ? (Eu(e.item, t) || this._addIdentityChange(e, t),
                 this._moveAfter(e, i, r)) : null !== (e = null === this._unlinkedRecords ? null : this._unlinkedRecords.get(n, null)) ? (Eu(e.item, t) || this._addIdentityChange(e, t),
-                this._reinsertAfter(e, i, r)) : e = this._addAfter(new Yd(t,n), i, r),
+                this._reinsertAfter(e, i, r)) : e = this._addAfter(new Kd(t,n), i, r),
                 e
             }
             _verifyReinsertion(e, t, n, r) {
@@ -8493,7 +8493,7 @@
                 e._prev = t,
                 null === r ? this._itTail = e : r._prev = e,
                 null === t ? this._itHead = e : t._next = e,
-                null === this._linkedRecords && (this._linkedRecords = new Kd),
+                null === this._linkedRecords && (this._linkedRecords = new qd),
                 this._linkedRecords.put(e),
                 e.currentIndex = n,
                 e
@@ -8514,7 +8514,7 @@
                 e)
             }
             _addToRemovals(e) {
-                return null === this._unlinkedRecords && (this._unlinkedRecords = new Kd),
+                return null === this._unlinkedRecords && (this._unlinkedRecords = new qd),
                 this._unlinkedRecords.put(e),
                 e.currentIndex = null,
                 e._nextRemoved = null,
@@ -8529,7 +8529,7 @@
                 e
             }
         }
-        class Yd {
+        class Kd {
             constructor(e, t) {
                 this.item = e,
                 this.trackById = t,
@@ -8547,7 +8547,7 @@
                 this._nextIdentityChange = null
             }
         }
-        class qd {
+        class Yd {
             constructor() {
                 this._head = null,
                 this._tail = null
@@ -8575,14 +8575,14 @@
                 null === this._head
             }
         }
-        class Kd {
+        class qd {
             constructor() {
                 this.map = new Map
             }
             put(e) {
                 const t = e.trackById;
                 let n = this.map.get(t);
-                n || (n = new qd,
+                n || (n = new Yd,
                 this.map.set(t, n)),
                 n.add(e)
             }
@@ -8613,7 +8613,7 @@
         class Zd {
             constructor() {}
             supports(e) {
-                return e instanceof Map || Nu(e)
+                return e instanceof Map || Ou(e)
             }
             create() {
                 return new Xd
@@ -8662,8 +8662,8 @@
             }
             diff(e) {
                 if (e) {
-                    if (!(e instanceof Map || Nu(e)))
-                        throw new Error(`Error trying to diff '${N(e)}'. Only maps and objects are allowed`)
+                    if (!(e instanceof Map || Ou(e)))
+                        throw new Error(`Error trying to diff '${O(e)}'. Only maps and objects are allowed`)
                 } else
                     e = new Map;
                 return this.check(e) ? this : null
@@ -8814,7 +8814,7 @@
             }
             return e.ngInjectableDef = k({
                 providedIn: "root",
-                factory: ()=>new e([new $d])
+                factory: ()=>new e([new Gd])
             }),
             e
         }
@@ -8869,12 +8869,12 @@
         }
           , ih = (...e)=>{}
           , lh = [new Zd]
-          , sh = new eh([new $d])
+          , sh = new eh([new Gd])
           , oh = new th(lh)
           , ah = (()=>{
             class e {
             }
-            return e.__NG_ELEMENT_ID__ = (()=>ch(e, Od)),
+            return e.__NG_ELEMENT_ID__ = (()=>ch(e, Md)),
             e
         }
         )()
@@ -8885,14 +8885,14 @@
           , dh = (()=>{
             class e {
             }
-            return e.__NG_ELEMENT_ID__ = (()=>fh(e, Od)),
+            return e.__NG_ELEMENT_ID__ = (()=>fh(e, Md)),
             e
         }
         )()
           , hh = function(e, t) {
             return function(e, t, n, r) {
                 let i;
-                Sd || (Sd = class extends e {
+                xd || (xd = class extends e {
                     constructor(e, t, n) {
                         super(),
                         this._lContainer = e,
@@ -8907,8 +8907,8 @@
                         return new Wi(this._hostTNode,this._hostView)
                     }
                     get parentInjector() {
-                        const e = Vi(this._hostTNode, this._hostView)
-                          , t = Si(e, this._hostView)
+                        const e = Fi(this._hostTNode, this._hostView)
+                          , t = xi(e, this._hostView)
                           , n = function(e, t, n) {
                             if (n.parent && -1 !== n.parent.injectorIndex) {
                                 const e = n.parent.injectorIndex;
@@ -8921,21 +8921,21 @@
                               , i = t
                               , l = t[pn];
                             for (; r > 1; )
-                                l = (i = i[Sn])[pn],
+                                l = (i = i[xn])[pn],
                                 r--;
                             return l
                         }(e, this._hostView, this._hostTNode);
-                        return Ci(e) && null != n ? new Wi(n,t) : new Wi(null,this._hostView)
+                        return _i(e) && null != n ? new Wi(n,t) : new Wi(null,this._hostView)
                     }
                     clear() {
-                        for (; this._lContainer[Nn].length; )
+                        for (; this._lContainer[On].length; )
                             this.remove(0)
                     }
                     get(e) {
                         return this._viewRefs[e] || null
                     }
                     get length() {
-                        return this._lContainer[Nn].length
+                        return this._lContainer[On].length
                     }
                     createEmbeddedView(e, t, n) {
                         const r = this._adjustIndex(n)
@@ -8957,7 +8957,7 @@
                         const n = e._lView
                           , r = this._adjustIndex(t);
                         return Wn(n) ? this.move(e, r) : (ba(n, this._lContainer, r),
-                        ya(n, !0, Ta(r, this._lContainer[Nn], this._lContainer[On])),
+                        ya(n, !0, Ta(r, this._lContainer[On], this._lContainer[Mn])),
                         e.attachToViewContainerRef(this),
                         this._viewRefs.splice(r, 0, e),
                         e)
@@ -8981,10 +8981,10 @@
                     detach(e) {
                         const t = this._adjustIndex(e, -1)
                           , n = va(this._lContainer, t);
-                        return n && null != this._viewRefs.splice(t, 1)[0] ? new _d(n,n[yn],-1) : null
+                        return n && null != this._viewRefs.splice(t, 1)[0] ? new Cd(n,n[yn],-1) : null
                     }
                     _adjustIndex(e, t=0) {
-                        return null == e ? this._lContainer[Nn].length + t : e
+                        return null == e ? this._lContainer[On].length + t : e
                     }
                 }
                 );
@@ -8995,16 +8995,16 @@
                     const e = r[wn].createComment("");
                     if (zn(r)) {
                         const t = r[wn]
-                          , i = Fn(n, r);
+                          , i = Vn(n, r);
                         ka(t, Ia(t, i), e, function(e, t) {
                             return Zr(e) ? e.nextSibling(t) : t.nextSibling
                         }(t, i))
                     } else
                         Ea(e, n, r);
                     r[n.index] = i = zo(l, r, e, n, !0),
-                    Go(r, i)
+                    $o(r, i)
                 }
-                return new Sd(i,n,r)
+                return new xd(i,n,r)
             }(e, t, kr(), hr())
         }
           , fh = Ad;
@@ -9041,18 +9041,18 @@
         function wh(e, t) {
             return e.nodes[t]
         }
-        function _h(e, t) {
-            return e.nodes[t]
-        }
         function Ch(e, t) {
             return e.nodes[t]
         }
-        function xh(e, t) {
+        function _h(e, t) {
+            return e.nodes[t]
+        }
+        function Sh(e, t) {
             return e.nodes[t]
         }
         class kh {
         }
-        const Sh = {
+        const xh = {
             setCurrentNode: void 0,
             createRootView: void 0,
             createEmbeddedView: void 0,
@@ -9075,7 +9075,7 @@
           , Eh = new Map;
         function Th(e) {
             let t = Eh.get(e);
-            return t || (t = N(e) + "_" + Eh.size,
+            return t || (t = O(e) + "_" + Eh.size,
             Eh.set(e, t)),
             t
         }
@@ -9088,17 +9088,17 @@
             }
             return r
         }
-        const Oh = "$$undefined"
-          , Nh = "$$empty";
+        const Mh = "$$undefined"
+          , Oh = "$$empty";
         function Rh(e) {
             return {
-                id: Oh,
+                id: Mh,
                 styles: e.styles,
                 encapsulation: e.encapsulation,
                 data: e.data
             }
         }
-        let Mh = 0;
+        let Nh = 0;
         function Ph(e, t, n, r) {
             return !(!(2 & e.state) && Eu(e.oldValues[t.bindingIndex + n], r))
         }
@@ -9106,14 +9106,14 @@
             return !!Ph(e, t, n, r) && (e.oldValues[t.bindingIndex + n] = r,
             !0)
         }
-        function Vh(e, t, n, r) {
+        function Fh(e, t, n, r) {
             const i = e.oldValues[t.bindingIndex + n];
             if (1 & e.state || !Tu(i, r)) {
                 const l = t.bindings[n].name;
-                throw ph(Sh.createDebugContext(e, t.nodeIndex), `${l}: ${i}`, `${l}: ${r}`, 0 != (1 & e.state))
+                throw ph(xh.createDebugContext(e, t.nodeIndex), `${l}: ${i}`, `${l}: ${r}`, 0 != (1 & e.state))
             }
         }
-        function Fh(e) {
+        function Vh(e) {
             let t = e;
             for (; t; )
                 2 & t.def.flags && (t.state |= 8),
@@ -9127,8 +9127,8 @@
         }
         function Bh(e, t, n, r) {
             try {
-                return Fh(33554432 & e.def.nodes[t].flags ? wh(e, t).componentView : e),
-                Sh.handleEvent(e, t, n, r)
+                return Vh(33554432 & e.def.nodes[t].flags ? wh(e, t).componentView : e),
+                xh.handleEvent(e, t, n, r)
             } catch (i) {
                 e.root.errorHandler.handleError(i)
             }
@@ -9150,10 +9150,10 @@
         function zh(e) {
             return !!e.parent && !!(32768 & e.parentNodeDef.flags)
         }
-        function $h(e) {
+        function Gh(e) {
             return !(!e.parent || 32768 & e.parentNodeDef.flags)
         }
-        function Gh(e) {
+        function $h(e) {
             return 1 << e % 32
         }
         function Wh(e) {
@@ -9162,7 +9162,7 @@
             const r = {};
             return e && e.forEach(([e,i])=>{
                 "number" == typeof e ? (t[e] = i,
-                n |= Gh(e)) : r[e] = i
+                n |= $h(e)) : r[e] = i
             }
             ),
             {
@@ -9171,7 +9171,7 @@
                 matchedQueryIds: n
             }
         }
-        function Yh(e, t) {
+        function Kh(e, t) {
             return e.map(e=>{
                 let n, r;
                 return Array.isArray(e) ? [r,n] = e : (r = 0,
@@ -9188,15 +9188,15 @@
             }
             )
         }
-        function qh(e, t, n) {
+        function Yh(e, t, n) {
             let r = n.renderParent;
             return r ? 0 == (1 & r.flags) || 0 == (33554432 & r.flags) || r.element.componentRendererType && r.element.componentRendererType.encapsulation === It.Native ? wh(e, n.renderParent.nodeIndex).renderElement : void 0 : t
         }
-        const Kh = new WeakMap;
+        const qh = new WeakMap;
         function Qh(e) {
-            let t = Kh.get(e);
+            let t = qh.get(e);
             return t || ((t = e(()=>Ih)).factory = e,
-            Kh.set(e, t)),
+            qh.set(e, t)),
             t
         }
         function Zh(e, t, n, r, i) {
@@ -9310,14 +9310,14 @@
         const uf = []
           , cf = {}
           , df = new Object
-          , hf = Th(Se)
-          , ff = Th(xe)
+          , hf = Th(xe)
+          , ff = Th(Se)
           , pf = Th(vd);
         function mf(e, t, n, r) {
             return n = P(n),
             {
                 index: -1,
-                deps: Yh(r, N(t)),
+                deps: Kh(r, O(t)),
                 flags: e,
                 token: t,
                 value: n
@@ -9329,7 +9329,7 @@
             let r = !1;
             for (let i = 0; i < e.length; i++) {
                 const l = e[i];
-                l.token === $c && !0 === l.value && (r = !0),
+                l.token === Gc && !0 === l.value && (r = !0),
                 1073741824 & l.flags && n.push(l.token),
                 l.index = i,
                 t[Th(l.token)] = l
@@ -9342,7 +9342,7 @@
                 isRoot: r
             }
         }
-        function yf(e, t, n=Se.THROW_IF_NOT_FOUND) {
+        function yf(e, t, n=xe.THROW_IF_NOT_FOUND) {
             const r = H(e);
             try {
                 if (8 & t.flags)
@@ -9444,9 +9444,9 @@
                 return null;
             const r = n[t];
             return r.viewContainerParent = null,
-            xf(n, t),
-            Sh.dirtyParentQueries(r),
-            _f(r),
+            Sf(n, t),
+            xh.dirtyParentQueries(r),
+            Cf(r),
             r
         }
         function wf(e, t, n) {
@@ -9455,17 +9455,17 @@
               , l = n.renderer.nextSibling(r);
             Zh(n, 2, i, l, void 0)
         }
-        function _f(e) {
+        function Cf(e) {
             Zh(e, 3, null, null, void 0)
         }
-        function Cf(e, t, n) {
+        function _f(e, t, n) {
             t >= e.length ? e.push(n) : e.splice(t, 0, n)
         }
-        function xf(e, t) {
+        function Sf(e, t) {
             t >= e.length - 1 ? e.pop() : e.splice(t, 1)
         }
         const kf = new Object;
-        function Sf(e, t, n, r, i, l) {
+        function xf(e, t, n, r, i, l) {
             return new Ef(e,t,n,r,i,l)
         }
         function If(e) {
@@ -9505,8 +9505,8 @@
                     throw new Error("ngModule should be provided");
                 const i = Qh(this.viewDefFactory)
                   , l = i.nodes[0].element.componentProvider.nodeIndex
-                  , s = Sh.createRootView(e, t || [], n, i, r, kf)
-                  , o = _h(s, l).instance;
+                  , s = xh.createRootView(e, t || [], n, i, r, kf)
+                  , o = Ch(s, l).instance;
                 return n && s.renderer.setAttribute(wh(s, 0).renderElement, "ng-version", zd.full),
                 new Tf(s,new Rf(s),o)
             }
@@ -9523,10 +9523,10 @@
                 this.instance = n
             }
             get location() {
-                return new Od(wh(this._view, this._elDef.nodeIndex).renderElement)
+                return new Md(wh(this._view, this._elDef.nodeIndex).renderElement)
             }
             get injector() {
-                return new Vf(this._view,this._elDef)
+                return new Ff(this._view,this._elDef)
             }
             get componentType() {
                 return this._component.constructor
@@ -9539,9 +9539,9 @@
             }
         }
         function Af(e, t, n) {
-            return new Of(e,t,n)
+            return new Mf(e,t,n)
         }
-        class Of {
+        class Mf {
             constructor(e, t, n) {
                 this._view = e,
                 this._elDef = t,
@@ -9549,10 +9549,10 @@
                 this._embeddedViews = []
             }
             get element() {
-                return new Od(this._data.renderElement)
+                return new Md(this._data.renderElement)
             }
             get injector() {
-                return new Vf(this._view,this._elDef)
+                return new Ff(this._view,this._elDef)
             }
             get parentInjector() {
                 let e = this._view
@@ -9560,12 +9560,12 @@
                 for (; !t && e; )
                     t = Lh(e),
                     e = e.parent;
-                return e ? new Vf(e,t) : new Vf(this._view,null)
+                return e ? new Ff(e,t) : new Ff(this._view,null)
             }
             clear() {
                 for (let e = this._embeddedViews.length - 1; e >= 0; e--) {
                     const t = vf(this._data, e);
-                    Sh.destroyView(t)
+                    xh.destroyView(t)
                 }
             }
             get(e) {
@@ -9600,7 +9600,7 @@
                     let i = t.viewContainer._embeddedViews;
                     null == n && (n = i.length),
                     r.viewContainerParent = e,
-                    Cf(i, n, r),
+                    _f(i, n, r),
                     function(e, t) {
                         const n = Hh(t);
                         if (!n || n === e || 16 & t.state)
@@ -9620,7 +9620,7 @@
                                 r = r.parent
                         }(0, t.parentNodeDef)
                     }(t, r),
-                    Sh.dirtyParentQueries(r),
+                    xh.dirtyParentQueries(r),
                     wf(t, n > 0 ? i[n - 1] : null, r)
                 }(this._view, this._data, t, n._view),
                 n.attachToViewContainerRef(this),
@@ -9633,11 +9633,11 @@
                 return function(e, t, r) {
                     const i = e.viewContainer._embeddedViews
                       , l = i[n];
-                    xf(i, n),
+                    Sf(i, n),
                     null == r && (r = i.length),
-                    Cf(i, r, l),
-                    Sh.dirtyParentQueries(l),
-                    _f(l),
+                    _f(i, r, l),
+                    xh.dirtyParentQueries(l),
+                    Cf(l),
                     wf(e, r > 0 ? i[r - 1] : null, l)
                 }(this._data, 0, t),
                 e
@@ -9647,14 +9647,14 @@
             }
             remove(e) {
                 const t = vf(this._data, e);
-                t && Sh.destroyView(t)
+                t && xh.destroyView(t)
             }
             detach(e) {
                 const t = vf(this._data, e);
                 return t ? new Rf(t) : null
             }
         }
-        function Nf(e) {
+        function Of(e) {
             return new Rf(e)
         }
         class Rf {
@@ -9677,7 +9677,7 @@
                 return 0 != (128 & this._view.state)
             }
             markForCheck() {
-                Fh(this._view)
+                Vh(this._view)
             }
             detach() {
                 this._view.state &= -5
@@ -9686,13 +9686,13 @@
                 const e = this._view.root.rendererFactory;
                 e.begin && e.begin();
                 try {
-                    Sh.checkAndUpdateView(this._view)
+                    xh.checkAndUpdateView(this._view)
                 } finally {
                     e.end && e.end()
                 }
             }
             checkNoChanges() {
-                Sh.checkNoChangesView(this._view)
+                xh.checkNoChangesView(this._view)
             }
             reattach() {
                 this._view.state |= 4
@@ -9703,12 +9703,12 @@
             }
             destroy() {
                 this._appRef ? this._appRef.detachView(this) : this._viewContainerRef && this._viewContainerRef.detach(this._viewContainerRef.indexOf(this)),
-                Sh.destroyView(this._view)
+                xh.destroyView(this._view)
             }
             detachFromAppRef() {
                 this._appRef = null,
-                _f(this._view),
-                Sh.dirtyParentQueries(this._view)
+                Cf(this._view),
+                xh.dirtyParentQueries(this._view)
             }
             attachToAppRef(e) {
                 if (this._viewContainerRef)
@@ -9721,7 +9721,7 @@
                 this._viewContainerRef = e
             }
         }
-        function Mf(e, t) {
+        function Nf(e, t) {
             return new Pf(e,t)
         }
         class Pf extends ah {
@@ -9731,29 +9731,29 @@
                 this._def = t
             }
             createEmbeddedView(e) {
-                return new Rf(Sh.createEmbeddedView(this._parentView, this._def, this._def.element.template, e))
+                return new Rf(xh.createEmbeddedView(this._parentView, this._def, this._def.element.template, e))
             }
             get elementRef() {
-                return new Od(wh(this._parentView, this._def.nodeIndex).renderElement)
+                return new Md(wh(this._parentView, this._def.nodeIndex).renderElement)
             }
         }
         function Df(e, t) {
-            return new Vf(e,t)
+            return new Ff(e,t)
         }
-        class Vf {
+        class Ff {
             constructor(e, t) {
                 this.view = e,
                 this.elDef = t
             }
-            get(e, t=Se.THROW_IF_NOT_FOUND) {
-                return Sh.resolveDep(this.view, this.elDef, !!this.elDef && 0 != (33554432 & this.elDef.flags), {
+            get(e, t=xe.THROW_IF_NOT_FOUND) {
+                return xh.resolveDep(this.view, this.elDef, !!this.elDef && 0 != (33554432 & this.elDef.flags), {
                     flags: 0,
                     token: e,
                     tokenKey: Th(e)
                 }, t)
             }
         }
-        function Ff(e, t) {
+        function Vf(e, t) {
             const n = e.def.nodes[t];
             if (1 & n.flags) {
                 const t = wh(e, n.nodeIndex);
@@ -9762,7 +9762,7 @@
             if (2 & n.flags)
                 return vh(e, n.nodeIndex).renderText;
             if (20240 & n.flags)
-                return _h(e, n.nodeIndex).instance;
+                return Ch(e, n.nodeIndex).instance;
             throw new Error(`Illegal state: read nodeValue for node index ${t}`)
         }
         function jf(e) {
@@ -9866,9 +9866,9 @@
                     }
                 }(this)
             }
-            get(e, t=Se.THROW_IF_NOT_FOUND, n=_.Default) {
+            get(e, t=xe.THROW_IF_NOT_FOUND, n=C.Default) {
                 let r = 0;
-                return n & _.SkipSelf ? r |= 1 : n & _.Self && (r |= 4),
+                return n & C.SkipSelf ? r |= 1 : n & C.Self && (r |= 4),
                 yf(this, {
                     token: e,
                     tokenKey: Th(e),
@@ -9883,7 +9883,7 @@
             }
             destroy() {
                 if (this._destroyed)
-                    throw new Error(`The ng module ${N(this.instance.constructor)} has already been destroyed.`);
+                    throw new Error(`The ng module ${O(this.instance.constructor)} has already been destroyed.`);
                 this._destroyed = !0,
                 function(e, t) {
                     const n = e._def
@@ -9906,12 +9906,12 @@
         }
         const Uf = Th(Dd)
           , zf = Th(Bd)
-          , $f = Th(Od)
-          , Gf = Th(dh)
+          , Gf = Th(Md)
+          , $f = Th(dh)
           , Wf = Th(ah)
-          , Yf = Th(nh)
-          , qf = Th(Se)
-          , Kf = Th(xe);
+          , Kf = Th(nh)
+          , Yf = Th(xe)
+          , qf = Th(Se);
         function Qf(e, t, n, r, i, l, s, o) {
             const a = [];
             if (s)
@@ -9948,7 +9948,7 @@
             a || (a = []),
             o || (o = []),
             l = P(l);
-            const h = Yh(s, N(i));
+            const h = Kh(s, O(i));
             return {
                 nodeIndex: -1,
                 parent: null,
@@ -10056,13 +10056,13 @@
             }
         }
         const sp = {};
-        function op(e, t, n, r, i=Se.THROW_IF_NOT_FOUND) {
+        function op(e, t, n, r, i=xe.THROW_IF_NOT_FOUND) {
             if (8 & r.flags)
                 return r.token;
             const l = e;
             2 & r.flags && (i = null);
             const s = r.tokenKey;
-            s === Yf && (n = !(!t || !t.element.componentView)),
+            s === Kf && (n = !(!t || !t.element.componentView)),
             t && 1 & r.flags && (n = !1,
             t = t.parent);
             let o = e;
@@ -10073,23 +10073,23 @@
                         return jf(ap(o, t, n));
                     case zf:
                         return ap(o, t, n).renderer;
-                    case $f:
-                        return new Od(wh(o, t.nodeIndex).renderElement);
                     case Gf:
+                        return new Md(wh(o, t.nodeIndex).renderElement);
+                    case $f:
                         return wh(o, t.nodeIndex).viewContainer;
                     case Wf:
                         if (t.element.template)
                             return wh(o, t.nodeIndex).template;
                         break;
-                    case Yf:
-                        return Nf(ap(o, t, n));
-                    case qf:
                     case Kf:
+                        return Of(ap(o, t, n));
+                    case Yf:
+                    case qf:
                         return Df(o, t);
                     default:
                         const e = (n ? t.element.allProviders : t.element.publicProviders)[s];
                         if (e) {
-                            let t = _h(o, e.nodeIndex);
+                            let t = Ch(o, e.nodeIndex);
                             return t || (t = {
                                 instance: ip(o, e)
                             },
@@ -10151,11 +10151,11 @@
             return r
         }
         function hp(e, t, n, r) {
-            const i = _h(e, t);
+            const i = Ch(e, t);
             if (!i)
                 return;
             const l = i.instance;
-            l && (Sh.setCurrentNode(e, t),
+            l && (xh.setCurrentNode(e, t),
             1048576 & n && bh(e, 512, r) && l.ngAfterContentInit(),
             2097152 & n && l.ngAfterContentChecked(),
             4194304 & n && bh(e, 768, r) && l.ngAfterViewInit(),
@@ -10173,7 +10173,7 @@
         }
         const pp = new ve("ROOT_CONTEXT_TOKEN",{
             providedIn: "root",
-            factory: ()=>Nc(z(mp))
+            factory: ()=>Oc(z(mp))
         })
           , mp = new ve("SCHEDULER_TOKEN",{
             providedIn: "root",
@@ -10205,12 +10205,12 @@
                         }
                     }
                 }(e, r.injector) : e
-                  , s = l.get(Fd, Xr)
-                  , o = l.get(Fl, null)
+                  , s = l.get(Vd, Xr)
+                  , o = l.get(Vl, null)
                   , a = i ? go(this.selector, s.createRenderer(null, this.componentDef)) : Ao(s, n)
                   , u = this.componentDef.onPush ? 576 : 528
                   , c = "string" == typeof n && /^#root-ng-internal-isolated-\d+/.test(n)
-                  , d = i || c ? Nc() : l.get(pp)
+                  , d = i || c ? Oc() : l.get(pp)
                   , h = s.createRenderer(a, this.componentDef);
                 n && a && (Zr(h) ? h.setAttribute(a, "ng-version", zd.full) : a.setAttribute("ng-version", zd.full));
                 const f = yo(null, To(-1, null, 1, 0, null, null, null, null), d, u, null, null, s, h, o, l)
@@ -10220,13 +10220,13 @@
                     const e = Ac(a, this.componentDef, f, s, h);
                     g = jn(0, f),
                     t && (g.projection = t.map(e=>Array.from(e))),
-                    m = Oc(e, this.componentDef, f, d, [Rc]),
-                    Go(f, e),
+                    m = Mc(e, this.componentDef, f, d, [Rc]),
+                    $o(f, e),
                     po(f)
                 } finally {
                     Ur(p)
                 }
-                const y = new yp(this.componentType,m,Id(Od, g, f),f,g);
+                const y = new yp(this.componentType,m,Id(Md, g, f),f,g);
                 return i && (y.hostView._tViewNode.child = g),
                 y
             }
@@ -10239,7 +10239,7 @@
                 this._tNode = i,
                 this.destroyCbs = [],
                 this.instance = t,
-                this.hostView = this.changeDetectorRef = new Cd(r),
+                this.hostView = this.changeDetectorRef = new _d(r),
                 this.hostView._tViewNode = vo(r[un], null, -1, r),
                 this.componentType = e
             }
@@ -10269,19 +10269,19 @@
             return t
         }
         const wp = "\ufffd"
-          , _p = /^\s*(\ufffd\d+:?\d*\ufffd)\s*,\s*(select|plural)\s*,/
-          , Cp = /\ufffd\/?\*(\d+:\d+)\ufffd/gi
-          , xp = /\ufffd(\/?[#*]\d+):?\d*\ufffd/gi
+          , Cp = /^\s*(\ufffd\d+:?\d*\ufffd)\s*,\s*(select|plural)\s*,/
+          , _p = /\ufffd\/?\*(\d+:\d+)\ufffd/gi
+          , Sp = /\ufffd(\/?[#*]\d+):?\d*\ufffd/gi
           , kp = /\ufffd(\d+):?\d*\ufffd/gi
-          , Sp = /({\s*\ufffd\d+:?\d*\ufffd\s*,\s*\S{6}\s*,[\s\S]*})/gi
+          , xp = /({\s*\ufffd\d+:?\d*\ufffd\s*,\s*\S{6}\s*,[\s\S]*})/gi
           , Ip = 0
           , Ep = /\[(\ufffd.+?\ufffd?)\]/
           , Tp = /\[(\ufffd.+?\ufffd?)\]|(\ufffd\/?\*\d+:\d+\ufffd)/g
           , Ap = /({\s*)(VAR_(PLURAL|SELECT)(_\d+)?)(\s*,)/g
-          , Op = /\ufffdI18N_EXP_(ICU(_\d+)?)\ufffd/g
-          , Np = /\/\*/
+          , Mp = /\ufffdI18N_EXP_(ICU(_\d+)?)\ufffd/g
+          , Op = /\/\*/
           , Rp = /\d+\:(\d+)/;
-        function Mp(e) {
+        function Np(e) {
             if (!e)
                 return [];
             let t = 0;
@@ -10295,7 +10295,7 @@
                     if (n.pop(),
                     0 == n.length) {
                         const n = e.substring(t, i);
-                        _p.test(n) ? r.push(Pp(n)) : n && r.push(n),
+                        Cp.test(n) ? r.push(Pp(n)) : n && r.push(n),
                         t = i + 1
                     }
                 } else {
@@ -10316,7 +10316,7 @@
               , n = [];
             let r = 1
               , i = 0;
-            const l = Mp(e = e.replace(_p, function(e, t, n) {
+            const l = Np(e = e.replace(Cp, function(e, t, n) {
                 return r = "select" === n ? 0 : 1,
                 i = parseInt(t.substr(1), 10),
                 ""
@@ -10325,7 +10325,7 @@
                 let e = l[a++].trim();
                 1 === r && (e = e.replace(/\s*(?:=)?(\w+)\s*/, "$1")),
                 e.length && t.push(e);
-                const i = Mp(l[a++]);
+                const i = Np(l[a++]);
                 i.length && n.push(i)
             }
             return s = t.indexOf("other"),
@@ -10343,14 +10343,14 @@
         }
         function Dp(e) {
             let t, n, r = "", i = 0, l = !1;
-            for (; null !== (t = Cp.exec(e)); )
+            for (; null !== (t = _p.exec(e)); )
                 l ? t[0] === `${wp}/*${n}${wp}` && (i = t.index,
                 l = !1) : (r += e.substring(i, t.index + t[0].length),
                 n = t[1],
                 l = !0);
             return r + e.substr(i)
         }
-        function Vp(e, t, n, r=null) {
+        function Fp(e, t, n, r=null) {
             const i = [null, null]
               , l = e.split(kp);
             let s = 0;
@@ -10369,7 +10369,7 @@
             i[1] = i.length - 2,
             i
         }
-        function Fp(e, t=0) {
+        function Vp(e, t=0) {
             let n;
             t |= Hp(e.mainBinding);
             for (let r = 0; r < e.values.length; r++) {
@@ -10380,7 +10380,7 @@
                         for (; n = kp.exec(r); )
                             t |= Hp(parseInt(n[1], 10));
                     else
-                        t = Fp(r, t)
+                        t = Vp(r, t)
                 }
             }
             return t
@@ -10415,7 +10415,7 @@
                           , r = e.search(new RegExp(`${wp}\\/\\*\\d+:${t}${wp}`));
                         return Dp(e.substring(n, r))
                     }
-                }(n, r).split(xp);
+                }(n, r).split(Sp);
                 for (let p = 0; p < f.length; p++) {
                     let e = f[p];
                     if (1 & p)
@@ -10431,13 +10431,13 @@
                             "#" === e.charAt(0) && (Lp[++u] = a = t)
                         }
                     else {
-                        const t = Mp(e);
+                        const t = Np(e);
                         for (let e = 0; e < t.length; e++)
                             if (1 & e) {
                                 const n = l + zp++;
                                 c.push(Jl, "", n, a << 17 | 1);
                                 const r = t[e]
-                                  , i = Fp(r);
+                                  , i = Vp(r);
                                 im(h, r, n, n);
                                 const s = h.length - 1;
                                 d.push(Hp(r.mainBinding), 3, -1 - r.mainBinding, n << 2 | 2, s, i, 2, n << 2 | 3, s)
@@ -10446,7 +10446,7 @@
                                   , r = n.match(kp)
                                   , i = l + zp++;
                                 c.push(r ? "" : n, i, a << 17 | 1),
-                                r && bp(Vp(n, i), d)
+                                r && bp(Fp(n, i), d)
                             }
                     }
                 }
@@ -10470,7 +10470,7 @@
             }(r, e, t, n)
         }
         let zp;
-        function $p(e, t, n) {
+        function Gp(e, t, n) {
             const r = e.next
               , i = hr();
             n || (n = t),
@@ -10482,12 +10482,12 @@
             for (; l; )
                 l.next === e && (l.next = r),
                 l = l.next;
-            Ea(Fn(e, i), e, i);
+            Ea(Vn(e, i), e, i);
             const s = i[e.index];
-            return 0 !== e.type && Dn(s) && Ea(s[On], e, i),
+            return 0 !== e.type && Dn(s) && Ea(s[Mn], e, i),
             e
         }
-        function Gp(e, t={}) {
+        function $p(e, t={}) {
             let n = e;
             if (Ep.test(e)) {
                 const e = {}
@@ -10499,7 +10499,7 @@
                         l.split("|").forEach(e=>{
                             const n = e.match(Rp)
                               , r = n ? parseInt(n[1], 10) : Ip
-                              , i = Np.test(e);
+                              , i = Op.test(e);
                             t.push([r, i, e])
                         }
                         ),
@@ -10524,7 +10524,7 @@
                 Object.keys(e).some(t=>!!e[t].length))
                     throw new Error(`i18n postprocess: unmatched values - ${JSON.stringify(e)}`)
             }
-            return Object.keys(t).length ? n = (n = n.replace(Ap, (e,n,r,i,l,s)=>t.hasOwnProperty(r) ? `${n}${t[r]}${s}` : e)).replace(Op, (e,n)=>{
+            return Object.keys(t).length ? n = (n = n.replace(Ap, (e,n,r,i,l,s)=>t.hasOwnProperty(r) ? `${n}${t[r]}${s}` : e)).replace(Mp, (e,n)=>{
                 if (t.hasOwnProperty(n)) {
                     const r = t[n];
                     if (!r.length)
@@ -10541,18 +10541,18 @@
                   , n = jp[Bp--]
                   , r = e.data[n + En];
                 let i = kr();
-                const l = qp(n, r.create, 0, t);
+                const l = Yp(n, r.create, 0, t);
                 for (let s = n + 1; s <= i.index - En; s++)
-                    -1 === l.indexOf(s) && Kp(s, t)
+                    -1 === l.indexOf(s) && qp(s, t)
             }(hr()[un])
         }
-        function Yp(e, t, n, r) {
+        function Kp(e, t, n, r) {
             const i = kr()
               , l = bo(e, t, n, r, null);
             return i.next === l && (i.next = null),
             l
         }
-        function qp(e, t, n, r) {
+        function Yp(e, t, n, r) {
             const i = hr()[wn];
             let l = null
               , s = null;
@@ -10563,7 +10563,7 @@
                     const e = ga(n, i)
                       , r = t[++a];
                     s = l,
-                    l = Yp(r, 3, e, null),
+                    l = Kp(r, 3, e, null),
                     o.push(r),
                     Tr(!1)
                 } else if ("number" == typeof n)
@@ -10571,18 +10571,18 @@
                     case 1:
                         const i = n >>> 17;
                         let u;
-                        s = $p(l, u = i === e ? r[pn] : jn(i, r), s);
+                        s = Gp(l, u = i === e ? r[pn] : jn(i, r), s);
                         break;
                     case 0:
                         const c = n >>> 3;
                         o.push(c),
                         s = l,
-                        (l = jn(c, r)) && (Sr(l),
+                        (l = jn(c, r)) && (xr(l),
                         3 === l.type && Tr(!0));
                         break;
                     case 5:
                         s = l = jn(n >>> 3, r),
-                        Sr(l),
+                        xr(l),
                         Tr(!1);
                         break;
                     case 4:
@@ -10598,7 +10598,7 @@
                           , u = t[++a]
                           , c = i.createComment(e);
                         s = l,
-                        l = Yp(u, 5, c, null),
+                        l = Kp(u, 5, c, null),
                         o.push(u),
                         ni(c, r),
                         l.activeCaseIndex = null,
@@ -10608,7 +10608,7 @@
                         const d = t[++a]
                           , h = t[++a];
                         s = l,
-                        l = Yp(h, 3, i.createElement(d), d),
+                        l = Kp(h, 3, i.createElement(d), d),
                         o.push(h);
                         break;
                     default:
@@ -10618,14 +10618,14 @@
             return Tr(!1),
             o
         }
-        function Kp(e, t) {
+        function qp(e, t) {
             const n = jn(e, t)
-              , r = Vn(e, t);
+              , r = Fn(e, t);
             r && Aa(t[wn], r);
             const i = Ba(e);
             if (Dn(i)) {
                 const e = i;
-                0 !== n.type && Aa(t[wn], e[On])
+                0 !== n.type && Aa(t[wn], e[Mn])
             }
         }
         function Qp(e, t, n) {
@@ -10639,10 +10639,10 @@
                   , i = [];
                 for (let l = 0; l < n.length; l += 2) {
                     const e = n[l]
-                      , t = n[l + 1].split(Sp);
+                      , t = n[l + 1].split(xp);
                     for (let n = 0; n < t.length; n++) {
                         const l = t[n];
-                        1 & n || "" !== l && (l.match(kp) ? bp(Vp(l, r, e), i) : ou(r, e, l))
+                        1 & n || "" !== l && (l.match(kp) ? bp(Fp(l, r, e), i) : ou(r, e, l))
                     }
                 }
                 e.data[t + En] = i
@@ -10693,7 +10693,7 @@
                                                     const r = e[t];
                                                     switch (7 & r) {
                                                     case 3:
-                                                        Kp(r >>> 3, l);
+                                                        qp(r >>> 3, l);
                                                         break;
                                                     case 6:
                                                         const i = jn(e[t + 1] >>> 3, l).activeCaseIndex;
@@ -10703,7 +10703,7 @@
                                             }
                                             const p = rm(h, s);
                                             f.activeCaseIndex = -1 !== p ? p : null,
-                                            qp(-1, h.create[p], 0, l),
+                                            Yp(-1, h.create[p], 0, l),
                                             o = !0;
                                             break;
                                         case 3:
@@ -11011,7 +11011,7 @@
                                 for (let e = 0; e < o.length; e++) {
                                     const t = o.item(e)
                                       , r = t.name.toLowerCase();
-                                    t.value.match(kp) ? El.hasOwnProperty(r) && bp(Sl[r] ? Vp(t.value, u, t.name, gl) : Il[r] ? Vp(t.value, u, t.name, yl) : Vp(t.value, u, t.name), n.update) : n.create.push(u << 3 | 4, t.name, t.value)
+                                    t.value.match(kp) ? El.hasOwnProperty(r) && bp(xl[r] ? Fp(t.value, u, t.name, gl) : Il[r] ? Fp(t.value, u, t.name, yl) : Fp(t.value, u, t.name), n.update) : n.create.push(u << 3 | 4, t.name, t.value)
                                 }
                                 e(t.firstChild, n, u, i, l, s),
                                 n.remove.push(u << 3 | 3)
@@ -11023,7 +11023,7 @@
                               , h = d.match(kp);
                             n.create.push(h ? "" : d, u, r << 17 | 1),
                             n.remove.push(u << 3 | 3),
-                            h && bp(Vp(d, u), n.update);
+                            h && bp(Fp(d, u), n.update);
                             break;
                         case Node.COMMENT_NODE:
                             const f = sm.exec(t.textContent || "");
@@ -11046,7 +11046,7 @@
                         const i = l.length - 1;
                         n.vars += Math.max(...l[i].vars),
                         n.childIcus.push(i);
-                        const a = Fp(t);
+                        const a = Vp(t);
                         n.update.push(Hp(t.mainBinding), 3, -1 - t.mainBinding, r << 2 | 2, i, a, 2, r << 2 | 3, i),
                         n.remove.push(i << 3 | 6, r << 3 | 3)
                     }
@@ -11074,7 +11074,7 @@
                     this.ngModule = e
                 }
                 resolveComponentFactory(e) {
-                    const t = Yt(e);
+                    const t = Kt(e);
                     return new gp(t,this.ngModule)
                 }
             }
@@ -11093,11 +11093,11 @@
                 this._r3Injector = Qc(e, t, [{
                     provide: vd,
                     useValue: this
-                }, dm], N(e)),
+                }, dm], O(e)),
                 this.instance = this.get(e)
             }
-            get(e, t=Se.THROW_IF_NOT_FOUND, n=_.Default) {
-                return e === Se || e === vd || e === xe ? this : this._r3Injector.get(e, t, n)
+            get(e, t=xe.THROW_IF_NOT_FOUND, n=C.Default) {
+                return e === xe || e === vd || e === Se ? this : this._r3Injector.get(e, t, n)
             }
             get componentFactoryResolver() {
                 return this.get(gd)
@@ -11135,51 +11135,51 @@
         function mm(e, t, n) {
             const r = Dr() + e
               , i = hr();
-            return Ar() ? Ru(i, r, n ? t.call(n) : t()) : Mu(i, r)
+            return Ar() ? Ru(i, r, n ? t.call(n) : t()) : Nu(i, r)
         }
         function gm(e, t, n, r) {
             const i = hr()
               , l = Dr() + e;
-            return Pu(i, l, n) ? Ru(i, l + 1, r ? t.call(r, n) : t(n)) : Mu(i, l + 1)
+            return Pu(i, l, n) ? Ru(i, l + 1, r ? t.call(r, n) : t(n)) : Nu(i, l + 1)
         }
         function ym(e, t, n, r, i) {
             const l = Dr() + e
               , s = hr();
-            return Du(s, l, n, r) ? Ru(s, l + 2, i ? t.call(i, n, r) : t(n, r)) : Mu(s, l + 2)
+            return Du(s, l, n, r) ? Ru(s, l + 2, i ? t.call(i, n, r) : t(n, r)) : Nu(s, l + 2)
         }
         function bm(e, t, n, r, i, l) {
             const s = Dr() + e
               , o = hr();
-            return Vu(o, s, n, r, i) ? Ru(o, s + 3, l ? t.call(l, n, r, i) : t(n, r, i)) : Mu(o, s + 3)
+            return Fu(o, s, n, r, i) ? Ru(o, s + 3, l ? t.call(l, n, r, i) : t(n, r, i)) : Nu(o, s + 3)
         }
         function vm(e, t, n, r, i, l, s) {
             const o = Dr() + e
               , a = hr();
-            return Fu(a, o, n, r, i, l) ? Ru(a, o + 4, s ? t.call(s, n, r, i, l) : t(n, r, i, l)) : Mu(a, o + 4)
+            return Vu(a, o, n, r, i, l) ? Ru(a, o + 4, s ? t.call(s, n, r, i, l) : t(n, r, i, l)) : Nu(a, o + 4)
         }
         function wm(e, t, n, r, i, l, s, o) {
             const a = Dr() + e
               , u = hr()
-              , c = Fu(u, a, n, r, i, l);
-            return Pu(u, a + 4, s) || c ? Ru(u, a + 5, o ? t.call(o, n, r, i, l, s) : t(n, r, i, l, s)) : Mu(u, a + 5)
+              , c = Vu(u, a, n, r, i, l);
+            return Pu(u, a + 4, s) || c ? Ru(u, a + 5, o ? t.call(o, n, r, i, l, s) : t(n, r, i, l, s)) : Nu(u, a + 5)
         }
-        function _m(e, t, n, r, i, l, s, o, a) {
+        function Cm(e, t, n, r, i, l, s, o, a) {
             const u = Dr() + e
               , c = hr()
-              , d = Fu(c, u, n, r, i, l);
-            return Du(c, u + 4, s, o) || d ? Ru(c, u + 6, a ? t.call(a, n, r, i, l, s, o) : t(n, r, i, l, s, o)) : Mu(c, u + 6)
+              , d = Vu(c, u, n, r, i, l);
+            return Du(c, u + 4, s, o) || d ? Ru(c, u + 6, a ? t.call(a, n, r, i, l, s, o) : t(n, r, i, l, s, o)) : Nu(c, u + 6)
         }
-        function Cm(e, t, n, r, i, l, s, o, a, u) {
+        function _m(e, t, n, r, i, l, s, o, a, u) {
             const c = Dr() + e
               , d = hr();
-            let h = Fu(d, c, n, r, i, l);
-            return Vu(d, c + 4, s, o, a) || h ? Ru(d, c + 7, u ? t.call(u, n, r, i, l, s, o, a) : t(n, r, i, l, s, o, a)) : Mu(d, c + 7)
+            let h = Vu(d, c, n, r, i, l);
+            return Fu(d, c + 4, s, o, a) || h ? Ru(d, c + 7, u ? t.call(u, n, r, i, l, s, o, a) : t(n, r, i, l, s, o, a)) : Nu(d, c + 7)
         }
-        function xm(e, t, n, r, i, l, s, o, a, u, c) {
+        function Sm(e, t, n, r, i, l, s, o, a, u, c) {
             const d = Dr() + e
               , h = hr()
-              , f = Fu(h, d, n, r, i, l);
-            return Fu(h, d + 4, s, o, a, u) || f ? Ru(h, d + 8, c ? t.call(c, n, r, i, l, s, o, a, u) : t(n, r, i, l, s, o, a, u)) : Mu(h, d + 8)
+              , f = Vu(h, d, n, r, i, l);
+            return Vu(h, d + 4, s, o, a, u) || f ? Ru(h, d + 8, c ? t.call(c, n, r, i, l, s, o, a, u) : t(n, r, i, l, s, o, a, u)) : Nu(h, d + 8)
         }
         function km(e, t, n, r) {
             let i = Dr() + e
@@ -11187,9 +11187,9 @@
             const s = hr();
             for (let o = 0; o < n.length; o++)
                 Pu(s, i++, n[o]) && (l = !0);
-            return l ? Ru(s, i, t.apply(r, n)) : Mu(s, i)
+            return l ? Ru(s, i, t.apply(r, n)) : Nu(s, i)
         }
-        function Sm(e, t) {
+        function xm(e, t) {
             const n = hr()[un];
             let r;
             const i = e + En;
@@ -11205,30 +11205,30 @@
             n.data[i] = r,
             r.onDestroy && (n.destroyHooks || (n.destroyHooks = [])).push(i, r.onDestroy)) : r = n.data[i];
             const l = r.factory(null);
-            return Fa(e, l),
+            return Va(e, l),
             l
         }
         function Im(e, t, n) {
             const r = Ba(e);
-            return Rm(Nm(e) ? gm(t, r.transform, n, r) : r.transform(n))
+            return Rm(Om(e) ? gm(t, r.transform, n, r) : r.transform(n))
         }
         function Em(e, t, n, r) {
             const i = Ba(e);
-            return Rm(Nm(e) ? ym(t, i.transform, n, r, i) : i.transform(n, r))
+            return Rm(Om(e) ? ym(t, i.transform, n, r, i) : i.transform(n, r))
         }
         function Tm(e, t, n, r, i) {
             const l = Ba(e);
-            return Rm(Nm(e) ? bm(t, l.transform, n, r, i, l) : l.transform(n, r, i))
+            return Rm(Om(e) ? bm(t, l.transform, n, r, i, l) : l.transform(n, r, i))
         }
         function Am(e, t, n, r, i, l) {
             const s = Ba(e);
-            return Rm(Nm(e) ? vm(t, s.transform, n, r, i, l, s) : s.transform(n, r, i, l))
+            return Rm(Om(e) ? vm(t, s.transform, n, r, i, l, s) : s.transform(n, r, i, l))
         }
-        function Om(e, t, n) {
+        function Mm(e, t, n) {
             const r = Ba(e);
-            return Rm(Nm(e) ? km(t, r.transform, n, r) : r.transform.apply(r, n))
+            return Rm(Om(e) ? km(t, r.transform, n, r) : r.transform.apply(r, n))
         }
-        function Nm(e) {
+        function Om(e) {
             return hr()[un].data[e + En].pure
         }
         function Rm(e) {
@@ -11239,7 +11239,7 @@
             }
             return e
         }
-        class Mm extends r.a {
+        class Nm extends r.a {
             constructor(e=!1) {
                 super(),
                 this.__isAsync = e
@@ -11299,7 +11299,7 @@
             constructor() {
                 this.dirty = !0,
                 this._results = [],
-                this.changes = new Mm,
+                this.changes = new Nm,
                 this.length = 0
             }
             map(e) {
@@ -11354,19 +11354,19 @@
                 this.deep = n
             }
             track(e, t, n, r) {
-                n ? this.deep = Ym(this.deep, e, t, null != r ? r : null) : this.shallow = Ym(this.shallow, e, t, null != r ? r : null)
+                n ? this.deep = Km(this.deep, e, t, null != r ? r : null) : this.shallow = Km(this.shallow, e, t, null != r ? r : null)
             }
             clone() {
                 return new Dm(this,null,this.deep)
             }
             container() {
-                const e = Vm(this.shallow)
-                  , t = Vm(this.deep);
+                const e = Fm(this.shallow)
+                  , t = Fm(this.deep);
                 return e || t ? new Dm(this,e,t) : null
             }
             createView() {
-                const e = Fm(this.shallow)
-                  , t = Fm(this.deep);
+                const e = Vm(this.shallow)
+                  , t = Vm(this.deep);
                 return e || t ? new Dm(this,e,t) : null
             }
             insertView(e) {
@@ -11374,19 +11374,19 @@
                 jm(e, this.deep)
             }
             addNode(e) {
-                $m(this.deep, e, !1),
-                $m(this.shallow, e, !1)
+                Gm(this.deep, e, !1),
+                Gm(this.shallow, e, !1)
             }
             insertNodeBeforeViews(e) {
-                $m(this.deep, e, !0),
-                $m(this.shallow, e, !0)
+                Gm(this.deep, e, !0),
+                Gm(this.shallow, e, !0)
             }
             removeView() {
                 Bm(this.shallow),
                 Bm(this.deep)
             }
         }
-        function Vm(e) {
+        function Fm(e) {
             let t = null;
             for (; e; ) {
                 const n = [];
@@ -11402,7 +11402,7 @@
             }
             return t
         }
-        function Fm(e) {
+        function Vm(e) {
             let t = null;
             for (; e; )
                 t = {
@@ -11454,10 +11454,10 @@
         }
         function zm(e, t, n, r) {
             return n ? Lm(n, e, t) : r > -1 ? zi(t[un].data, t, r, e) : function(e, t) {
-                return 3 === e.type || 4 === e.type ? Id(Od, e, t) : 0 === e.type ? Ed(ah, Od, e, t) : null
+                return 3 === e.type || 4 === e.type ? Id(Md, e, t) : 0 === e.type ? Ed(ah, Md, e, t) : null
             }(e, t)
         }
-        function $m(e, t, n) {
+        function Gm(e, t, n) {
             const r = hr();
             for (; e; ) {
                 const i = e.predicate
@@ -11470,21 +11470,21 @@
                         const e = Ui(t, r, l, !1, !1);
                         null !== e && (s = zm(t, r, i.read, e))
                     }
-                    null !== s && Gm(e, s, n)
+                    null !== s && $m(e, s, n)
                 } else {
                     const l = i.selector;
                     for (let s = 0; s < l.length; s++) {
                         const o = Hm(t, l[s]);
                         if (null !== o) {
                             const l = zm(t, r, i.read, o);
-                            null !== l && Gm(e, l, n)
+                            null !== l && $m(e, l, n)
                         }
                     }
                 }
                 e = e.next
             }
         }
-        function Gm(e, t, n) {
+        function $m(e, t, n) {
             n ? e.values.splice(-1, 0, t) : e.values.push(t),
             e.list.setDirty()
         }
@@ -11496,7 +11496,7 @@
                 read: t
             }
         }
-        function Ym(e, t, n, r) {
+        function Km(e, t, n, r) {
             return {
                 next: e,
                 list: t,
@@ -11505,7 +11505,7 @@
                 containerValues: null
             }
         }
-        function qm(e, t, n) {
+        function Ym(e, t, n) {
             const r = hr()
               , i = new Pm
               , l = r[fn] || (r[fn] = new Dm(null,null,null));
@@ -11519,7 +11519,7 @@
             }(r, i, i.destroy),
             i
         }
-        function Km(e) {
+        function qm(e) {
             const t = e
               , n = Ar();
             return !(!e.dirty || n !== t._static || (e.reset(t._valuesTree || []),
@@ -11536,8 +11536,8 @@
             const r = hr()[un];
             r.firstTemplatePass && r.expandoStartIndex++;
             const i = jr()
-              , l = qm(e, t, n);
-            return Fa(i - En, l),
+              , l = Ym(e, t, n);
+            return Va(i - En, l),
             Br(i + 1),
             l
         }
@@ -11549,7 +11549,7 @@
         function Jm(e, t, n, r) {
             const i = hr()
               , l = i[un]
-              , s = qm(t, n, r);
+              , s = Ym(t, n, r);
             if ((i[kn] || (i[kn] = [])).push(s),
             l.firstTemplatePass) {
                 const t = l.contentQueries || (l.contentQueries = []);
@@ -11570,7 +11570,7 @@
             e[kn][t]
         }
         function ng(e, t) {
-            return Ed(ah, Od, e, t)
+            return Ed(ah, Md, e, t)
         }
         class rg {
         }
@@ -11582,7 +11582,7 @@
         }
         function sg(e, t, n) {
             if (t && t !== n)
-                throw new Error(`Duplicate module registered for ${e} - ${N(t)} vs ${N(t.name)}`)
+                throw new Error(`Duplicate module registered for ${e} - ${O(t)} vs ${O(t.name)}`)
         }
         function og(e, t) {
             sg(e, ig.get(e), t),
@@ -11605,16 +11605,16 @@
             return new Error(`No module with ID ${e} loaded`)
         }
         const hg = (()=>({
-            "\u0275\u0275defineBase": $t,
-            "\u0275\u0275defineComponent": Ft,
-            "\u0275\u0275defineDirective": Gt,
+            "\u0275\u0275defineBase": Gt,
+            "\u0275\u0275defineComponent": Vt,
+            "\u0275\u0275defineDirective": $t,
             "\u0275\u0275defineInjectable": k,
             "\u0275\u0275defineInjector": I,
             "\u0275\u0275defineNgModule": Lt,
             "\u0275\u0275definePipe": Wt,
             "\u0275\u0275directiveInject": Ha,
-            "\u0275\u0275getFactoryOf": Yi,
-            "\u0275\u0275getInheritedFactory": qi,
+            "\u0275\u0275getFactoryOf": Ki,
+            "\u0275\u0275getInheritedFactory": Yi,
             "\u0275\u0275inject": z,
             "\u0275\u0275injectAttribute": La,
             "\u0275\u0275templateRefExtractor": ng,
@@ -11623,13 +11623,13 @@
             "\u0275\u0275InheritDefinitionFeature": Hc,
             "\u0275\u0275elementAttribute": ou,
             "\u0275\u0275bind": Bu,
-            "\u0275\u0275container": Na,
-            "\u0275\u0275nextContext": _u,
-            "\u0275\u0275containerRefreshStart": Ma,
+            "\u0275\u0275container": Oa,
+            "\u0275\u0275nextContext": Cu,
+            "\u0275\u0275containerRefreshStart": Na,
             "\u0275\u0275containerRefreshEnd": Pa,
-            "\u0275\u0275namespaceHTML": Kr,
-            "\u0275\u0275namespaceMathML": qr,
-            "\u0275\u0275namespaceSVG": Yr,
+            "\u0275\u0275namespaceHTML": qr,
+            "\u0275\u0275namespaceMathML": Yr,
+            "\u0275\u0275namespaceSVG": Kr,
             "\u0275\u0275enableBindings": cr,
             "\u0275\u0275disableBindings": dr,
             "\u0275\u0275allocHostVars": aa,
@@ -11644,19 +11644,19 @@
             "\u0275\u0275pureFunction3": bm,
             "\u0275\u0275pureFunction4": vm,
             "\u0275\u0275pureFunction5": wm,
-            "\u0275\u0275pureFunction6": _m,
-            "\u0275\u0275pureFunction7": Cm,
-            "\u0275\u0275pureFunction8": xm,
+            "\u0275\u0275pureFunction6": Cm,
+            "\u0275\u0275pureFunction7": _m,
+            "\u0275\u0275pureFunction8": Sm,
             "\u0275\u0275pureFunctionV": km,
             "\u0275\u0275getCurrentView": fu,
-            "\u0275\u0275restoreView": xr,
+            "\u0275\u0275restoreView": Sr,
             "\u0275\u0275interpolation1": zu,
-            "\u0275\u0275interpolation2": $u,
-            "\u0275\u0275interpolation3": Gu,
+            "\u0275\u0275interpolation2": Gu,
+            "\u0275\u0275interpolation3": $u,
             "\u0275\u0275interpolation4": Wu,
-            "\u0275\u0275interpolation5": Yu,
-            "\u0275\u0275interpolation6": qu,
-            "\u0275\u0275interpolation7": Ku,
+            "\u0275\u0275interpolation5": Ku,
+            "\u0275\u0275interpolation6": Yu,
+            "\u0275\u0275interpolation7": qu,
             "\u0275\u0275interpolation8": Qu,
             "\u0275\u0275interpolationV": Uu,
             "\u0275\u0275listener": gu,
@@ -11669,8 +11669,8 @@
             "\u0275\u0275pipeBind2": Em,
             "\u0275\u0275pipeBind3": Tm,
             "\u0275\u0275pipeBind4": Am,
-            "\u0275\u0275pipeBindV": Om,
-            "\u0275\u0275projectionDef": xu,
+            "\u0275\u0275pipeBindV": Mm,
+            "\u0275\u0275projectionDef": Su,
             "\u0275\u0275property": ju,
             "\u0275\u0275propertyInterpolate": Zu,
             "\u0275\u0275propertyInterpolate1": Xu,
@@ -11682,8 +11682,8 @@
             "\u0275\u0275propertyInterpolate7": ic,
             "\u0275\u0275propertyInterpolate8": lc,
             "\u0275\u0275propertyInterpolateV": sc,
-            "\u0275\u0275pipe": Sm,
-            "\u0275\u0275queryRefresh": Km,
+            "\u0275\u0275pipe": xm,
+            "\u0275\u0275queryRefresh": qm,
             "\u0275\u0275viewQuery": Zm,
             "\u0275\u0275staticViewQuery": Qm,
             "\u0275\u0275staticContentQuery": eg,
@@ -11694,14 +11694,14 @@
             "\u0275\u0275elementHostAttrs": au,
             "\u0275\u0275elementStyling": Ua,
             "\u0275\u0275elementStylingMap": Za,
-            "\u0275\u0275elementStyleProp": Ga,
+            "\u0275\u0275elementStyleProp": $a,
             "\u0275\u0275elementStylingApply": Ja,
-            "\u0275\u0275elementClassProp": qa,
+            "\u0275\u0275elementClassProp": Ya,
             "\u0275\u0275elementHostStyling": za,
             "\u0275\u0275elementHostStylingMap": Xa,
             "\u0275\u0275elementHostStyleProp": Wa,
             "\u0275\u0275elementHostStylingApply": eu,
-            "\u0275\u0275elementHostClassProp": Ka,
+            "\u0275\u0275elementHostClassProp": qa,
             "\u0275\u0275select": oc,
             "\u0275\u0275template": Ra,
             "\u0275\u0275text": ac,
@@ -11714,7 +11714,7 @@
             "\u0275\u0275i18nStart": Up,
             "\u0275\u0275i18nEnd": Wp,
             "\u0275\u0275i18nApply": tm,
-            "\u0275\u0275i18nPostprocess": Gp,
+            "\u0275\u0275i18nPostprocess": $p,
             "\u0275\u0275i18nLocalize": cm,
             "\u0275\u0275resolveWindow": tn,
             "\u0275\u0275resolveDocument": nn,
@@ -11723,11 +11723,11 @@
             "\u0275\u0275setNgModuleScope": Ut,
             "\u0275\u0275sanitizeHtml": Ll,
             "\u0275\u0275sanitizeStyle": Ul,
-            "\u0275\u0275defaultStyleSanitizer": ql,
-            "\u0275\u0275sanitizeResourceUrl": $l,
-            "\u0275\u0275sanitizeScript": Gl,
+            "\u0275\u0275defaultStyleSanitizer": Yl,
+            "\u0275\u0275sanitizeResourceUrl": Gl,
+            "\u0275\u0275sanitizeScript": $l,
             "\u0275\u0275sanitizeUrl": zl,
-            "\u0275\u0275sanitizeUrlOrResourceUrl": Yl,
+            "\u0275\u0275sanitizeUrlOrResourceUrl": Kl,
             "\u0275registerNgModuleType": og
         }))()
           , fg = []
@@ -11740,7 +11740,7 @@
                     for (let e = pg.length - 1; e >= 0; e--) {
                         const {moduleType: t, ngModule: n} = pg[e];
                         n.declarations && n.declarations.every(yg) && (pg.splice(e, 1),
-                        xg(t, n))
+                        Sg(t, n))
                     }
                 } finally {
                     mg = !1
@@ -11762,9 +11762,9 @@
         function vg(e, t) {
             const n = vp(t.declarations || fg);
             let r = null;
-            Object.defineProperty(e, Mt, {
+            Object.defineProperty(e, Nt, {
                 configurable: !0,
-                get: ()=>(null === r && (r = F().compileNgModule(hg, `ng:///${e.name}/ngModuleDef.js`, {
+                get: ()=>(null === r && (r = V().compileNgModule(hg, `ng:///${e.name}/ngModuleDef.js`, {
                     type: e,
                     bootstrap: vp(t.bootstrap || fg).map(P),
                     declarations: n.map(P),
@@ -11777,7 +11777,7 @@
             }),
             t.id && og(t.id, e);
             let i = null;
-            Object.defineProperty(e, O, {
+            Object.defineProperty(e, M, {
                 get: ()=>{
                     if (null === i) {
                         const n = {
@@ -11787,7 +11787,7 @@
                             providers: t.providers || fg,
                             imports: [(t.imports || fg).map(P), (t.exports || fg).map(P)]
                         };
-                        i = F().compileInjector(hg, `ng:///${e.name}/ngInjectorDef.js`, n)
+                        i = V().compileInjector(hg, `ng:///${e.name}/ngInjectorDef.js`, n)
                     }
                     return i
                 }
@@ -11796,27 +11796,27 @@
             })
         }
         let wg = new Map
-          , _g = new Map;
-        function Cg() {
+          , Cg = new Map;
+        function _g() {
             wg = new Map,
-            _g = new Map,
+            Cg = new Map,
             pg.length = 0
         }
-        function xg(e, t) {
+        function Sg(e, t) {
             const n = vp(t.declarations || fg)
-              , r = Sg(e);
+              , r = xg(e);
             n.forEach(t=>{
-                t.hasOwnProperty(Ot) ? kg(Yt(t), r) : t.hasOwnProperty(Nt) || t.hasOwnProperty(Rt) || (t.ngSelectorScope = e)
+                t.hasOwnProperty(Mt) ? kg(Kt(t), r) : t.hasOwnProperty(Ot) || t.hasOwnProperty(Rt) || (t.ngSelectorScope = e)
             }
             )
         }
         function kg(e, t) {
-            e.directiveDefs = (()=>Array.from(t.compilation.directives).map(e=>e.hasOwnProperty(Ot) ? Yt(e) : qt(e)).filter(e=>!!e)),
-            e.pipeDefs = (()=>Array.from(t.compilation.pipes).map(e=>Kt(e))),
+            e.directiveDefs = (()=>Array.from(t.compilation.directives).map(e=>e.hasOwnProperty(Mt) ? Kt(e) : Yt(e)).filter(e=>!!e)),
+            e.pipeDefs = (()=>Array.from(t.compilation.pipes).map(e=>qt(e))),
             e.schemas = t.schemas,
             e.template.ngPrivateData = void 0
         }
-        function Sg(e, t) {
+        function xg(e, t) {
             if (!Eg(e))
                 throw new Error(`${e.name} does not have an ngModuleDef`);
             const n = Zt(e);
@@ -11834,7 +11834,7 @@
                 }
             };
             return on(n.declarations).forEach(e=>{
-                Kt(e) ? r.compilation.pipes.add(e) : r.compilation.directives.add(e)
+                qt(e) ? r.compilation.pipes.add(e) : r.compilation.directives.add(e)
             }
             ),
             on(n.imports).forEach(e=>{
@@ -11842,7 +11842,7 @@
                 if (!Eg(n))
                     throw new Error(`Importing ${n.name} which does not have an ngModuleDef`);
                 t && t(n);
-                const i = Sg(n, t);
+                const i = xg(n, t);
                 i.exported.directives.forEach(e=>r.compilation.directives.add(e)),
                 i.exported.pipes.forEach(e=>r.compilation.pipes.add(e))
             }
@@ -11850,7 +11850,7 @@
             on(n.exports).forEach(e=>{
                 const n = e;
                 if (Eg(n)) {
-                    const e = Sg(n, t);
+                    const e = xg(n, t);
                     e.exported.directives.forEach(e=>{
                         r.compilation.directives.add(e),
                         r.exported.directives.add(e)
@@ -11862,7 +11862,7 @@
                     }
                     )
                 } else
-                    Kt(n) ? r.exported.pipes.add(n) : r.exported.directives.add(n)
+                    qt(n) ? r.exported.pipes.add(n) : r.exported.directives.add(n)
             }
             ),
             n.transitiveCompileScopes = r,
@@ -11879,14 +11879,14 @@
         function Tg(e, t) {
             let n = null;
             !function(e, t) {
-                xt(t) && (_t.set(e, t),
-                Ct.add(e))
+                St(t) && (Ct.set(e, t),
+                _t.add(e))
             }(e, t),
-            Object.defineProperty(e, Ot, {
+            Object.defineProperty(e, Mt, {
                 get: ()=>{
-                    const r = F();
+                    const r = V();
                     if (null === n) {
-                        if (xt(t)) {
+                        if (St(t)) {
                             const n = [`Component '${e.name}' is not resolved:`];
                             throw t.templateUrl && n.push(` - templateUrl: ${t.templateUrl}`),
                             t.styleUrls && t.styleUrls.length && n.push(` - styleUrls: ${JSON.stringify(t.styleUrls)}`),
@@ -11894,7 +11894,7 @@
                             new Error(n.join("\n"))
                         }
                         const i = t.templateUrl || `ng:///${e.name}/template.html`
-                          , l = Object.assign({}, Ng(e, t), {
+                          , l = Object.assign({}, Og(e, t), {
                             typeSourceSpan: r.createParseSourceSpan("Component", e.name, i),
                             template: t.template || "",
                             preserveWhitespaces: t.preserveWhitespaces || !1,
@@ -11913,7 +11913,7 @@
                         function(t) {
                             return void 0 !== e.ngSelectorScope
                         }()) {
-                            const t = Sg(e.ngSelectorScope);
+                            const t = xg(e.ngSelectorScope);
                             kg(n, t)
                         }
                     }
@@ -11926,13 +11926,13 @@
         }
         function Ag(e, t) {
             let n = null;
-            Object.defineProperty(e, Nt, {
+            Object.defineProperty(e, Ot, {
                 get: ()=>{
                     if (null === n) {
                         const r = e && e.name
                           , i = `ng:///${r}/ngDirectiveDef.js`
-                          , l = F()
-                          , s = Ng(e, t);
+                          , l = V()
+                          , s = Og(e, t);
                         s.typeSourceSpan = l.createParseSourceSpan("Directive", r, i),
                         s.usesInheritance && Rg(e),
                         n = l.compileDirective(hg, i, s)
@@ -11944,10 +11944,10 @@
             }),
             oe(e)
         }
-        function Og(e) {
+        function Mg(e) {
             return Object.getPrototypeOf(e.prototype) === Object.prototype
         }
-        function Ng(e, t) {
+        function Og(e, t) {
             const n = ie().ownPropMetadata(e);
             return {
                 name: e.name,
@@ -11959,16 +11959,16 @@
                 propMetadata: n,
                 inputs: t.inputs || At,
                 outputs: t.outputs || At,
-                queries: Vg(e, n, Fg),
+                queries: Fg(e, n, Vg),
                 lifecycle: {
                     usesOnChanges: e.prototype.hasOwnProperty("ngOnChanges")
                 },
                 typeSourceSpan: null,
-                usesInheritance: !Og(e),
+                usesInheritance: !Mg(e),
                 exportAs: (r = t.exportAs,
                 void 0 === r ? null : r.split(",").map(e=>e.trim())),
                 providers: t.providers || null,
-                viewQueries: Vg(e, n, jg)
+                viewQueries: Fg(e, n, jg)
             };
             var r
         }
@@ -11976,20 +11976,20 @@
             const t = Object.prototype;
             let n = Object.getPrototypeOf(e);
             for (; n && n !== t; ) {
-                if (!qt(n) && !Yt(n) && !Qt(n)) {
+                if (!Yt(n) && !Kt(n) && !Qt(n)) {
                     const e = Pg(n);
-                    e && Mg(n, e)
+                    e && Ng(n, e)
                 }
                 n = Object.getPrototypeOf(n)
             }
         }
-        function Mg(e, t) {
+        function Ng(e, t) {
             let n = null;
             Object.defineProperty(e, Pt, {
                 get: ()=>{
                     if (null === n) {
                         const r = `ng://${e && e.name}/ngBaseDef.js`
-                          , i = F();
+                          , i = V();
                         n = i.compileBase(hg, r, t)
                     }
                     return n
@@ -12000,8 +12000,8 @@
         }
         function Pg(e) {
             const t = ie().ownPropMetadata(e)
-              , n = Vg(e, t, jg)
-              , r = Vg(e, t, Fg);
+              , n = Fg(e, t, jg)
+              , r = Fg(e, t, Vg);
             let i, l;
             for (const s in t)
                 t[s].forEach(e=>{
@@ -12027,7 +12027,7 @@
             };
             var n
         }
-        function Vg(e, t, n) {
+        function Fg(e, t, n) {
             const r = [];
             for (const i in t)
                 if (t.hasOwnProperty(i)) {
@@ -12045,7 +12045,7 @@
                 }
             return r
         }
-        function Fg(e) {
+        function Vg(e) {
             const t = e.ngMetadataName;
             return "ContentChild" === t || "ContentChildren" === t
         }
@@ -12062,7 +12062,7 @@
                 get: ()=>{
                     if (null === n) {
                         const r = e.name;
-                        n = F().compilePipe(hg, `ng:///${r}/ngPipeDef.js`, {
+                        n = V().compilePipe(hg, `ng:///${r}/ngPipeDef.js`, {
                             type: e,
                             typeArgumentCount: 0,
                             name: r,
@@ -12084,21 +12084,21 @@
           , zg = d("Pipe", e=>Object.assign({
             pure: !0
         }, e), void 0, void 0, (e,t)=>Jg(e, t))
-          , $g = p("Input", e=>({
+          , Gg = p("Input", e=>({
             bindingPropertyName: e
         }))
-          , Gg = p("Output", e=>({
+          , $g = p("Output", e=>({
             bindingPropertyName: e
         }))
           , Wg = p("HostBinding", e=>({
             hostPropertyName: e
         }))
-          , Yg = p("HostListener", (e,t)=>({
+          , Kg = p("HostListener", (e,t)=>({
             eventName: e,
             args: t
         }))
-          , qg = Tg
-          , Kg = Ag
+          , Yg = Tg
+          , qg = Ag
           , Qg = Hg
           , Zg = Ad
           , Xg = Ad
@@ -12199,60 +12199,60 @@
           , wy = function(e) {
             const t = gy(e)
               , n = on(Zt(e).declarations).reduce((e,t)=>{
-                const n = Yt(t);
+                const n = Kt(t);
                 return n && e.push(new gp(n)),
                 e
             }
             , []);
             return new py(t,n)
         }
-          , _y = my
-          , Cy = function(e) {
+          , Cy = my
+          , _y = function(e) {
             return Promise.resolve(wy(e))
         }
-          , xy = my
+          , Sy = my
           , ky = (()=>(class {
             constructor() {
                 this.compileModuleSync = yy,
                 this.compileModuleAsync = vy,
-                this.compileModuleAndAllComponentsSync = _y,
-                this.compileModuleAndAllComponentsAsync = xy
+                this.compileModuleAndAllComponentsSync = Cy,
+                this.compileModuleAndAllComponentsAsync = Sy
             }
             clearCache() {}
             clearCacheFor(e) {}
             getModuleId(e) {}
         }
         ))()
-          , Sy = new ve("compilerOptions");
+          , xy = new ve("compilerOptions");
         class Iy {
         }
         let Ey, Ty;
         function Ay() {
-            const e = V.wtf;
+            const e = F.wtf;
             return !(!e || !(Ey = e.trace) || (Ty = Ey.events,
             0))
         }
-        function Oy(e, t=null) {
+        function My(e, t=null) {
             return Ty.createScope(e, t)
         }
-        function Ny(e, t) {
+        function Oy(e, t) {
             return Ey.leaveScope(e, t),
             t
         }
         function Ry(e, t) {
             return Ey.beginTimeRange(e, t)
         }
-        function My(e) {
+        function Ny(e) {
             Ey.endTimeRange(e)
         }
         const Py = Ay()
-          , Dy = Py ? Oy : (e,t)=>(function(e, t) {
+          , Dy = Py ? My : (e,t)=>(function(e, t) {
             return null
         }
         )
-          , Vy = Py ? Ny : (e,t)=>t
-          , Fy = Py ? Ry : (e,t)=>null
-          , jy = Py ? My : e=>null
+          , Fy = Py ? Oy : (e,t)=>t
+          , Vy = Py ? Ry : (e,t)=>null
+          , jy = Py ? Ny : e=>null
           , By = (()=>Promise.resolve(0))();
         function Hy(e) {
             "undefined" == typeof Zone ? By.then(()=>{
@@ -12265,10 +12265,10 @@
                 if (this.hasPendingMicrotasks = !1,
                 this.hasPendingMacrotasks = !1,
                 this.isStable = !0,
-                this.onUnstable = new Mm(!1),
-                this.onMicrotaskEmpty = new Mm(!1),
-                this.onStable = new Mm(!1),
-                this.onError = new Mm(!1),
+                this.onUnstable = new Nm(!1),
+                this.onMicrotaskEmpty = new Nm(!1),
+                this.onStable = new Nm(!1),
+                this.onError = new Nm(!1),
                 "undefined" == typeof Zone)
                     throw new Error("In this configuration Angular requires Zone.js");
                 var t;
@@ -12285,7 +12285,7 @@
                     },
                     onInvokeTask: (e,n,r,i,l,s)=>{
                         try {
-                            return Gy(t),
+                            return $y(t),
                             e.invokeTask(r, i, l, s)
                         } finally {
                             Wy(t)
@@ -12294,7 +12294,7 @@
                     ,
                     onInvoke: (e,n,r,i,l,s,o)=>{
                         try {
-                            return Gy(t),
+                            return $y(t),
                             e.invoke(r, i, l, s, o)
                         } finally {
                             Wy(t)
@@ -12304,7 +12304,7 @@
                     onHasTask: (e,n,r,i)=>{
                         e.hasTask(r, i),
                         n === r && ("microTask" == i.change ? (t.hasPendingMicrotasks = i.microTask,
-                        $y(t)) : "macroTask" == i.change && (t.hasPendingMacrotasks = i.macroTask))
+                        Gy(t)) : "macroTask" == i.change && (t.hasPendingMacrotasks = i.macroTask))
                     }
                     ,
                     onHandleError: (e,n,r,i)=>(e.handleError(r, i),
@@ -12344,7 +12344,7 @@
         }
         function Uy() {}
         const zy = {};
-        function $y(e) {
+        function Gy(e) {
             if (0 == e._nesting && !e.hasPendingMicrotasks && !e.isStable)
                 try {
                     e._nesting++,
@@ -12359,24 +12359,24 @@
                         }
                 }
         }
-        function Gy(e) {
+        function $y(e) {
             e._nesting++,
             e.isStable && (e.isStable = !1,
             e.onUnstable.emit(null))
         }
         function Wy(e) {
             e._nesting--,
-            $y(e)
+            Gy(e)
         }
-        class Yy {
+        class Ky {
             constructor() {
                 this.hasPendingMicrotasks = !1,
                 this.hasPendingMacrotasks = !1,
                 this.isStable = !0,
-                this.onUnstable = new Mm,
-                this.onMicrotaskEmpty = new Mm,
-                this.onStable = new Mm,
-                this.onError = new Mm
+                this.onUnstable = new Nm,
+                this.onMicrotaskEmpty = new Nm,
+                this.onStable = new Nm,
+                this.onError = new Nm
             }
             run(e) {
                 return e()
@@ -12391,7 +12391,7 @@
                 return e()
             }
         }
-        const qy = (()=>(class {
+        const Yy = (()=>(class {
             constructor(e) {
                 this._ngZone = e,
                 this._pendingCount = 0,
@@ -12493,7 +12493,7 @@
             }
         }
         ))()
-          , Ky = (()=>{
+          , qy = (()=>{
             class e {
                 constructor() {
                     this._applications = new Map,
@@ -12537,17 +12537,17 @@
         let Xy, Jy = new Qy;
         function eb(e, t, n) {
             const r = new fm(n);
-            if (0 === _t.size)
+            if (0 === Ct.size)
                 return Promise.resolve(r);
             const i = function(e) {
                 const t = [];
                 return e.forEach(e=>e && t.push(...e)),
                 t
-            }(e.get(Sy, []).concat(t).map(e=>e.providers));
+            }(e.get(xy, []).concat(t).map(e=>e.providers));
             if (0 === i.length)
                 return Promise.resolve(r);
-            const l = F()
-              , s = Se.create({
+            const l = V()
+              , s = xe.create({
                 providers: i
             }).get(l.ResourceLoader);
             return wt(e=>Promise.resolve(s.get(e))).then(()=>r)
@@ -12589,7 +12589,7 @@
                             provide: i,
                             useValue: !0
                         });
-                        lb(Se.create({
+                        lb(xe.create({
                             providers: e,
                             name: r
                         }))
@@ -12619,7 +12619,7 @@
                 this._destroyed = !1
             }
             bootstrapModuleFactory(e, t) {
-                const n = "noop" === (i = t ? t.ngZone : void 0) ? new Yy : ("zone.js" === i ? void 0 : i) || new Ly({
+                const n = "noop" === (i = t ? t.ngZone : void 0) ? new Ky : ("zone.js" === i ? void 0 : i) || new Ly({
                     enableLongStackTrace: dl()
                 })
                   , r = [{
@@ -12628,7 +12628,7 @@
                 }];
                 var i;
                 return n.run(()=>{
-                    const t = Se.create({
+                    const t = xe.create({
                         providers: r,
                         parent: this.injector,
                         name: e.moduleType.name
@@ -12677,7 +12677,7 @@
                     e._bootstrapComponents.forEach(e=>t.bootstrap(e));
                 else {
                     if (!e.instance.ngDoBootstrap)
-                        throw new Error(`The module ${N(e.instance.constructor)} was bootstrapped, but it does not declare "@NgModule.bootstrap" components nor a "ngDoBootstrap" method. ` + "Please define one of these.");
+                        throw new Error(`The module ${O(e.instance.constructor)} was bootstrapped, but it does not declare "@NgModule.bootstrap" components nor a "ngDoBootstrap" method. ` + "Please define one of these.");
                     e.instance.ngDoBootstrap(t)
                 }
                 this._modules.push(e)
@@ -12775,13 +12775,13 @@
                     n = e instanceof hd ? e : this._componentFactoryResolver.resolveComponentFactory(e),
                     this.componentTypes.push(n.componentType);
                     const r = tb(n) ? null : this._injector.get(vd)
-                      , i = n.create(Se.NULL, [], t || n.selector, r);
+                      , i = n.create(xe.NULL, [], t || n.selector, r);
                     i.onDestroy(()=>{
                         this._unloadComponent(i)
                     }
                     );
-                    const l = i.injector.get(qy, null);
-                    return l && i.injector.get(Ky).registerApplication(i.location.nativeElement, l),
+                    const l = i.injector.get(Yy, null);
+                    return l && i.injector.get(qy).registerApplication(i.location.nativeElement, l),
                     this._loadComponent(i),
                     dl() && this._console.log("Angular is running in the development mode. Call enableProdMode() to enable the production mode."),
                     i
@@ -12801,7 +12801,7 @@
                         this._zone.runOutsideAngular(()=>this._exceptionHandler.handleError(n))
                     } finally {
                         this._runningTick = !1,
-                        Vy(t)
+                        Fy(t)
                     }
                 }
                 attachView(e) {
@@ -12876,15 +12876,15 @@
         }
         class wb extends nh {
         }
-        class _b extends wb {
+        class Cb extends wb {
         }
-        class Cb {
+        class _b {
             constructor(e, t) {
                 this.name = e,
                 this.callback = t
             }
         }
-        class xb {
+        class Sb {
             constructor(e, t, n) {
                 this.listeners = [],
                 this.parent = null,
@@ -12908,7 +12908,7 @@
                 return this._debugContext.providerTokens
             }
         }
-        class kb extends xb {
+        class kb extends Sb {
             constructor(e, t, n) {
                 super(e, t, n),
                 this.properties = {},
@@ -12977,7 +12977,7 @@
                 )
             }
         }
-        function Sb(e) {
+        function xb(e) {
             return e.map(e=>e.nativeElement)
         }
         class Ib {
@@ -12999,7 +12999,7 @@
                 return fc(this.nativeNode)
             }
             get listeners() {
-                return Cc(this.nativeNode).filter(_c)
+                return _c(this.nativeNode).filter(Cc)
             }
             get references() {
                 return function(e) {
@@ -13116,8 +13116,8 @@
                     if (r) {
                         for (let t = 10; t < r.length; t += 4)
                             if (ws(r, t)) {
-                                const n = Fs(r, t)
-                                  , i = Vs(r, t);
+                                const n = Vs(r, t)
+                                  , i = Fs(r, t);
                                 "boolean" == typeof i && (e[n] = i)
                             }
                     } else {
@@ -13137,8 +13137,8 @@
                     if (r) {
                         for (let t = 10; t < r.length; t += 4)
                             if (!ws(r, t)) {
-                                const n = Fs(r, t)
-                                  , i = Vs(r, t);
+                                const n = Vs(r, t)
+                                  , i = Fs(r, t);
                                 null !== i && (e[n] = i)
                             }
                     } else {
@@ -13155,7 +13155,7 @@
                 const e = this.nativeNode.childNodes
                   , t = [];
                 for (let n = 0; n < e.length; n++)
-                    t.push(Mb(e[n]));
+                    t.push(Nb(e[n]));
                 return t
             }
             get children() {
@@ -13165,7 +13165,7 @@
                 const t = e.children
                   , n = [];
                 for (let r = 0; r < t.length; r++)
-                    n.push(Mb(t[r]));
+                    n.push(Nb(t[r]));
                 return n
             }
             query(e) {
@@ -13194,24 +13194,24 @@
         }
         function Ab(e, t, n, r, i, l) {
             if (3 === e.type || 4 === e.type) {
-                if (Nb(Fn(e, t), n, r, i, l),
+                if (Ob(Vn(e, t), n, r, i, l),
                 Ln(e)) {
                     const s = Hn(e.index, t);
                     s && s[un].firstChild && Ab(s[un].firstChild, s, n, r, i, l)
                 } else
                     e.child && Ab(e.child, t, n, r, i, l);
                 const s = t[e.index];
-                Dn(s) && Ob(s, n, r, i, l)
+                Dn(s) && Mb(s, n, r, i, l)
             } else if (0 === e.type) {
                 const s = t[e.index];
-                Nb(s[On], n, r, i, l),
-                Ob(s, n, r, i, l)
+                Ob(s[Mn], n, r, i, l),
+                Mb(s, n, r, i, l)
             } else if (1 === e.type) {
                 const s = Ei(t)
                   , o = s[pn].projection[e.projection];
                 if (Array.isArray(o))
                     for (let e of o)
-                        Nb(e, n, r, i, l);
+                        Ob(e, n, r, i, l);
                 else if (o) {
                     const e = s[dn];
                     Ab(e[un].data[o.index], e, n, r, i, l)
@@ -13221,20 +13221,20 @@
             const s = 2 & e.flags ? e.projectionNext : e.next;
             s && Ab(s, t, n, r, i, l)
         }
-        function Ob(e, t, n, r, i) {
-            for (let l = 0; l < e[Nn].length; l++) {
-                const s = e[Nn][l];
+        function Mb(e, t, n, r, i) {
+            for (let l = 0; l < e[On].length; l++) {
+                const s = e[On][l];
                 Ab(s[un].node, s, t, n, r, i)
             }
         }
-        function Nb(e, t, n, r, i) {
+        function Ob(e, t, n, r, i) {
             if (i !== e) {
                 const i = Pb(e);
                 i && (!r || i instanceof Eb) && t(i) && n.push(i)
             }
         }
         const Rb = new Map;
-        function Mb(e) {
+        function Nb(e) {
             return e instanceof Node ? e.nodeType == Node.ELEMENT_NODE ? new Eb(e) : new Ib(e) : null
         }
         const Pb = function(e) {
@@ -13243,16 +13243,16 @@
         function Db(e) {
             Rb.set(e.nativeNode, e)
         }
-        const Vb = xb
-          , Fb = kb
+        const Fb = Sb
+          , Vb = kb
           , jb = sb(null, "core", [{
             provide: cy,
             useValue: "unknown"
         }, {
             provide: cb,
-            deps: [Se]
+            deps: [xe]
         }, {
-            provide: Ky,
+            provide: qy,
             deps: []
         }, {
             provide: fy,
@@ -13275,20 +13275,20 @@
         function zb() {
             return sh
         }
-        function $b() {
+        function Gb() {
             return oh
         }
-        function Gb(e) {
+        function $b(e) {
             return e || "en-US"
         }
         const Wb = [{
             provide: hb,
             useClass: hb,
-            deps: [Ly, fy, Se, Xi, gd, iy]
+            deps: [Ly, fy, xe, Xi, gd, iy]
         }, {
             provide: mp,
             deps: [Ly],
-            useFactory: Yb
+            useFactory: Kb
         }, {
             provide: iy,
             useClass: iy,
@@ -13303,14 +13303,14 @@
             deps: []
         }, {
             provide: th,
-            useFactory: $b,
+            useFactory: Gb,
             deps: []
         }, {
             provide: Bb,
-            useFactory: Gb,
+            useFactory: $b,
             deps: [[new m(Bb), new g, new b]]
         }];
-        function Yb(e) {
+        function Kb(e) {
             let t = [];
             return e.onStable.subscribe(()=>{
                 for (; t.length; )
@@ -13321,11 +13321,11 @@
                 t.push(e)
             }
         }
-        const qb = (()=>(class {
+        const Yb = (()=>(class {
             constructor(e) {}
         }
         ))();
-        function Kb(e, t, n, r, i, l) {
+        function qb(e, t, n, r, i, l) {
             e |= 1;
             const {matchedQueries: s, references: o, matchedQueryIds: a} = Wh(t);
             return {
@@ -13412,11 +13412,11 @@
             }
             );
             return d = function(e) {
-                if (e && e.id === Oh) {
+                if (e && e.id === Mh) {
                     const t = null != e.encapsulation && e.encapsulation !== It.None || e.styles.length || Object.keys(e.data).length;
-                    e.id = t ? `c${Mh++}` : Nh
+                    e.id = t ? `c${Nh++}` : Oh
                 }
-                return e && e.id === Nh && (e = null),
+                return e && e.id === Oh && (e = null),
                 e || null
             }(d),
             c && (t |= 33554432),
@@ -13464,7 +13464,7 @@
             let s;
             if (e.parent || !i) {
                 s = r.name ? l.createElement(r.name, r.ns) : l.createComment("");
-                const i = qh(e, t, n);
+                const i = Yh(e, t, n);
                 i && l.appendChild(i, s)
             } else
                 s = l.selectRootElement(i, !!r.componentRendererType && r.componentRendererType.encapsulation === It.ShadowDom);
@@ -13517,7 +13517,7 @@
                 break;
             case 4:
                 !function(e, t, n, r, i) {
-                    let l = e.root.sanitizer.sanitize(Vl.STYLE, i);
+                    let l = e.root.sanitizer.sanitize(Fl.STYLE, i);
                     if (null != l) {
                         l = l.toString();
                         const e = t.suffix;
@@ -13568,7 +13568,7 @@
                 text: null,
                 query: {
                     id: t,
-                    filterId: Gh(t),
+                    filterId: $h(t),
                     bindings: r
                 },
                 ngContent: null
@@ -13576,32 +13576,32 @@
         }
         function nv(e) {
             const t = e.def.nodeMatchedQueries;
-            for (; e.parent && $h(e); ) {
+            for (; e.parent && Gh(e); ) {
                 let n = e.parentNodeDef;
                 e = e.parent;
                 const r = n.nodeIndex + n.childCount;
                 for (let i = 0; i <= r; i++) {
                     const r = e.def.nodes[i];
-                    67108864 & r.flags && 536870912 & r.flags && (r.query.filterId & t) === r.query.filterId && xh(e, i).setDirty(),
+                    67108864 & r.flags && 536870912 & r.flags && (r.query.filterId & t) === r.query.filterId && Sh(e, i).setDirty(),
                     !(1 & r.flags && i + r.childCount < n.nodeIndex) && 67108864 & r.childFlags && 536870912 & r.childFlags || (i += r.childCount)
                 }
             }
             if (134217728 & e.def.nodeFlags)
                 for (let n = 0; n < e.def.nodes.length; n++) {
                     const t = e.def.nodes[n];
-                    134217728 & t.flags && 536870912 & t.flags && xh(e, n).setDirty(),
+                    134217728 & t.flags && 536870912 & t.flags && Sh(e, n).setDirty(),
                     n += t.childCount
                 }
         }
         function rv(e, t) {
-            const n = xh(e, t.nodeIndex);
+            const n = Sh(e, t.nodeIndex);
             if (!n.dirty)
                 return;
             let r, i = void 0;
             if (67108864 & t.flags) {
                 const n = t.parent.parent;
                 i = iv(e, n.nodeIndex, n.nodeIndex + n.childCount, t.query, []),
-                r = _h(e, t.parent.nodeIndex).instance
+                r = Ch(e, t.parent.nodeIndex).instance
             } else
                 134217728 & t.flags && (i = iv(e, 0, e.def.nodes.length - 1, t.query, []),
                 r = e.component);
@@ -13657,13 +13657,13 @@
                 case 1:
                     return wh(e, t.nodeIndex).renderElement;
                 case 0:
-                    return new Od(wh(e, t.nodeIndex).renderElement);
+                    return new Md(wh(e, t.nodeIndex).renderElement);
                 case 2:
                     return wh(e, t.nodeIndex).template;
                 case 3:
                     return wh(e, t.nodeIndex).viewContainer;
                 case 4:
-                    return _h(e, t.nodeIndex).instance
+                    return Ch(e, t.nodeIndex).instance
                 }
         }
         function sv(e, t) {
@@ -13696,7 +13696,7 @@
             }
         }
         function ov(e, t, n) {
-            const r = qh(e, t, n);
+            const r = Yh(e, t, n);
             r && Jh(e, n.ngContent.index, 1, r, null, void 0)
         }
         function av(e, t) {
@@ -13797,7 +13797,7 @@
             let r;
             const i = e.renderer;
             r = i.createText(n.text.prefix);
-            const l = qh(e, t, n);
+            const l = Yh(e, t, n);
             return l && i.appendChild(l, r),
             {
                 renderText: r
@@ -13904,24 +13904,24 @@
             }
         }
         function bv(e, t, n, r) {
-            const i = _v(e.root, e.renderer, e, t, n);
-            return Cv(i, e.component, r),
-            xv(i),
+            const i = Cv(e.root, e.renderer, e, t, n);
+            return _v(i, e.component, r),
+            Sv(i),
             i
         }
         function vv(e, t, n) {
-            const r = _v(e, e.renderer, null, null, t);
-            return Cv(r, n, n),
-            xv(r),
+            const r = Cv(e, e.renderer, null, null, t);
+            return _v(r, n, n),
+            Sv(r),
             r
         }
         function wv(e, t, n, r) {
             const i = t.element.componentRendererType;
             let l;
             return l = i ? e.root.rendererFactory.createRenderer(r, i) : e.root.renderer,
-            _v(e.root, l, e, t.element.componentProvider, n)
+            Cv(e.root, l, e, t.element.componentProvider, n)
         }
-        function _v(e, t, n, r, i) {
+        function Cv(e, t, n, r, i) {
             const l = new Array(i.nodes.length)
               , s = i.outputCount ? new Array(i.outputCount) : null;
             return {
@@ -13940,11 +13940,11 @@
                 initIndex: -1
             }
         }
-        function Cv(e, t, n) {
+        function _v(e, t, n) {
             e.component = t,
             e.context = n
         }
-        function xv(e) {
+        function Sv(e) {
             let t;
             zh(e) && (t = wh(e.parent, e.parentNodeDef.parent.nodeIndex).renderElement);
             const n = e.def
@@ -13952,21 +13952,21 @@
             for (let i = 0; i < n.nodes.length; i++) {
                 const l = n.nodes[i];
                 let s;
-                switch (Sh.setCurrentNode(e, i),
+                switch (xh.setCurrentNode(e, i),
                 201347067 & l.flags) {
                 case 1:
                     const n = Zb(e, t, l);
                     let o = void 0;
                     if (33554432 & l.flags) {
                         const t = Qh(l.element.componentView);
-                        o = Sh.createComponentView(e, l, t, n)
+                        o = xh.createComponentView(e, l, t, n)
                     }
                     Xb(e, o, l, n),
                     s = {
                         renderElement: n,
                         componentView: o,
                         viewContainer: null,
-                        template: l.element.template ? Mf(e, l) : void 0
+                        template: l.element.template ? Nf(e, l) : void 0
                     },
                     16777216 & l.flags && (s.viewContainer = Af(e, l, s));
                     break;
@@ -13990,7 +13990,7 @@
                     (s = r[i]) || (s = {
                         instance: np(e, l)
                     }),
-                    32768 & l.flags && Cv(wh(e, l.parent.nodeIndex).componentView, s.instance, s.instance);
+                    32768 & l.flags && _v(wh(e, l.parent.nodeIndex).componentView, s.instance, s.instance);
                     break;
                 case 32:
                 case 64:
@@ -14009,30 +14009,30 @@
                 }
                 r[i] = s
             }
-            Rv(e, Nv.CreateViewNodes),
-            Vv(e, 201326592, 268435456, 0)
+            Rv(e, Ov.CreateViewNodes),
+            Fv(e, 201326592, 268435456, 0)
         }
         function kv(e) {
             Ev(e),
-            Sh.updateDirectives(e, 1),
-            Mv(e, Nv.CheckNoChanges),
-            Sh.updateRenderer(e, 1),
-            Rv(e, Nv.CheckNoChanges),
+            xh.updateDirectives(e, 1),
+            Nv(e, Ov.CheckNoChanges),
+            xh.updateRenderer(e, 1),
+            Rv(e, Ov.CheckNoChanges),
             e.state &= -97
         }
-        function Sv(e) {
+        function xv(e) {
             1 & e.state ? (e.state &= -2,
             e.state |= 2) : e.state &= -3,
             yh(e, 0, 256),
             Ev(e),
-            Sh.updateDirectives(e, 0),
-            Mv(e, Nv.CheckAndUpdate),
-            Vv(e, 67108864, 536870912, 0);
+            xh.updateDirectives(e, 0),
+            Nv(e, Ov.CheckAndUpdate),
+            Fv(e, 67108864, 536870912, 0);
             let t = yh(e, 256, 512);
             cp(e, 2097152 | (t ? 1048576 : 0)),
-            Sh.updateRenderer(e, 0),
-            Rv(e, Nv.CheckAndUpdate),
-            Vv(e, 134217728, 536870912, 0),
+            xh.updateRenderer(e, 0),
+            Rv(e, Ov.CheckAndUpdate),
+            Fv(e, 134217728, 536870912, 0),
             cp(e, 8388608 | ((t = yh(e, 512, 768)) ? 4194304 : 0)),
             2 & e.def.flags && (e.state &= -9),
             e.state &= -97,
@@ -14091,7 +14091,7 @@
                     }(e, t, n, r, i, l, s, o, a, u, c, d);
                 case 16384:
                     return function(e, t, n, r, i, l, s, o, a, u, c, d) {
-                        const h = _h(e, t.nodeIndex)
+                        const h = Ch(e, t.nodeIndex)
                           , f = h.instance;
                         let p = !1
                           , m = void 0;
@@ -14139,7 +14139,7 @@
                         p > 8 && Dh(e, t, 8, c) && (f = !0),
                         p > 9 && Dh(e, t, 9, d) && (f = !0),
                         f) {
-                            const f = Ch(e, t.nodeIndex);
+                            const f = _h(e, t.nodeIndex);
                             let m;
                             switch (201347067 & t.flags) {
                             case 32:
@@ -14236,7 +14236,7 @@
                     }(e, t, n);
                 case 16384:
                     return function(e, t, n) {
-                        const r = _h(e, t.nodeIndex)
+                        const r = Ch(e, t.nodeIndex)
                           , i = r.instance;
                         let l = !1
                           , s = void 0;
@@ -14257,7 +14257,7 @@
                         for (let l = 0; l < n.length; l++)
                             Dh(e, t, l, n[l]) && (i = !0);
                         if (i) {
-                            const i = Ch(e, t.nodeIndex);
+                            const i = _h(e, t.nodeIndex);
                             let l;
                             switch (201347067 & t.flags) {
                             case 32:
@@ -14302,30 +14302,30 @@
         function Tv(e, t, n, r, i, l, s, o, a, u, c, d, h) {
             return 0 === n ? function(e, t, n, r, i, l, s, o, a, u, c, d) {
                 const h = t.bindings.length;
-                h > 0 && Vh(e, t, 0, n),
-                h > 1 && Vh(e, t, 1, r),
-                h > 2 && Vh(e, t, 2, i),
-                h > 3 && Vh(e, t, 3, l),
-                h > 4 && Vh(e, t, 4, s),
-                h > 5 && Vh(e, t, 5, o),
-                h > 6 && Vh(e, t, 6, a),
-                h > 7 && Vh(e, t, 7, u),
-                h > 8 && Vh(e, t, 8, c),
-                h > 9 && Vh(e, t, 9, d)
+                h > 0 && Fh(e, t, 0, n),
+                h > 1 && Fh(e, t, 1, r),
+                h > 2 && Fh(e, t, 2, i),
+                h > 3 && Fh(e, t, 3, l),
+                h > 4 && Fh(e, t, 4, s),
+                h > 5 && Fh(e, t, 5, o),
+                h > 6 && Fh(e, t, 6, a),
+                h > 7 && Fh(e, t, 7, u),
+                h > 8 && Fh(e, t, 8, c),
+                h > 9 && Fh(e, t, 9, d)
             }(e, t, r, i, l, s, o, a, u, c, d, h) : function(e, t, n) {
                 for (let r = 0; r < n.length; r++)
-                    Vh(e, t, r, n[r])
+                    Fh(e, t, r, n[r])
             }(e, t, r),
             !1
         }
         function Av(e, t) {
-            if (xh(e, t.nodeIndex).dirty)
-                throw ph(Sh.createDebugContext(e, t.nodeIndex), `Query ${t.query.id} not dirty`, `Query ${t.query.id} dirty`, 0 != (1 & e.state))
+            if (Sh(e, t.nodeIndex).dirty)
+                throw ph(xh.createDebugContext(e, t.nodeIndex), `Query ${t.query.id} not dirty`, `Query ${t.query.id} dirty`, 0 != (1 & e.state))
         }
-        function Ov(e) {
+        function Mv(e) {
             if (!(128 & e.state)) {
-                if (Mv(e, Nv.Destroy),
-                Rv(e, Nv.Destroy),
+                if (Nv(e, Ov.Destroy),
+                Rv(e, Ov.Destroy),
                 cp(e, 131072),
                 e.disposables)
                     for (let t = 0; t < e.disposables.length; t++)
@@ -14336,22 +14336,22 @@
                     const t = Hh(e);
                     if (t) {
                         const n = t.template._projectedViews;
-                        n && (xf(n, n.indexOf(e)),
-                        Sh.dirtyParentQueries(e))
+                        n && (Sf(n, n.indexOf(e)),
+                        xh.dirtyParentQueries(e))
                     }
                 }(e),
                 e.renderer.destroyNode && function(e) {
                     const t = e.def.nodes.length;
                     for (let n = 0; n < t; n++) {
                         const t = e.def.nodes[n];
-                        1 & t.flags ? e.renderer.destroyNode(wh(e, n).renderElement) : 2 & t.flags ? e.renderer.destroyNode(vh(e, n).renderText) : (67108864 & t.flags || 134217728 & t.flags) && xh(e, n).destroy()
+                        1 & t.flags ? e.renderer.destroyNode(wh(e, n).renderElement) : 2 & t.flags ? e.renderer.destroyNode(vh(e, n).renderText) : (67108864 & t.flags || 134217728 & t.flags) && Sh(e, n).destroy()
                     }
                 }(e),
                 zh(e) && e.renderer.destroy(),
                 e.state |= 128
             }
         }
-        const Nv = function() {
+        const Ov = function() {
             var e = {
                 CreateViewNodes: 0,
                 CheckNoChanges: 1,
@@ -14376,7 +14376,7 @@
                     33554432 & i.flags ? Pv(wh(e, r).componentView, t) : 0 == (33554432 & i.childFlags) && (r += i.childCount)
                 }
         }
-        function Mv(e, t) {
+        function Nv(e, t) {
             const n = e.def;
             if (16777216 & n.nodeFlags)
                 for (let r = 0; r < n.nodes.length; r++) {
@@ -14392,37 +14392,37 @@
         function Pv(e, t) {
             const n = e.state;
             switch (t) {
-            case Nv.CheckNoChanges:
-                0 == (128 & n) && (12 == (12 & n) ? kv(e) : 64 & n && Dv(e, Nv.CheckNoChangesProjectedViews));
+            case Ov.CheckNoChanges:
+                0 == (128 & n) && (12 == (12 & n) ? kv(e) : 64 & n && Dv(e, Ov.CheckNoChangesProjectedViews));
                 break;
-            case Nv.CheckNoChangesProjectedViews:
+            case Ov.CheckNoChangesProjectedViews:
                 0 == (128 & n) && (32 & n ? kv(e) : 64 & n && Dv(e, t));
                 break;
-            case Nv.CheckAndUpdate:
-                0 == (128 & n) && (12 == (12 & n) ? Sv(e) : 64 & n && Dv(e, Nv.CheckAndUpdateProjectedViews));
+            case Ov.CheckAndUpdate:
+                0 == (128 & n) && (12 == (12 & n) ? xv(e) : 64 & n && Dv(e, Ov.CheckAndUpdateProjectedViews));
                 break;
-            case Nv.CheckAndUpdateProjectedViews:
-                0 == (128 & n) && (32 & n ? Sv(e) : 64 & n && Dv(e, t));
+            case Ov.CheckAndUpdateProjectedViews:
+                0 == (128 & n) && (32 & n ? xv(e) : 64 & n && Dv(e, t));
                 break;
-            case Nv.Destroy:
-                Ov(e);
+            case Ov.Destroy:
+                Mv(e);
                 break;
-            case Nv.CreateViewNodes:
-                xv(e)
+            case Ov.CreateViewNodes:
+                Sv(e)
             }
         }
         function Dv(e, t) {
-            Mv(e, t),
+            Nv(e, t),
             Rv(e, t)
         }
-        function Vv(e, t, n, r) {
+        function Fv(e, t, n, r) {
             if (!(e.def.nodeFlags & t && e.def.nodeFlags & n))
                 return;
             const i = e.def.nodes.length;
             for (let l = 0; l < i; l++) {
                 const i = e.def.nodes[l];
                 if (i.flags & t && i.flags & n)
-                    switch (Sh.setCurrentNode(e, i.nodeIndex),
+                    switch (xh.setCurrentNode(e, i.nodeIndex),
                     r) {
                     case 0:
                         rv(e, i);
@@ -14433,19 +14433,19 @@
                 i.childFlags & t && i.childFlags & n || (l += i.childCount)
             }
         }
-        let Fv = !1;
+        let Vv = !1;
         function jv() {
-            if (Fv)
+            if (Vv)
                 return;
-            Fv = !0;
+            Vv = !0;
             const e = dl() ? {
                 setCurrentNode: ow,
                 createRootView: Hv,
                 createEmbeddedView: Uv,
                 createComponentView: zv,
-                createNgModuleRef: $v,
-                overrideProvider: qv,
-                overrideComponentView: Kv,
+                createNgModuleRef: Gv,
+                overrideProvider: Yv,
+                overrideComponentView: qv,
                 clearOverrides: Qv,
                 checkAndUpdateView: ew,
                 checkNoChangesView: tw,
@@ -14464,44 +14464,44 @@
                 overrideProvider: Ih,
                 overrideComponentView: Ih,
                 clearOverrides: Ih,
-                checkAndUpdateView: Sv,
+                checkAndUpdateView: xv,
                 checkNoChangesView: kv,
-                destroyView: Ov,
+                destroyView: Mv,
                 createDebugContext: (e,t)=>new mw(e,t),
                 handleEvent: (e,t,n,r)=>e.def.handleEvent(e, t, n, r),
                 updateDirectives: (e,t)=>e.def.updateDirectives(0 === t ? Xv : Jv, e),
                 updateRenderer: (e,t)=>e.def.updateRenderer(0 === t ? Xv : Jv, e)
             };
-            Sh.setCurrentNode = e.setCurrentNode,
-            Sh.createRootView = e.createRootView,
-            Sh.createEmbeddedView = e.createEmbeddedView,
-            Sh.createComponentView = e.createComponentView,
-            Sh.createNgModuleRef = e.createNgModuleRef,
-            Sh.overrideProvider = e.overrideProvider,
-            Sh.overrideComponentView = e.overrideComponentView,
-            Sh.clearOverrides = e.clearOverrides,
-            Sh.checkAndUpdateView = e.checkAndUpdateView,
-            Sh.checkNoChangesView = e.checkNoChangesView,
-            Sh.destroyView = e.destroyView,
-            Sh.resolveDep = op,
-            Sh.createDebugContext = e.createDebugContext,
-            Sh.handleEvent = e.handleEvent,
-            Sh.updateDirectives = e.updateDirectives,
-            Sh.updateRenderer = e.updateRenderer,
-            Sh.dirtyParentQueries = nv
+            xh.setCurrentNode = e.setCurrentNode,
+            xh.createRootView = e.createRootView,
+            xh.createEmbeddedView = e.createEmbeddedView,
+            xh.createComponentView = e.createComponentView,
+            xh.createNgModuleRef = e.createNgModuleRef,
+            xh.overrideProvider = e.overrideProvider,
+            xh.overrideComponentView = e.overrideComponentView,
+            xh.clearOverrides = e.clearOverrides,
+            xh.checkAndUpdateView = e.checkAndUpdateView,
+            xh.checkNoChangesView = e.checkNoChangesView,
+            xh.destroyView = e.destroyView,
+            xh.resolveDep = op,
+            xh.createDebugContext = e.createDebugContext,
+            xh.handleEvent = e.handleEvent,
+            xh.updateDirectives = e.updateDirectives,
+            xh.updateRenderer = e.updateRenderer,
+            xh.dirtyParentQueries = nv
         }
         function Bv(e, t, n, r, i, l) {
-            const s = i.injector.get(Fd);
+            const s = i.injector.get(Vd);
             return vv(Lv(e, i, s, t, n), r, l)
         }
         function Hv(e, t, n, r, i, l) {
-            const s = i.injector.get(Fd)
+            const s = i.injector.get(Vd)
               , o = Lv(e, i, new vw(s), t, n)
               , a = Zv(r);
             return yw(rw.create, vv, null, [o, a, l])
         }
         function Lv(e, t, n, r, i) {
-            const l = t.injector.get(Fl)
+            const l = t.injector.get(Vl)
               , s = t.injector.get(Xi)
               , o = n.createRenderer(null, null);
             return {
@@ -14520,19 +14520,19 @@
             return yw(rw.create, bv, null, [e, t, i, r])
         }
         function zv(e, t, n, r) {
-            return n = Yv.get(t.element.componentProvider.provider.token) || Zv(n),
+            return n = Kv.get(t.element.componentProvider.provider.token) || Zv(n),
             yw(rw.create, wv, null, [e, t, n, r])
         }
-        function $v(e, t, n, r) {
+        function Gv(e, t, n, r) {
             return Hf(e, t, n, function(e) {
                 const {hasOverrides: t, hasDeprecatedOverrides: n} = function(e) {
                     let t = !1
                       , n = !1;
-                    return 0 === Gv.size ? {
+                    return 0 === $v.size ? {
                         hasOverrides: t,
                         hasDeprecatedOverrides: n
                     } : (e.providers.forEach(e=>{
-                        const r = Gv.get(e.token);
+                        const r = $v.get(e.token);
                         3840 & e.flags && r && (t = !0,
                         n = n || r.deprecatedBehavior)
                     }
@@ -14554,9 +14554,9 @@
                     for (let t = 0; t < e.providers.length; t++) {
                         const r = e.providers[t];
                         n && (r.flags |= 4096);
-                        const i = Gv.get(r.token);
+                        const i = $v.get(r.token);
                         i && (r.flags = -3841 & r.flags | i.flags,
-                        r.deps = Yh(i.deps),
+                        r.deps = Kh(i.deps),
                         r.value = i.value)
                     }
                     if (Wv.size > 0) {
@@ -14566,7 +14566,7 @@
                                 let t = {
                                     token: i,
                                     flags: r.flags | (n ? 4096 : 0),
-                                    deps: Yh(r.deps),
+                                    deps: Kh(r.deps),
                                     value: r.value,
                                     index: e.providers.length
                                 };
@@ -14580,26 +14580,26 @@
                 e) : e
             }(r))
         }
-        const Gv = new Map
+        const $v = new Map
           , Wv = new Map
-          , Yv = new Map;
-        function qv(e) {
+          , Kv = new Map;
+        function Yv(e) {
             let t;
-            Gv.set(e.token, e),
+            $v.set(e.token, e),
             "function" == typeof e.token && (t = E(e.token)) && "function" == typeof t.providedIn && Wv.set(e.token, e)
         }
-        function Kv(e, t) {
+        function qv(e, t) {
             const n = Qh(If(t))
               , r = Qh(n.nodes[0].element.componentView);
-            Yv.set(e, r)
+            Kv.set(e, r)
         }
         function Qv() {
-            Gv.clear(),
+            $v.clear(),
             Wv.clear(),
-            Yv.clear()
+            Kv.clear()
         }
         function Zv(e) {
-            if (0 === Gv.size)
+            if (0 === $v.size)
                 return e;
             const t = function(e) {
                 const t = [];
@@ -14607,7 +14607,7 @@
                 for (let r = 0; r < e.nodes.length; r++) {
                     const i = e.nodes[r];
                     1 & i.flags && (n = i),
-                    n && 3840 & i.flags && Gv.has(i.provider.token) && (t.push(n.nodeIndex),
+                    n && 3840 & i.flags && $v.has(i.provider.token) && (t.push(n.nodeIndex),
                     n = null)
                 }
                 return t
@@ -14625,9 +14625,9 @@
                         return;
                     if (3840 & t.flags) {
                         const e = t.provider
-                          , n = Gv.get(e.token);
+                          , n = $v.get(e.token);
                         n && (t.flags = -3841 & t.flags | n.flags,
-                        e.deps = Yh(n.deps),
+                        e.deps = Kh(n.deps),
                         e.value = n.value)
                     }
                 }
@@ -14636,21 +14636,21 @@
         function Xv(e, t, n, r, i, l, s, o, a, u, c, d, h) {
             const f = e.def.nodes[t];
             return Iv(e, f, n, r, i, l, s, o, a, u, c, d, h),
-            224 & f.flags ? Ch(e, t).value : void 0
+            224 & f.flags ? _h(e, t).value : void 0
         }
         function Jv(e, t, n, r, i, l, s, o, a, u, c, d, h) {
             const f = e.def.nodes[t];
             return Tv(e, f, n, r, i, l, s, o, a, u, c, d, h),
-            224 & f.flags ? Ch(e, t).value : void 0
+            224 & f.flags ? _h(e, t).value : void 0
         }
         function ew(e) {
-            return yw(rw.detectChanges, Sv, null, [e])
+            return yw(rw.detectChanges, xv, null, [e])
         }
         function tw(e) {
             return yw(rw.checkNoChanges, kv, null, [e])
         }
         function nw(e) {
-            return yw(rw.destroy, Ov, null, [e])
+            return yw(rw.destroy, Mv, null, [e])
         }
         const rw = function() {
             var e = {
@@ -14684,7 +14684,7 @@
                 const l = e.def.nodes[n];
                 return 0 === t ? dw(e, l, r, i) : hw(e, l, r, i),
                 16384 & l.flags && ow(e, fw(e, n)),
-                224 & l.flags ? Ch(e, l.nodeIndex).value : void 0
+                224 & l.flags ? _h(e, l.nodeIndex).value : void 0
             }, e)
         }
         function cw(e, t) {
@@ -14695,7 +14695,7 @@
                 const l = e.def.nodes[n];
                 return 0 === t ? dw(e, l, r, i) : hw(e, l, r, i),
                 3 & l.flags && ow(e, pw(e, n)),
-                224 & l.flags ? Ch(e, l.nodeIndex).value : void 0
+                224 & l.flags ? _h(e, l.nodeIndex).value : void 0
             }, e)
         }
         function dw(e, t, n, r) {
@@ -14838,7 +14838,7 @@
                 iw = i,
                 a
             } catch (o) {
-                if (Ki(o) || !lw)
+                if (qi(o) || !lw)
                     throw o;
                 throw function(e, t) {
                     return e instanceof Error || (e = new Error(e.toString())),
@@ -14898,13 +14898,13 @@
             createComment(e) {
                 const t = this.delegate.createComment(e)
                   , n = this.createDebugContext(t);
-                return n && Db(new xb(t,null,n)),
+                return n && Db(new Sb(t,null,n)),
                 t
             }
             createText(e) {
                 const t = this.delegate.createText(e)
                   , n = this.createDebugContext(t);
-                return n && Db(new xb(t,null,n)),
+                return n && Db(new Sb(t,null,n)),
                 t
             }
             appendChild(e, t) {
@@ -14970,7 +14970,7 @@
             listen(e, t, n) {
                 if ("string" != typeof e) {
                     const r = Pb(e);
-                    r && r.listeners.push(new Cb(t,n))
+                    r && r.listeners.push(new _b(t,n))
                 }
                 return this.delegate.listen(e, t, n)
             }
@@ -14984,22 +14984,22 @@
                 return this.delegate.setValue(e, t)
             }
         }
-        function _w(e) {
+        function Cw(e) {
             return jv(),
-            Sh.overrideProvider(e)
+            xh.overrideProvider(e)
         }
-        function Cw(e, t) {
+        function _w(e, t) {
             return jv(),
-            Sh.overrideComponentView(e, t)
+            xh.overrideComponentView(e, t)
         }
-        function xw() {
+        function Sw() {
             return jv(),
-            Sh.clearOverrides()
+            xh.clearOverrides()
         }
         function kw(e, t, n) {
-            return new Sw(e,t,n)
+            return new xw(e,t,n)
         }
-        class Sw extends wd {
+        class xw extends wd {
             constructor(e, t, n) {
                 super(),
                 this.moduleType = e,
@@ -15022,7 +15022,7 @@
                         providersByKey: r
                     }
                 }(Qh(this._ngModuleDefFactory));
-                return Sh.createNgModuleRef(this.moduleType, e || Se.NULL, this._bootstrapComponents, t)
+                return xh.createNgModuleRef(this.moduleType, e || xe.NULL, this._bootstrapComponents, t)
             }
         }
     },
@@ -15348,33 +15348,33 @@
                           , i = e[r];
                         e[r] = 16711935 & (i << 8 | i >>> 24) | 4278255360 & (i << 24 | i >>> 8)
                     }
-                    var l, s, f, w, _, C, x, k, S, I, E, T = this._hash.words, A = d.words, O = h.words, N = o.words, R = a.words, M = u.words, P = c.words;
-                    for (C = l = T[0],
-                    x = s = T[1],
+                    var l, s, f, w, C, _, S, k, x, I, E, T = this._hash.words, A = d.words, M = h.words, O = o.words, R = a.words, N = u.words, P = c.words;
+                    for (_ = l = T[0],
+                    S = s = T[1],
                     k = f = T[2],
-                    S = w = T[3],
-                    I = _ = T[4],
+                    x = w = T[3],
+                    I = C = T[4],
                     n = 0; n < 80; n += 1)
-                        E = l + e[t + N[n]] | 0,
+                        E = l + e[t + O[n]] | 0,
                         E += n < 16 ? p(s, f, w) + A[0] : n < 32 ? m(s, f, w) + A[1] : n < 48 ? g(s, f, w) + A[2] : n < 64 ? y(s, f, w) + A[3] : b(s, f, w) + A[4],
-                        E = (E = v(E |= 0, M[n])) + _ | 0,
-                        l = _,
-                        _ = w,
+                        E = (E = v(E |= 0, N[n])) + C | 0,
+                        l = C,
+                        C = w,
                         w = v(f, 10),
                         f = s,
                         s = E,
-                        E = C + e[t + R[n]] | 0,
-                        E += n < 16 ? b(x, k, S) + O[0] : n < 32 ? y(x, k, S) + O[1] : n < 48 ? g(x, k, S) + O[2] : n < 64 ? m(x, k, S) + O[3] : p(x, k, S) + O[4],
+                        E = _ + e[t + R[n]] | 0,
+                        E += n < 16 ? b(S, k, x) + M[0] : n < 32 ? y(S, k, x) + M[1] : n < 48 ? g(S, k, x) + M[2] : n < 64 ? m(S, k, x) + M[3] : p(S, k, x) + M[4],
                         E = (E = v(E |= 0, P[n])) + I | 0,
-                        C = I,
-                        I = S,
-                        S = v(k, 10),
-                        k = x,
-                        x = E;
-                    E = T[1] + f + S | 0,
+                        _ = I,
+                        I = x,
+                        x = v(k, 10),
+                        k = S,
+                        S = E;
+                    E = T[1] + f + x | 0,
                     T[1] = T[2] + w + I | 0,
-                    T[2] = T[3] + _ + C | 0,
-                    T[3] = T[4] + l + x | 0,
+                    T[2] = T[3] + C + _ | 0,
+                    T[3] = T[4] + l + S | 0,
                     T[4] = T[0] + s + k | 0,
                     T[0] = E
                 },
@@ -17639,81 +17639,81 @@
                       , b = e[t + 7]
                       , v = e[t + 8]
                       , w = e[t + 9]
-                      , _ = e[t + 10]
-                      , C = e[t + 11]
-                      , x = e[t + 12]
+                      , C = e[t + 10]
+                      , _ = e[t + 11]
+                      , S = e[t + 12]
                       , k = e[t + 13]
-                      , S = e[t + 14]
+                      , x = e[t + 14]
                       , I = e[t + 15]
                       , E = l[0]
                       , T = l[1]
                       , A = l[2]
-                      , O = l[3];
-                    E = u(E, T, A, O, s, 7, o[0]),
-                    O = u(O, E, T, A, a, 12, o[1]),
-                    A = u(A, O, E, T, f, 17, o[2]),
-                    T = u(T, A, O, E, p, 22, o[3]),
-                    E = u(E, T, A, O, m, 7, o[4]),
-                    O = u(O, E, T, A, g, 12, o[5]),
-                    A = u(A, O, E, T, y, 17, o[6]),
-                    T = u(T, A, O, E, b, 22, o[7]),
-                    E = u(E, T, A, O, v, 7, o[8]),
-                    O = u(O, E, T, A, w, 12, o[9]),
-                    A = u(A, O, E, T, _, 17, o[10]),
-                    T = u(T, A, O, E, C, 22, o[11]),
-                    E = u(E, T, A, O, x, 7, o[12]),
-                    O = u(O, E, T, A, k, 12, o[13]),
-                    A = u(A, O, E, T, S, 17, o[14]),
-                    E = c(E, T = u(T, A, O, E, I, 22, o[15]), A, O, a, 5, o[16]),
-                    O = c(O, E, T, A, y, 9, o[17]),
-                    A = c(A, O, E, T, C, 14, o[18]),
-                    T = c(T, A, O, E, s, 20, o[19]),
-                    E = c(E, T, A, O, g, 5, o[20]),
-                    O = c(O, E, T, A, _, 9, o[21]),
-                    A = c(A, O, E, T, I, 14, o[22]),
-                    T = c(T, A, O, E, m, 20, o[23]),
-                    E = c(E, T, A, O, w, 5, o[24]),
-                    O = c(O, E, T, A, S, 9, o[25]),
-                    A = c(A, O, E, T, p, 14, o[26]),
-                    T = c(T, A, O, E, v, 20, o[27]),
-                    E = c(E, T, A, O, k, 5, o[28]),
-                    O = c(O, E, T, A, f, 9, o[29]),
-                    A = c(A, O, E, T, b, 14, o[30]),
-                    E = d(E, T = c(T, A, O, E, x, 20, o[31]), A, O, g, 4, o[32]),
-                    O = d(O, E, T, A, v, 11, o[33]),
-                    A = d(A, O, E, T, C, 16, o[34]),
-                    T = d(T, A, O, E, S, 23, o[35]),
-                    E = d(E, T, A, O, a, 4, o[36]),
-                    O = d(O, E, T, A, m, 11, o[37]),
-                    A = d(A, O, E, T, b, 16, o[38]),
-                    T = d(T, A, O, E, _, 23, o[39]),
-                    E = d(E, T, A, O, k, 4, o[40]),
-                    O = d(O, E, T, A, s, 11, o[41]),
-                    A = d(A, O, E, T, p, 16, o[42]),
-                    T = d(T, A, O, E, y, 23, o[43]),
-                    E = d(E, T, A, O, w, 4, o[44]),
-                    O = d(O, E, T, A, x, 11, o[45]),
-                    A = d(A, O, E, T, I, 16, o[46]),
-                    E = h(E, T = d(T, A, O, E, f, 23, o[47]), A, O, s, 6, o[48]),
-                    O = h(O, E, T, A, b, 10, o[49]),
-                    A = h(A, O, E, T, S, 15, o[50]),
-                    T = h(T, A, O, E, g, 21, o[51]),
-                    E = h(E, T, A, O, x, 6, o[52]),
-                    O = h(O, E, T, A, p, 10, o[53]),
-                    A = h(A, O, E, T, _, 15, o[54]),
-                    T = h(T, A, O, E, a, 21, o[55]),
-                    E = h(E, T, A, O, v, 6, o[56]),
-                    O = h(O, E, T, A, I, 10, o[57]),
-                    A = h(A, O, E, T, y, 15, o[58]),
-                    T = h(T, A, O, E, k, 21, o[59]),
-                    E = h(E, T, A, O, m, 6, o[60]),
-                    O = h(O, E, T, A, C, 10, o[61]),
-                    A = h(A, O, E, T, f, 15, o[62]),
-                    T = h(T, A, O, E, w, 21, o[63]),
+                      , M = l[3];
+                    E = u(E, T, A, M, s, 7, o[0]),
+                    M = u(M, E, T, A, a, 12, o[1]),
+                    A = u(A, M, E, T, f, 17, o[2]),
+                    T = u(T, A, M, E, p, 22, o[3]),
+                    E = u(E, T, A, M, m, 7, o[4]),
+                    M = u(M, E, T, A, g, 12, o[5]),
+                    A = u(A, M, E, T, y, 17, o[6]),
+                    T = u(T, A, M, E, b, 22, o[7]),
+                    E = u(E, T, A, M, v, 7, o[8]),
+                    M = u(M, E, T, A, w, 12, o[9]),
+                    A = u(A, M, E, T, C, 17, o[10]),
+                    T = u(T, A, M, E, _, 22, o[11]),
+                    E = u(E, T, A, M, S, 7, o[12]),
+                    M = u(M, E, T, A, k, 12, o[13]),
+                    A = u(A, M, E, T, x, 17, o[14]),
+                    E = c(E, T = u(T, A, M, E, I, 22, o[15]), A, M, a, 5, o[16]),
+                    M = c(M, E, T, A, y, 9, o[17]),
+                    A = c(A, M, E, T, _, 14, o[18]),
+                    T = c(T, A, M, E, s, 20, o[19]),
+                    E = c(E, T, A, M, g, 5, o[20]),
+                    M = c(M, E, T, A, C, 9, o[21]),
+                    A = c(A, M, E, T, I, 14, o[22]),
+                    T = c(T, A, M, E, m, 20, o[23]),
+                    E = c(E, T, A, M, w, 5, o[24]),
+                    M = c(M, E, T, A, x, 9, o[25]),
+                    A = c(A, M, E, T, p, 14, o[26]),
+                    T = c(T, A, M, E, v, 20, o[27]),
+                    E = c(E, T, A, M, k, 5, o[28]),
+                    M = c(M, E, T, A, f, 9, o[29]),
+                    A = c(A, M, E, T, b, 14, o[30]),
+                    E = d(E, T = c(T, A, M, E, S, 20, o[31]), A, M, g, 4, o[32]),
+                    M = d(M, E, T, A, v, 11, o[33]),
+                    A = d(A, M, E, T, _, 16, o[34]),
+                    T = d(T, A, M, E, x, 23, o[35]),
+                    E = d(E, T, A, M, a, 4, o[36]),
+                    M = d(M, E, T, A, m, 11, o[37]),
+                    A = d(A, M, E, T, b, 16, o[38]),
+                    T = d(T, A, M, E, C, 23, o[39]),
+                    E = d(E, T, A, M, k, 4, o[40]),
+                    M = d(M, E, T, A, s, 11, o[41]),
+                    A = d(A, M, E, T, p, 16, o[42]),
+                    T = d(T, A, M, E, y, 23, o[43]),
+                    E = d(E, T, A, M, w, 4, o[44]),
+                    M = d(M, E, T, A, S, 11, o[45]),
+                    A = d(A, M, E, T, I, 16, o[46]),
+                    E = h(E, T = d(T, A, M, E, f, 23, o[47]), A, M, s, 6, o[48]),
+                    M = h(M, E, T, A, b, 10, o[49]),
+                    A = h(A, M, E, T, x, 15, o[50]),
+                    T = h(T, A, M, E, g, 21, o[51]),
+                    E = h(E, T, A, M, S, 6, o[52]),
+                    M = h(M, E, T, A, p, 10, o[53]),
+                    A = h(A, M, E, T, C, 15, o[54]),
+                    T = h(T, A, M, E, a, 21, o[55]),
+                    E = h(E, T, A, M, v, 6, o[56]),
+                    M = h(M, E, T, A, I, 10, o[57]),
+                    A = h(A, M, E, T, y, 15, o[58]),
+                    T = h(T, A, M, E, k, 21, o[59]),
+                    E = h(E, T, A, M, m, 6, o[60]),
+                    M = h(M, E, T, A, _, 10, o[61]),
+                    A = h(A, M, E, T, f, 15, o[62]),
+                    T = h(T, A, M, E, w, 21, o[63]),
                     l[0] = l[0] + E | 0,
                     l[1] = l[1] + T | 0,
                     l[2] = l[2] + A | 0,
-                    l[3] = l[3] + O | 0
+                    l[3] = l[3] + M | 0
                 },
                 _doFinalize: function() {
                     var t = this._data
@@ -18171,10 +18171,10 @@
             let i = Number.POSITIVE_INFINITY;
             return t >= 3 && (i = arguments[2]),
             function(t) {
-                return t.lift(new _(e,r,i,n))
+                return t.lift(new C(e,r,i,n))
             }
         }
-        class _ {
+        class C {
             constructor(e, t, n, r) {
                 this.bufferTimeSpan = e,
                 this.bufferCreationInterval = t,
@@ -18182,15 +18182,15 @@
                 this.scheduler = r
             }
             call(e, t) {
-                return t.subscribe(new x(e,this.bufferTimeSpan,this.bufferCreationInterval,this.maxBufferSize,this.scheduler))
+                return t.subscribe(new S(e,this.bufferTimeSpan,this.bufferCreationInterval,this.maxBufferSize,this.scheduler))
             }
         }
-        class C {
+        class _ {
             constructor() {
                 this.buffer = []
             }
         }
-        class x extends p.a {
+        class S extends p.a {
             constructor(e, t, n, r, i) {
                 super(e),
                 this.bufferTimeSpan = t,
@@ -18217,7 +18217,7 @@
                         subscriber: this,
                         context: l
                     })),
-                    this.add(i.schedule(S, n, e))
+                    this.add(i.schedule(x, n, e))
                 }
             }
             _next(e) {
@@ -18263,7 +18263,7 @@
                 }
             }
             openContext() {
-                const e = new C;
+                const e = new _;
                 return this.contexts.push(e),
                 e
             }
@@ -18280,7 +18280,7 @@
             t.closed || (e.context = t.openContext(),
             e.context.closeAction = this.schedule(e, e.bufferTimeSpan))
         }
-        function S(e) {
+        function x(e) {
             const {bufferCreationInterval: t, bufferTimeSpan: n, subscriber: r, scheduler: i} = e
               , l = r.openContext();
             r.closed || (r.add(l.closeAction = i.schedule(I, n, {
@@ -18305,10 +18305,10 @@
                 this.closingSelector = t
             }
             call(e, t) {
-                return t.subscribe(new O(e,this.openings,this.closingSelector))
+                return t.subscribe(new M(e,this.openings,this.closingSelector))
             }
         }
-        class O extends r.a {
+        class M extends r.a {
             constructor(e, t, n) {
                 super(e),
                 this.openings = t,
@@ -18383,7 +18383,7 @@
                 n.add(l))
             }
         }
-        function N(e) {
+        function O(e) {
             return function(t) {
                 return t.lift(new R(e))
             }
@@ -18393,10 +18393,10 @@
                 this.closingSelector = e
             }
             call(e, t) {
-                return t.subscribe(new M(e,this.closingSelector))
+                return t.subscribe(new N(e,this.closingSelector))
             }
         }
-        class M extends r.a {
+        class N extends r.a {
             constructor(e, t) {
                 super(e),
                 this.closingSelector = t,
@@ -18444,20 +18444,20 @@
         var P = n("51Dv");
         function D(e) {
             return function(t) {
-                const n = new V(e)
+                const n = new F(e)
                   , r = t.lift(n);
                 return n.caught = r
             }
         }
-        class V {
+        class F {
             constructor(e) {
                 this.selector = e
             }
             call(e, t) {
-                return t.subscribe(new F(e,this.selector,this.caught))
+                return t.subscribe(new V(e,this.selector,this.caught))
             }
         }
-        class F extends r.a {
+        class V extends r.a {
             constructor(e, t, n) {
                 super(e),
                 this.selector = t,
@@ -18491,18 +18491,18 @@
             n=>n.lift.call(Object(L.a)([n, ...e]), new j.a(t))
         }
         var z = n("GyhO");
-        function $(...e) {
+        function G(...e) {
             return t=>t.lift.call(Object(z.a)(t, ...e))
         }
-        var G = n("0EUg")
+        var $ = n("0EUg")
           , W = n("5+tZ");
-        function Y(e, t) {
+        function K(e, t) {
             return Object(W.a)(e, t, 1)
         }
-        function q(e, t) {
-            return Y(()=>e, t)
+        function Y(e, t) {
+            return K(()=>e, t)
         }
-        function K(e) {
+        function q(e) {
             return t=>t.lift(new Q(e,t))
         }
         class Q {
@@ -18846,15 +18846,15 @@
         }
         function we() {
             return function(e) {
-                return e.lift(new _e)
+                return e.lift(new Ce)
             }
         }
-        class _e {
+        class Ce {
             call(e, t) {
-                return t.subscribe(new Ce(e))
+                return t.subscribe(new _e(e))
             }
         }
-        class Ce extends p.a {
+        class _e extends p.a {
             constructor(e) {
                 super(e)
             }
@@ -18862,7 +18862,7 @@
                 e.observe(this.destination)
             }
         }
-        function xe(e, t) {
+        function Se(e, t) {
             return n=>n.lift(new ke(e,t))
         }
         class ke {
@@ -18871,10 +18871,10 @@
                 this.flushes = t
             }
             call(e, t) {
-                return t.subscribe(new Se(e,this.keySelector,this.flushes))
+                return t.subscribe(new xe(e,this.keySelector,this.flushes))
             }
         }
-        class Se extends r.a {
+        class xe extends r.a {
             constructor(e, t, n) {
                 super(e),
                 this.keySelector = t,
@@ -18953,8 +18953,8 @@
         function Ae(e, t) {
             return Ie((n,r)=>t ? t(n[e], r[e]) : n[e] === r[e])
         }
-        var Oe = n("4I5i");
-        function Ne(e, t) {
+        var Me = n("4I5i");
+        function Oe(e, t) {
             return function(n) {
                 return n.lift(new Re(e,t))
             }
@@ -18965,10 +18965,10 @@
                 this.thisArg = t
             }
             call(e, t) {
-                return t.subscribe(new Me(e,this.predicate,this.thisArg))
+                return t.subscribe(new Ne(e,this.predicate,this.thisArg))
             }
         }
-        class Me extends p.a {
+        class Ne extends p.a {
             constructor(e, t, n) {
                 super(e),
                 this.predicate = t,
@@ -18987,12 +18987,12 @@
         }
         var Pe = n("KqfI")
           , De = n("n6bG");
-        function Ve(e, t, n) {
+        function Fe(e, t, n) {
             return function(r) {
-                return r.lift(new Fe(e,t,n))
+                return r.lift(new Ve(e,t,n))
             }
         }
-        class Fe {
+        class Ve {
             constructor(e, t, n) {
                 this.nextOrObserver = e,
                 this.error = t,
@@ -19045,7 +19045,7 @@
         const He = (e=function() {
             return new Be.a
         }
-        )=>Ve({
+        )=>Fe({
             hasValue: !1,
             next() {
                 this.hasValue = !0
@@ -19063,13 +19063,13 @@
             constructor(e) {
                 if (this.total = e,
                 this.total < 0)
-                    throw new Oe.a
+                    throw new Me.a
             }
             call(e, t) {
-                return t.subscribe(new $e(e,this.total))
+                return t.subscribe(new Ge(e,this.total))
             }
         }
-        class $e extends p.a {
+        class Ge extends p.a {
             constructor(e, t) {
                 super(e),
                 this.total = t,
@@ -19083,23 +19083,23 @@
                 this.unsubscribe()))
             }
         }
-        function Ge(e, t) {
+        function $e(e, t) {
             if (e < 0)
-                throw new Oe.a;
+                throw new Me.a;
             const n = arguments.length >= 2;
-            return r=>r.pipe(Ne((t,n)=>n === e), Ue(1), n ? le(t) : He(()=>new Oe.a))
+            return r=>r.pipe(Oe((t,n)=>n === e), Ue(1), n ? le(t) : He(()=>new Me.a))
         }
         var We = n("yCtX")
-          , Ye = n("XUOw");
-        function qe(...e) {
+          , Ke = n("XUOw");
+        function Ye(...e) {
             return t=>{
                 let n = e[e.length - 1];
                 Object(v.a)(n) ? e.pop() : n = null;
                 const r = e.length;
-                return 1 !== r || n ? r > 0 ? Object(z.a)(t, Object(We.a)(e, n)) : Object(z.a)(t, Object(Le.b)(n)) : Object(z.a)(t, Object(Ye.a)(e[0]))
+                return 1 !== r || n ? r > 0 ? Object(z.a)(t, Object(We.a)(e, n)) : Object(z.a)(t, Object(Le.b)(n)) : Object(z.a)(t, Object(Ke.a)(e[0]))
             }
         }
-        function Ke(e, t) {
+        function qe(e, t) {
             return n=>n.lift(new Qe(e,t,n))
         }
         class Qe {
@@ -19360,7 +19360,7 @@
         var mt = n("SpAZ");
         function gt(e, t) {
             const n = arguments.length >= 2;
-            return r=>r.pipe(e ? Ne((t,n)=>e(t, n, r)) : mt.a, Ue(1), n ? le(t) : He(()=>new Be.a))
+            return r=>r.pipe(e ? Oe((t,n)=>e(t, n, r)) : mt.a, Ue(1), n ? le(t) : He(()=>new Be.a))
         }
         var yt = n("OQgR");
         function bt() {
@@ -19376,15 +19376,15 @@
         class wt extends p.a {
             _next(e) {}
         }
-        function _t() {
-            return e=>e.lift(new Ct)
+        function Ct() {
+            return e=>e.lift(new _t)
         }
-        class Ct {
+        class _t {
             call(e, t) {
-                return t.subscribe(new xt(e))
+                return t.subscribe(new St(e))
             }
         }
-        class xt extends p.a {
+        class St extends p.a {
             constructor(e) {
                 super(e)
             }
@@ -19402,14 +19402,14 @@
         }
         function kt(e) {
             return function(t) {
-                return 0 === e ? Object(Le.b)() : t.lift(new St(e))
+                return 0 === e ? Object(Le.b)() : t.lift(new xt(e))
             }
         }
-        class St {
+        class xt {
             constructor(e) {
                 if (this.total = e,
                 this.total < 0)
-                    throw new Oe.a
+                    throw new Me.a
             }
             call(e, t) {
                 return t.subscribe(new It(e,this.total))
@@ -19444,7 +19444,7 @@
         }
         function Et(e, t) {
             const n = arguments.length >= 2;
-            return r=>r.pipe(e ? Ne((t,n)=>e(t, n, r)) : mt.a, kt(1), n ? le(t) : He(()=>new Be.a))
+            return r=>r.pipe(e ? Oe((t,n)=>e(t, n, r)) : mt.a, kt(1), n ? le(t) : He(()=>new Be.a))
         }
         function Tt(e) {
             return t=>t.lift(new At(e))
@@ -19454,10 +19454,10 @@
                 this.value = e
             }
             call(e, t) {
-                return t.subscribe(new Ot(e,this.value))
+                return t.subscribe(new Mt(e,this.value))
             }
         }
-        class Ot extends p.a {
+        class Mt extends p.a {
             constructor(e, t) {
                 super(e),
                 this.value = t
@@ -19466,17 +19466,17 @@
                 this.destination.next(this.value)
             }
         }
-        function Nt() {
+        function Ot() {
             return function(e) {
                 return e.lift(new Rt)
             }
         }
         class Rt {
             call(e, t) {
-                return t.subscribe(new Mt(e))
+                return t.subscribe(new Nt(e))
             }
         }
-        class Mt extends p.a {
+        class Nt extends p.a {
             constructor(e) {
                 super(e)
             }
@@ -19508,10 +19508,10 @@
                 this.hasSeed = n
             }
             call(e, t) {
-                return t.subscribe(new Vt(e,this.accumulator,this.seed,this.hasSeed))
+                return t.subscribe(new Ft(e,this.accumulator,this.seed,this.hasSeed))
             }
         }
-        class Vt extends p.a {
+        class Ft extends p.a {
             constructor(e, t, n, r) {
                 super(e),
                 this.accumulator = t,
@@ -19544,13 +19544,13 @@
                 this.destination.next(n)
             }
         }
-        var Ft = n("mCNh");
+        var Vt = n("mCNh");
         function jt(e, t) {
             return arguments.length >= 2 ? function(n) {
-                return Object(Ft.a)(Pt(e, t), kt(1), le(t))(n)
+                return Object(Vt.a)(Pt(e, t), kt(1), le(t))(n)
             }
             : function(t) {
-                return Object(Ft.a)(Pt((t,n,r)=>e(t, n, r + 1)), kt(1))(t)
+                return Object(Vt.a)(Pt((t,n,r)=>e(t, n, r + 1)), kt(1))(t)
             }
         }
         function Bt(e) {
@@ -19565,10 +19565,10 @@
             return "function" == typeof t ? Object(W.a)(()=>e, t, n) : ("number" == typeof t && (n = t),
             Object(W.a)(()=>e, n))
         }
-        function $t(e, t, n=Number.POSITIVE_INFINITY) {
-            return r=>r.lift(new Gt(e,t,n))
+        function Gt(e, t, n=Number.POSITIVE_INFINITY) {
+            return r=>r.lift(new $t(e,t,n))
         }
-        class Gt {
+        class $t {
             constructor(e, t, n) {
                 this.accumulator = e,
                 this.seed = t,
@@ -19631,11 +19631,11 @@
                 this.destination.complete())
             }
         }
-        function Yt(e) {
+        function Kt(e) {
             return jt("function" == typeof e ? (t,n)=>e(t, n) < 0 ? t : n : (e,t)=>e < t ? e : t)
         }
-        var qt = n("oB13")
-          , Kt = n("pxpQ");
+        var Yt = n("oB13")
+          , qt = n("pxpQ");
         function Qt(...e) {
             return 1 === e.length && Object(H.a)(e[0]) && (e = e[0]),
             t=>t.lift(new Zt(e))
@@ -19705,7 +19705,7 @@
             n
         }
         function rn(e, t) {
-            return n=>[Ne(e, t)(n), Ne(nn(e, t))(n)]
+            return n=>[Oe(e, t)(n), Oe(nn(e, t))(n)]
         }
         function ln(...e) {
             const t = e.length;
@@ -19726,22 +19726,22 @@
         }
         var sn = n("XNiG");
         function on(e) {
-            return e ? Object(qt.a)(()=>new sn.a, e) : Object(qt.a)(new sn.a)
+            return e ? Object(Yt.a)(()=>new sn.a, e) : Object(Yt.a)(new sn.a)
         }
         var an = n("2Vo4");
         function un(e) {
-            return t=>Object(qt.a)(new an.a(e))(t)
+            return t=>Object(Yt.a)(new an.a(e))(t)
         }
         var cn = n("NHP+");
         function dn() {
-            return e=>Object(qt.a)(new cn.a)(e)
+            return e=>Object(Yt.a)(new cn.a)(e)
         }
         var hn = n("jtHE");
         function fn(e, t, n, r) {
             n && "function" != typeof n && (r = n);
             const i = "function" == typeof n ? n : void 0
               , l = new hn.a(e,t,r);
-            return e=>Object(qt.a)(()=>l, i)(e)
+            return e=>Object(Yt.a)(()=>l, i)(e)
         }
         var pn = n("Nv8m");
         function mn(...e) {
@@ -19786,10 +19786,10 @@
                 this.notifier = e
             }
             call(e, t) {
-                return t.subscribe(new _n(e,this.notifier,t))
+                return t.subscribe(new Cn(e,this.notifier,t))
             }
         }
-        class _n extends r.a {
+        class Cn extends r.a {
             constructor(e, t, n) {
                 super(e),
                 this.notifier = t,
@@ -19842,10 +19842,10 @@
                 this.retriesSubscription = Object(i.a)(this, e)
             }
         }
-        function Cn(e=-1) {
-            return t=>t.lift(new xn(e,t))
+        function _n(e=-1) {
+            return t=>t.lift(new Sn(e,t))
         }
-        class xn {
+        class Sn {
             constructor(e, t) {
                 this.count = e,
                 this.source = t
@@ -19870,7 +19870,7 @@
                 }
             }
         }
-        function Sn(e) {
+        function xn(e) {
             return t=>t.lift(new In(e,t))
         }
         class In {
@@ -19931,20 +19931,20 @@
         }
         var Tn = n("x+ZX");
         function An(e) {
-            return t=>t.lift(new On(e))
+            return t=>t.lift(new Mn(e))
         }
-        class On {
+        class Mn {
             constructor(e) {
                 this.notifier = e
             }
             call(e, t) {
-                const n = new Nn(e)
+                const n = new On(e)
                   , r = t.subscribe(n);
                 return r.add(Object(i.a)(n, this.notifier)),
                 r
             }
         }
-        class Nn extends r.a {
+        class On extends r.a {
             constructor() {
                 super(...arguments),
                 this.hasValue = !1
@@ -19965,9 +19965,9 @@
             }
         }
         function Rn(e, t=a.a) {
-            return n=>n.lift(new Mn(e,t))
+            return n=>n.lift(new Nn(e,t))
         }
-        class Mn {
+        class Nn {
             constructor(e, t) {
                 this.period = e,
                 this.scheduler = t
@@ -20001,10 +20001,10 @@
             t.notifyNext(),
             this.schedule(e, n)
         }
-        function Vn(e, t) {
-            return n=>n.lift(new Fn(e,t))
+        function Fn(e, t) {
+            return n=>n.lift(new Vn(e,t))
         }
-        class Fn {
+        class Vn {
             constructor(e, t) {
                 this.compareTo = e,
                 this.comparator = t
@@ -20124,10 +20124,10 @@
                 this.source = t
             }
             call(e, t) {
-                return t.subscribe(new $n(e,this.predicate,this.source))
+                return t.subscribe(new Gn(e,this.predicate,this.source))
             }
         }
-        class $n extends p.a {
+        class Gn extends p.a {
             constructor(e, t, n) {
                 super(e),
                 this.predicate = t,
@@ -20156,7 +20156,7 @@
                 e.complete()) : e.error(new Be.a)
             }
         }
-        function Gn(e) {
+        function $n(e) {
             return t=>t.lift(new Wn(e))
         }
         class Wn {
@@ -20164,10 +20164,10 @@
                 this.total = e
             }
             call(e, t) {
-                return t.subscribe(new Yn(e,this.total))
+                return t.subscribe(new Kn(e,this.total))
             }
         }
-        class Yn extends p.a {
+        class Kn extends p.a {
             constructor(e, t) {
                 super(e),
                 this.total = t,
@@ -20177,14 +20177,14 @@
                 ++this.count > this.total && this.destination.next(e)
             }
         }
-        function qn(e) {
-            return t=>t.lift(new Kn(e))
+        function Yn(e) {
+            return t=>t.lift(new qn(e))
         }
-        class Kn {
+        class qn {
             constructor(e) {
                 if (this._skipCount = e,
                 this._skipCount < 0)
-                    throw new Oe.a
+                    throw new Me.a
             }
             call(e, t) {
                 return t.subscribe(0 === this._skipCount ? new p.a(e) : new Qn(e,this._skipCount))
@@ -20277,7 +20277,7 @@
                 let n = e[e.length - 1];
                 Object(v.a)(n) ? e.pop() : n = null;
                 const r = e.length;
-                return 1 !== r || n ? r > 0 ? Object(z.a)(Object(We.a)(e, n), t) : Object(z.a)(Object(Le.b)(n), t) : Object(z.a)(Object(Ye.a)(e[0]), t)
+                return 1 !== r || n ? r > 0 ? Object(z.a)(Object(We.a)(e, n), t) : Object(z.a)(Object(Le.b)(n), t) : Object(z.a)(Object(Ke.a)(e[0]), t)
             }
         }
         var ir = n("7Hc7")
@@ -20440,20 +20440,20 @@
             leading: !0,
             trailing: !1
         };
-        function _r(e, t=wr) {
-            return n=>n.lift(new Cr(e,t.leading,t.trailing))
+        function Cr(e, t=wr) {
+            return n=>n.lift(new _r(e,t.leading,t.trailing))
         }
-        class Cr {
+        class _r {
             constructor(e, t, n) {
                 this.durationSelector = e,
                 this.leading = t,
                 this.trailing = n
             }
             call(e, t) {
-                return t.subscribe(new xr(e,this.durationSelector,this.leading,this.trailing))
+                return t.subscribe(new Sr(e,this.durationSelector,this.leading,this.trailing))
             }
         }
-        class xr extends r.a {
+        class Sr extends r.a {
             constructor(e, t, n, r) {
                 super(e),
                 this.destination = e,
@@ -20500,9 +20500,9 @@
             }
         }
         function kr(e, t=a.a, n=wr) {
-            return r=>r.lift(new Sr(e,t,n.leading,n.trailing))
+            return r=>r.lift(new xr(e,t,n.leading,n.trailing))
         }
-        class Sr {
+        class xr {
             constructor(e, t, n, r) {
                 this.duration = e,
                 this.scheduler = t,
@@ -20558,23 +20558,23 @@
                 current: e.now(),
                 value: void 0,
                 last: void 0
-            }), Object(tt.a)(({current: e, last: t, value: n})=>new Or(n,e - t))))
+            }), Object(tt.a)(({current: e, last: t, value: n})=>new Mr(n,e - t))))
         }
-        class Or {
+        class Mr {
             constructor(e, t) {
                 this.value = e,
                 this.interval = t
             }
         }
-        var Nr = n("Y6u4");
+        var Or = n("Y6u4");
         function Rr(e, t, n=a.a) {
             return r=>{
                 let i = ae(e)
                   , l = i ? +e - n.now() : Math.abs(e);
-                return r.lift(new Mr(l,i,t,n))
+                return r.lift(new Nr(l,i,t,n))
             }
         }
-        class Mr {
+        class Nr {
             constructor(e, t, n, r) {
                 this.waitFor = e,
                 this.absoluteTimeout = t,
@@ -20615,10 +20615,10 @@
             }
         }
         var Dr = n("z6cu");
-        function Vr(e, t=a.a) {
-            return Rr(e, Object(Dr.a)(new Nr.a), t)
+        function Fr(e, t=a.a) {
+            return Rr(e, Object(Dr.a)(new Or.a), t)
         }
-        function Fr(e=a.a) {
+        function Vr(e=a.a) {
             return Object(tt.a)(t=>new jr(t,e.now()))
         }
         class jr {
@@ -20687,12 +20687,12 @@
                 t.next(n)
             }
         }
-        function $r(e, t=0) {
+        function Gr(e, t=0) {
             return function(n) {
-                return n.lift(new Gr(e,t))
+                return n.lift(new $r(e,t))
             }
         }
-        class Gr {
+        class $r {
             constructor(e, t) {
                 this.windowSize = e,
                 this.startWindowEvery = t
@@ -20746,7 +20746,7 @@
                 this.windows = null
             }
         }
-        function Yr(e) {
+        function Kr(e) {
             let t = a.a
               , n = null
               , r = Number.POSITIVE_INFINITY;
@@ -20754,10 +20754,10 @@
             Object(v.a)(arguments[2]) ? t = arguments[2] : Object(lr.a)(arguments[2]) && (r = arguments[2]),
             Object(v.a)(arguments[1]) ? t = arguments[1] : Object(lr.a)(arguments[1]) && (n = arguments[1]),
             function(i) {
-                return i.lift(new qr(e,n,r,t))
+                return i.lift(new Yr(e,n,r,t))
             }
         }
-        class qr {
+        class Yr {
             constructor(e, t, n, r) {
                 this.windowTimeSpan = e,
                 this.windowCreationInterval = t,
@@ -20768,7 +20768,7 @@
                 return t.subscribe(new Qr(e,this.windowTimeSpan,this.windowCreationInterval,this.maxWindowSize,this.scheduler))
             }
         }
-        class Kr extends sn.a {
+        class qr extends sn.a {
             constructor() {
                 super(...arguments),
                 this._numberOfNextedValues = 0
@@ -20835,7 +20835,7 @@
                 this.destination.complete()
             }
             openWindow() {
-                const e = new Kr;
+                const e = new qr;
                 return this.windows.push(e),
                 this.destination.next(e),
                 e
@@ -21128,7 +21128,7 @@
             return T
         }),
         n.d(t, "bufferWhen", function() {
-            return N
+            return O
         }),
         n.d(t, "catchError", function() {
             return D
@@ -21140,19 +21140,19 @@
             return U
         }),
         n.d(t, "concat", function() {
-            return $
+            return G
         }),
         n.d(t, "concatAll", function() {
-            return G.a
+            return $.a
         }),
         n.d(t, "concatMap", function() {
-            return Y
+            return K
         }),
         n.d(t, "concatMapTo", function() {
-            return q
+            return Y
         }),
         n.d(t, "count", function() {
-            return K
+            return q
         }),
         n.d(t, "debounce", function() {
             return X
@@ -21173,7 +21173,7 @@
             return we
         }),
         n.d(t, "distinct", function() {
-            return xe
+            return Se
         }),
         n.d(t, "distinctUntilChanged", function() {
             return Ie
@@ -21182,13 +21182,13 @@
             return Ae
         }),
         n.d(t, "elementAt", function() {
-            return Ge
+            return $e
         }),
         n.d(t, "endWith", function() {
-            return qe
+            return Ye
         }),
         n.d(t, "every", function() {
-            return Ke
+            return qe
         }),
         n.d(t, "exhaust", function() {
             return Xe
@@ -21200,7 +21200,7 @@
             return lt
         }),
         n.d(t, "filter", function() {
-            return Ne
+            return Oe
         }),
         n.d(t, "finalize", function() {
             return at
@@ -21221,7 +21221,7 @@
             return bt
         }),
         n.d(t, "isEmpty", function() {
-            return _t
+            return Ct
         }),
         n.d(t, "last", function() {
             return Et
@@ -21233,7 +21233,7 @@
             return Tt
         }),
         n.d(t, "materialize", function() {
-            return Nt
+            return Ot
         }),
         n.d(t, "max", function() {
             return Bt
@@ -21254,16 +21254,16 @@
             return zt
         }),
         n.d(t, "mergeScan", function() {
-            return $t
+            return Gt
         }),
         n.d(t, "min", function() {
-            return Yt
+            return Kt
         }),
         n.d(t, "multicast", function() {
-            return qt.a
+            return Yt.a
         }),
         n.d(t, "observeOn", function() {
-            return Kt.b
+            return qt.b
         }),
         n.d(t, "onErrorResumeNext", function() {
             return Qt
@@ -21302,10 +21302,10 @@
             return vn
         }),
         n.d(t, "retry", function() {
-            return Cn
+            return _n
         }),
         n.d(t, "retryWhen", function() {
-            return Sn
+            return xn
         }),
         n.d(t, "refCount", function() {
             return Tn.a
@@ -21320,7 +21320,7 @@
             return Pt
         }),
         n.d(t, "sequenceEqual", function() {
-            return Vn
+            return Fn
         }),
         n.d(t, "share", function() {
             return Hn.a
@@ -21332,10 +21332,10 @@
             return Un
         }),
         n.d(t, "skip", function() {
-            return Gn
+            return $n
         }),
         n.d(t, "skipLast", function() {
-            return qn
+            return Yn
         }),
         n.d(t, "skipUntil", function() {
             return Zn
@@ -21371,10 +21371,10 @@
             return yr
         }),
         n.d(t, "tap", function() {
-            return Ve
+            return Fe
         }),
         n.d(t, "throttle", function() {
-            return _r
+            return Cr
         }),
         n.d(t, "throttleTime", function() {
             return kr
@@ -21386,13 +21386,13 @@
             return Ar
         }),
         n.d(t, "timeout", function() {
-            return Vr
+            return Fr
         }),
         n.d(t, "timeoutWith", function() {
             return Rr
         }),
         n.d(t, "timestamp", function() {
-            return Fr
+            return Vr
         }),
         n.d(t, "toArray", function() {
             return Hr
@@ -21401,10 +21401,10 @@
             return Lr
         }),
         n.d(t, "windowCount", function() {
-            return $r
+            return Gr
         }),
         n.d(t, "windowTime", function() {
-            return Yr
+            return Kr
         }),
         n.d(t, "windowToggle", function() {
             return ei
@@ -22685,29 +22685,29 @@
                 return e.delay === t.delay ? e.index === t.index ? 0 : e.index > t.index ? 1 : -1 : e.delay > t.delay ? 1 : -1
             }
         }
-        var _ = n("Y/cZ")
-          , C = n("quSY")
-          , x = n("7o/Q")
+        var C = n("Y/cZ")
+          , _ = n("quSY")
+          , S = n("7o/Q")
           , k = n("WMd4")
-          , S = n("mCNh")
+          , x = n("mCNh")
           , I = n("KqfI")
           , E = n("SpAZ");
         function T(e) {
             return !!e && (e instanceof r.a || "function" == typeof e.lift && "function" == typeof e.subscribe)
         }
         var A = n("4I5i")
-          , O = n("sVev")
-          , N = n("9ppp")
+          , M = n("sVev")
+          , O = n("9ppp")
           , R = n("pjAE")
-          , M = n("Y6u4")
+          , N = n("Y6u4")
           , P = n("lJxs")
           , D = n("8Qeq")
-          , V = n("DH7j")
-          , F = n("z+Ro");
+          , F = n("DH7j")
+          , V = n("z+Ro");
         function j(e, t, n) {
             if (t) {
-                if (!Object(F.a)(t))
-                    return (...r)=>j(e, n)(...r).pipe(Object(P.a)(e=>Object(V.a)(e) ? t(...e) : t(e)));
+                if (!Object(V.a)(t))
+                    return (...r)=>j(e, n)(...r).pipe(Object(P.a)(e=>Object(F.a)(e) ? t(...e) : t(e)));
                 n = t
             }
             return function(...t) {
@@ -22772,8 +22772,8 @@
         }
         function L(e, t, n) {
             if (t) {
-                if (!Object(F.a)(t))
-                    return (...r)=>L(e, n)(...r).pipe(Object(P.a)(e=>Object(V.a)(e) ? t(...e) : t(e)));
+                if (!Object(V.a)(t))
+                    return (...r)=>L(e, n)(...r).pipe(Object(P.a)(e=>Object(F.a)(e) ? t(...e) : t(e)));
                 n = t
             }
             return function(...t) {
@@ -22820,7 +22820,7 @@
                 o = t.subject = new c.a;
                 const e = (...e)=>{
                     const t = e.shift();
-                    this.add(t ? s.schedule($, 0, {
+                    this.add(t ? s.schedule(G, 0, {
                         err: t,
                         subject: o
                     }) : s.schedule(z, 0, {
@@ -22832,7 +22832,7 @@
                 try {
                     i.apply(r, [...l, e])
                 } catch (a) {
-                    this.add(s.schedule($, 0, {
+                    this.add(s.schedule(G, 0, {
                         err: a,
                         subject: o
                     }))
@@ -22845,21 +22845,21 @@
             n.next(t),
             n.complete()
         }
-        function $(e) {
+        function G(e) {
             const {err: t, subject: n} = e;
             n.error(t)
         }
-        var G = n("itXk")
+        var $ = n("itXk")
           , W = n("GyhO")
-          , Y = n("NXyV")
-          , q = n("EY2u")
-          , K = n("cp0P")
+          , K = n("NXyV")
+          , Y = n("EY2u")
+          , q = n("cp0P")
           , Q = n("Cfvw")
           , Z = n("n6bG");
         function X(e, t, n, i) {
             return Object(Z.a)(n) && (i = n,
             n = void 0),
-            i ? X(e, t, n).pipe(Object(P.a)(e=>Object(V.a)(e) ? i(...e) : i(e))) : new r.a(r=>{
+            i ? X(e, t, n).pipe(Object(P.a)(e=>Object(F.a)(e) ? i(...e) : i(e))) : new r.a(r=>{
                 !function e(t, n, r, i, l) {
                     let s;
                     if (function(e) {
@@ -22894,7 +22894,7 @@
             )
         }
         function J(e, t, n) {
-            return n ? J(e, t).pipe(Object(P.a)(e=>Object(V.a)(e) ? n(...e) : n(e))) : new r.a(n=>{
+            return n ? J(e, t).pipe(Object(P.a)(e=>Object(F.a)(e) ? n(...e) : n(e))) : new r.a(n=>{
                 const r = (...e)=>n.next(1 === e.length ? e[0] : e);
                 let i;
                 try {
@@ -22913,7 +22913,7 @@
             t = e.condition,
             n = e.iterate,
             s = e.resultSelector || E.a,
-            l = e.scheduler) : void 0 === i || Object(F.a)(i) ? (o = e,
+            l = e.scheduler) : void 0 === i || Object(V.a)(i) ? (o = e,
             s = E.a,
             l = i) : (o = e,
             s = i),
@@ -22991,8 +22991,8 @@
             return t.closed || (t.next(r),
             t.closed) ? void 0 : this.schedule(e)
         }
-        function ne(e, t=q.a, n=q.a) {
-            return Object(Y.a)(()=>e() ? t : n)
+        function ne(e, t=Y.a, n=Y.a) {
+            return Object(K.a)(()=>e() ? t : n)
         }
         var re = n("Y7HM");
         function ie(e=0, t=h.a) {
@@ -23022,9 +23022,9 @@
         var ue = n("LRne");
         function ce(...e) {
             if (0 === e.length)
-                return q.a;
+                return Y.a;
             const [t,...n] = e;
-            return 1 === e.length && Object(V.a)(t) ? ce(...t) : new r.a(e=>{
+            return 1 === e.length && Object(F.a)(t) ? ce(...t) : new r.a(e=>{
                 const r = ()=>e.add(ce(...n).subscribe(e));
                 return Object(Q.a)(t).subscribe({
                     next(t) {
@@ -23039,7 +23039,7 @@
         function de(e, t) {
             return new r.a(t ? n=>{
                 const r = Object.keys(e)
-                  , i = new C.a;
+                  , i = new _.a;
                 return i.add(t.schedule(he, 0, {
                     keys: r,
                     index: 0,
@@ -23123,7 +23123,7 @@
                 } catch (s) {
                     return void n.error(s)
                 }
-                const l = (i ? Object(Q.a)(i) : q.a).subscribe(n);
+                const l = (i ? Object(Q.a)(i) : Y.a).subscribe(n);
                 return ()=>{
                     l.unsubscribe(),
                     r && r.unsubscribe()
@@ -23176,19 +23176,19 @@
             return w
         }),
         n.d(t, "Scheduler", function() {
-            return _.a
-        }),
-        n.d(t, "Subscription", function() {
             return C.a
         }),
+        n.d(t, "Subscription", function() {
+            return _.a
+        }),
         n.d(t, "Subscriber", function() {
-            return x.a
+            return S.a
         }),
         n.d(t, "Notification", function() {
             return k.a
         }),
         n.d(t, "pipe", function() {
-            return S.a
+            return x.a
         }),
         n.d(t, "noop", function() {
             return I.a
@@ -23203,16 +23203,16 @@
             return A.a
         }),
         n.d(t, "EmptyError", function() {
-            return O.a
+            return M.a
         }),
         n.d(t, "ObjectUnsubscribedError", function() {
-            return N.a
+            return O.a
         }),
         n.d(t, "UnsubscriptionError", function() {
             return R.a
         }),
         n.d(t, "TimeoutError", function() {
-            return M.a
+            return N.a
         }),
         n.d(t, "bindCallback", function() {
             return j
@@ -23221,19 +23221,19 @@
             return L
         }),
         n.d(t, "combineLatest", function() {
-            return G.b
+            return $.b
         }),
         n.d(t, "concat", function() {
             return W.a
         }),
         n.d(t, "defer", function() {
-            return Y.a
+            return K.a
         }),
         n.d(t, "empty", function() {
-            return q.b
+            return Y.b
         }),
         n.d(t, "forkJoin", function() {
-            return K.a
+            return q.a
         }),
         n.d(t, "from", function() {
             return Q.a
@@ -23287,7 +23287,7 @@
             return ve.b
         }),
         n.d(t, "EMPTY", function() {
-            return q.a
+            return Y.a
         }),
         n.d(t, "NEVER", function() {
             return oe
@@ -25463,7 +25463,7 @@
             name: "Swordsman",
             tier: 1,
             arena: 4,
-            description: "[Hero] {modifier0} HEALTH, {modifier1} ATK, {modifier2} DEF, {modifier3} MAG",
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
             imageFilename: "assets/images/cards/swordsman.png",
             rarity: 1,
             isProducer: !1,
@@ -25471,13 +25471,13 @@
             cardType: "hero",
             relevantResource: "gold",
             resourcesAffectedByMultipliers: "gold",
-            modifiers: [2, 1, 1, 1]
+            modifiers: [10, 4, 1, 2]
         }, {
             id: 124,
             name: "Goblin",
             tier: 1,
             arena: 4,
-            description: "[Monster] {modifier0} HEALTH, {modifier1} ATK, {modifier2} DEF, {modifier3} MAG. Drops {modifier4} gold",
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
             imageFilename: "assets/images/cards/goblin.png",
             rarity: 1,
             isProducer: !1,
@@ -25485,7 +25485,807 @@
             cardType: "monster",
             relevantResource: "gold",
             resourcesAffectedByMultipliers: "gold",
+            modifiers: [8, 4, 1, 2, 10, 0]
+        }, {
+            id: 125,
+            name: "Toad",
+            tier: 1,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/toad.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [10, 6, 1, 2, 15, 0]
+        }, {
+            id: 126,
+            name: "Parrot",
+            tier: 1,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/parrot.png",
+            rarity: 4,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [12, 6, 2, 2, 20, 0]
+        }, {
+            id: 127,
+            name: "Roo",
+            tier: 1,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/roo.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [14, 8, 3, 4, 25, 0]
+        }, {
+            id: 128,
+            name: "Greedy Bird",
+            tier: 1,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/bird.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [40, 4, 4, 4, 35, 0]
+        }, {
+            id: 129,
+            name: "Arachnid",
+            tier: 1,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/arachnid.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [20, 10, 3, 4, 30, 0]
+        }, {
+            id: 130,
+            name: "Dingo",
+            tier: 1,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier5} wood",
+            imageFilename: "assets/images/cards/dingo.png",
+            rarity: 4,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [20, 10, 4, 8, 0, 10]
+        }, {
+            id: 131,
+            name: "Scarecrow",
+            tier: 1,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier5} wood",
+            imageFilename: "assets/images/cards/scarecrow.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [24, 14, 2, 8, 0, 15]
+        }, {
+            id: 132,
+            name: "Valkyrie",
+            tier: 1,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/valkyrie.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [12, 4, 3, 4, 0, 0]
+        }, {
+            id: 133,
+            name: "Rogue",
+            tier: 1,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/rogue.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [8, 14, 2, 6, 0, 0]
+        }, {
+            id: 134,
+            name: "Viking",
+            tier: 1,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/viking.png",
+            rarity: 4,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [24, 8, 4, 3, 0, 0]
+        }, {
+            id: 135,
+            name: "Dwarf",
+            tier: 1,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/dwarf.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [16, 6, 10, 1, 0, 0]
+        }, {
+            id: 136,
+            name: "Potion",
+            tier: 1,
+            arena: 4,
+            description: "[Boost] +{modifier0} HEALTH. The boosted Hero resurrects if it dies.",
+            imageFilename: "assets/images/cards/potion.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [1, 0, 0, 0, 0, 0],
+            boostPotionEffect: !0
+        }, {
+            id: 137,
+            name: "Heart",
+            tier: 1,
+            arena: 4,
+            description: "[Boost] +{modifier0} HEALTH.  If used on a monster, +{modifier4%}% loot drops.",
+            imageFilename: "assets/images/cards/heart.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [7, 0, 0, 0, .25, .25]
+        }, {
+            id: 138,
+            name: "Well",
+            tier: 1,
+            arena: 4,
+            description: "[Boost] +{modifier3} MAG.  If used on a monster, +{modifier4%}% loot drops.",
+            imageFilename: "assets/images/cards/well.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 0, 0, 4, .15, .15]
+        }, {
+            id: 139,
+            name: "Mana Potion",
+            tier: 1,
+            arena: 4,
+            description: "[Boost] +{modifier3} MAG.  If used on a monster, +{modifier4%}% loot drops.",
+            imageFilename: "assets/images/cards/mana.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 0, 0, 5, .2, .2]
+        }, {
+            id: 140,
+            name: "Shield",
+            tier: 1,
+            arena: 4,
+            description: "[Boost] +{modifier2} DEF.  If used on a monster, +{modifier4%}% loot drops.",
+            imageFilename: "assets/images/cards/shield.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 0, 4, 0, .25, .25]
+        }, {
+            id: 141,
+            name: "Beer",
+            tier: 1,
+            arena: 4,
+            description: "[Boost] +{modifier1} ATK, {modifier2} DEF, {modifier3} MAG.",
+            imageFilename: "assets/images/cards/beer.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 5, -2, -2, 0, 0]
+        }, {
+            id: 142,
+            name: "Chest",
+            tier: 1,
+            arena: 4,
+            description: "[Boost] +{modifier1} ATK. If used on a monster, +{modifier4%}% loot drops.",
+            imageFilename: "assets/images/cards/chest.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 2, 0, 0, .3, .3]
+        }, {
+            id: 143,
+            name: "Jar of Death",
+            tier: 1,
+            arena: 4,
+            description: "[Boost] +{modifier1} ATK, critical hit chance x2.  If used on monster, +{modifier4%}% loot drops.",
+            imageFilename: "assets/images/cards/jarofdeath.png",
+            rarity: 4,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 1, 0, 0, .3, 0],
+            doubleCriticalRateEffect: !0
+        }, {
+            id: 144,
+            name: "Dead Fish",
+            tier: 1,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/fish.png",
+            rarity: 1,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
             modifiers: [1, 1, 1, 1, 1, 0]
+        }, {
+            id: 145,
+            name: "Assassin",
+            tier: 2,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/assassin.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [15, 22, 6, 8, 0, 0]
+        }, {
+            id: 146,
+            name: "Girl",
+            tier: 2,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/girl2.png",
+            rarity: 1,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [24, 15, 12, 9, 0, 0]
+        }, {
+            id: 147,
+            name: "Necromancer",
+            tier: 2,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/necromancer.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [19, 6, 11, 21, 0, 0]
+        }, {
+            id: 148,
+            name: "Pikeman",
+            tier: 2,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/pikeman.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [26, 19, 10, 7, 0, 0]
+        }, {
+            id: 149,
+            name: "Telepath",
+            tier: 2,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/telepath.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [20, 10, 10, 14, 0, 0]
+        }, {
+            id: 150,
+            name: "Nightwatch",
+            tier: 2,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/nightwatch.png",
+            rarity: 4,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [22, 17, 11, 8, 0, 0]
+        }, {
+            id: 151,
+            name: "Windmill",
+            tier: 2,
+            arena: 4,
+            description: "[Boost] +{modifier0} HEALTH, +{modifier1} ATK, +{modifier2} DEF.  If used on a monster, +{modifier4%}% loot drops.",
+            imageFilename: "assets/images/cards/mill.png",
+            rarity: 1,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [7, 5, 5, 0, .35, .35]
+        }, {
+            id: 152,
+            name: "Helmet",
+            tier: 2,
+            arena: 4,
+            description: "[Boost] +{modifier2} DEF, {modifier3} MAG.  If used on a monster, +{modifier4%}% loot drops.",
+            imageFilename: "assets/images/cards/helmet.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 0, 8, -2, .35, .35]
+        }, {
+            id: 153,
+            name: "Gem",
+            tier: 2,
+            arena: 4,
+            description: "[Boost] {modifier0} HEALTH, +{modifier3} MAG.  If used on a monster, +{modifier4%}% loot drops.",
+            imageFilename: "assets/images/cards/gem.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [-5, 0, 0, 6, .35, .35]
+        }, {
+            id: 154,
+            name: "Meteor",
+            tier: 2,
+            arena: 4,
+            description: "[Boost] +{modifier1} ATK, {modifier2} DEF",
+            imageFilename: "assets/images/cards/meteor.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 8, -6, 0, 0, 0]
+        }, {
+            id: 155,
+            name: "Tavern",
+            tier: 2,
+            arena: 4,
+            description: "[Boost] +{modifier0} HEALTH, +{modifier1} ATK, +{modifier2} DEF, +{modifier3} MAG.  Monster: +{modifier4%}% loot.",
+            imageFilename: "assets/images/cards/tavern.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [5, 2, 2, 2, .35, .35]
+        }, {
+            id: 156,
+            name: "Egg",
+            tier: 2,
+            arena: 4,
+            description: "[Boost] {modifier0} HEALTH. If used on a monster, +{modifier4%}% loot drops.",
+            imageFilename: "assets/images/cards/egg.png",
+            rarity: 4,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [30, 0, 0, 0, 1.25, 1.25]
+        }, {
+            id: 157,
+            name: "Swamper",
+            tier: 2,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/swamper.png",
+            rarity: 1,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [18, 16, 13, 8, 100, 0]
+        }, {
+            id: 158,
+            name: "Marauder",
+            tier: 2,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier5} wood",
+            imageFilename: "assets/images/cards/marauder.png",
+            rarity: 1,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [22, 8, 8, 22, 0, 100]
+        }, {
+            id: 159,
+            name: "Flying Pig",
+            tier: 2,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/boar.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [18, 12, 10, 6, 200, 0]
+        }, {
+            id: 160,
+            name: "Reptile",
+            tier: 2,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/reptile.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [30, 11, 11, 12, 400, 0]
+        }, {
+            id: 161,
+            name: "Skeleton",
+            tier: 2,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold, {modifier5} wood",
+            imageFilename: "assets/images/cards/skeleton.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [26, 13, 13, 12, 100, 100]
+        }, {
+            id: 162,
+            name: "Kobold",
+            tier: 2,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier5} wood",
+            imageFilename: "assets/images/cards/kobold.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [30, 22, 10, 10, 0, 150]
+        }, {
+            id: 163,
+            name: "Spider King",
+            tier: 2,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/spider_king.png",
+            rarity: 4,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [27, 24, 9, 16, 600, 0]
+        }, {
+            id: 164,
+            name: "Werewolf",
+            tier: 2,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier5} wood",
+            imageFilename: "assets/images/cards/werewolf.png",
+            rarity: 4,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [32, 23, 11, 17, 0, 250]
+        }, {
+            id: 165,
+            name: "Heathen",
+            tier: 2,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier5} wood",
+            imageFilename: "assets/images/cards/heathen.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [44, 33, 16, 14, 0, 600]
+        }, {
+            id: 166,
+            name: "Sailor",
+            tier: 3,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/sailor.png",
+            rarity: 1,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [30, 21, 17, 14, 0, 0]
+        }, {
+            id: 167,
+            name: "Phalanx",
+            tier: 3,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/phalanx.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [20, 29, 11, 13, 0, 0]
+        }, {
+            id: 168,
+            name: "Knight",
+            tier: 3,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/knight.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [27, 23, 15, 11, 0, 0]
+        }, {
+            id: 169,
+            name: "Shaman",
+            tier: 3,
+            arena: 4,
+            description: "[Hero] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG",
+            imageFilename: "assets/images/cards/shaman.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "hero",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [19, 6, 7, 30, 0, 0]
+        }, {
+            id: 170,
+            name: "Mushroom",
+            tier: 3,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/mushroom.png",
+            rarity: 1,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [31, 17, 15, 15, 600, 0]
+        }, {
+            id: 171,
+            name: "Golem",
+            tier: 3,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold, {modifier5} wood",
+            imageFilename: "assets/images/cards/golem.png",
+            rarity: 1,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "gold|wood",
+            resourcesAffectedByMultipliers: "gold",
+            modifiers: [38, 25, 12, 13, 400, 400]
+        }, {
+            id: 172,
+            name: "Sneaky Barrel",
+            tier: 3,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier5} wood",
+            imageFilename: "assets/images/cards/marauder.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [36, 27, 11, 19, 0, 600]
+        }, {
+            id: 173,
+            name: "Beast",
+            tier: 3,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier4} gold",
+            imageFilename: "assets/images/cards/beast.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [40, 27, 14, 20, 2400, 0]
+        }, {
+            id: 174,
+            name: "Demon",
+            tier: 3,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier5} wood",
+            imageFilename: "assets/images/cards/demon.png",
+            rarity: 4,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [55, 36, 19, 17, 0, 1e3]
+        }, {
+            id: 175,
+            name: "Ghoul",
+            tier: 3,
+            arena: 4,
+            description: "[Monster] {modifier0} HEALTH {modifier1} ATK {modifier2} DEF {modifier3} MAG&nbsp;&nbsp; Drops {modifier5} wood",
+            imageFilename: "assets/images/cards/ghoul.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "monster",
+            relevantResource: "wood",
+            resourcesAffectedByMultipliers: "wood",
+            modifiers: [60, 37, 24, 19, 0, 2400]
+        }, {
+            id: 176,
+            name: "Hatchet",
+            tier: 3,
+            arena: 4,
+            description: "[Boost] +{modifier1} ATK.  Monster: +{modifier4%}% loot.",
+            imageFilename: "assets/images/cards/hatchet.png",
+            rarity: 2,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 10, 0, 0, .5, .5]
+        }, {
+            id: 177,
+            name: "Gauntlet",
+            tier: 3,
+            arena: 4,
+            description: "[Boost] +{modifier2} DEF.  Monster: +{modifier4%}% loot.",
+            imageFilename: "assets/images/cards/gauntlet.png",
+            rarity: 1,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 0, 9, 0, .5, .5]
+        }, {
+            id: 178,
+            name: "Hood",
+            tier: 3,
+            arena: 4,
+            description: "[Boost] +{modifier1} ATK, +{modifier3} MAG.  Monster: +{modifier4%}% loot.",
+            imageFilename: "assets/images/cards/hood.png",
+            rarity: 1,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 4, 0, 5, .5, .5]
+        }, {
+            id: 179,
+            name: "Starfire",
+            tier: 3,
+            arena: 4,
+            description: "[Boost] {modifier2} DEF, +{modifier3} MAG.  Monster: +{modifier4%}% loot.",
+            imageFilename: "assets/images/cards/starfire.png",
+            rarity: 5,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [0, 0, -7, 10, .5, .5]
+        }, {
+            id: 180,
+            name: "Desert",
+            tier: 3,
+            arena: 4,
+            description: "[Boost] +{modifier0} HEALTH, +{modifier1} ATK, +{modifier2} DEF, +{modifier3} MAG.  Monster: +{modifier4%}% loot.",
+            imageFilename: "assets/images/cards/desert.png",
+            rarity: 3,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [10, 5, 5, 5, .5, .5]
+        }, {
+            id: 181,
+            name: "Barracks",
+            tier: 3,
+            arena: 4,
+            description: "[Boost] +{modifier0} HEALTH, +{modifier1} ATK, +{modifier2} DEF.  Monster: +{modifier4%}% loot.",
+            imageFilename: "assets/images/cards/barracks.png",
+            rarity: 4,
+            isProducer: !1,
+            isEffect: !1,
+            cardType: "boost",
+            relevantResource: "",
+            resourcesAffectedByMultipliers: "",
+            modifiers: [8, 7, 7, 0, .5, .5]
         }];
         function s(e) {
             for (var t = 0; t < l.length; t++)
@@ -25520,16 +26320,18 @@
             class e {
                 constructor() {
                     this.isVisible = !1,
+                    this.isMonsterCard = !1,
                     this.isAwaitingKredPurchaseResponse = !1,
                     this.objectKeys = Object.keys,
                     e.instance = this
                 }
                 ngOnInit() {
-                    this.appComponent = q.instance
+                    this.appComponent = Z.instance
                 }
                 show(e, t) {
                     this.isAwaitingKredPurchaseResponse || (this.arenaNumber = e,
                     this.cardId = t,
+                    this.isMonsterCard = "monster" == s(this.cardId).cardType,
                     this.isVisible = !0)
                 }
                 pressedOk() {
@@ -25539,19 +26341,19 @@
                     this.isAwaitingKredPurchaseResponse || (this.isVisible = !1)
                 }
                 upgradeWithQty() {
-                    q.instance.tryToRankUpCard(this.arenaNumber, this.cardId)
+                    Z.instance.tryToRankUpCard(this.arenaNumber, this.cardId)
                 }
                 upgradeWithGems() {
-                    this.isAwaitingKredPurchaseResponse || q.instance.tryToRankUpCardWithGems(this.arenaNumber, this.cardId)
+                    this.isAwaitingKredPurchaseResponse || Z.instance.tryToRankUpCardWithGems(this.arenaNumber, this.cardId)
                 }
                 combineCards() {
-                    this.isAwaitingKredPurchaseResponse || q.instance.tryToRankUpCard(this.arenaNumber, this.cardId)
+                    this.isAwaitingKredPurchaseResponse || Z.instance.tryToRankUpCard(this.arenaNumber, this.cardId)
                 }
                 massCombineCards() {
-                    this.isAwaitingKredPurchaseResponse || q.instance.tryToRankUpAllCards(this.arenaNumber)
+                    this.isAwaitingKredPurchaseResponse || Z.instance.tryToRankUpAllCards(this.arenaNumber)
                 }
                 gemCount() {
-                    return q.instance.gameState.gems
+                    return Z.instance.gameState.gems
                 }
                 upgradeWithKreds() {
                     this.isAwaitingKredPurchaseResponse = !0,
@@ -25563,7 +26365,10 @@
                 kredUpgradeCallback(e) {
                     let t = parseInt("" + e.cardId)
                       , n = parseInt("" + e.arenaNumber);
-                    q.instance.forceToRankUpCard(n, t)
+                    Z.instance.forceToRankUpCard(n, t)
+                }
+                reduceLevel() {
+                    this.isMonsterCard && Z.instance.rankDownCard(this.arenaNumber, this.cardId)
                 }
             }
             return e.instance = null,
@@ -25581,8 +26386,8 @@
                 kongregateAPI.loadAPI((function() {
                     this.kongregate = kongregateAPI.getAPI(),
                     this.isReady = !0,
-                    q.instance.isOnKongregate = !0,
-                    u.instance.submitStat("realmsunlocked", q.instance.gameState.highestUnlockedArena - 1),
+                    Z.instance.isOnKongregate = !0,
+                    u.instance.submitStat("realmsunlocked", Z.instance.gameState.highestUnlockedArena - 1),
                     this.kongregate.mtx.requestItemList([], this.microtransactionListCallback.bind(this))
                 }
                 ).bind(this))
@@ -25616,10 +26421,10 @@
                 this.itemIdentifierBeingPurchased = null
             }
             microtransactionListCallback(e) {
-                e.success && (q.instance.kongregateMicrotransactionList = e.data)
+                e.success && (Z.instance.kongregateMicrotransactionList = e.data)
             }
             getUsername() {
-                return this.isReady ? this.kongregate.services.getUsername() : null
+                return Object(r.isDevMode)() ? "Fordesoft" : this.isReady ? this.kongregate.services.getUsername() : null
             }
         }
         function c(e, t) {
@@ -25636,416 +26441,416 @@
                     switch (u) {
                     case 3:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "gold", d(u, e, 1));
-                            let n = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != n && q.instance.pushMultiplier(e, i, n, "gold", d(u, e, 1));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "gold", d(u, e, 1));
+                            let n = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != n && Z.instance.pushMultiplier(e, i, n, "gold", d(u, e, 1));
                             break
                         }
                     case 5:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
-                            null != t && q.instance.pushMultiplier(e, i, t, "gold", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "gold", d(u, e, 0));
                             break
                         }
                     case 6:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "gold", d(u, e, 0));
-                            let n = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != n && q.instance.pushMultiplier(e, i, n, "gold", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "gold", d(u, e, 0));
+                            let n = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != n && Z.instance.pushMultiplier(e, i, n, "gold", d(u, e, 0));
                             break
                         }
                     case 7:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "gold", 0);
+                                Z.instance.pushMultiplier(e, i, t[r], "gold", 0);
                             break
                         }
                     case 9:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInPlay(e, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInPlay(e, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "gold", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "gold", d(u, e, 0));
                             break
                         }
                     case 11:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "gold", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "gold", d(u, e, 0));
                             break
                         }
                     case 17:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, -1, 0);
-                            null != t && q.instance.pushMultiplier(e, i, t, "gold", d(u, e, 1));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, -1, 0);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "gold", d(u, e, 1));
                             break
                         }
                     case 20:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "gold", 0);
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "gold", 0);
                             break
                         }
                     case 21:
-                        var l = q.instance.getSlotNumbersOfCardsInPlay(e, i);
+                        var l = Z.instance.getSlotNumbersOfCardsInPlay(e, i);
                         for (r = 0; r < l.length; r++)
-                            q.instance.pushMultiplier(e, i, l[r], "gold", 0);
+                            Z.instance.pushMultiplier(e, i, l[r], "gold", 0);
                         break;
                     case 22:
-                        for (l = q.instance.getSlotNumbersOfCardsInPlay(e, i),
+                        for (l = Z.instance.getSlotNumbersOfCardsInPlay(e, i),
                         r = 0; r < l.length; r++)
-                            q.instance.pushMultiplier(e, i, l[r], "gold", d(u, e, 0));
+                            Z.instance.pushMultiplier(e, i, l[r], "gold", d(u, e, 0));
                         break;
                     case 23:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "gold", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "gold", d(u, e, 0));
                             break
                         }
                     case 31:
                         for (var s = -1; s <= 1; s++)
                             for (var o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && q.instance.pushMultiplier(e, i, t, "wood", d(u, e, 0))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && Z.instance.pushMultiplier(e, i, t, "wood", d(u, e, 0))
                             }
                         break;
                     case 32:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "wood", 0);
+                                Z.instance.pushMultiplier(e, i, t[r], "wood", 0);
                             break
                         }
                     case 33:
                         for (s = -1; s <= 1; s++)
                             for (o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && 24 == q.instance.GetCardIdAtSlot(e, t) && q.instance.pushMultiplier(e, i, t, "wood", d(u, e, 0))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && 24 == Z.instance.GetCardIdAtSlot(e, t) && Z.instance.pushMultiplier(e, i, t, "wood", d(u, e, 0))
                             }
                         break;
                     case 36:
                     case 35:
                         for (s = -1; s <= 1; s++)
                             for (o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && q.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && Z.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0))
                             }
                         break;
                     case 39:
                         for (s = -1; s <= 1; s++)
                             for (o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && q.instance.pushMultiplier(e, i, t, "wood", d(u, e, 0))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && Z.instance.pushMultiplier(e, i, t, "wood", d(u, e, 0))
                             }
                         break;
                     case 40:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInColumn(e, n[i].x, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInColumn(e, n[i].x, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "wood", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "wood", d(u, e, 0));
                             break
                         }
                     case 41:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "wood", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "wood", d(u, e, 0));
                             break
                         }
                     case 42:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "iron", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "iron", d(u, e, 0));
                             break
                         }
                     case 43:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInPlay(e, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInPlay(e, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "wood", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "wood", d(u, e, 0));
                             break
                         }
                     case 44:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0));
                             break
                         }
                     case 45:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, -1, 0);
-                            null != t && q.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, -1, 0);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0));
                             break
                         }
                     case 46:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0));
                             break
                         }
                     case 47:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
-                            null != t && q.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0));
                             break
                         }
                     case 48:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInPlay(e, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInPlay(e, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "iron", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "iron", d(u, e, 0));
                             break
                         }
                     case 51:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "wood", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "wood", d(u, e, 0));
                             break
                         }
                     case 56:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0));
                             break
                         }
                     case 57:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, -1, 0);
-                            null != t && q.instance.pushMultiplier(e, i, t, "iron", d(u, e, 1));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, -1, 0);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "iron", d(u, e, 1));
                             break
                         }
                     case 58:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInPlay(e, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInPlay(e, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "iron", d(u, e, 0)),
-                                q.instance.pushMultiplier(e, i, t[r], "wood", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "iron", d(u, e, 0)),
+                                Z.instance.pushMultiplier(e, i, t[r], "wood", d(u, e, 0));
                             break
                         }
                     case 60:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
-                            null != t && (q.instance.pushMultiplier(e, i, t, "wood", d(u, e, 0)),
-                            q.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0)));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
+                            null != t && (Z.instance.pushMultiplier(e, i, t, "wood", d(u, e, 0)),
+                            Z.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0)));
                             break
                         }
                     case 61:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInPlay(e, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInPlay(e, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "iron", d(u, e, 0)),
-                                q.instance.pushMultiplier(e, i, t[r], "wood", 0);
+                                Z.instance.pushMultiplier(e, i, t[r], "iron", d(u, e, 0)),
+                                Z.instance.pushMultiplier(e, i, t[r], "wood", 0);
                             break
                         }
                     case 63:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
-                            null != t && q.instance.pushMultiplier(e, i, t, "wood", d(u, e, 1));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "wood", d(u, e, 1));
                             break
                         }
                     case 64:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "iron", d(u, e, 2));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "iron", d(u, e, 2));
                             break
                         }
                     case 65:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInPlay(e, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInPlay(e, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "iron", d(u, e, 2));
+                                Z.instance.pushMultiplier(e, i, t[r], "iron", d(u, e, 2));
                             break
                         }
                     case 67:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "wood", 0);
+                                Z.instance.pushMultiplier(e, i, t[r], "wood", 0);
                             break
                         }
                     case 68:
                         for (s = -1; s <= 1; s++)
                             for (o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && (q.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0)),
-                                q.instance.pushMultiplier(e, i, t, "wood", 0))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && (Z.instance.pushMultiplier(e, i, t, "iron", d(u, e, 0)),
+                                Z.instance.pushMultiplier(e, i, t, "wood", 0))
                             }
                         break;
                     case 70:
                         for (s = -1; s <= 1; s++)
                             for (o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && q.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 0))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && Z.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 0))
                             }
                         break;
                     case 76:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 0));
                             break
                         }
                     case 83:
                         for (s = -1; s <= 1; s++)
                             for (o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && q.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 0))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && Z.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 0))
                             }
                         break;
                     case 84:
                         for (s = -1; s <= 1; s++)
                             for (o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && (q.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0)),
-                                q.instance.pushMultiplier(e, i, t, "skulls", 0))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && (Z.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0)),
+                                Z.instance.pushMultiplier(e, i, t, "skulls", 0))
                             }
                         break;
                     case 85:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 0));
-                            let n = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != n && q.instance.pushMultiplier(e, i, n, "feathers", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 0));
+                            let n = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != n && Z.instance.pushMultiplier(e, i, n, "feathers", d(u, e, 0));
                             break
                         }
                     case 86:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "ether", d(u, e, 1));
+                                Z.instance.pushMultiplier(e, i, t[r], "ether", d(u, e, 1));
                             break
                         }
                     case 87:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0));
-                            let n = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != n && q.instance.pushMultiplier(e, i, n, "ether", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0));
+                            let n = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != n && Z.instance.pushMultiplier(e, i, n, "ether", d(u, e, 0));
                             break
                         }
                     case 90:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInColumn(e, n[i].x, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInColumn(e, n[i].x, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "feathers", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "feathers", d(u, e, 0));
                             break
                         }
                     case 91:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 0));
                             break
                         }
                     case 92:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, -1, 0);
-                            null != t && q.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, -1, 0);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0));
                             break
                         }
                     case 95:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
-                            null != t && q.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 1));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 1));
                             break
                         }
                     case 96:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "ether", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "ether", d(u, e, 0));
                             break
                         }
                     case 98:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0));
-                            let n = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != n && q.instance.pushMultiplier(e, i, n, "ether", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0));
+                            let n = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != n && Z.instance.pushMultiplier(e, i, n, "ether", d(u, e, 0));
                             break
                         }
                     case 99:
                         for (s = -1; s <= 1; s++)
                             for (o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && q.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 1))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && Z.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 1))
                             }
                         break;
                     case 100:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 1));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 1));
                             break
                         }
                     case 101:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "skulls", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "skulls", d(u, e, 0));
                             break
                         }
                     case 102:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 1));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, 1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 1));
                             break
                         }
                     case 105:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
-                            null != t && q.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 1));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 1));
                             break
                         }
                     case 107:
                         for (s = -1; s <= 1; s++)
                             for (o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && (q.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0)),
-                                q.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 0)),
-                                q.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 0)))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && (Z.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0)),
+                                Z.instance.pushMultiplier(e, i, t, "skulls", d(u, e, 0)),
+                                Z.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 0)))
                             }
                         break;
                     case 112:
                         for (s = -1; s <= 1; s++)
                             for (o = -1; o <= 1; o++) {
-                                let t = q.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
-                                null != t && (q.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0)),
-                                q.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 1)))
+                                let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, s, o);
+                                null != t && (Z.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0)),
+                                Z.instance.pushMultiplier(e, i, t, "feathers", d(u, e, 1)))
                             }
                         break;
                     case 113:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
-                            null != t && q.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 1, 0);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0));
                             break
                         }
                     case 116:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInRow(e, n[i].y, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "ether", d(u, e, 1));
+                                Z.instance.pushMultiplier(e, i, t[r], "ether", d(u, e, 1));
                             break
                         }
                     case 118:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInColumn(e, n[i].x, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInColumn(e, n[i].x, i);
                             for (r = 0; r < t.length; r++)
-                                q.instance.pushMultiplier(e, i, t[r], "skulls", d(u, e, 0));
+                                Z.instance.pushMultiplier(e, i, t[r], "skulls", d(u, e, 0));
                             break
                         }
                     case 120:
                         {
-                            let t = q.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
-                            null != t && q.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0));
+                            let t = Z.instance.getCardSlotNumberAtXYOffset(e, i, 0, -1);
+                            null != t && Z.instance.pushMultiplier(e, i, t, "ether", d(u, e, 0));
                             break
                         }
                     case 122:
                         {
-                            let t = q.instance.getSlotNumbersOfCardsInPlay(e, i);
+                            let t = Z.instance.getSlotNumbersOfCardsInPlay(e, i);
                             for (var a = 0; a < t.length; a++) {
                                 let n = t[a];
-                                121 == q.instance.GetCardIdAtSlot(e, n) && q.instance.pushMultiplier(e, i, n, "skulls", d(u, e, 0))
+                                121 == Z.instance.GetCardIdAtSlot(e, n) && Z.instance.pushMultiplier(e, i, n, "skulls", d(u, e, 0))
                             }
                             break
                         }
@@ -26054,7 +26859,7 @@
             }
         }
         function d(e, t, n) {
-            return q.instance.rankAdjustedModifier(e, t, n)
+            return Z.instance.rankAdjustedModifier(e, t, n)
         }
         const h = {
             cardSlots: [{
@@ -26722,8 +27527,14 @@
                 slotIsUnlocked: !1,
                 slotType: "boost",
                 unlockCurrency: "gold",
-                unlockPrice: 4e3,
+                unlockPrice: 1e4,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26739,6 +27550,12 @@
                 unlockCurrency: "gold",
                 unlockPrice: 50,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26751,9 +27568,15 @@
                 y: 0,
                 slotIsUnlocked: !1,
                 slotType: "boost",
-                unlockCurrency: "gold",
-                unlockPrice: 2e3,
+                unlockCurrency: "wood",
+                unlockPrice: 100,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26766,9 +27589,15 @@
                 y: 0,
                 slotIsUnlocked: !1,
                 slotType: "boost",
-                unlockCurrency: "gold",
-                unlockPrice: 1e4,
+                unlockCurrency: "wood",
+                unlockPrice: 1e3,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26783,9 +27612,15 @@
                 slotType: "monster",
                 currentHP: 0,
                 maxHP: 0,
-                unlockCurrency: "gold",
-                unlockPrice: 3e3,
+                unlockCurrency: "wood",
+                unlockPrice: 50,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26803,6 +27638,12 @@
                 unlockCurrency: "gold",
                 unlockPrice: 0,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26818,8 +27659,14 @@
                 currentHP: 0,
                 maxHP: 0,
                 unlockCurrency: "gold",
-                unlockPrice: 1e3,
+                unlockPrice: 3e3,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26837,6 +27684,12 @@
                 unlockCurrency: "gold",
                 unlockPrice: 5e3,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26851,9 +27704,15 @@
                 slotType: "hero",
                 currentHP: 0,
                 maxHP: 0,
-                unlockCurrency: "gold",
-                unlockPrice: 3e3,
+                unlockCurrency: "wood",
+                unlockPrice: 50,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26871,6 +27730,12 @@
                 unlockCurrency: "gold",
                 unlockPrice: 200,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26886,8 +27751,14 @@
                 currentHP: 0,
                 maxHP: 0,
                 unlockCurrency: "gold",
-                unlockPrice: 1e3,
+                unlockPrice: 3e3,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26905,6 +27776,12 @@
                 unlockCurrency: "gold",
                 unlockPrice: 5e3,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26918,8 +27795,14 @@
                 slotIsUnlocked: !1,
                 slotType: "boost",
                 unlockCurrency: "gold",
-                unlockPrice: 4e3,
+                unlockPrice: 1e4,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26935,6 +27818,12 @@
                 unlockCurrency: "gold",
                 unlockPrice: 50,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26947,9 +27836,15 @@
                 y: 3,
                 slotIsUnlocked: !1,
                 slotType: "boost",
-                unlockCurrency: "gold",
-                unlockPrice: 2e3,
+                unlockCurrency: "wood",
+                unlockPrice: 100,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26962,9 +27857,15 @@
                 y: 3,
                 slotIsUnlocked: !1,
                 slotType: "boost",
-                unlockCurrency: "gold",
-                unlockPrice: 5e3,
+                unlockCurrency: "wood",
+                unlockPrice: 1e3,
                 cardInSlot: null,
+                statBonuses: {},
+                roundsSoFar: 0,
+                estimatedLootPerSecond: {
+                    gold: 0,
+                    wood: 0
+                },
                 multipliers: {
                     gold: [],
                     iron: [],
@@ -26975,45 +27876,45 @@
             }]
         };
         function g(e) {
-            for (var t = 0, n = q.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
+            for (var t = 0, n = Z.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
                 if (null != n[r].cardInSlot) {
                     var i = n[r].cardInSlot.id
                       , l = 0;
                     switch (i) {
                     case 1:
-                        l = y(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "gold");
+                        l = y(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "gold");
                         break;
                     case 2:
                         l = y(i, e, 0),
-                        q.instance.cardExistsInArena(e, 4) && (l += y(i, e, 1)),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "gold");
+                        Z.instance.cardExistsInArena(e, 4) && (l += y(i, e, 1)),
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "gold");
                         break;
                     case 3:
-                        l = y(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "gold");
+                        l = y(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "gold");
                         break;
                     case 4:
                         l = y(i, e, 0),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "gold");
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "gold");
                         break;
                     case 5:
                     case 6:
                         l = 0;
                         break;
                     case 7:
-                        l = y(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "gold");
+                        l = y(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "gold");
                         break;
                     case 8:
                         l = y(i, e, 0),
-                        1 == q.instance.getNumberOfCardsInPlay(e) && (l += y(i, e, 1)),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "gold");
+                        1 == Z.instance.getNumberOfCardsInPlay(e) && (l += y(i, e, 1)),
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "gold");
                         break;
                     case 9:
                         l = 0;
                         break;
                     case 10:
                         l = y(i, e, 0),
-                        0 != q.instance.getSlotNumbersOfCardsInRow(e, n[r].y, r).length && (l = 0),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "gold");
+                        0 != Z.instance.getSlotNumbersOfCardsInRow(e, n[r].y, r).length && (l = 0),
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "gold");
                         break;
                     case 11:
                         l = 0;
@@ -27025,13 +27926,13 @@
                     case 16:
                     case 17:
                         l = y(i, e, 0),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "gold");
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "gold");
                         break;
                     case 18:
                         l = y(i, e, 0),
-                        null != q.instance.getCardSlotNumberAtXYOffset(e, r, 0, -1) && (l = 0),
-                        null != q.instance.getCardSlotNumberAtXYOffset(e, r, 0, 1) && (l = 0),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "gold");
+                        null != Z.instance.getCardSlotNumberAtXYOffset(e, r, 0, -1) && (l = 0),
+                        null != Z.instance.getCardSlotNumberAtXYOffset(e, r, 0, 1) && (l = 0),
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "gold");
                         break;
                     case 19:
                         l = y(i, e, 0);
@@ -27039,23 +27940,23 @@
                     case 20:
                     case 21:
                         l = y(i, e, 0),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "gold")
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "gold")
                     }
-                    t += l *= q.instance.UniversalAura(e)
+                    t += l *= Z.instance.UniversalAura(e)
                 }
             return t
         }
         function y(e, t, n) {
-            return q.instance.rankAdjustedModifier(e, t, n)
+            return Z.instance.rankAdjustedModifier(e, t, n)
         }
         function b(e) {
-            for (var t = 0, n = q.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
+            for (var t = 0, n = Z.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
                 if (null != n[r].cardInSlot) {
                     var i = n[r].cardInSlot.id
                       , l = 0;
                     switch (i) {
                     case 24:
-                        l = w(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                        l = w(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                         break;
                     case 25:
                     case 26:
@@ -27063,67 +27964,67 @@
                         break;
                     case 27:
                         {
-                            let t = q.instance.cardCountInArena(e, 27);
-                            l = (w(i, e, 0) + (t - 1) * w(i, e, 1)) * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                            let t = Z.instance.cardCountInArena(e, 27);
+                            l = (w(i, e, 0) + (t - 1) * w(i, e, 1)) * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                             break
                         }
                     case 28:
                     case 29:
-                        l = w(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                        l = w(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                         break;
                     case 30:
                         l = w(i, e, 1);
                         break;
                     case 32:
-                        l = w(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                        l = w(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                         break;
                     case 34:
                         l = w(i, e, 1);
                         break;
                     case 37:
-                        l = w(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                        l = w(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                         break;
                     case 49:
                         l = w(i, e, 1);
                         break;
                     case 52:
-                        l = w(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                        l = w(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                         break;
                     case 53:
                         {
-                            let t = q.instance.gameState.resources["arena" + e].wood
+                            let t = Z.instance.gameState.resources["arena" + e].wood
                               , n = w(i, e, 0) * Math.floor(t / 3e3);
                             n > w(i, e, 2) && (n = w(i, e, 2)),
                             n <= 0 && (n = 1),
-                            l = n * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                            l = n * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                             break
                         }
                     case 50:
                         {
-                            let t = q.instance.gameState.resources["arena" + e].wood
+                            let t = Z.instance.gameState.resources["arena" + e].wood
                               , n = w(i, e, 0) * Math.floor(t / 1e3);
                             n > w(i, e, 2) && (n = w(i, e, 2)),
                             n <= 0 && (n = 1),
-                            l = n * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                            l = n * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                             break
                         }
                     case 54:
-                        l = w(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                        l = w(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                         break;
                     case 55:
                         l = w(i, e, 0),
-                        q.instance.cardExistsInArena(e, 59) && (l += w(i, e, 1)),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                        Z.instance.cardExistsInArena(e, 59) && (l += w(i, e, 1)),
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                         break;
                     case 57:
                     case 59:
-                        l = w(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                        l = w(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                         break;
                     case 62:
                         l = w(i, e, 1);
                         break;
                     case 63:
-                        l = w(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "wood");
+                        l = w(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "wood");
                         break;
                     case 64:
                     case 65:
@@ -27131,21 +28032,21 @@
                         l = w(i, e, 1);
                         break;
                     case 67:
-                        l = w(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "wood")
+                        l = w(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "wood")
                     }
                     l < 0 && v(e, r) && (l = 0),
-                    t += l *= q.instance.UniversalAura(e)
+                    t += l *= Z.instance.UniversalAura(e)
                 }
             return t
         }
         function v(e, t) {
-            return q.instance.cardIsImmuneFromConsumingResource(e, t, "wood")
+            return Z.instance.cardIsImmuneFromConsumingResource(e, t, "wood")
         }
         function w(e, t, n) {
-            return q.instance.rankAdjustedModifier(e, t, n)
+            return Z.instance.rankAdjustedModifier(e, t, n)
         }
-        function _(e) {
-            for (var t = 0, n = q.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
+        function C(e) {
+            for (var t = 0, n = Z.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
                 if (null != n[r].cardInSlot) {
                     var i = n[r].cardInSlot.id
                       , l = 0;
@@ -27154,58 +28055,58 @@
                     case 26:
                     case 30:
                     case 34:
-                        l = k(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "iron"),
-                        C(e, r, Math.abs(k(i, e, 1))) || (x(e, r, i),
+                        l = k(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "iron"),
+                        _(e, r, Math.abs(k(i, e, 1))) || (S(e, r, i),
                         l = 0);
                         break;
                     case 38:
-                        l = k(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "iron");
+                        l = k(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "iron");
                         break;
                     case 49:
                         l = k(i, e, 0),
-                        C(e, r, Math.abs(k(i, e, 1))) || (x(e, r, i),
+                        _(e, r, Math.abs(k(i, e, 1))) || (S(e, r, i),
                         l = 0);
                         break;
                     case 62:
                     case 64:
                     case 65:
                     case 66:
-                        l = k(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "iron"),
-                        C(e, r, Math.abs(k(i, e, 1))) || (x(e, r, i),
+                        l = k(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "iron"),
+                        _(e, r, Math.abs(k(i, e, 1))) || (S(e, r, i),
                         l = 0)
                     }
-                    t += l *= q.instance.UniversalAura(e)
+                    t += l *= Z.instance.UniversalAura(e)
                 }
             return t
         }
-        function C(e, t, n) {
+        function _(e, t, n) {
             return !!function(e, t) {
-                return q.instance.cardIsImmuneFromConsumingResource(e, t, "wood")
-            }(e, t) || q.instance.gameState.resources["arena" + e].wood >= n
+                return Z.instance.cardIsImmuneFromConsumingResource(e, t, "wood")
+            }(e, t) || Z.instance.gameState.resources["arena" + e].wood >= n
         }
-        function x(e, t, n) {
-            q.instance.removeCardFromArena(e, t, n)
+        function S(e, t, n) {
+            Z.instance.removeCardFromArena(e, t, n)
         }
         function k(e, t, n) {
-            return q.instance.rankAdjustedModifier(e, t, n)
+            return Z.instance.rankAdjustedModifier(e, t, n)
         }
-        function S(e) {
-            for (var t = 0, n = q.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
+        function x(e) {
+            for (var t = 0, n = Z.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
                 if (null != n[r].cardInSlot) {
                     var i = n[r].cardInSlot.id
                       , l = 0;
                     switch (i) {
                     case 69:
-                        l = I(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "ether");
+                        l = I(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "ether");
                         break;
                     case 72:
-                        l = I(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "ether"),
+                        l = I(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "ether"),
                         E(e, r, Math.abs(I(i, e, 1))) || (T(e, r, i),
                         l = 0);
                         break;
                     case 73:
                     case 80:
-                        l = I(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "ether");
+                        l = I(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "ether");
                         break;
                     case 81:
                     case 88:
@@ -27216,43 +28117,43 @@
                     case 108:
                     case 115:
                     case 119:
-                        l = I(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "ether");
+                        l = I(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "ether");
                         break;
                     case 93:
                         l = I(i, e, 0);
-                        let t = q.instance.getCardSlotNumberAtXYOffset(e, r, 0, 1);
-                        null != t && 92 == q.instance.GetCardIdAtSlot(e, t) && (l += I(i, e, 1)),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "ether");
+                        let t = Z.instance.getCardSlotNumberAtXYOffset(e, r, 0, 1);
+                        null != t && 92 == Z.instance.GetCardIdAtSlot(e, t) && (l += I(i, e, 1)),
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "ether");
                         break;
                     case 114:
-                        l = I(i, e, 1) * q.instance.getTotalMultiplierForSlot(e, r, "ether")
+                        l = I(i, e, 1) * Z.instance.getTotalMultiplierForSlot(e, r, "ether")
                     }
-                    t += l *= q.instance.UniversalAura(e)
+                    t += l *= Z.instance.UniversalAura(e)
                 }
             return t
         }
         function I(e, t, n) {
-            return q.instance.rankAdjustedModifier(e, t, n)
+            return Z.instance.rankAdjustedModifier(e, t, n)
         }
         function E(e, t, n) {
             return !!function(e, t) {
-                return q.instance.cardIsImmuneFromConsumingResource(e, t, "skulls")
-            }(e, t) || q.instance.gameState.resources["arena" + e].skulls >= n
+                return Z.instance.cardIsImmuneFromConsumingResource(e, t, "skulls")
+            }(e, t) || Z.instance.gameState.resources["arena" + e].skulls >= n
         }
         function T(e, t, n) {
-            q.instance.removeCardFromArena(e, t, n)
+            Z.instance.removeCardFromArena(e, t, n)
         }
         function A(e) {
-            for (var t = 0, n = q.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
+            for (var t = 0, n = Z.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
                 if (null != n[r].cardInSlot) {
                     var i = n[r].cardInSlot.id
                       , l = 0;
                     switch (i) {
                     case 69:
-                        l = O(i, e, 1) * q.instance.getTotalMultiplierForSlot(e, r, "skulls");
+                        l = M(i, e, 1) * Z.instance.getTotalMultiplierForSlot(e, r, "skulls");
                         break;
                     case 72:
-                        l = O(i, e, 1);
+                        l = M(i, e, 1);
                         break;
                     case 74:
                     case 78:
@@ -27267,42 +28168,42 @@
                     case 111:
                     case 114:
                     case 116:
-                        l = O(i, e, 0),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "skulls");
+                        l = M(i, e, 0),
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "skulls");
                         break;
                     case 80:
-                        l = O(i, e, 1),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "skulls");
+                        l = M(i, e, 1),
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "skulls");
                         break;
                     case 109:
-                        l = O(i, e, 1);
+                        l = M(i, e, 1);
                         break;
                     case 117:
-                        l = O(i, e, 0),
-                        q.instance.cardExistsInArena(e, 91) && (l += O(i, e, 1)),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "skulls");
+                        l = M(i, e, 0),
+                        Z.instance.cardExistsInArena(e, 91) && (l += M(i, e, 1)),
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "skulls");
                         break;
                     case 121:
-                        l = O(i, e, 0),
-                        q.instance.cardExistsInArena(e, 91) || q.instance.cardExistsInArena(e, 92) || (l = 0,
+                        l = M(i, e, 0),
+                        Z.instance.cardExistsInArena(e, 91) || Z.instance.cardExistsInArena(e, 92) || (l = 0,
                         l = 0),
-                        l *= q.instance.getTotalMultiplierForSlot(e, r, "skulls")
+                        l *= Z.instance.getTotalMultiplierForSlot(e, r, "skulls")
                     }
-                    t += l *= q.instance.UniversalAura(e)
+                    t += l *= Z.instance.UniversalAura(e)
                 }
             return t
         }
-        function O(e, t, n) {
-            return q.instance.rankAdjustedModifier(e, t, n)
+        function M(e, t, n) {
+            return Z.instance.rankAdjustedModifier(e, t, n)
         }
-        function N(e) {
-            for (var t = 0, n = q.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
+        function O(e) {
+            for (var t = 0, n = Z.instance.gameState["arena" + e].cardSlots, r = 0; r < n.length; r++)
                 if (null != n[r].cardInSlot) {
                     var i = n[r].cardInSlot.id
                       , l = 0;
                     switch (i) {
                     case 69:
-                        l = P(i, e, 2) * q.instance.getTotalMultiplierForSlot(e, r, "feathers");
+                        l = P(i, e, 2) * Z.instance.getTotalMultiplierForSlot(e, r, "feathers");
                         break;
                     case 71:
                     case 75:
@@ -27310,37 +28211,37 @@
                     case 94:
                     case 95:
                     case 97:
-                        l = P(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "feathers");
+                        l = P(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "feathers");
                         break;
                     case 80:
-                        l = P(i, e, 2) * q.instance.getTotalMultiplierForSlot(e, r, "feathers");
+                        l = P(i, e, 2) * Z.instance.getTotalMultiplierForSlot(e, r, "feathers");
                         break;
                     case 82:
-                        l = P(i, e, 1) * q.instance.getTotalMultiplierForSlot(e, r, "feathers");
+                        l = P(i, e, 1) * Z.instance.getTotalMultiplierForSlot(e, r, "feathers");
                         break;
                     case 109:
-                        l = P(i, e, 0) * q.instance.getTotalMultiplierForSlot(e, r, "feathers"),
-                        R(e, r, Math.abs(P(i, e, 1))) || (M(e, r, i),
+                        l = P(i, e, 0) * Z.instance.getTotalMultiplierForSlot(e, r, "feathers"),
+                        R(e, r, Math.abs(P(i, e, 1))) || (N(e, r, i),
                         l = 0);
                         break;
                     case 110:
                     case 115:
-                        l = P(i, e, 1) * q.instance.getTotalMultiplierForSlot(e, r, "feathers")
+                        l = P(i, e, 1) * Z.instance.getTotalMultiplierForSlot(e, r, "feathers")
                     }
-                    t += l *= q.instance.UniversalAura(e)
+                    t += l *= Z.instance.UniversalAura(e)
                 }
             return t
         }
         function R(e, t, n) {
             return !!function(e, t) {
-                return q.instance.cardIsImmuneFromConsumingResource(e, t, "skulls")
-            }(e, t) || q.instance.gameState.resources["arena" + e].skulls >= n
+                return Z.instance.cardIsImmuneFromConsumingResource(e, t, "skulls")
+            }(e, t) || Z.instance.gameState.resources["arena" + e].skulls >= n
         }
-        function M(e, t, n) {
-            q.instance.removeCardFromArena(e, t, n)
+        function N(e, t, n) {
+            Z.instance.removeCardFromArena(e, t, n)
         }
         function P(e, t, n) {
-            return q.instance.rankAdjustedModifier(e, t, n)
+            return Z.instance.rankAdjustedModifier(e, t, n)
         }
         const D = (()=>{
             class e {
@@ -27373,7 +28274,7 @@
             e
         }
         )()
-          , V = (()=>{
+          , F = (()=>{
             class e {
                 constructor() {
                     this.isVisible = !1,
@@ -27401,7 +28302,7 @@
             e
         }
         )()
-          , F = (()=>{
+          , V = (()=>{
             class e {
                 constructor() {
                     this.isVisible = !1,
@@ -27422,7 +28323,7 @@
                 }
                 pressedOk() {
                     this.newLayoutName = this.newLayoutName.substring(0, 50),
-                    q.instance.saveLayout(this.arenaNumber, this.selectedLayoutIndex, this.newLayoutName),
+                    Z.instance.saveLayout(this.arenaNumber, this.selectedLayoutIndex, this.newLayoutName),
                     this.isVisible = !1
                 }
                 pressedCancel() {
@@ -27433,7 +28334,7 @@
                     this.newLayoutName = null == this.selectedLayoutIndex ? "" : this.existingLayouts[this.selectedLayoutIndex] ? this.existingLayouts[this.selectedLayoutIndex].name : ""
                 }
                 deleteSelectedLayout() {
-                    q.instance.deleteSavedLayout(this.arenaNumber, this.selectedLayoutIndex),
+                    Z.instance.deleteSavedLayout(this.arenaNumber, this.selectedLayoutIndex),
                     this.selectedLayoutIndex = null
                 }
             }
@@ -27472,7 +28373,7 @@
                 }
                 loadMusic() {
                     let e = "";
-                    q.instance.gameState.enableMusic && (e = this.getMusicNameForArenaNumber(q.instance.gameState.selectedArenaNumber));
+                    Z.instance.gameState.enableMusic && (e = this.getMusicNameForArenaNumber(Z.instance.gameState.selectedArenaNumber));
                     for (var t = 0; t < this.musicNames.length; t++) {
                         let n = this.musicNames[t];
                         this.musicFiles[n] = new Audio,
@@ -27484,16 +28385,16 @@
                     }
                 }
                 playSound(e) {
-                    q.instance.gameState.enableSoundEffects && (-1 != this.soundEffectNames.indexOf(e) ? this.soundFiles[e].play() : console.error("Tried to play sound with name '" + e + "', but that doesn't exist in SoundEffectManager."))
+                    Z.instance.gameState.enableSoundEffects && (-1 != this.soundEffectNames.indexOf(e) ? this.soundFiles[e].play() : console.error("Tried to play sound with name '" + e + "', but that doesn't exist in SoundEffectManager."))
                 }
                 playMusic(e) {
                     -1 != this.musicNames.indexOf(e) ? this.musicFiles[e].play() : console.error("Tried to play music with name '" + e + "', but that doesn't exist in SoundEffectManager.")
                 }
                 turnOnMusic() {
                     if (this.turnOffMusic(),
-                    !q.instance.gameState.enableMusic)
+                    !Z.instance.gameState.enableMusic)
                         return;
-                    let e = this.getMusicNameForArenaNumber(q.instance.gameState.selectedArenaNumber);
+                    let e = this.getMusicNameForArenaNumber(Z.instance.gameState.selectedArenaNumber);
                     this.playMusic(e)
                 }
                 turnOffMusic() {
@@ -27515,7 +28416,7 @@
                     "unknown"
                 }
                 arenaChanged() {
-                    q.instance.gameState.enableMusic && this.turnOnMusic()
+                    Z.instance.gameState.enableMusic && this.turnOnMusic()
                 }
             }
             return e.instance = null,
@@ -27539,7 +28440,7 @@
                     this.isVisible = !1
                 }
                 exportSave() {
-                    q.instance.exportSaveData()
+                    Z.instance.exportSaveData()
                 }
                 importSave(e) {
                     let t = u.instance.getUsername();
@@ -27549,7 +28450,7 @@
                         r.readAsText(n, "UTF-8"),
                         r.onload = (e=>{
                             var n = e.target.result.toString();
-                            q.instance.importSaveData(n, t),
+                            Z.instance.importSaveData(n, t),
                             this.isVisible = !1
                         }
                         )
@@ -27557,13 +28458,13 @@
                         o.instance.show("Error exporting data.  Please ensure you're logged into Kongregate and connected to the internet.  If the problem persists, please try again in a minute.")
                 }
                 resetGame() {
-                    q.instance.resetGame()
+                    Z.instance.resetGame()
                 }
                 getAppComponent() {
-                    return q.instance
+                    return Z.instance
                 }
                 musicSettingChanged() {
-                    q.instance.gameState.enableMusic ? L.instance.turnOnMusic() : L.instance.turnOffMusic()
+                    Z.instance.gameState.enableMusic ? L.instance.turnOnMusic() : L.instance.turnOffMusic()
                 }
             }
             return e.instance = null,
@@ -27609,7 +28510,7 @@
             e
         }
         )()
-          , $ = [{
+          , G = [{
             id: 1,
             title: "Road to riches",
             description: "Earn 1K gold in Intro Realm",
@@ -27669,26 +28570,51 @@
             title: "Plains of War",
             description: "Unlock the Plains of War expansion",
             imageFilename: "12.png"
+        }, {
+            id: 13,
+            title: "Mascot Slayer",
+            description: "In Plains of War, kill the Scarecrow in one hit",
+            imageFilename: "13.png"
+        }, {
+            id: 14,
+            title: "Harder Than It Looks",
+            description: "Kill a Dead Fish in 4 or more rounds",
+            imageFilename: "14.png"
         }];
-        function G(e) {
-            q.instance.gameState.achievementsUnlocked[e] = !0,
+        function $(e) {
+            Z.instance.gameState.achievementsUnlocked[e] = !0,
             z.instance.show(function(e) {
-                for (var t = 0; t < $.length; t++)
-                    if ($[t].id == e)
-                        return $[t];
+                for (var t = 0; t < G.length; t++)
+                    if (G[t].id == e)
+                        return G[t];
                 return null
             }(e))
         }
         function W(e) {
-            return void 0 !== q.instance.gameState.achievementsUnlocked[e] && q.instance.gameState.achievementsUnlocked[e]
+            return void 0 !== Z.instance.gameState.achievementsUnlocked[e] && Z.instance.gameState.achievementsUnlocked[e]
         }
-        function Y() {
+        function K() {
             let e = 0;
-            for (var t = 1; t <= $.length; t++)
+            for (var t = 1; t <= G.length; t++)
                 W(t) && e++;
             return e
         }
-        const q = (()=>{
+        function Y(e, t) {
+            let n = Z.instance.getCardSlotNumberAtXYLocation(e, t.x, t.y - 1);
+            return Z.instance.gameState["arena" + e].cardSlots[n]
+        }
+        function q(e, t) {
+            let n = Z.instance.getCardSlotNumberAtXYLocation(e, t.x, t.y + 1);
+            return Z.instance.gameState["arena" + e].cardSlots[n]
+        }
+        function Q(e, t) {
+            let n = t.y - 1;
+            if (n < 0)
+                return null;
+            let r = Z.instance.getCardSlotNumberAtXYLocation(e, t.x, n);
+            return Z.instance.gameState["arena" + e].cardSlots[r]
+        }
+        const Z = (()=>{
             class e {
                 constructor(t, n) {
                     this.sanitizer = t,
@@ -27707,21 +28633,23 @@
                     this.purchaseMultiplier = 1,
                     this.buyMaxChecked = !1,
                     this.unlockedArenas = [],
-                    this.LatestSaveDataVersion = 29,
+                    this.LatestSaveDataVersion = 32,
                     this.AmountOfGoldPerSecond = g,
                     this.AmountOfWoodPerSecond = b,
-                    this.AmountOfIronPerSecond = _,
-                    this.AmountOfEtherPerSecond = S,
+                    this.AmountOfIronPerSecond = C,
+                    this.AmountOfEtherPerSecond = x,
                     this.AmountOfSkullsPerSecond = A,
-                    this.AmountOfFeathersPerSecond = N,
-                    this.collectionSortOptions = ["Tier (ascending)", "Tier (descending)", "Producers first", "Effects first", "Rarity (ascending)", "Rarity (descending)", "Quantity", "Name", "Level (descending)", "Resource (ascending)", "Resource (descending)"],
+                    this.AmountOfFeathersPerSecond = O,
+                    this.collectionSortOptions = ["Tier (ascending)", "Tier (descending)", "Producers first", "Effects first", "Rarity (ascending)", "Rarity (descending)", "Quantity", "Name", "Type", "Level (descending)", "Resource (ascending)", "Resource (descending)"],
                     this.isOnKongregate = !1,
                     this.kongregateMicrotransactionList = [],
                     this.recentResourcesEarned = {},
+                    this.lastTickTimeInMilliseconds = 0,
                     this.gameState = {
                         secondsPlayed: 0,
                         gems: 0,
                         enableSoundEffects: !0,
+                        enableBattleSoundEffects: !0,
                         enableMusic: !1,
                         enableAnimations: !0,
                         highestUnlockedArena: 1,
@@ -27794,7 +28722,14 @@
                         lifetimeGemsReceived: {
                             1: 0,
                             2: 0,
-                            3: 0
+                            3: 0,
+                            4: 0,
+                            5: 0,
+                            6: 0,
+                            7: 0,
+                            8: 0,
+                            9: 0,
+                            10: 0
                         },
                         arena1: h,
                         arena2: f,
@@ -27864,6 +28799,7 @@
                 }
                 everyTick(e=1) {
                     this.gameState.secondsPlayed++,
+                    this.lastTickTimeInMilliseconds = (new Date).getTime(),
                     c(1, this.gameState);
                     let t = g(1) * e;
                     if (this.gameState.resources.arena1.gold += t,
@@ -27871,7 +28807,7 @@
                     this.gameState.highestUnlockedArena >= 2) {
                         c(2, this.gameState);
                         let t = b(2) * e
-                          , n = _(2) * e;
+                          , n = C(2) * e;
                         this.gameState.resources.arena2.wood += t,
                         this.gameState.resources.arena2.iron += n,
                         t > 0 && (this.gameState.lifetimeResourcesEarned.arena2.wood += t),
@@ -27879,9 +28815,9 @@
                     }
                     if (this.gameState.highestUnlockedArena >= 3) {
                         c(3, this.gameState);
-                        let t = S(3) * e
+                        let t = x(3) * e
                           , n = A(3) * e
-                          , r = N(3) * e;
+                          , r = O(3) * e;
                         this.gameState.resources.arena3.ether += t,
                         this.gameState.resources.arena3.skulls += n,
                         this.gameState.resources.arena3.feathers += r,
@@ -27899,14 +28835,90 @@
                             r = [8, 9, 10, 11],
                             t.gold = 0,
                             t.wood = 0;
-                            for (var i = 0; i < n.length; i++)
-                                ;
+                            for (var i = 0; i < n.length; i++) {
+                                let e = Z.instance.gameState.arena4.cardSlots[n[i]]
+                                  , r = Y(4, e)
+                                  , l = q(4, e)
+                                  , o = Q(4, r)
+                                  , a = null != l.cardInSlot ? s(l.cardInSlot.id) : null
+                                  , u = null != o.cardInSlot ? s(o.cardInSlot.id) : null
+                                  , c = null != a && a.boostPotionEffect
+                                  , d = null != a && a.doubleCriticalRateEffect
+                                  , h = null != u && u.doubleCriticalRateEffect;
+                                if (e && (e.foughtInLastTick = !1),
+                                r && (r.foughtInLastTick = !1,
+                                r.droppedLootLastTick = !1),
+                                null != e.cardInSlot && null == r.cardInSlot && (e.roundsSoFar = 0,
+                                e.estimatedLootPerSecond = {
+                                    gold: 0,
+                                    wood: 0
+                                }),
+                                null != e.cardInSlot && null != r.cardInSlot)
+                                    if (e.roundsSoFar++,
+                                    e.currentHP <= 0 || r.currentHP <= 0) {
+                                        if (r.currentHP <= 0 && (e.currentHP > 0 || c)) {
+                                            W(13) || 1 == e.roundsSoFar && 131 == r.cardInSlot.id && $(13),
+                                            W(14) || e.roundsSoFar >= 4 && 144 == r.cardInSlot.id && $(14);
+                                            let n = Z.instance.rankAdjustedModifier(r.cardInSlot.id, 4, 4)
+                                              , i = Z.instance.rankAdjustedModifier(r.cardInSlot.id, 4, 5);
+                                            null != u && (n *= 1 + Z.instance.rankAdjustedModifier(u.id, 4, 4),
+                                            i *= 1 + Z.instance.rankAdjustedModifier(u.id, 4, 5)),
+                                            t.gold += n,
+                                            t.wood += i,
+                                            e.estimatedLootPerSecond = {
+                                                gold: n / e.roundsSoFar,
+                                                wood: i / e.roundsSoFar
+                                            },
+                                            e.roundsSoFar = 0,
+                                            r.droppedLootLastTick = !0
+                                        } else
+                                            e.currentHP <= 0 && !c && (e.estimatedLootPerSecond = {
+                                                gold: 0,
+                                                wood: 0
+                                            },
+                                            e.roundsSoFar = 0);
+                                        e.currentHP = Z.instance.rankAdjustedModifier(e.cardInSlot.id, 4, 0),
+                                        a && (e.currentHP += Z.instance.rankAdjustedModifier(a.id, 4, 0)),
+                                        (r.currentHP <= 0 || !c) && (r.currentHP = Z.instance.rankAdjustedModifier(r.cardInSlot.id, 4, 0),
+                                        u && (r.currentHP += Z.instance.rankAdjustedModifier(u.id, 4, 0)))
+                                    } else if (e.cardInSlot && r && null != r.cardInSlot) {
+                                        let t = Z.instance.rankAdjustedModifier(e.cardInSlot.id, 4, 1)
+                                          , n = Z.instance.rankAdjustedModifier(r.cardInSlot.id, 4, 1)
+                                          , i = Z.instance.rankAdjustedModifier(e.cardInSlot.id, 4, 2)
+                                          , l = Z.instance.rankAdjustedModifier(r.cardInSlot.id, 4, 2)
+                                          , s = Z.instance.rankAdjustedModifier(e.cardInSlot.id, 4, 3)
+                                          , o = Z.instance.rankAdjustedModifier(r.cardInSlot.id, 4, 3);
+                                        null != a && (t += Z.instance.rankAdjustedModifier(a.id, 4, 1),
+                                        i += Z.instance.rankAdjustedModifier(a.id, 4, 2),
+                                        s += Z.instance.rankAdjustedModifier(a.id, 4, 3)),
+                                        null != u && (n += Z.instance.rankAdjustedModifier(u.id, 4, 1),
+                                        l += Z.instance.rankAdjustedModifier(u.id, 4, 2),
+                                        o += Z.instance.rankAdjustedModifier(u.id, 4, 3));
+                                        let c = !1
+                                          , f = !1;
+                                        0 == Math.floor(Math.random() * (d ? 5 : 10)) && (c = !0),
+                                        0 == Math.floor(Math.random() * (h ? 5 : 10)) && (f = !0);
+                                        let p = (c ? 2 : 1) * Math.max(0, t - l)
+                                          , m = (f ? 2 : 1) * Math.max(0, n - i);
+                                        s > o ? p += s - o : m += o - s,
+                                        e.currentHP -= m,
+                                        r.currentHP -= p,
+                                        e.currentHP < 0 && (e.currentHP = 0),
+                                        r.currentHP < 0 && (r.currentHP = 0),
+                                        e.damageTakenThisRound = m,
+                                        r.damageTakenThisRound = p,
+                                        e.foughtInLastTick = !0,
+                                        r.foughtInLastTick = !0
+                                    }
+                            }
                             return t
                         }();
                         this.gameState.resources.gold += e.gold,
                         this.gameState.resources.wood += e.wood,
                         e.gold && (this.gameState.lifetimeResourcesEarned.arena4.gold += e.gold),
                         e.wood && (this.gameState.lifetimeResourcesEarned.arena4.wood += e.wood),
+                        this.gameState.resources.arena4.gold += e.gold,
+                        this.gameState.resources.arena4.wood += e.wood,
                         this.recordRecentResourcesEarned(4, e)
                     }
                     this.gameState.secondsPlayed % 10 == 0 && (this.saveGame(),
@@ -27975,10 +28987,16 @@
                     let i = this.gameState.cardCollection["arena" + this.gameState.selectedArenaNumber][n.id];
                     i < 1 || ((this.gameState["arena" + e].cardSlots[t].slotType || "normal") === (n.cardType || "normal") ? (this.removeCardFromCollection(n.id, this.gameState.selectedArenaNumber),
                     this.gameState["arena" + e].cardSlots[t].cardInSlot = s(n.id),
-                    "hero" != n.cardType && "monster" != n.cardType || (this.gameState["arena" + e].cardSlots[t].currentHP = this.rankAdjustedModifier(n.id, e, 0)),
+                    "hero" != n.cardType && "monster" != n.cardType || (this.gameState["arena" + e].cardSlots[t].currentHP = this.rankAdjustedModifier(n.id, e, 0),
+                    "hero" == n.cardType && (this.gameState["arena" + e].cardSlots[t].roundsSoFar = 0,
+                    this.gameState["arena" + e].cardSlots[t].estimatedLootPerSecond = {
+                        gold: 0,
+                        wood: 0
+                    })),
                     r && L.instance.playSound("placecard"),
                     (null == (i = this.gameState.cardCollection["arena" + this.gameState.selectedArenaNumber][n.id]) || i <= 0 || !this.keyIsPressed[17]) && this.isSelectingEmptySlot && n.id == this.cardIdToPutInEmptySlot && (this.isSelectingEmptySlot = !1,
-                    this.cardIdToPutInEmptySlot = null)) : L.instance.playSound("cantdothat"))
+                    this.cardIdToPutInEmptySlot = null),
+                    c(e, this.gameState)) : L.instance.playSound("cantdothat"))
                 }
                 tryToBuyEmptySlot(e, t) {
                     var n = this.gameState["arena" + e].cardSlots[t];
@@ -27992,11 +29010,25 @@
                             return void (n[t].slotIsUnlocked = !0)
                 }
                 removeCardFromArena(e, t, n) {
-                    null != e && null != t && null != n && null != this.gameState["arena" + e].cardSlots[t].cardInSlot && (this.gameState["arena" + e].cardSlots[t].cardInSlot = null,
-                    this.addCardsToCollection([{
-                        data: s(n),
-                        quantity: 1
-                    }], e))
+                    if (null != e && null != t && null != n && null != this.gameState["arena" + e].cardSlots[t].cardInSlot) {
+                        if ("hero" == this.gameState["arena" + e].cardSlots[t].cardInSlot.cardType) {
+                            let n = Y(e, this.gameState["arena" + e].cardSlots[t]);
+                            null != n.cardInSlot && (n.currentHP = this.rankAdjustedModifier(n.cardInSlot.id, e, 0))
+                        }
+                        if ("monster" == this.gameState["arena" + e].cardSlots[t].cardInSlot.cardType) {
+                            let n = function(e, t) {
+                                let n = Z.instance.getCardSlotNumberAtXYLocation(e, t.x, t.y + 1);
+                                return Z.instance.gameState["arena" + e].cardSlots[n]
+                            }(e, this.gameState["arena" + e].cardSlots[t]);
+                            null != n.cardInSlot && (n.currentHP = this.rankAdjustedModifier(n.cardInSlot.id, e, 0))
+                        }
+                        this.gameState["arena" + e].cardSlots[t].cardInSlot = null,
+                        this.addCardsToCollection([{
+                            data: s(n),
+                            quantity: 1
+                        }], e),
+                        c(e, this.gameState)
+                    }
                 }
                 getSlotNumbersOfCardsInRow(e, t, n) {
                     let r = [];
@@ -28029,7 +29061,7 @@
                 getCardSlotNumberAtXYLocation(e, t, n) {
                     const r = this.gameState["arena" + e].cardSlots;
                     for (var i = 0; i < r.length; i++)
-                        if (null != r[i].cardInSlot && r[i].x == t && r[i].y == n)
+                        if (r[i].x == t && r[i].y == n)
                             return i;
                     return null
                 }
@@ -28048,6 +29080,13 @@
                         amount: i,
                         fromSlot: t
                     })
+                }
+                pushStatBonus(e, t, n, r, i) {
+                    let l = this.gameState["arena" + e].cardSlots[n].statBonuses[r] || {};
+                    this.gameState["arena" + e].cardSlots[n].statBonuses[r] = l = {
+                        amount: i,
+                        fromSlot: t
+                    }
                 }
                 getNumberOfCardsInPlay(e) {
                     var t = 0;
@@ -28221,7 +29260,25 @@
                         this.gameState.cardCollectionOrders.arena4 = [123, 124];
                         break;
                     case 29:
-                        this.gameState.enableAnimations = !0
+                        this.gameState.enableAnimations = !0;
+                        break;
+                    case 30:
+                        this.gameState.lifetimeGemsReceived[4] = 0,
+                        this.gameState.lifetimeGemsReceived[5] = 0,
+                        this.gameState.lifetimeGemsReceived[6] = 0,
+                        this.gameState.lifetimeGemsReceived[7] = 0,
+                        this.gameState.lifetimeGemsReceived[8] = 0,
+                        this.gameState.lifetimeGemsReceived[9] = 0,
+                        this.gameState.lifetimeGemsReceived[10] = 0;
+                        break;
+                    case 31:
+                        this.gameState.savedLayouts.arena4 = [],
+                        this.gameState.savedLayouts.arena5 = [],
+                        this.gameState.arena4 = m,
+                        this.gameState.enableBattleSoundEffects = !0;
+                        break;
+                    case 32:
+                        this.gameState.arena4 = m
                     }
                     this.gameState.saveDataVersion = e
                 }
@@ -28237,12 +29294,13 @@
                     return JSON.parse(JSON.stringify(e))
                 }
                 unlockArena(e) {
-                    if (this.gameState.highestUnlockedArena > e)
+                    if (e = parseInt("" + e),
+                    this.gameState.highestUnlockedArena > e)
                         console.error("Trying to unlockArena() with an arena number (" + e + ") lower than what's already the highest unlocked (" + this.gameState.highestUnlockedArena + ")");
                     else {
-                        switch (2 == e && (W(9) || G(9)),
-                        3 == e && (W(10) || G(10)),
-                        4 == e && (W(12) || G(12)),
+                        switch (2 == e && (W(9) || $(9)),
+                        3 == e && (W(10) || $(10)),
+                        4 == e && (W(12) || $(12)),
                         e) {
                         case 2:
                             this.gameState.resources.iron = 0,
@@ -28307,6 +29365,17 @@
                         this.gameState.cardRanks["arena" + e][t] = i + 1,
                         r && this.tryToRankUpCard(e, t, n, r)
                     }
+                    c(e, this.gameState)
+                }
+                rankDownCard(e, t) {
+                    let n = this.gameState.cardRanks["arena" + e][t];
+                    if (n < 2)
+                        return;
+                    this.gameState.cardRanks["arena" + e][t] = n - 1;
+                    let r = this.gameState.cardCollection["arena" + e][t]
+                      , i = this.getCardUpgradeCost(e, t);
+                    this.gameState.cardCollection["arena" + e][t] = r + i - 1,
+                    c(e, this.gameState)
                 }
                 tryToRankUpAllCards(e) {
                     let t = Object.keys(this.gameState.cardCollection["arena" + e]);
@@ -28435,15 +29504,21 @@
                         }
                         ).bind(this));
                         break;
+                    case "Type":
+                        this.gameState.cardCollectionOrders["arena" + e].sort((function(e, t) {
+                            return this.GetCardById(e).cardType && this.GetCardById(t).cardType ? this.GetCardById(e).cardType.localeCompare(this.GetCardById(t).cardType) : 0
+                        }
+                        ).bind(this));
+                        break;
                     default:
                         console.error("Unknown sort order requested in sortCardCollection(): " + this.gameState.selectedSortOption)
                     }
                 }
                 openSaveLayoutDialog() {
-                    F.instance.show(this.gameState.savedLayouts["arena" + this.gameState.selectedArenaNumber], this.gameState.selectedArenaNumber)
+                    V.instance.show(this.gameState.savedLayouts["arena" + this.gameState.selectedArenaNumber], this.gameState.selectedArenaNumber)
                 }
                 closeSaveLayoutDialog() {
-                    F.instance.hide()
+                    V.instance.hide()
                 }
                 saveLayout(e, t, n) {
                     let r = []
@@ -28529,7 +29604,7 @@
                             this.resetGame();
                             break;
                         case "unlocknextrealm":
-                            this.unlockArena(this.gameState.selectedArenaNumber + 1)
+                            this.unlockArena(parseInt("" + this.gameState.selectedArenaNumber) + 1)
                         }
                 }
                 exportSaveData() {
@@ -28582,7 +29657,7 @@
                         if (e > 30) {
                             let t = this.getResourceDifference(r, this.gameState.resources);
                             setTimeout(()=>{
-                                V.instance.show(e, n, t)
+                                F.instance.show(e, n, t)
                             }
                             , 500)
                         }
@@ -28643,19 +29718,19 @@
                 }
                 CheckForAchievements() {
                     if (null != z.instance) {
-                        if (W(1) || this.gameState.lifetimeResourcesEarned.arena1.gold >= 1e3 && G(1),
-                        W(2) || this.gameState.lifetimeResourcesEarned.arena1.gold >= 1e5 && G(2),
-                        W(3) || this.gameState.lifetimeResourcesEarned.arena1.gold >= 1e7 && G(3),
-                        W(4) || this.cardExistsInArena(1, 2) && this.cardExistsInArena(1, 4) && G(4),
-                        W(5) || 21 == this.GetCardIdAtSlot(1, this.getCardSlotNumberAtXYLocation(1, 1, 1)) && 17 == this.GetCardIdAtSlot(1, this.getCardSlotNumberAtXYLocation(1, 2, 1)) && G(5),
+                        if (W(1) || this.gameState.lifetimeResourcesEarned.arena1.gold >= 1e3 && $(1),
+                        W(2) || this.gameState.lifetimeResourcesEarned.arena1.gold >= 1e5 && $(2),
+                        W(3) || this.gameState.lifetimeResourcesEarned.arena1.gold >= 1e7 && $(3),
+                        W(4) || this.cardExistsInArena(1, 2) && this.cardExistsInArena(1, 4) && $(4),
+                        W(5) || 21 == this.GetCardIdAtSlot(1, this.getCardSlotNumberAtXYLocation(1, 1, 1)) && 17 == this.GetCardIdAtSlot(1, this.getCardSlotNumberAtXYLocation(1, 2, 1)) && $(5),
                         !W(7) && g(1) >= 25) {
                             let t = !0;
                             for (var e = 0; e < 9; e++)
-                                if (1 != this.GetCardIdAtSlot(1, e)) {
+                                if (1 != this.GetCardIdAtSlot(1, e) && null != this.GetCardIdAtSlot(1, e)) {
                                     t = !1;
                                     break
                                 }
-                            t && G(7)
+                            t && $(7)
                         }
                         if (!W(11) && this.gameState.highestUnlockedArena >= 2 && b(2) >= 500) {
                             let t = !0;
@@ -28664,10 +29739,10 @@
                                     t = !1;
                                     break
                                 }
-                            t && G(11)
+                            t && $(11)
                         }
-                        this.gameState.highestUnlockedArena >= 2 && (W(9) || G(9)),
-                        this.gameState.highestUnlockedArena >= 3 && (W(10) || G(10))
+                        this.gameState.highestUnlockedArena >= 2 && (W(9) || $(9)),
+                        this.gameState.highestUnlockedArena >= 3 && (W(10) || $(10))
                     }
                 }
                 arenaSelectionChanged() {
@@ -28689,36 +29764,35 @@
                     for (let n of Object.keys(t)) {
                         this.recentResourcesEarned[e][n] || (this.recentResourcesEarned[e][n] = []);
                         let r = this.recentResourcesEarned[e][n];
-                        for (r.unshift(t[n]); r.length > 10; )
+                        for (r.unshift(t[n]); r.length > 30; )
                             r.pop()
                     }
                 }
                 getEstimatedResourcePerSecondForBattleArena(e, t) {
-                    if (!this.recentResourcesEarned[e] || !this.recentResourcesEarned[e][t])
-                        return "Calculating...";
-                    let n = this.recentResourcesEarned[e][t]
-                      , r = 0;
-                    for (var i = 0; i < n.length; i++)
-                        r += n[i];
-                    let l = r / n.length;
-                    return (l > 0 ? "+" : "") + this.niceNumber.transform(l) + "/sec"
+                    let n = 0
+                      , r = this.getSlotNumbersOfCardsInPlay(e, null);
+                    for (var i = 0; i < r.length; i++) {
+                        let l = r[i];
+                        "hero" == this.gameState["arena" + e].cardSlots[l].slotType && null != this.gameState["arena" + e].cardSlots[l].cardInSlot && (n += this.gameState["arena" + e].cardSlots[l].estimatedLootPerSecond[t])
+                    }
+                    return "(est. " + (n >= 0 ? "+" : "") + this.niceNumber.transform(n) + "/sec)"
                 }
             }
             return e.instance = null,
             e
         }
         )();
-        class K {
+        class X {
         }
-        const Q = void 0;
-        var Z = ["en", [["a", "p"], ["AM", "PM"], Q], [["AM", "PM"], Q, Q], [["S", "M", "T", "W", "T", "F", "S"], ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]], Q, [["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]], Q, [["B", "A"], ["BC", "AD"], ["Before Christ", "Anno Domini"]], 0, [6, 0], ["M/d/yy", "MMM d, y", "MMMM d, y", "EEEE, MMMM d, y"], ["h:mm a", "h:mm:ss a", "h:mm:ss a z", "h:mm:ss a zzzz"], ["{1}, {0}", Q, "{1} 'at' {0}", Q], [".", ",", ";", "%", "+", "-", "E", "\xd7", "\u2030", "\u221e", "NaN", ":"], ["#,##0.###", "#,##0%", "\xa4#,##0.00", "#E0"], "$", "US Dollar", {}, function(e) {
+        const J = void 0;
+        var ee = ["en", [["a", "p"], ["AM", "PM"], J], [["AM", "PM"], J, J], [["S", "M", "T", "W", "T", "F", "S"], ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]], J, [["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]], J, [["B", "A"], ["BC", "AD"], ["Before Christ", "Anno Domini"]], 0, [6, 0], ["M/d/yy", "MMM d, y", "MMMM d, y", "EEEE, MMMM d, y"], ["h:mm a", "h:mm:ss a", "h:mm:ss a z", "h:mm:ss a zzzz"], ["{1}, {0}", J, "{1} 'at' {0}", J], [".", ",", ";", "%", "+", "-", "E", "\xd7", "\u2030", "\u221e", "NaN", ":"], ["#,##0.###", "#,##0%", "\xa4#,##0.00", "#E0"], "$", "US Dollar", {}, function(e) {
             let t = Math.floor(Math.abs(e))
               , n = e.toString().replace(/^[^.]*\.?/, "").length;
             return 1 === t && 0 === n ? 1 : 5
         }
         ];
-        const X = {}
-          , J = function() {
+        const te = {}
+          , ne = function() {
             var e = {
                 Zero: 0,
                 One: 1,
@@ -28735,10 +29809,10 @@
             e[e.Other] = "Other",
             e
         }()
-          , ee = new r.InjectionToken("UseV4Plurals");
-        class te {
+          , re = new r.InjectionToken("UseV4Plurals");
+        class ie {
         }
-        const ne = (()=>(class extends te {
+        const le = (()=>(class extends ie {
             constructor(e, t) {
                 super(),
                 this.locale = e,
@@ -28748,26 +29822,26 @@
                 switch (this.deprecatedPluralFn ? this.deprecatedPluralFn(t || this.locale, e) : function(e) {
                     return function(e) {
                         const t = e.toLowerCase().replace(/_/g, "-");
-                        let n = X[t];
+                        let n = te[t];
                         if (n)
                             return n;
                         const r = t.split("-")[0];
-                        if (n = X[r])
+                        if (n = te[r])
                             return n;
                         if ("en" === r)
-                            return Z;
+                            return ee;
                         throw new Error(`Missing locale data for the locale "${e}".`)
                     }(e)[18]
                 }(t || this.locale)(e)) {
-                case J.Zero:
+                case ne.Zero:
                     return "zero";
-                case J.One:
+                case ne.One:
                     return "one";
-                case J.Two:
+                case ne.Two:
                     return "two";
-                case J.Few:
+                case ne.Few:
                     return "few";
-                case J.Many:
+                case ne.Many:
                     return "many";
                 default:
                     return "other"
@@ -28775,9 +29849,9 @@
             }
         }
         ))();
-        class re {
+        class se {
         }
-        const ie = (()=>(class {
+        const oe = (()=>(class {
             constructor(e, t, n, r) {
                 this._iterableDiffers = e,
                 this._keyValueDiffers = t,
@@ -28842,7 +29916,7 @@
             }
         }
         ))()
-          , le = (()=>{
+          , ae = (()=>{
             class e {
                 constructor(e) {
                     this._delegate = e
@@ -28855,7 +29929,7 @@
             e
         }
         )()
-          , se = (()=>(class extends le {
+          , ue = (()=>(class extends ae {
             constructor(e) {
                 super(e)
             }
@@ -28870,7 +29944,7 @@
             }
         }
         ))();
-        class oe {
+        class ce {
             constructor(e, t, n, r) {
                 this.$implicit = e,
                 this.ngForOf = t,
@@ -28890,7 +29964,7 @@
                 return !this.even
             }
         }
-        const ae = (()=>(class {
+        const de = (()=>(class {
             constructor(e, t, n) {
                 this._viewContainer = e,
                 this._template = t,
@@ -28934,15 +30008,15 @@
                 const t = [];
                 e.forEachOperation((e,n,r)=>{
                     if (null == e.previousIndex) {
-                        const n = this._viewContainer.createEmbeddedView(this._template, new oe(null,this._ngForOf,-1,-1), r)
-                          , i = new ue(e,n);
+                        const n = this._viewContainer.createEmbeddedView(this._template, new ce(null,this._ngForOf,-1,-1), r)
+                          , i = new he(e,n);
                         t.push(i)
                     } else if (null == r)
                         this._viewContainer.remove(n);
                     else {
                         const i = this._viewContainer.get(n);
                         this._viewContainer.move(i, r);
-                        const l = new ue(e,i);
+                        const l = new he(e,i);
                         t.push(l)
                     }
                 }
@@ -28968,16 +30042,16 @@
             }
         }
         ))();
-        class ue {
+        class he {
             constructor(e, t) {
                 this.record = e,
                 this.view = t
             }
         }
-        const ce = (()=>(class {
+        const fe = (()=>(class {
             constructor(e, t) {
                 this._viewContainer = e,
-                this._context = new de,
+                this._context = new pe,
                 this._thenTemplateRef = null,
                 this._elseTemplateRef = null,
                 this._thenViewRef = null,
@@ -28989,13 +30063,13 @@
                 this._updateView()
             }
             set ngIfThen(e) {
-                he("ngIfThen", e),
+                me("ngIfThen", e),
                 this._thenTemplateRef = e,
                 this._thenViewRef = null,
                 this._updateView()
             }
             set ngIfElse(e) {
-                he("ngIfElse", e),
+                me("ngIfElse", e),
                 this._elseTemplateRef = e,
                 this._elseViewRef = null,
                 this._updateView()
@@ -29012,25 +30086,25 @@
             }
         }
         ))();
-        class de {
+        class pe {
             constructor() {
                 this.$implicit = null,
                 this.ngIf = null
             }
         }
-        function he(e, t) {
+        function me(e, t) {
             if (t && !t.createEmbeddedView)
                 throw new Error(`${e} must be a TemplateRef, but received '${Object(r["\u0275stringify"])(t)}'.`)
         }
-        const fe = (()=>(class {
+        const ge = (()=>(class {
         }
         ))()
-          , pe = new r.InjectionToken("DocumentToken");
-        let me = null;
-        function ge() {
-            return me
+          , ye = new r.InjectionToken("DocumentToken");
+        let be = null;
+        function ve() {
+            return be
         }
-        class ye {
+        class we {
             constructor() {
                 this.resourceLoaderType = null
             }
@@ -29041,7 +30115,7 @@
                 this._attrToPropMap = e
             }
         }
-        class be extends ye {
+        class Ce extends we {
             constructor() {
                 super(),
                 this._animationPrefix = null,
@@ -29095,14 +30169,14 @@
                 return null != this._animationPrefix && null != this._transitionEnd
             }
         }
-        const ve = {
+        const _e = {
             class: "className",
             innerHtml: "innerHTML",
             readonly: "readOnly",
             tabindex: "tabIndex"
         }
-          , we = 3
-          , _e = {
+          , Se = 3
+          , ke = {
             "\b": "Backspace",
             "\t": "Tab",
             "\x7f": "Delete",
@@ -29117,7 +30191,7 @@
             Scroll: "ScrollLock",
             Win: "OS"
         }
-          , Ce = {
+          , xe = {
             A: "1",
             B: "2",
             C: "3",
@@ -29135,21 +30209,21 @@
             "`": "0",
             "\x90": "NumLock"
         }
-          , xe = (()=>{
+          , Ie = (()=>{
             if (r["\u0275global"].Node)
                 return r["\u0275global"].Node.prototype.contains || function(e) {
                     return !!(16 & this.compareDocumentPosition(e))
                 }
         }
         )();
-        class ke extends be {
+        class Ee extends Ce {
             parse(e) {
                 throw new Error("parse not implemented")
             }
             static makeCurrent() {
                 var e;
-                e = new ke,
-                me || (me = e)
+                e = new Ee,
+                be || (be = e)
             }
             hasProperty(e, t) {
                 return t in e
@@ -29176,10 +30250,10 @@
                 window.console && window.console.groupEnd && window.console.groupEnd()
             }
             get attrToPropMap() {
-                return ve
+                return _e
             }
             contains(e, t) {
-                return xe.call(e, t)
+                return Ie.call(e, t)
             }
             querySelector(e, t) {
                 return e.querySelector(t)
@@ -29474,9 +30548,9 @@
                     if (null == (t = e.keyIdentifier))
                         return "Unidentified";
                     t.startsWith("U+") && (t = String.fromCharCode(parseInt(t.substring(2), 16)),
-                    e.location === we && Ce.hasOwnProperty(t) && (t = Ce[t]))
+                    e.location === Se && xe.hasOwnProperty(t) && (t = xe[t]))
                 }
-                return _e[t] || t
+                return ke[t] || t
             }
             getGlobalEventTarget(e, t) {
                 return "window" === t ? window : "document" === t ? e : "body" === t ? e.body : null
@@ -29488,15 +30562,15 @@
                 return window.location
             }
             getBaseHref(e) {
-                const t = Ie || (Ie = document.querySelector("base")) ? Ie.getAttribute("href") : null;
+                const t = Ae || (Ae = document.querySelector("base")) ? Ae.getAttribute("href") : null;
                 return null == t ? null : (n = t,
-                Se || (Se = document.createElement("a")),
-                Se.setAttribute("href", n),
-                "/" === Se.pathname.charAt(0) ? Se.pathname : "/" + Se.pathname);
+                Te || (Te = document.createElement("a")),
+                Te.setAttribute("href", n),
+                "/" === Te.pathname.charAt(0) ? Te.pathname : "/" + Te.pathname);
                 var n
             }
             resetBaseElement() {
-                Ie = null
+                Ae = null
             }
             getUserAgent() {
                 return window.navigator.userAgent
@@ -29535,29 +30609,29 @@
                 document.cookie = encodeURIComponent(e) + "=" + encodeURIComponent(t)
             }
         }
-        let Se, Ie = null;
-        function Ee() {
+        let Te, Ae = null;
+        function Me() {
             return !!window.history.pushState
         }
-        const Te = (()=>{
-            class e extends K {
+        const Oe = (()=>{
+            class e extends X {
                 constructor(e) {
                     super(),
                     this._doc = e,
                     this._init()
                 }
                 _init() {
-                    this.location = ge().getLocation(),
-                    this._history = ge().getHistory()
+                    this.location = ve().getLocation(),
+                    this._history = ve().getHistory()
                 }
                 getBaseHrefFromDOM() {
-                    return ge().getBaseHref(this._doc)
+                    return ve().getBaseHref(this._doc)
                 }
                 onPopState(e) {
-                    ge().getGlobalEventTarget(this._doc, "window").addEventListener("popstate", e, !1)
+                    ve().getGlobalEventTarget(this._doc, "window").addEventListener("popstate", e, !1)
                 }
                 onHashChange(e) {
-                    ge().getGlobalEventTarget(this._doc, "window").addEventListener("hashchange", e, !1)
+                    ve().getGlobalEventTarget(this._doc, "window").addEventListener("hashchange", e, !1)
                 }
                 get href() {
                     return this.location.href
@@ -29584,10 +30658,10 @@
                     this.location.pathname = e
                 }
                 pushState(e, t, n) {
-                    Ee() ? this._history.pushState(e, t, n) : this.location.hash = n
+                    Me() ? this._history.pushState(e, t, n) : this.location.hash = n
                 }
                 replaceState(e, t, n) {
-                    Ee() ? this._history.replaceState(e, t, n) : this.location.hash = n
+                    Me() ? this._history.replaceState(e, t, n) : this.location.hash = n
                 }
                 forward() {
                     this._history.forward()
@@ -29603,30 +30677,30 @@
                 type: void 0,
                 decorators: [{
                     type: r.Inject,
-                    args: [pe]
+                    args: [ye]
                 }]
             }]),
             e
         }
         )()
-          , Ae = new r.InjectionToken("TRANSITION_ID")
-          , Oe = [{
+          , Re = new r.InjectionToken("TRANSITION_ID")
+          , Ne = [{
             provide: r.APP_INITIALIZER,
             useFactory: function(e, t, n) {
                 return ()=>{
                     n.get(r.ApplicationInitStatus).donePromise.then(()=>{
-                        const n = ge();
+                        const n = ve();
                         Array.prototype.slice.apply(n.querySelectorAll(t, "style[ng-transition]")).filter(t=>n.getAttribute(t, "ng-transition") === e).forEach(e=>n.remove(e))
                     }
                     )
                 }
             },
-            deps: [Ae, pe, r.Injector],
+            deps: [Re, ye, r.Injector],
             multi: !0
         }];
-        class Ne {
+        class Pe {
             static init() {
-                Object(r.setTestabilityGetter)(new Ne)
+                Object(r.setTestabilityGetter)(new Pe)
             }
             addToWindow(e) {
                 r["\u0275global"].getAngularTestability = ((t,n=!0)=>{
@@ -29657,21 +30731,21 @@
                 if (null == t)
                     return null;
                 const r = e.getTestability(t);
-                return null != r ? r : n ? ge().isShadowRoot(t) ? this.findTestabilityInTree(e, ge().getHost(t), !0) : this.findTestabilityInTree(e, ge().parentElement(t), !0) : null
+                return null != r ? r : n ? ve().isShadowRoot(t) ? this.findTestabilityInTree(e, ve().getHost(t), !0) : this.findTestabilityInTree(e, ve().parentElement(t), !0) : null
             }
         }
-        function Re(e, t) {
+        function De(e, t) {
             "undefined" != typeof COMPILED && COMPILED || ((r["\u0275global"].ng = r["\u0275global"].ng || {})[e] = t)
         }
-        const Me = (()=>({
+        const Fe = (()=>({
             ApplicationRef: r.ApplicationRef,
             NgZone: r.NgZone
         }))();
-        function Pe(e) {
+        function Ve(e) {
             return Object(r.getDebugNode)(e)
         }
-        const De = new r.InjectionToken("EventManagerPlugins")
-          , Ve = (()=>(class {
+        const je = new r.InjectionToken("EventManagerPlugins")
+          , Be = (()=>(class {
             constructor(e, t) {
                 this._zone = t,
                 this._eventNameToPlugin = new Map,
@@ -29702,18 +30776,18 @@
             }
         }
         ))();
-        class Fe {
+        class He {
             constructor(e) {
                 this._doc = e
             }
             addGlobalEventListener(e, t, n) {
-                const r = ge().getGlobalEventTarget(this._doc, e);
+                const r = ve().getGlobalEventTarget(this._doc, e);
                 if (!r)
                     throw new Error(`Unsupported event target ${r} for event ${t}`);
                 return this.addEventListener(r, t, n)
             }
         }
-        const je = (()=>(class {
+        const Le = (()=>(class {
             constructor() {
                 this._stylesSet = new Set
             }
@@ -29732,7 +30806,7 @@
             }
         }
         ))()
-          , Be = (()=>(class extends je {
+          , Ue = (()=>(class extends Le {
             constructor(e) {
                 super(),
                 this._doc = e,
@@ -29759,41 +30833,41 @@
                 this._hostNodes.forEach(t=>this._addStylesToHost(e, t))
             }
             ngOnDestroy() {
-                this._styleNodes.forEach(e=>ge().remove(e))
+                this._styleNodes.forEach(e=>ve().remove(e))
             }
         }
         ))()
-          , He = {
+          , ze = {
             svg: "http://www.w3.org/2000/svg",
             xhtml: "http://www.w3.org/1999/xhtml",
             xlink: "http://www.w3.org/1999/xlink",
             xml: "http://www.w3.org/XML/1998/namespace",
             xmlns: "http://www.w3.org/2000/xmlns/"
         }
-          , Le = /%COMP%/g
-          , Ue = "_nghost-%COMP%"
-          , ze = "_ngcontent-%COMP%";
-        function $e(e, t, n) {
+          , Ge = /%COMP%/g
+          , $e = "_nghost-%COMP%"
+          , We = "_ngcontent-%COMP%";
+        function Ke(e, t, n) {
             for (let r = 0; r < t.length; r++) {
                 let i = t[r];
-                Array.isArray(i) ? $e(e, i, n) : (i = i.replace(Le, e),
+                Array.isArray(i) ? Ke(e, i, n) : (i = i.replace(Ge, e),
                 n.push(i))
             }
             return n
         }
-        function Ge(e) {
+        function Ye(e) {
             return t=>{
                 !1 === e(t) && (t.preventDefault(),
                 t.returnValue = !1)
             }
         }
-        const We = (()=>(class {
+        const qe = (()=>(class {
             constructor(e, t, n) {
                 this.eventManager = e,
                 this.sharedStylesHost = t,
                 this.appId = n,
                 this.rendererByCompId = new Map,
-                this.defaultRenderer = new Ye(e)
+                this.defaultRenderer = new Qe(e)
             }
             createRenderer(e, t) {
                 if (!e || !t)
@@ -29802,17 +30876,17 @@
                 case r.ViewEncapsulation.Emulated:
                     {
                         let n = this.rendererByCompId.get(t.id);
-                        return n || (n = new Qe(this.eventManager,this.sharedStylesHost,t,this.appId),
+                        return n || (n = new Je(this.eventManager,this.sharedStylesHost,t,this.appId),
                         this.rendererByCompId.set(t.id, n)),
                         n.applyToHost(e),
                         n
                     }
                 case r.ViewEncapsulation.Native:
                 case r.ViewEncapsulation.ShadowDom:
-                    return new Ze(this.eventManager,this.sharedStylesHost,e,t);
+                    return new et(this.eventManager,this.sharedStylesHost,e,t);
                 default:
                     if (!this.rendererByCompId.has(t.id)) {
-                        const e = $e(t.id, t.styles, []);
+                        const e = Ke(t.id, t.styles, []);
                         this.sharedStylesHost.addStyles(e),
                         this.rendererByCompId.set(t.id, this.defaultRenderer)
                     }
@@ -29823,14 +30897,14 @@
             end() {}
         }
         ))();
-        class Ye {
+        class Qe {
             constructor(e) {
                 this.eventManager = e,
                 this.data = Object.create(null)
             }
             destroy() {}
             createElement(e, t) {
-                return t ? document.createElementNS(He[t] || t, e) : document.createElement(e)
+                return t ? document.createElementNS(ze[t] || t, e) : document.createElement(e)
             }
             createComment(e) {
                 return document.createComment(e)
@@ -29863,14 +30937,14 @@
             setAttribute(e, t, n, r) {
                 if (r) {
                     t = `${r}:${t}`;
-                    const i = He[r];
+                    const i = ze[r];
                     i ? e.setAttributeNS(i, t, n) : e.setAttribute(t, n)
                 } else
                     e.setAttribute(t, n)
             }
             removeAttribute(e, t, n) {
                 if (n) {
-                    const r = He[n];
+                    const r = ze[n];
                     r ? e.removeAttributeNS(r, t) : e.removeAttribute(`${n}:${t}`)
                 } else
                     e.removeAttribute(t)
@@ -29888,30 +30962,30 @@
                 n & r.RendererStyleFlags2.DashCase ? e.style.removeProperty(t) : e.style[t] = ""
             }
             setProperty(e, t, n) {
-                Ke(t, "property"),
+                Xe(t, "property"),
                 e[t] = n
             }
             setValue(e, t) {
                 e.nodeValue = t
             }
             listen(e, t, n) {
-                return Ke(t, "listener"),
-                "string" == typeof e ? this.eventManager.addGlobalEventListener(e, t, Ge(n)) : this.eventManager.addEventListener(e, t, Ge(n))
+                return Xe(t, "listener"),
+                "string" == typeof e ? this.eventManager.addGlobalEventListener(e, t, Ye(n)) : this.eventManager.addEventListener(e, t, Ye(n))
             }
         }
-        const qe = (()=>"@".charCodeAt(0))();
-        function Ke(e, t) {
-            if (e.charCodeAt(0) === qe)
+        const Ze = (()=>"@".charCodeAt(0))();
+        function Xe(e, t) {
+            if (e.charCodeAt(0) === Ze)
                 throw new Error(`Found the synthetic ${t} ${e}. Please include either "BrowserAnimationsModule" or "NoopAnimationsModule" in your application.`)
         }
-        class Qe extends Ye {
+        class Je extends Qe {
             constructor(e, t, n, r) {
                 super(e),
                 this.component = n;
-                const i = $e(r + "-" + n.id, n.styles, []);
+                const i = Ke(r + "-" + n.id, n.styles, []);
                 t.addStyles(i),
-                this.contentAttr = ze.replace(Le, r + "-" + n.id),
-                this.hostAttr = Ue.replace(Le, r + "-" + n.id)
+                this.contentAttr = We.replace(Ge, r + "-" + n.id),
+                this.hostAttr = $e.replace(Ge, r + "-" + n.id)
             }
             applyToHost(e) {
                 super.setAttribute(e, this.hostAttr, "")
@@ -29922,7 +30996,7 @@
                 n
             }
         }
-        class Ze extends Ye {
+        class et extends Qe {
             constructor(e, t, n, i) {
                 super(e),
                 this.sharedStylesHost = t,
@@ -29932,7 +31006,7 @@
                     mode: "open"
                 }) : n.createShadowRoot(),
                 this.sharedStylesHost.addHost(this.shadowRoot);
-                const l = $e(i.id, i.styles, []);
+                const l = Ke(i.id, i.styles, []);
                 for (let r = 0; r < l.length; r++) {
                     const e = document.createElement("style");
                     e.textContent = l[r],
@@ -29958,16 +31032,16 @@
                 return this.nodeOrShadowRoot(super.parentNode(this.nodeOrShadowRoot(e)))
             }
         }
-        const Xe = (()=>"undefined" != typeof Zone && Zone.__symbol__ || function(e) {
+        const tt = (()=>"undefined" != typeof Zone && Zone.__symbol__ || function(e) {
             return "__zone_symbol__" + e
         }
         )()
-          , Je = Xe("addEventListener")
-          , et = Xe("removeEventListener")
-          , tt = {}
-          , nt = "__zone_symbol__propagationStopped"
-          , rt = (()=>{
-            const e = "undefined" != typeof Zone && Zone[Xe("BLACK_LISTED_EVENTS")];
+          , nt = tt("addEventListener")
+          , rt = tt("removeEventListener")
+          , it = {}
+          , lt = "__zone_symbol__propagationStopped"
+          , st = (()=>{
+            const e = "undefined" != typeof Zone && Zone[tt("BLACK_LISTED_EVENTS")];
             if (e) {
                 const t = {};
                 return e.forEach(e=>{
@@ -29978,11 +31052,11 @@
             }
         }
         )()
-          , it = function(e) {
-            return !!rt && rt.hasOwnProperty(e)
+          , ot = function(e) {
+            return !!st && st.hasOwnProperty(e)
         }
-          , lt = function(e) {
-            const t = tt[e.type];
+          , at = function(e) {
+            const t = it[e.type];
             if (!t)
                 return;
             const n = this[t];
@@ -29995,13 +31069,13 @@
             }
             {
                 const t = n.slice();
-                for (let n = 0; n < t.length && !0 !== e[nt]; n++) {
+                for (let n = 0; n < t.length && !0 !== e[lt]; n++) {
                     const e = t[n];
                     e.zone !== Zone.current ? e.zone.run(e.handler, this, r) : e.handler.apply(this, r)
                 }
             }
         }
-          , st = (()=>(class extends Fe {
+          , ut = (()=>(class extends He {
             constructor(e, t, n) {
                 super(e),
                 this.ngZone = t,
@@ -30016,7 +31090,7 @@
                     return;
                 const e = Event.prototype.__zone_symbol__stopImmediatePropagation = Event.prototype.stopImmediatePropagation;
                 Event.prototype.stopImmediatePropagation = function() {
-                    this && (this[nt] = !0),
+                    this && (this[lt] = !0),
                     e && e.apply(this, arguments)
                 }
             }
@@ -30025,15 +31099,15 @@
             }
             addEventListener(e, t, n) {
                 let i = n;
-                if (!e[Je] || r.NgZone.isInAngularZone() && !it(t))
+                if (!e[nt] || r.NgZone.isInAngularZone() && !ot(t))
                     e.addEventListener(t, i, !1);
                 else {
-                    let n = tt[t];
-                    n || (n = tt[t] = Xe("ANGULAR" + t + "FALSE"));
+                    let n = it[t];
+                    n || (n = it[t] = tt("ANGULAR" + t + "FALSE"));
                     let r = e[n];
                     const l = r && r.length > 0;
                     r || (r = e[n] = []);
-                    const s = it(t) ? Zone.root : Zone.current;
+                    const s = ot(t) ? Zone.root : Zone.current;
                     if (0 === r.length)
                         r.push({
                             zone: s,
@@ -30051,15 +31125,15 @@
                             handler: i
                         })
                     }
-                    l || e[Je](t, lt, !1)
+                    l || e[nt](t, at, !1)
                 }
                 return ()=>this.removeEventListener(e, t, i)
             }
             removeEventListener(e, t, n) {
-                let r = e[et];
+                let r = e[rt];
                 if (!r)
                     return e.removeEventListener.apply(e, [t, n, !1]);
-                let i = tt[t]
+                let i = it[t]
                   , l = i && e[i];
                 if (!l)
                     return e.removeEventListener.apply(e, [t, n, !1]);
@@ -30070,11 +31144,11 @@
                         l.splice(o, 1);
                         break
                     }
-                s ? 0 === l.length && r.apply(e, [t, lt, !1]) : e.removeEventListener.apply(e, [t, n, !1])
+                s ? 0 === l.length && r.apply(e, [t, at, !1]) : e.removeEventListener.apply(e, [t, n, !1])
             }
         }
         ))()
-          , ot = {
+          , ct = {
             pan: !0,
             panstart: !0,
             panmove: !0,
@@ -30105,9 +31179,9 @@
             swipedown: !0,
             tap: !0
         }
-          , at = new r.InjectionToken("HammerGestureConfig")
-          , ut = new r.InjectionToken("HammerLoader")
-          , ct = (()=>(class {
+          , dt = new r.InjectionToken("HammerGestureConfig")
+          , ht = new r.InjectionToken("HammerLoader")
+          , ft = (()=>(class {
             constructor() {
                 this.events = [],
                 this.overrides = {}
@@ -30126,7 +31200,7 @@
             }
         }
         ))()
-          , dt = (()=>(class extends Fe {
+          , pt = (()=>(class extends He {
             constructor(e, t, n, r) {
                 super(e),
                 this._config = t,
@@ -30134,7 +31208,7 @@
                 this.loader = r
             }
             supports(e) {
-                return !(!ot.hasOwnProperty(e.toLowerCase()) && !this.isCustomEvent(e) || !window.Hammer && !this.loader && (this.console.warn(`The "${e}" event cannot be bound because Hammer.JS is not ` + "loaded and no custom loader has been specified."),
+                return !(!ct.hasOwnProperty(e.toLowerCase()) && !this.isCustomEvent(e) || !window.Hammer && !this.loader && (this.console.warn(`The "${e}" event cannot be bound because Hammer.JS is not ` + "loaded and no custom loader has been specified."),
                 1))
             }
             addEventListener(e, t, n) {
@@ -30183,15 +31257,15 @@
             }
         }
         ))()
-          , ht = ["alt", "control", "meta", "shift"]
-          , ft = {
+          , mt = ["alt", "control", "meta", "shift"]
+          , gt = {
             alt: e=>e.altKey,
             control: e=>e.ctrlKey,
             meta: e=>e.metaKey,
             shift: e=>e.shiftKey
         }
-          , pt = (()=>{
-            class e extends Fe {
+          , yt = (()=>{
+            class e extends He {
                 constructor(e) {
                     super(e)
                 }
@@ -30201,7 +31275,7 @@
                 addEventListener(t, n, r) {
                     const i = e.parseEventName(n)
                       , l = e.eventCallback(i.fullKey, r, this.manager.getZone());
-                    return this.manager.getZone().runOutsideAngular(()=>ge().onAndCancel(t, i.domEventName, l))
+                    return this.manager.getZone().runOutsideAngular(()=>ve().onAndCancel(t, i.domEventName, l))
                 }
                 static parseEventName(t) {
                     const n = t.toLowerCase().split(".")
@@ -30210,7 +31284,7 @@
                         return null;
                     const i = e._normalizeKey(n.pop());
                     let l = "";
-                    if (ht.forEach(e=>{
+                    if (mt.forEach(e=>{
                         const t = n.indexOf(e);
                         t > -1 && (n.splice(t, 1),
                         l += e + ".")
@@ -30226,11 +31300,11 @@
                 }
                 static getEventFullKey(e) {
                     let t = ""
-                      , n = ge().getEventKey(e);
+                      , n = ve().getEventKey(e);
                     return " " === (n = n.toLowerCase()) ? n = "space" : "." === n && (n = "dot"),
-                    ht.forEach(r=>{
+                    mt.forEach(r=>{
                         r != n && (0,
-                        ft[r])(e) && (t += r + ".")
+                        gt[r])(e) && (t += r + ".")
                     }
                     ),
                     t += n
@@ -30252,9 +31326,9 @@
             return e
         }
         )();
-        class mt {
+        class bt {
         }
-        const gt = (()=>(class extends mt {
+        const vt = (()=>(class extends bt {
             constructor(e) {
                 super(),
                 this._doc = e
@@ -30266,21 +31340,21 @@
                 case r.SecurityContext.NONE:
                     return t;
                 case r.SecurityContext.HTML:
-                    return t instanceof bt ? t.changingThisBreaksApplicationSecurity : (this.checkNotSafeValue(t, "HTML"),
+                    return t instanceof Ct ? t.changingThisBreaksApplicationSecurity : (this.checkNotSafeValue(t, "HTML"),
                     Object(r["\u0275_sanitizeHtml"])(this._doc, String(t)));
                 case r.SecurityContext.STYLE:
-                    return t instanceof vt ? t.changingThisBreaksApplicationSecurity : (this.checkNotSafeValue(t, "Style"),
+                    return t instanceof _t ? t.changingThisBreaksApplicationSecurity : (this.checkNotSafeValue(t, "Style"),
                     Object(r["\u0275_sanitizeStyle"])(t));
                 case r.SecurityContext.SCRIPT:
-                    if (t instanceof wt)
+                    if (t instanceof St)
                         return t.changingThisBreaksApplicationSecurity;
                     throw this.checkNotSafeValue(t, "Script"),
                     new Error("unsafe value used in a script context");
                 case r.SecurityContext.URL:
-                    return t instanceof Ct || t instanceof _t ? t.changingThisBreaksApplicationSecurity : (this.checkNotSafeValue(t, "URL"),
+                    return t instanceof xt || t instanceof kt ? t.changingThisBreaksApplicationSecurity : (this.checkNotSafeValue(t, "URL"),
                     Object(r["\u0275_sanitizeUrl"])(String(t)));
                 case r.SecurityContext.RESOURCE_URL:
-                    if (t instanceof Ct)
+                    if (t instanceof xt)
                         return t.changingThisBreaksApplicationSecurity;
                     throw this.checkNotSafeValue(t, "ResourceURL"),
                     new Error("unsafe value used in a resource URL context (see http://g.co/ng/security#xss)");
@@ -30289,27 +31363,27 @@
                 }
             }
             checkNotSafeValue(e, t) {
-                if (e instanceof yt)
+                if (e instanceof wt)
                     throw new Error(`Required a safe ${t}, got a ${e.getTypeName()} ` + "(see http://g.co/ng/security#xss)")
             }
             bypassSecurityTrustHtml(e) {
-                return new bt(e)
+                return new Ct(e)
             }
             bypassSecurityTrustStyle(e) {
-                return new vt(e)
-            }
-            bypassSecurityTrustScript(e) {
-                return new wt(e)
-            }
-            bypassSecurityTrustUrl(e) {
                 return new _t(e)
             }
+            bypassSecurityTrustScript(e) {
+                return new St(e)
+            }
+            bypassSecurityTrustUrl(e) {
+                return new kt(e)
+            }
             bypassSecurityTrustResourceUrl(e) {
-                return new Ct(e)
+                return new xt(e)
             }
         }
         ))();
-        class yt {
+        class wt {
             constructor(e) {
                 this.changingThisBreaksApplicationSecurity = e
             }
@@ -30317,57 +31391,57 @@
                 return `SafeValue must use [property]=binding: ${this.changingThisBreaksApplicationSecurity}` + " (see http://g.co/ng/security#xss)"
             }
         }
-        class bt extends yt {
+        class Ct extends wt {
             getTypeName() {
                 return "HTML"
             }
         }
-        class vt extends yt {
+        class _t extends wt {
             getTypeName() {
                 return "Style"
             }
         }
-        class wt extends yt {
+        class St extends wt {
             getTypeName() {
                 return "Script"
             }
         }
-        class _t extends yt {
+        class kt extends wt {
             getTypeName() {
                 return "URL"
             }
         }
-        class Ct extends yt {
+        class xt extends wt {
             getTypeName() {
                 return "ResourceURL"
             }
         }
-        const xt = [{
+        const It = [{
             provide: r.PLATFORM_ID,
             useValue: "browser"
         }, {
             provide: r.PLATFORM_INITIALIZER,
             useValue: function() {
-                ke.makeCurrent(),
-                Ne.init()
+                Ee.makeCurrent(),
+                Pe.init()
             },
             multi: !0
         }, {
-            provide: K,
-            useClass: Te,
-            deps: [pe]
+            provide: X,
+            useClass: Oe,
+            deps: [ye]
         }, {
-            provide: pe,
+            provide: ye,
             useFactory: function() {
                 return document
             },
             deps: []
         }]
-          , kt = Object(r.createPlatformFactory)(r.platformCore, "browser", xt);
-        function St() {
+          , Et = Object(r.createPlatformFactory)(r.platformCore, "browser", It);
+        function Tt() {
             return new r.ErrorHandler
         }
-        const It = (()=>{
+        const At = (()=>{
             class e {
                 constructor(e) {
                     if (e)
@@ -30380,9 +31454,9 @@
                             provide: r.APP_ID,
                             useValue: t.appId
                         }, {
-                            provide: Ae,
+                            provide: Re,
                             useExisting: r.APP_ID
-                        }, Oe]
+                        }, Ne]
                     }
                 }
             }
@@ -30390,11 +31464,11 @@
         }
         )();
         "undefined" != typeof window && window;
-        var Et = n("cp0P")
-          , Tt = n("Cfvw")
-          , At = n("lJxs");
-        const Ot = new r.InjectionToken("NgValueAccessor")
-          , Nt = (()=>(class {
+        var Mt = n("cp0P")
+          , Ot = n("Cfvw")
+          , Rt = n("lJxs");
+        const Nt = new r.InjectionToken("NgValueAccessor")
+          , Pt = (()=>(class {
             constructor(e, t) {
                 this._renderer = e,
                 this._elementRef = t,
@@ -30417,8 +31491,8 @@
             }
         }
         ))()
-          , Rt = new r.InjectionToken("CompositionEventMode")
-          , Mt = (()=>(class {
+          , Dt = new r.InjectionToken("CompositionEventMode")
+          , Ft = (()=>(class {
             constructor(e, t, n) {
                 this._renderer = e,
                 this._elementRef = t,
@@ -30429,7 +31503,7 @@
                 ),
                 this._composing = !1,
                 null == this._compositionMode && (this._compositionMode = !function() {
-                    const e = ge() ? ge().getUserAgent() : "";
+                    const e = ve() ? ve().getUserAgent() : "";
                     return /android (\d+)/.test(e.toLowerCase())
                 }())
             }
@@ -30457,7 +31531,7 @@
             }
         }
         ))();
-        class Pt {
+        class Vt {
             get value() {
                 return this.control ? this.control.value : null
             }
@@ -30513,7 +31587,7 @@
                 return this.control ? this.control.getError(e, t) : null
             }
         }
-        class Dt extends Pt {
+        class jt extends Vt {
             get formDirective() {
                 return null
             }
@@ -30521,10 +31595,10 @@
                 return null
             }
         }
-        function Vt() {
+        function Bt() {
             throw new Error("unimplemented")
         }
-        class Ft extends Pt {
+        class Ht extends Vt {
             constructor() {
                 super(...arguments),
                 this._parent = null,
@@ -30534,13 +31608,13 @@
                 this._rawAsyncValidators = []
             }
             get validator() {
-                return Vt()
+                return Bt()
             }
             get asyncValidator() {
-                return Vt()
+                return Bt()
             }
         }
-        const jt = (()=>(class extends class {
+        const Lt = (()=>(class extends class {
             constructor(e) {
                 this._cd = e
             }
@@ -30572,15 +31646,15 @@
             }
         }
         ))();
-        function Bt(e) {
+        function Ut(e) {
             return null == e || 0 === e.length
         }
-        const Ht = new r.InjectionToken("NgValidators")
-          , Lt = /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+\/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+\/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
-        class Ut {
+        const zt = new r.InjectionToken("NgValidators")
+          , Gt = /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
+        class $t {
             static min(e) {
                 return t=>{
-                    if (Bt(t.value) || Bt(e))
+                    if (Ut(t.value) || Ut(e))
                         return null;
                     const n = parseFloat(t.value);
                     return !isNaN(n) && n < e ? {
@@ -30593,7 +31667,7 @@
             }
             static max(e) {
                 return t=>{
-                    if (Bt(t.value) || Bt(e))
+                    if (Ut(t.value) || Ut(e))
                         return null;
                     const n = parseFloat(t.value);
                     return !isNaN(n) && n > e ? {
@@ -30605,7 +31679,7 @@
                 }
             }
             static required(e) {
-                return Bt(e.value) ? {
+                return Ut(e.value) ? {
                     required: !0
                 } : null
             }
@@ -30615,13 +31689,13 @@
                 }
             }
             static email(e) {
-                return Bt(e.value) ? null : Lt.test(e.value) ? null : {
+                return Ut(e.value) ? null : Gt.test(e.value) ? null : {
                     email: !0
                 }
             }
             static minLength(e) {
                 return t=>{
-                    if (Bt(t.value))
+                    if (Ut(t.value))
                         return null;
                     const n = t.value ? t.value.length : 0;
                     return n < e ? {
@@ -30645,7 +31719,7 @@
             }
             static pattern(e) {
                 if (!e)
-                    return Ut.nullValidator;
+                    return $t.nullValidator;
                 let t, n;
                 return "string" == typeof e ? (n = "",
                 "^" !== e.charAt(0) && (n += "^"),
@@ -30654,7 +31728,7 @@
                 t = new RegExp(n)) : (n = e.toString(),
                 t = e),
                 e=>{
-                    if (Bt(e.value))
+                    if (Ut(e.value))
                         return null;
                     const r = e.value;
                     return t.test(r) ? null : {
@@ -30671,9 +31745,9 @@
             static compose(e) {
                 if (!e)
                     return null;
-                const t = e.filter(zt);
+                const t = e.filter(Wt);
                 return 0 == t.length ? null : function(e) {
-                    return Gt(function(e, n) {
+                    return Yt(function(e, n) {
                         return t.map(t=>t(e))
                     }(e))
                 }
@@ -30681,35 +31755,35 @@
             static composeAsync(e) {
                 if (!e)
                     return null;
-                const t = e.filter(zt);
+                const t = e.filter(Wt);
                 return 0 == t.length ? null : function(e) {
                     const n = function(e, n) {
                         return t.map(t=>t(e))
-                    }(e).map($t);
-                    return Object(Et.a)(n).pipe(Object(At.a)(Gt))
+                    }(e).map(Kt);
+                    return Object(Mt.a)(n).pipe(Object(Rt.a)(Yt))
                 }
             }
         }
-        function zt(e) {
+        function Wt(e) {
             return null != e
         }
-        function $t(e) {
-            const t = Object(r["\u0275isPromise"])(e) ? Object(Tt.a)(e) : e;
+        function Kt(e) {
+            const t = Object(r["\u0275isPromise"])(e) ? Object(Ot.a)(e) : e;
             if (!Object(r["\u0275isObservable"])(t))
                 throw new Error("Expected validator to return Promise or Observable.");
             return t
         }
-        function Gt(e) {
+        function Yt(e) {
             const t = e.reduce((e,t)=>null != t ? Object.assign({}, e, t) : e, {});
             return 0 === Object.keys(t).length ? null : t
         }
-        function Wt(e) {
+        function qt(e) {
             return e.validate ? t=>e.validate(t) : e
         }
-        function Yt(e) {
+        function Qt(e) {
             return e.validate ? t=>e.validate(t) : e
         }
-        const qt = (()=>(class {
+        const Zt = (()=>(class {
             constructor(e, t) {
                 this._renderer = e,
                 this._elementRef = t,
@@ -30735,7 +31809,7 @@
             }
         }
         ))()
-          , Kt = (()=>(class {
+          , Xt = (()=>(class {
             constructor() {
                 this._accessors = []
             }
@@ -30758,7 +31832,7 @@
             }
         }
         ))()
-          , Qt = (()=>(class {
+          , Jt = (()=>(class {
             constructor(e, t, n, r) {
                 this._renderer = e,
                 this._elementRef = t,
@@ -30770,7 +31844,7 @@
                 )
             }
             ngOnInit() {
-                this._control = this._injector.get(Ft),
+                this._control = this._injector.get(Ht),
                 this._checkName(),
                 this._registry.add(this._control, this)
             }
@@ -30807,7 +31881,7 @@
             }
         }
         ))()
-          , Zt = (()=>(class {
+          , en = (()=>(class {
             constructor(e, t) {
                 this._renderer = e,
                 this._elementRef = t,
@@ -30833,18 +31907,18 @@
             }
         }
         ))()
-          , Xt = {
+          , tn = {
             formControlName: '\n    <div [formGroup]="myGroup">\n      <input formControlName="firstName">\n    </div>\n\n    In your class:\n\n    this.myGroup = new FormGroup({\n       firstName: new FormControl()\n    });',
             formGroupName: '\n    <div [formGroup]="myGroup">\n       <div formGroupName="person">\n          <input formControlName="firstName">\n       </div>\n    </div>\n\n    In your class:\n\n    this.myGroup = new FormGroup({\n       person: new FormGroup({ firstName: new FormControl() })\n    });',
             formArrayName: '\n    <div [formGroup]="myGroup">\n      <div formArrayName="cities">\n        <div *ngFor="let city of cityArray.controls; index as i">\n          <input [formControlName]="i">\n        </div>\n      </div>\n    </div>\n\n    In your class:\n\n    this.cityArray = new FormArray([new FormControl(\'SF\')]);\n    this.myGroup = new FormGroup({\n      cities: this.cityArray\n    });',
             ngModelGroup: '\n    <form>\n       <div ngModelGroup="person">\n          <input [(ngModel)]="person.name" name="firstName">\n       </div>\n    </form>',
             ngModelWithFormGroup: '\n    <div [formGroup]="myGroup">\n       <input formControlName="firstName">\n       <input [(ngModel)]="showMoreControls" [ngModelOptions]="{standalone: true}">\n    </div>\n  '
         };
-        function Jt(e, t) {
+        function nn(e, t) {
             return null == e ? `${t}` : (t && "object" == typeof t && (t = "Object"),
             `${e}: ${t}`.slice(0, 50))
         }
-        const en = (()=>(class {
+        const rn = (()=>(class {
             constructor(e, t) {
                 this._renderer = e,
                 this._elementRef = t,
@@ -30865,7 +31939,7 @@
                 this.value = e;
                 const t = this._getOptionId(e);
                 null == t && this._renderer.setProperty(this._elementRef.nativeElement, "selectedIndex", -1);
-                const n = Jt(t, e);
+                const n = nn(t, e);
                 this._renderer.setProperty(this._elementRef.nativeElement, "value", n)
             }
             registerOnChange(e) {
@@ -30898,7 +31972,7 @@
             }
         }
         ))()
-          , tn = (()=>(class {
+          , ln = (()=>(class {
             constructor(e, t, n) {
                 this._element = e,
                 this._renderer = t,
@@ -30907,7 +31981,7 @@
             }
             set ngValue(e) {
                 null != this._select && (this._select._optionMap.set(this.id, e),
-                this._setElementValue(Jt(this.id, e)),
+                this._setElementValue(nn(this.id, e)),
                 this._select.writeValue(this._select.value))
             }
             set value(e) {
@@ -30923,12 +31997,12 @@
             }
         }
         ))();
-        function nn(e, t) {
+        function sn(e, t) {
             return null == e ? `${t}` : ("string" == typeof t && (t = `'${t}'`),
             t && "object" == typeof t && (t = "Object"),
             `${e}: ${t}`.slice(0, 50))
         }
-        const rn = (()=>(class {
+        const on = (()=>(class {
             constructor(e, t) {
                 this._renderer = e,
                 this._elementRef = t,
@@ -31011,7 +32085,7 @@
             }
         }
         ))()
-          , ln = (()=>(class {
+          , an = (()=>(class {
             constructor(e, t, n) {
                 this._element = e,
                 this._renderer = t,
@@ -31020,12 +32094,12 @@
             }
             set ngValue(e) {
                 null != this._select && (this._value = e,
-                this._setElementValue(nn(this.id, e)),
+                this._setElementValue(sn(this.id, e)),
                 this._select.writeValue(this._select.value))
             }
             set value(e) {
                 this._select ? (this._value = e,
-                this._setElementValue(nn(this.id, e)),
+                this._setElementValue(sn(this.id, e)),
                 this._select.writeValue(this._select.value)) : this._setElementValue(e)
             }
             _setElementValue(e) {
@@ -31040,21 +32114,21 @@
             }
         }
         ))();
-        function sn(e, t) {
+        function un(e, t) {
             return [...t.path, e]
         }
-        function on(e, t) {
-            e || un(t, "Cannot find control with"),
-            t.valueAccessor || un(t, "No value accessor for form control with"),
-            e.validator = Ut.compose([e.validator, t.validator]),
-            e.asyncValidator = Ut.composeAsync([e.asyncValidator, t.asyncValidator]),
+        function cn(e, t) {
+            e || hn(t, "Cannot find control with"),
+            t.valueAccessor || hn(t, "No value accessor for form control with"),
+            e.validator = $t.compose([e.validator, t.validator]),
+            e.asyncValidator = $t.composeAsync([e.asyncValidator, t.asyncValidator]),
             t.valueAccessor.writeValue(e.value),
             function(e, t) {
                 t.valueAccessor.registerOnChange(n=>{
                     e._pendingValue = n,
                     e._pendingChange = !0,
                     e._pendingDirty = !0,
-                    "change" === e.updateOn && an(e, t)
+                    "change" === e.updateOn && dn(e, t)
                 }
                 )
             }(e, t),
@@ -31068,7 +32142,7 @@
             function(e, t) {
                 t.valueAccessor.registerOnTouched(()=>{
                     e._pendingTouched = !0,
-                    "blur" === e.updateOn && e._pendingChange && an(e, t),
+                    "blur" === e.updateOn && e._pendingChange && dn(e, t),
                     "submit" !== e.updateOn && e.markAsTouched()
                 }
                 )
@@ -31086,7 +32160,7 @@
             }
             )
         }
-        function an(e, t) {
+        function dn(e, t) {
             e._pendingDirty && e.markAsDirty(),
             e.setValue(e._pendingValue, {
                 emitModelToViewChange: !1
@@ -31094,34 +32168,34 @@
             t.viewToModelUpdate(e._pendingValue),
             e._pendingChange = !1
         }
-        function un(e, t) {
+        function hn(e, t) {
             let n;
             throw n = e.path.length > 1 ? `path: '${e.path.join(" -> ")}'` : e.path[0] ? `name: '${e.path}'` : "unspecified name attribute",
             new Error(`${t} ${n}`)
         }
-        function cn(e) {
-            return null != e ? Ut.compose(e.map(Wt)) : null
+        function fn(e) {
+            return null != e ? $t.compose(e.map(qt)) : null
         }
-        function dn(e) {
-            return null != e ? Ut.composeAsync(e.map(Yt)) : null
+        function pn(e) {
+            return null != e ? $t.composeAsync(e.map(Qt)) : null
         }
-        const hn = [Nt, Zt, qt, en, rn, Qt]
-          , fn = "VALID"
-          , pn = "INVALID"
-          , mn = "PENDING"
-          , gn = "DISABLED";
-        function yn(e) {
-            const t = vn(e) ? e.validators : e;
-            return Array.isArray(t) ? cn(t) : t || null
+        const mn = [Pt, en, Zt, rn, on, Jt]
+          , gn = "VALID"
+          , yn = "INVALID"
+          , bn = "PENDING"
+          , vn = "DISABLED";
+        function wn(e) {
+            const t = _n(e) ? e.validators : e;
+            return Array.isArray(t) ? fn(t) : t || null
         }
-        function bn(e, t) {
-            const n = vn(t) ? t.asyncValidators : e;
-            return Array.isArray(n) ? dn(n) : n || null
+        function Cn(e, t) {
+            const n = _n(t) ? t.asyncValidators : e;
+            return Array.isArray(n) ? pn(n) : n || null
         }
-        function vn(e) {
+        function _n(e) {
             return null != e && !Array.isArray(e) && "object" == typeof e
         }
-        class wn {
+        class Sn {
             constructor(e, t) {
                 this.validator = e,
                 this.asyncValidator = t,
@@ -31135,19 +32209,19 @@
                 return this._parent
             }
             get valid() {
-                return this.status === fn
-            }
-            get invalid() {
-                return this.status === pn
-            }
-            get pending() {
-                return this.status == mn
-            }
-            get disabled() {
                 return this.status === gn
             }
+            get invalid() {
+                return this.status === yn
+            }
+            get pending() {
+                return this.status == bn
+            }
+            get disabled() {
+                return this.status === vn
+            }
             get enabled() {
-                return this.status !== gn
+                return this.status !== vn
             }
             get dirty() {
                 return !this.pristine
@@ -31159,10 +32233,10 @@
                 return this._updateOn ? this._updateOn : this.parent ? this.parent.updateOn : "change"
             }
             setValidators(e) {
-                this.validator = yn(e)
+                this.validator = wn(e)
             }
             setAsyncValidators(e) {
-                this.asyncValidator = bn(e)
+                this.asyncValidator = Cn(e)
             }
             clearValidators() {
                 this.validator = null
@@ -31207,13 +32281,13 @@
                 this._parent && !e.onlySelf && this._parent._updatePristine(e)
             }
             markAsPending(e={}) {
-                this.status = mn,
+                this.status = bn,
                 !1 !== e.emitEvent && this.statusChanges.emit(this.status),
                 this._parent && !e.onlySelf && this._parent.markAsPending(e)
             }
             disable(e={}) {
                 const t = this._parentMarkedDirty(e.onlySelf);
-                this.status = gn,
+                this.status = vn,
                 this.errors = null,
                 this._forEachChild(t=>{
                     t.disable(Object.assign({}, e, {
@@ -31231,7 +32305,7 @@
             }
             enable(e={}) {
                 const t = this._parentMarkedDirty(e.onlySelf);
-                this.status = fn,
+                this.status = gn,
                 this._forEachChild(t=>{
                     t.enable(Object.assign({}, e, {
                         onlySelf: !0
@@ -31261,7 +32335,7 @@
                 this.enabled && (this._cancelExistingSubscription(),
                 this.errors = this._runValidator(),
                 this.status = this._calculateStatus(),
-                this.status !== fn && this.status !== mn || this._runAsyncValidator(e.emitEvent)),
+                this.status !== gn && this.status !== bn || this._runAsyncValidator(e.emitEvent)),
                 !1 !== e.emitEvent && (this.valueChanges.emit(this.value),
                 this.statusChanges.emit(this.status)),
                 this._parent && !e.onlySelf && this._parent.updateValueAndValidity(e)
@@ -31276,15 +32350,15 @@
                 })
             }
             _setInitialStatus() {
-                this.status = this._allControlsDisabled() ? gn : fn
+                this.status = this._allControlsDisabled() ? vn : gn
             }
             _runValidator() {
                 return this.validator ? this.validator(this) : null
             }
             _runAsyncValidator(e) {
                 if (this.asyncValidator) {
-                    this.status = mn;
-                    const t = $t(this.asyncValidator(this));
+                    this.status = bn;
+                    const t = Kt(this.asyncValidator(this));
                     this._asyncValidationSubscription = t.subscribe(t=>this.setErrors(t, {
                         emitEvent: e
                     }))
@@ -31300,7 +32374,7 @@
             get(e) {
                 return function(e, t, n) {
                     return null == t ? null : (t instanceof Array || (t = t.split(".")),
-                    t instanceof Array && 0 === t.length ? null : t.reduce((e,t)=>e instanceof Cn ? e.controls.hasOwnProperty(t) ? e.controls[t] : null : e instanceof xn && e.at(t) || null, e))
+                    t instanceof Array && 0 === t.length ? null : t.reduce((e,t)=>e instanceof xn ? e.controls.hasOwnProperty(t) ? e.controls[t] : null : e instanceof In && e.at(t) || null, e))
                 }(this, e)
             }
             getError(e, t) {
@@ -31326,7 +32400,7 @@
                 this.statusChanges = new r.EventEmitter
             }
             _calculateStatus() {
-                return this._allControlsDisabled() ? gn : this.errors ? pn : this._anyControlsHaveStatus(mn) ? mn : this._anyControlsHaveStatus(pn) ? pn : fn
+                return this._allControlsDisabled() ? vn : this.errors ? yn : this._anyControlsHaveStatus(bn) ? bn : this._anyControlsHaveStatus(yn) ? yn : gn
             }
             _anyControlsHaveStatus(e) {
                 return this._anyControls(t=>t.status === e)
@@ -31352,15 +32426,15 @@
                 this._onCollectionChange = e
             }
             _setUpdateStrategy(e) {
-                vn(e) && null != e.updateOn && (this._updateOn = e.updateOn)
+                _n(e) && null != e.updateOn && (this._updateOn = e.updateOn)
             }
             _parentMarkedDirty(e) {
                 return !e && this._parent && this._parent.dirty && !this._parent._anyControlsDirty()
             }
         }
-        class _n extends wn {
+        class kn extends Sn {
             constructor(e=null, t, n) {
-                super(yn(t), bn(n, t)),
+                super(wn(t), Cn(n, t)),
                 this._onChange = [],
                 this._applyFormState(e),
                 this._setUpdateStrategy(t),
@@ -31425,9 +32499,9 @@
                 })) : this.value = this._pendingValue = e
             }
         }
-        class Cn extends wn {
+        class xn extends Sn {
             constructor(e, t, n) {
-                super(yn(t), bn(n, t)),
+                super(wn(t), Cn(n, t)),
                 this.controls = e,
                 this._initObservables(),
                 this._setUpdateStrategy(t),
@@ -31501,7 +32575,7 @@
                 this.updateValueAndValidity(t)
             }
             getRawValue() {
-                return this._reduceChildren({}, (e,t,n)=>(e[n] = t instanceof _n ? t.value : t.getRawValue(),
+                return this._reduceChildren({}, (e,t,n)=>(e[n] = t instanceof kn ? t.value : t.getRawValue(),
                 e))
             }
             _syncPendingControls() {
@@ -31564,9 +32638,9 @@
                 )
             }
         }
-        class xn extends wn {
+        class In extends Sn {
             constructor(e, t, n) {
-                super(yn(t), bn(n, t)),
+                super(wn(t), Cn(n, t)),
                 this.controls = e,
                 this._initObservables(),
                 this._setUpdateStrategy(t),
@@ -31643,7 +32717,7 @@
                 this.updateValueAndValidity(t)
             }
             getRawValue() {
-                return this.controls.map(e=>e instanceof _n ? e.value : e.getRawValue())
+                return this.controls.map(e=>e instanceof kn ? e.value : e.getRawValue())
             }
             clear() {
                 this.controls.length < 1 || (this._forEachChild(e=>e._registerOnCollectionChange(()=>{}
@@ -31697,14 +32771,14 @@
                 e._registerOnCollectionChange(this._onCollectionChange)
             }
         }
-        const kn = (()=>Promise.resolve(null))()
-          , Sn = (()=>(class extends Dt {
+        const En = (()=>Promise.resolve(null))()
+          , Tn = (()=>(class extends jt {
             constructor(e, t) {
                 super(),
                 this.submitted = !1,
                 this._directives = [],
                 this.ngSubmit = new r.EventEmitter,
-                this.form = new Cn({},cn(e),dn(t))
+                this.form = new xn({},fn(e),pn(t))
             }
             ngAfterViewInit() {
                 this._setUpdateStrategy()
@@ -31722,10 +32796,10 @@
                 return this.form.controls
             }
             addControl(e) {
-                kn.then(()=>{
+                En.then(()=>{
                     const t = this._findContainer(e.path);
                     e.control = t.registerControl(e.name, e.control),
-                    on(e.control, e),
+                    cn(e.control, e),
                     e.control.updateValueAndValidity({
                         emitEvent: !1
                     }),
@@ -31737,7 +32811,7 @@
                 return this.form.get(e.path)
             }
             removeControl(e) {
-                kn.then(()=>{
+                En.then(()=>{
                     const t = this._findContainer(e.path);
                     t && t.removeControl(e.name),
                     function(t, n) {
@@ -31748,13 +32822,13 @@
                 )
             }
             addFormGroup(e) {
-                kn.then(()=>{
+                En.then(()=>{
                     const t = this._findContainer(e.path)
-                      , n = new Cn({});
+                      , n = new xn({});
                     (function(e, t) {
-                        null == e && un(t, "Cannot find control with"),
-                        e.validator = Ut.compose([e.validator, t.validator]),
-                        e.asyncValidator = Ut.composeAsync([e.asyncValidator, t.asyncValidator])
+                        null == e && hn(t, "Cannot find control with"),
+                        e.validator = $t.compose([e.validator, t.validator]),
+                        e.asyncValidator = $t.composeAsync([e.asyncValidator, t.asyncValidator])
                     }
                     )(n, e),
                     t.registerControl(e.name, n),
@@ -31765,7 +32839,7 @@
                 )
             }
             removeFormGroup(e) {
-                kn.then(()=>{
+                En.then(()=>{
                     const t = this._findContainer(e.path);
                     t && t.removeControl(e.name)
                 }
@@ -31775,7 +32849,7 @@
                 return this.form.get(e.path)
             }
             updateModel(e, t) {
-                kn.then(()=>{
+                En.then(()=>{
                     this.form.get(e.path).setValue(t)
                 }
                 )
@@ -31813,25 +32887,25 @@
             }
         }
         ))();
-        class In {
+        class An {
             static modelParentException() {
-                throw new Error(`\n      ngModel cannot be used to register form controls with a parent formGroup directive.  Try using\n      formGroup's partner directive "formControlName" instead.  Example:\n\n      ${Xt.formControlName}\n\n      Or, if you'd like to avoid registering this form control, indicate that it's standalone in ngModelOptions:\n\n      Example:\n\n      ${Xt.ngModelWithFormGroup}`)
+                throw new Error(`\n      ngModel cannot be used to register form controls with a parent formGroup directive.  Try using\n      formGroup's partner directive "formControlName" instead.  Example:\n\n      ${tn.formControlName}\n\n      Or, if you'd like to avoid registering this form control, indicate that it's standalone in ngModelOptions:\n\n      Example:\n\n      ${tn.ngModelWithFormGroup}`)
             }
             static formGroupNameException() {
-                throw new Error(`\n      ngModel cannot be used to register form controls with a parent formGroupName or formArrayName directive.\n\n      Option 1: Use formControlName instead of ngModel (reactive strategy):\n\n      ${Xt.formGroupName}\n\n      Option 2:  Update ngModel's parent be ngModelGroup (template-driven strategy):\n\n      ${Xt.ngModelGroup}`)
+                throw new Error(`\n      ngModel cannot be used to register form controls with a parent formGroupName or formArrayName directive.\n\n      Option 1: Use formControlName instead of ngModel (reactive strategy):\n\n      ${tn.formGroupName}\n\n      Option 2:  Update ngModel's parent be ngModelGroup (template-driven strategy):\n\n      ${tn.ngModelGroup}`)
             }
             static missingNameException() {
                 throw new Error('If ngModel is used within a form tag, either the name attribute must be set or the form\n      control must be defined as \'standalone\' in ngModelOptions.\n\n      Example 1: <input [(ngModel)]="person.firstName" name="first">\n      Example 2: <input [(ngModel)]="person.firstName" [ngModelOptions]="{standalone: true}">')
             }
             static modelGroupParentException() {
-                throw new Error(`\n      ngModelGroup cannot be used with a parent formGroup directive.\n\n      Option 1: Use formGroupName instead of ngModelGroup (reactive strategy):\n\n      ${Xt.formGroupName}\n\n      Option 2:  Use a regular form tag instead of the formGroup directive (template-driven strategy):\n\n      ${Xt.ngModelGroup}`)
+                throw new Error(`\n      ngModelGroup cannot be used with a parent formGroup directive.\n\n      Option 1: Use formGroupName instead of ngModelGroup (reactive strategy):\n\n      ${tn.formGroupName}\n\n      Option 2:  Use a regular form tag instead of the formGroup directive (template-driven strategy):\n\n      ${tn.ngModelGroup}`)
             }
             static ngFormWarning() {
                 console.warn("\n    It looks like you're using 'ngForm'.\n\n    Support for using the 'ngForm' element selector has been deprecated in Angular v6 and will be removed\n    in Angular v9.\n\n    Use 'ng-form' instead.\n\n    Before:\n    <ngForm #myForm=\"ngForm\">\n\n    After:\n    <ng-form #myForm=\"ngForm\">\n    ")
             }
         }
-        const En = new r.InjectionToken("NgFormSelectorWarning");
-        class Tn extends Dt {
+        const Mn = new r.InjectionToken("NgFormSelectorWarning");
+        class On extends jt {
             ngOnInit() {
                 this._checkParentType(),
                 this.formDirective.addFormGroup(this)
@@ -31843,21 +32917,21 @@
                 return this.formDirective.getFormGroup(this)
             }
             get path() {
-                return sn(this.name, this._parent)
+                return un(this.name, this._parent)
             }
             get formDirective() {
                 return this._parent ? this._parent.formDirective : null
             }
             get validator() {
-                return cn(this._validators)
+                return fn(this._validators)
             }
             get asyncValidator() {
-                return dn(this._asyncValidators)
+                return pn(this._asyncValidators)
             }
             _checkParentType() {}
         }
-        const An = (()=>{
-            class e extends Tn {
+        const Rn = (()=>{
+            class e extends On {
                 constructor(e, t, n) {
                     super(),
                     this._parent = e,
@@ -31865,17 +32939,17 @@
                     this._asyncValidators = n
                 }
                 _checkParentType() {
-                    this._parent instanceof e || this._parent instanceof Sn || In.modelGroupParentException()
+                    this._parent instanceof e || this._parent instanceof Tn || An.modelGroupParentException()
                 }
             }
             return e
         }
         )()
-          , On = (()=>Promise.resolve(null))()
-          , Nn = (()=>(class extends Ft {
+          , Nn = (()=>Promise.resolve(null))()
+          , Pn = (()=>(class extends Ht {
             constructor(e, t, n, i) {
                 super(),
-                this.control = new _n,
+                this.control = new kn,
                 this._registered = !1,
                 this.update = new r.EventEmitter,
                 this._parent = e,
@@ -31884,19 +32958,19 @@
                 this.valueAccessor = function(e, t) {
                     if (!t)
                         return null;
-                    Array.isArray(t) || un(e, "Value accessor was not provided as an array for form control with");
+                    Array.isArray(t) || hn(e, "Value accessor was not provided as an array for form control with");
                     let n = void 0
                       , r = void 0
                       , i = void 0;
                     return t.forEach(t=>{
-                        t.constructor === Mt ? n = t : function(e) {
-                            return hn.some(t=>e.constructor === t)
-                        }(t) ? (r && un(e, "More than one built-in value accessor matches form control with"),
-                        r = t) : (i && un(e, "More than one custom value accessor matches form control with"),
+                        t.constructor === Ft ? n = t : function(e) {
+                            return mn.some(t=>e.constructor === t)
+                        }(t) ? (r && hn(e, "More than one built-in value accessor matches form control with"),
+                        r = t) : (i && hn(e, "More than one custom value accessor matches form control with"),
                         i = t)
                     }
                     ),
-                    i || r || n || (un(e, "No valid value accessor for form control with"),
+                    i || r || n || (hn(e, "No valid value accessor for form control with"),
                     null)
                 }(this, i)
             }
@@ -31916,16 +32990,16 @@
                 this.formDirective && this.formDirective.removeControl(this)
             }
             get path() {
-                return this._parent ? sn(this.name, this._parent) : [this.name]
+                return this._parent ? un(this.name, this._parent) : [this.name]
             }
             get formDirective() {
                 return this._parent ? this._parent.formDirective : null
             }
             get validator() {
-                return cn(this._rawValidators)
+                return fn(this._rawValidators)
             }
             get asyncValidator() {
-                return dn(this._rawAsyncValidators)
+                return pn(this._rawAsyncValidators)
             }
             viewToModelUpdate(e) {
                 this.viewModel = e,
@@ -31943,7 +33017,7 @@
                 return !this._parent || !(!this.options || !this.options.standalone)
             }
             _setUpStandalone() {
-                on(this.control, this),
+                cn(this.control, this),
                 this.control.updateValueAndValidity({
                     emitEvent: !1
                 })
@@ -31953,14 +33027,14 @@
                 this._checkName()
             }
             _checkParentType() {
-                !(this._parent instanceof An) && this._parent instanceof Tn ? In.formGroupNameException() : this._parent instanceof An || this._parent instanceof Sn || In.modelParentException()
+                !(this._parent instanceof Rn) && this._parent instanceof On ? An.formGroupNameException() : this._parent instanceof Rn || this._parent instanceof Tn || An.modelParentException()
             }
             _checkName() {
                 this.options && this.options.name && (this.name = this.options.name),
-                this._isStandalone() || this.name || In.missingNameException()
+                this._isStandalone() || this.name || An.missingNameException()
             }
             _updateValue(e) {
-                On.then(()=>{
+                Nn.then(()=>{
                     this.control.setValue(e, {
                         emitViewToModelChange: !1
                     })
@@ -31970,14 +33044,14 @@
             _updateDisabled(e) {
                 const t = e.isDisabled.currentValue
                   , n = "" === t || t && "false" !== t;
-                On.then(()=>{
+                Nn.then(()=>{
                     n && !this.control.disabled ? this.control.disable() : !n && this.control.disabled && this.control.enable()
                 }
                 )
             }
         }
         ))()
-          , Rn = (()=>(class {
+          , Dn = (()=>(class {
             ngOnChanges(e) {
                 "maxlength"in e && (this._createValidator(),
                 this._onChange && this._onChange())
@@ -31989,20 +33063,20 @@
                 this._onChange = e
             }
             _createValidator() {
-                this._validator = Ut.maxLength(parseInt(this.maxlength, 10))
+                this._validator = $t.maxLength(parseInt(this.maxlength, 10))
             }
         }
         ))()
-          , Mn = (()=>(class {
+          , Fn = (()=>(class {
         }
         ))()
-          , Pn = (()=>{
+          , Vn = (()=>{
             class e {
                 static withConfig(t) {
                     return {
                         ngModule: e,
                         providers: [{
-                            provide: En,
+                            provide: Mn,
                             useValue: t.warnOnDeprecatedNgFormSelector
                         }]
                     }
@@ -32011,9 +33085,9 @@
             return e
         }
         )();
-        var Dn = n("q6c6")
-          , Vn = n("ZbGM");
-        class Fn {
+        var jn = n("q6c6")
+          , Bn = n("ZbGM");
+        class Hn {
             constructor(e) {
                 this.sanitizer = e,
                 this.cardsPerRow = 3,
@@ -32025,11 +33099,11 @@
             }
             cardDroppedHere(e) {
                 let t = e.dragData.cardData;
-                this.isUnlocked && (e.dragData.isCollectionCard || q.instance.removeCardFromArena(e.dragData.arenaNumber, e.dragData.slotNumber, t.id),
-                q.instance.tryToPlaceCardInEmptySlot(this.arenaNumber, this.slotNumber, t, !0))
+                this.isUnlocked && (e.dragData.isCollectionCard || Z.instance.removeCardFromArena(e.dragData.arenaNumber, e.dragData.slotNumber, t.id),
+                Z.instance.tryToPlaceCardInEmptySlot(this.arenaNumber, this.slotNumber, t, !0))
             }
             clicked() {
-                this.isUnlocked ? q.instance.isSelectingEmptySlot && null != q.instance.cardIdToPutInEmptySlot && q.instance.tryToPlaceCardInEmptySlot(this.arenaNumber, this.slotNumber, s(q.instance.cardIdToPutInEmptySlot), !0) : q.instance.tryToBuyEmptySlot(this.arenaNumber, this.slotNumber)
+                this.isUnlocked ? Z.instance.isSelectingEmptySlot && null != Z.instance.cardIdToPutInEmptySlot && Z.instance.tryToPlaceCardInEmptySlot(this.arenaNumber, this.slotNumber, s(Z.instance.cardIdToPutInEmptySlot), !0) : Z.instance.tryToBuyEmptySlot(this.arenaNumber, this.slotNumber)
             }
             getCssClass() {
                 return "empty-card-slot left-float " + (this.clickable ? " clickable " : "") + this.slotType + " "
@@ -32038,18 +33112,18 @@
                 return this.sanitizer.bypassSecurityTrustHtml(this.unlockPriceText)
             }
         }
-        var jn = r["\u0275crt"]({
+        var Ln = r["\u0275crt"]({
             encapsulation: 0,
             styles: [[""]],
             data: {}
         });
-        function Bn(e) {
+        function Un(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 0, "div", [["style", "padding: 10px;"]], [[8, "innerHTML", 1]], null, null, null, null))], null, function(e, t) {
                 e(t, 0, 0, t.component.getUnlockText())
             })
         }
-        function Hn(e) {
+        function zn(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 3, "div", [["droppable", ""]], [[8, "className", 0]], [[null, "click"], [null, "onDrop"], [null, "drop"]], function(e, t, n) {
                 var i = !0
@@ -32058,12 +33132,12 @@
                 "click" === t && (i = !1 !== l.clicked() && i),
                 "onDrop" === t && (i = !1 !== l.cardDroppedHere(n) && i),
                 i
-            }, null, null)), r["\u0275did"](1, 212992, null, 0, Dn.Droppable, [r.ElementRef, r.Renderer2, Vn.NgDragDropService, r.NgZone], {
+            }, null, null)), r["\u0275did"](1, 212992, null, 0, jn.Droppable, [r.ElementRef, r.Renderer2, Bn.NgDragDropService, r.NgZone], {
                 dragOverClass: [0, "dragOverClass"]
             }, {
                 onDrop: "onDrop"
             }), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Bn)), r["\u0275did"](3, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Un)), r["\u0275did"](3, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -32073,7 +33147,7 @@
                 e(t, 0, 0, t.component.getCssClass())
             })
         }
-        function Ln(e) {
+        function Gn(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "div", [], [[8, "className", 0]], [[null, "click"]], function(e, t, n) {
                 var r = !0;
@@ -32086,19 +33160,19 @@
                 e(t, 1, 0, n.getUnlockText())
             })
         }
-        function Un(e) {
+        function $n(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 0, "div", [["class", "break-float"]], null, null, null, null, null))], null, null)
         }
-        function zn(e) {
+        function Wn(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Hn)), r["\u0275did"](1, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, zn)), r["\u0275did"](1, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ln)), r["\u0275did"](3, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Gn)), r["\u0275did"](3, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Un)), r["\u0275did"](5, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, $n)), r["\u0275did"](5, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -32107,7 +33181,7 @@
                 e(t, 5, 0, n.x == n.cardsPerRow - 1)
             }, null)
         }
-        const $n = (()=>(class {
+        const Kn = (()=>(class {
             constructor() {
                 this._optionalClasses = []
             }
@@ -32128,13 +33202,13 @@
             }
         }
         ))()
-          , Gn = (()=>(class {
+          , Yn = (()=>(class {
             constructor() {}
         }
         ))();
         new r.InjectionToken("Location Initialized"),
         new r.InjectionToken("appBaseHref");
-        var Wn = function() {
+        var qn = function() {
             function e() {}
             return e.prototype.createSubscription = function(e, t) {
                 return e.subscribe({
@@ -32169,125 +33243,125 @@
             ,
             e
         }()),
-        new Wn;
-        var Yn, qn = /((?:[^yMLdHhmsazZEwGjJ']+)|(?:'(?:[^']|'')*')|(?:E+|y+|M+|L+|d+|H+|h+|J+|j+|m+|s+|a|z|Z|G+|w+))(.*)/, Kn = {
-            yMMMdjms: lr(ir([nr("year", 1), rr("month", 3), nr("day", 1), nr("hour", 1), nr("minute", 1), nr("second", 1)])),
-            yMdjm: lr(ir([nr("year", 1), nr("month", 1), nr("day", 1), nr("hour", 1), nr("minute", 1)])),
-            yMMMMEEEEd: lr(ir([nr("year", 1), rr("month", 4), rr("weekday", 4), nr("day", 1)])),
-            yMMMMd: lr(ir([nr("year", 1), rr("month", 4), nr("day", 1)])),
-            yMMMd: lr(ir([nr("year", 1), rr("month", 3), nr("day", 1)])),
-            yMd: lr(ir([nr("year", 1), nr("month", 1), nr("day", 1)])),
-            jms: lr(ir([nr("hour", 1), nr("second", 1), nr("minute", 1)])),
-            jm: lr(ir([nr("hour", 1), nr("minute", 1)]))
-        }, Qn = {
-            yyyy: lr(nr("year", 4)),
-            yy: lr(nr("year", 2)),
-            y: lr(nr("year", 1)),
-            MMMM: lr(rr("month", 4)),
-            MMM: lr(rr("month", 3)),
-            MM: lr(nr("month", 2)),
-            M: lr(nr("month", 1)),
-            LLLL: lr(rr("month", 4)),
-            L: lr(rr("month", 1)),
-            dd: lr(nr("day", 2)),
-            d: lr(nr("day", 1)),
-            HH: Zn(Xn(lr(tr(nr("hour", 2), !1)))),
-            H: Xn(lr(tr(nr("hour", 1), !1))),
-            hh: Zn(Xn(lr(tr(nr("hour", 2), !0)))),
-            h: Xn(lr(tr(nr("hour", 1), !0))),
-            jj: lr(nr("hour", 2)),
-            j: lr(nr("hour", 1)),
-            mm: Zn(lr(nr("minute", 2))),
-            m: lr(nr("minute", 1)),
-            ss: Zn(lr(nr("second", 2))),
-            s: lr(nr("second", 1)),
-            sss: lr(nr("second", 3)),
-            EEEE: lr(rr("weekday", 4)),
-            EEE: lr(rr("weekday", 3)),
-            EE: lr(rr("weekday", 2)),
-            E: lr(rr("weekday", 1)),
-            a: (Yn = lr(tr(nr("hour", 1), !0)),
+        new qn;
+        var Qn, Zn = /((?:[^yMLdHhmsazZEwGjJ']+)|(?:'(?:[^']|'')*')|(?:E+|y+|M+|L+|d+|H+|h+|J+|j+|m+|s+|a|z|Z|G+|w+))(.*)/, Xn = {
+            yMMMdjms: ar(or([lr("year", 1), sr("month", 3), lr("day", 1), lr("hour", 1), lr("minute", 1), lr("second", 1)])),
+            yMdjm: ar(or([lr("year", 1), lr("month", 1), lr("day", 1), lr("hour", 1), lr("minute", 1)])),
+            yMMMMEEEEd: ar(or([lr("year", 1), sr("month", 4), sr("weekday", 4), lr("day", 1)])),
+            yMMMMd: ar(or([lr("year", 1), sr("month", 4), lr("day", 1)])),
+            yMMMd: ar(or([lr("year", 1), sr("month", 3), lr("day", 1)])),
+            yMd: ar(or([lr("year", 1), lr("month", 1), lr("day", 1)])),
+            jms: ar(or([lr("hour", 1), lr("second", 1), lr("minute", 1)])),
+            jm: ar(or([lr("hour", 1), lr("minute", 1)]))
+        }, Jn = {
+            yyyy: ar(lr("year", 4)),
+            yy: ar(lr("year", 2)),
+            y: ar(lr("year", 1)),
+            MMMM: ar(sr("month", 4)),
+            MMM: ar(sr("month", 3)),
+            MM: ar(lr("month", 2)),
+            M: ar(lr("month", 1)),
+            LLLL: ar(sr("month", 4)),
+            L: ar(sr("month", 1)),
+            dd: ar(lr("day", 2)),
+            d: ar(lr("day", 1)),
+            HH: er(tr(ar(ir(lr("hour", 2), !1)))),
+            H: tr(ar(ir(lr("hour", 1), !1))),
+            hh: er(tr(ar(ir(lr("hour", 2), !0)))),
+            h: tr(ar(ir(lr("hour", 1), !0))),
+            jj: ar(lr("hour", 2)),
+            j: ar(lr("hour", 1)),
+            mm: er(ar(lr("minute", 2))),
+            m: ar(lr("minute", 1)),
+            ss: er(ar(lr("second", 2))),
+            s: ar(lr("second", 1)),
+            sss: ar(lr("second", 3)),
+            EEEE: ar(sr("weekday", 4)),
+            EEE: ar(sr("weekday", 3)),
+            EE: ar(sr("weekday", 2)),
+            E: ar(sr("weekday", 1)),
+            a: (Qn = ar(ir(lr("hour", 1), !0)),
             function(e, t) {
-                return Yn(e, t).split(" ")[1]
+                return Qn(e, t).split(" ")[1]
             }
             ),
-            Z: er("short"),
-            z: er("long"),
-            ww: lr({}),
-            w: lr({}),
-            G: lr(rr("era", 1)),
-            GG: lr(rr("era", 2)),
-            GGG: lr(rr("era", 3)),
-            GGGG: lr(rr("era", 4))
+            Z: rr("short"),
+            z: rr("long"),
+            ww: ar({}),
+            w: ar({}),
+            G: ar(sr("era", 1)),
+            GG: ar(sr("era", 2)),
+            GGG: ar(sr("era", 3)),
+            GGGG: ar(sr("era", 4))
         };
-        function Zn(e) {
+        function er(e) {
             return function(t, n) {
                 var r = e(t, n);
                 return 1 == r.length ? "0" + r : r
             }
         }
-        function Xn(e) {
+        function tr(e) {
             return function(t, n) {
                 return e(t, n).split(" ")[0]
             }
         }
-        function Jn(e, t, n) {
+        function nr(e, t, n) {
             return new Intl.DateTimeFormat(t,n).format(e).replace(/[\u200e\u200f]/g, "")
         }
-        function er(e) {
+        function rr(e) {
             var t = {
                 hour: "2-digit",
                 hour12: !1,
                 timeZoneName: e
             };
             return function(e, n) {
-                var r = Jn(e, n, t);
+                var r = nr(e, n, t);
                 return r ? r.substring(3) : ""
             }
         }
-        function tr(e, t) {
+        function ir(e, t) {
             return e.hour12 = t,
             e
         }
-        function nr(e, t) {
+        function lr(e, t) {
             var n = {};
             return n[e] = 2 === t ? "2-digit" : "numeric",
             n
         }
-        function rr(e, t) {
+        function sr(e, t) {
             var n = {};
             return n[e] = t < 4 ? t > 1 ? "short" : "narrow" : "long",
             n
         }
-        function ir(e) {
+        function or(e) {
             return Object.assign.apply(Object, [{}].concat(e))
         }
-        function lr(e) {
+        function ar(e) {
             return function(t, n) {
-                return Jn(t, n, e)
+                return nr(t, n, e)
             }
         }
-        var sr = new Map
-          , or = function() {
+        var ur = new Map
+          , cr = function() {
             function e() {}
             return e.format = function(e, t, n) {
                 return function(e, t, n) {
-                    var r = Kn[e];
+                    var r = Xn[e];
                     if (r)
                         return r(t, n);
                     var i = e
-                      , l = sr.get(i);
+                      , l = ur.get(i);
                     if (!l) {
                         l = [];
                         var s = void 0;
-                        qn.exec(e);
+                        Zn.exec(e);
                         for (var o = e; o; )
-                            (s = qn.exec(o)) ? o = (l = l.concat(s.slice(1))).pop() : (l.push(o),
+                            (s = Zn.exec(o)) ? o = (l = l.concat(s.slice(1))).pop() : (l.push(o),
                             o = null);
-                        sr.set(i, l)
+                        ur.set(i, l)
                     }
                     return l.reduce(function(e, r) {
-                        var i = Qn[r];
+                        var i = Jn[r];
                         return e + (i ? i(t, n) : function(e) {
                             return "''" === e ? "'" : e.replace(/(^'|'$)/g, "").replace(/''/g, "'")
                         }(r))
@@ -32297,11 +33371,11 @@
             ,
             e
         }()
-          , ar = /^(\d{4})-?(\d\d)-?(\d\d)(?:T(\d\d)(?::?(\d\d)(?::?(\d\d)(?:\.(\d+))?)?)?(Z|([+-])(\d\d):?(\d\d))?)?$/;
-        function ur(e) {
+          , dr = /^(\d{4})-?(\d\d)-?(\d\d)(?:T(\d\d)(?::?(\d\d)(?::?(\d\d)(?:\.(\d+))?)?)?(Z|([+-])(\d\d):?(\d\d))?)?$/;
+        function hr(e) {
             return e instanceof Date && !isNaN(e.valueOf())
         }
-        function cr(e) {
+        function fr(e) {
             return parseInt(e, 10)
         }
         (function() {
@@ -32314,7 +33388,7 @@
                 null == (l = t) || "" === l || t != t)
                     return null;
                 if ("string" == typeof t && (t = t.trim()),
-                ur(t))
+                hr(t))
                     i = t;
                 else if (function(e) {
                     return !isNaN(e - parseFloat(e))
@@ -32327,9 +33401,9 @@
                     i = new Date(s[0],s[1] - 1,s[2])
                 } else
                     i = new Date(t);
-                if (!ur(i)) {
+                if (!hr(i)) {
                     var o = void 0;
-                    if ("string" != typeof t || !(o = t.match(ar)))
+                    if ("string" != typeof t || !(o = t.match(dr)))
                         throw function(e, t) {
                             return Error("InvalidPipeArgument: '" + t + "' for pipe '" + Object(r["\u0275stringify"])(e) + "'")
                         }(e, t);
@@ -32339,18 +33413,18 @@
                           , r = 0
                           , i = e[8] ? t.setUTCFullYear : t.setFullYear
                           , l = e[8] ? t.setUTCHours : t.setHours;
-                        e[9] && (n = cr(e[9] + e[10]),
-                        r = cr(e[9] + e[11])),
-                        i.call(t, cr(e[1]), cr(e[2]) - 1, cr(e[3]));
-                        var s = cr(e[4] || "0") - n
-                          , o = cr(e[5] || "0") - r
-                          , a = cr(e[6] || "0")
+                        e[9] && (n = fr(e[9] + e[10]),
+                        r = fr(e[9] + e[11])),
+                        i.call(t, fr(e[1]), fr(e[2]) - 1, fr(e[3]));
+                        var s = fr(e[4] || "0") - n
+                          , o = fr(e[5] || "0") - r
+                          , a = fr(e[6] || "0")
                           , u = Math.round(1e3 * parseFloat("0." + (e[7] || 0)));
                         return l.call(t, s, o, a, u),
                         t
                     }(o)
                 }
-                return or.format(i, this._locale, e._ALIASES[n] || n)
+                return cr.format(i, this._locale, e._ALIASES[n] || n)
             }
             ,
             e
@@ -32365,17 +33439,17 @@
             shortTime: "jm"
         },
         new r.Version("4.1.3");
-        const dr = (()=>(class {
+        const pr = (()=>(class {
         }
         ))();
-        var hr = r["\u0275crt"]({
+        var mr = r["\u0275crt"]({
             encapsulation: 0,
             styles: [""],
             data: {}
         });
-        function fr(e) {
+        function gr(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 2, "i", [["aria-hidden", "true"]], null, null, null, null, null)), r["\u0275prd"](512, null, re, ie, [r.IterableDiffers, r.KeyValueDiffers, r.ElementRef, r.Renderer2]), r["\u0275did"](2, 278528, null, 0, se, [re], {
+            r["\u0275eld"](0, 0, null, null, 2, "i", [["aria-hidden", "true"]], null, null, null, null, null)), r["\u0275prd"](512, null, se, oe, [r.IterableDiffers, r.KeyValueDiffers, r.ElementRef, r.Renderer2]), r["\u0275did"](2, 278528, null, 0, ue, [se], {
                 klass: [0, "klass"],
                 ngClass: [1, "ngClass"]
             }, null)], function(e, t) {
@@ -32383,8 +33457,47 @@
                 e(t, 2, 0, r["\u0275inlineInterpolate"](1, "fa fa-", n.name, ""), n.optionalClasses)
             }, null)
         }
-        var pr = n("UmOi");
-        class mr {
+        class yr {
+            constructor(e) {
+                this.sanitizer = e,
+                this.monsterBoostCard = null
+            }
+            getStyle() {
+                let e = 0
+                  , t = 0;
+                e = -300 * Math.sin(.785 * (1 - this.secondsRemainingInAnimation)),
+                t = -20 * Math.sin(.785 * (1 - this.secondsRemainingInAnimation));
+                let n = Math.min(1, .5 + this.secondsRemainingInAnimation);
+                return this.sanitizer.bypassSecurityTrustStyle("position: absolute; top: " + e + "px; left: " + t + "px; opacity: " + n)
+            }
+            getHtml() {
+                let e = "";
+                switch (this.arenaNumber) {
+                case 4:
+                    let t = Z.instance.rankAdjustedModifier(this.cardData.id, this.arenaNumber, 4)
+                      , n = Z.instance.rankAdjustedModifier(this.cardData.id, this.arenaNumber, 5);
+                    this.monsterBoostCard && (t *= 1 + Z.instance.rankAdjustedModifier(this.monsterBoostCard.id, this.arenaNumber, 4),
+                    n *= 1 + Z.instance.rankAdjustedModifier(this.monsterBoostCard.id, this.arenaNumber, 5)),
+                    t > 0 && (e += "<div>" + t + "</div><img src='assets/images/resources/gold.png' alt='gold' class='loot-drop-animation-resource-icon'><br>"),
+                    n > 0 && (e += "<div>" + n + "</div><img src='assets/images/resources/wood.png' alt='wood' class='loot-drop-animation-resource-icon'>")
+                }
+                return e
+            }
+        }
+        var br = r["\u0275crt"]({
+            encapsulation: 2,
+            styles: [],
+            data: {}
+        });
+        function vr(e) {
+            return r["\u0275vid"](0, [(e()(),
+            r["\u0275eld"](0, 0, null, null, 0, "div", [["class", "loot-drop-animation"]], [[8, "style", 2], [8, "innerHTML", 1]], null, null, null, null))], null, function(e, t) {
+                var n = t.component;
+                e(t, 0, 0, n.getStyle(), n.getHtml())
+            })
+        }
+        var wr = n("UmOi");
+        class Cr {
             constructor(e, t) {
                 this.sanitizer = e,
                 this.niceNumber = t,
@@ -32395,7 +33508,19 @@
                 this.rank = 1,
                 this.currentHP = 0,
                 this.maxHP = 0,
+                this.damageTakenThisRound = 0,
+                this.foughtInLastTick = !1,
+                this.droppedLootLastTick = !1,
+                this.damageOpacityVal = 1,
+                this.updateDamageOpacityInterval = null,
                 this.isAbleToDrop = (e=>!this.isCollectionCard && !this.isBoosterResultCard)
+            }
+            ngOnInit() {
+                this.updateDamageOpacityInterval = setInterval(this.updateDamageOpacityVal.bind(this), 16)
+            }
+            ngOnDestroy() {
+                null != this.updateDamageOpacityInterval && (clearInterval(this.updateDamageOpacityInterval),
+                this.updateDamageOpacityInterval = null)
             }
             showTooltip() {
                 D.instance.showTooltip(this.prepareDescription())
@@ -32409,41 +33534,60 @@
                 this.sanitizer.bypassSecurityTrustStyle("url(" + e + "), url(" + this.cardData.imageFilename + ")")
             }
             clicked() {
-                this.clickable && (this.isCollectionCard ? q.instance.isSelectingEmptySlot && q.instance.cardIdToPutInEmptySlot == this.cardData.id ? q.instance.stopChoosingEmptySlotForCard() : q.instance.startChoosingEmptySlotForCard(this.cardData.id) : (q.instance.removeCardFromArena(this.arenaNumber, this.slotNumber, this.cardData.id),
-                q.instance.isSelectingEmptySlot ? q.instance.tryToPlaceCardInEmptySlot(this.arenaNumber, this.slotNumber, s(q.instance.cardIdToPutInEmptySlot), !0) : L.instance.playSound("removecard")))
+                this.clickable && (this.isCollectionCard ? Z.instance.isSelectingEmptySlot && Z.instance.cardIdToPutInEmptySlot == this.cardData.id ? Z.instance.stopChoosingEmptySlotForCard() : Z.instance.startChoosingEmptySlotForCard(this.cardData.id) : (Z.instance.removeCardFromArena(this.arenaNumber, this.slotNumber, this.cardData.id),
+                Z.instance.isSelectingEmptySlot ? Z.instance.tryToPlaceCardInEmptySlot(this.arenaNumber, this.slotNumber, s(Z.instance.cardIdToPutInEmptySlot), !0) : L.instance.playSound("removecard")))
             }
             prepareDescription() {
                 let e = this.cardData.description;
-                return -1 != e.indexOf("{modifier0%}") && (e = e.replace("{modifier0%}", this.niceNumber.transform(100 * q.instance.rankAdjustedModifier(this.cardData.id, q.instance.gameState.selectedArenaNumber, 0)))),
-                -1 != e.indexOf("{modifier1%}") && (e = e.replace("{modifier1%}", this.niceNumber.transform(100 * q.instance.rankAdjustedModifier(this.cardData.id, q.instance.gameState.selectedArenaNumber, 1)))),
-                -1 != e.indexOf("{modifier2%}") && (e = e.replace("{modifier2%}", this.niceNumber.transform(100 * q.instance.rankAdjustedModifier(this.cardData.id, q.instance.gameState.selectedArenaNumber, 2)))),
-                -1 != e.indexOf("{modifier3%}") && (e = e.replace("{modifier3%}", this.niceNumber.transform(100 * q.instance.rankAdjustedModifier(this.cardData.id, q.instance.gameState.selectedArenaNumber, 3)))),
-                -1 != e.indexOf("{modifier4%}") && (e = e.replace("{modifier4%}", this.niceNumber.transform(100 * q.instance.rankAdjustedModifier(this.cardData.id, q.instance.gameState.selectedArenaNumber, 4)))),
-                -1 != e.indexOf("{modifier0}") && (e = e.replace("{modifier0}", this.niceNumber.transform(q.instance.UniversalAura(q.instance.gameState.selectedArenaNumber) * q.instance.rankAdjustedModifier(this.cardData.id, q.instance.gameState.selectedArenaNumber, 0)))),
-                -1 != e.indexOf("{modifier1}") && (e = e.replace("{modifier1}", this.niceNumber.transform(q.instance.UniversalAura(q.instance.gameState.selectedArenaNumber) * q.instance.rankAdjustedModifier(this.cardData.id, q.instance.gameState.selectedArenaNumber, 1)))),
-                -1 != e.indexOf("{modifier2}") && (e = e.replace("{modifier2}", this.niceNumber.transform(q.instance.UniversalAura(q.instance.gameState.selectedArenaNumber) * q.instance.rankAdjustedModifier(this.cardData.id, q.instance.gameState.selectedArenaNumber, 2)))),
-                -1 != e.indexOf("{modifier3}") && (e = e.replace("{modifier3}", this.niceNumber.transform(q.instance.UniversalAura(q.instance.gameState.selectedArenaNumber) * q.instance.rankAdjustedModifier(this.cardData.id, q.instance.gameState.selectedArenaNumber, 3)))),
-                -1 != e.indexOf("{modifier4}") && (e = e.replace("{modifier4}", this.niceNumber.transform(q.instance.UniversalAura(q.instance.gameState.selectedArenaNumber) * q.instance.rankAdjustedModifier(this.cardData.id, q.instance.gameState.selectedArenaNumber, 4)))),
-                e
+                if (-1 != e.indexOf("{modifier0%}") && (e = e.replace("{modifier0%}", this.niceNumber.transform(100 * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 0)))),
+                -1 != e.indexOf("{modifier1%}") && (e = e.replace("{modifier1%}", this.niceNumber.transform(100 * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 1)))),
+                -1 != e.indexOf("{modifier2%}") && (e = e.replace("{modifier2%}", this.niceNumber.transform(100 * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 2)))),
+                -1 != e.indexOf("{modifier3%}") && (e = e.replace("{modifier3%}", this.niceNumber.transform(100 * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 3)))),
+                -1 != e.indexOf("{modifier4%}") && (e = e.replace("{modifier4%}", this.niceNumber.transform(100 * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 4)))),
+                -1 != e.indexOf("{modifier5%}") && (e = e.replace("{modifier5%}", this.niceNumber.transform(100 * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 5)))),
+                -1 != e.indexOf("{modifier0}") && (e = e.replace("{modifier0}", this.niceNumber.transform(Z.instance.UniversalAura(Z.instance.gameState.selectedArenaNumber) * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 0)))),
+                -1 != e.indexOf("{modifier1}") && (e = e.replace("{modifier1}", this.niceNumber.transform(Z.instance.UniversalAura(Z.instance.gameState.selectedArenaNumber) * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 1)))),
+                -1 != e.indexOf("{modifier2}") && (e = e.replace("{modifier2}", this.niceNumber.transform(Z.instance.UniversalAura(Z.instance.gameState.selectedArenaNumber) * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 2)))),
+                -1 != e.indexOf("{modifier3}") && (e = e.replace("{modifier3}", this.niceNumber.transform(Z.instance.UniversalAura(Z.instance.gameState.selectedArenaNumber) * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 3)))),
+                -1 != e.indexOf("{modifier4}") && (e = e.replace("{modifier4}", this.niceNumber.transform(Z.instance.UniversalAura(Z.instance.gameState.selectedArenaNumber) * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 4)))),
+                -1 != e.indexOf("{modifier5}") && (e = e.replace("{modifier5}", this.niceNumber.transform(Z.instance.UniversalAura(Z.instance.gameState.selectedArenaNumber) * Z.instance.rankAdjustedModifier(this.cardData.id, Z.instance.gameState.selectedArenaNumber, 5)))),
+                !this.isCollectionCard && !this.isBoosterResultCard && "hero" == this.cardData.cardType && null != this.slotNumber) {
+                    let t = Z.instance.gameState["arena" + this.arenaNumber].cardSlots[this.slotNumber].estimatedLootPerSecond;
+                    (t.gold > 0 || t.wood > 0) && (e += "&nbsp;&nbsp;(est. +" + this.niceNumber.transform(t.gold) + " gold, +" + this.niceNumber.transform(t.wood) + " wood/sec)")
+                }
+                return e
             }
             mouseOver() {
-                this.isCollectionCard || this.isBoosterResultCard || (q.instance.hoveredCardSlot = this.slotNumber),
+                this.isCollectionCard || this.isBoosterResultCard || (Z.instance.hoveredCardSlot = this.slotNumber),
                 this.showTooltip()
             }
             mouseOut() {
-                q.instance.hoveredCardSlot == this.slotNumber && (q.instance.hoveredCardSlot = null),
+                Z.instance.hoveredCardSlot == this.slotNumber && (Z.instance.hoveredCardSlot = null),
                 this.hideTooltip()
             }
             shouldShowYellowEffectBorder() {
                 return this.shouldShowGreenEffectBorder() && this.shouldShowRedEffectBorder()
             }
             shouldShowGreenEffectBorder() {
-                if (this.isCollectionCard || this.isBoosterResultCard || !this.cardData.isProducer)
+                if (this.isCollectionCard || this.isBoosterResultCard || !this.cardData.isProducer && "hero" != this.cardData.cardType && "monster" != this.cardData.cardType)
                     return !1;
+                if ("hero" == this.cardData.cardType) {
+                    if (null == Z.instance.hoveredCardSlot)
+                        return !1;
+                    let e = q(this.arenaNumber, Z.instance.gameState["arena" + this.arenaNumber].cardSlots[this.slotNumber]);
+                    if (e)
+                        return Z.instance.gameState["arena" + this.arenaNumber].cardSlots[Z.instance.hoveredCardSlot] == e
+                } else if ("monster" == this.cardData.cardType) {
+                    if (null == Z.instance.hoveredCardSlot)
+                        return !1;
+                    let e = Q(this.arenaNumber, Z.instance.gameState["arena" + this.arenaNumber].cardSlots[this.slotNumber]);
+                    if (e)
+                        return Z.instance.gameState["arena" + this.arenaNumber].cardSlots[Z.instance.hoveredCardSlot] == e
+                }
                 let e = this.cardData.resourcesAffectedByMultipliers.split("|");
                 if (e.length > 0)
                     for (var t of e)
-                        if (t.length > 0 && q.instance.gameState["arena" + this.arenaNumber].cardSlots[this.slotNumber].multipliers[t].filter(e=>e.fromSlot == q.instance.hoveredCardSlot && e.amount > 0).length > 0)
+                        if (t.length > 0 && Z.instance.gameState["arena" + this.arenaNumber].cardSlots[this.slotNumber].multipliers[t].filter(e=>e.fromSlot == Z.instance.hoveredCardSlot && e.amount > 0).length > 0)
                             return !0;
                 return !1
             }
@@ -32453,7 +33597,7 @@
                 let e = this.cardData.resourcesAffectedByMultipliers.split("|");
                 if (e.length > 0)
                     for (var t of e)
-                        if (t.length > 0 && q.instance.gameState["arena" + this.arenaNumber].cardSlots[this.slotNumber].multipliers[t].filter(e=>e.fromSlot == q.instance.hoveredCardSlot && e.amount <= 0).length > 0)
+                        if (t.length > 0 && Z.instance.gameState["arena" + this.arenaNumber].cardSlots[this.slotNumber].multipliers[t].filter(e=>e.fromSlot == Z.instance.hoveredCardSlot && e.amount <= 0).length > 0)
                             return !0;
                 return !1
             }
@@ -32471,28 +33615,45 @@
                   , r = e.dragData.arenaNumber
                   , i = e.dragData.cardData;
                 if (this.isCollectionCard && null != r && null != n)
-                    q.instance.removeCardFromArena(r, n, i.id),
+                    Z.instance.removeCardFromArena(r, n, i.id),
                     L.instance.playSound("removecard");
                 else if (!this.isCollectionCard && null != this.slotNumber && null != this.arenaNumber) {
-                    t || q.instance.removeCardFromArena(r, n, i.id);
+                    if (!t) {
+                        if (n == this.slotNumber && r == this.arenaNumber)
+                            return;
+                        Z.instance.removeCardFromArena(r, n, i.id)
+                    }
                     let e = this.slotNumber
                       , l = this.arenaNumber
                       , s = this.cardData;
-                    q.instance.removeCardFromArena(l, e, this.cardData.id),
-                    q.instance.tryToPlaceCardInEmptySlot(l, e, i, !0),
-                    t || q.instance.tryToPlaceCardInEmptySlot(r, n, s, !1)
+                    Z.instance.removeCardFromArena(l, e, this.cardData.id),
+                    Z.instance.tryToPlaceCardInEmptySlot(l, e, i, !0),
+                    t || Z.instance.tryToPlaceCardInEmptySlot(r, n, s, !1)
                 }
             }
             getMaxHP() {
-                return q.instance.rankAdjustedModifier(this.cardData.cardId, this.arenaNumber, 0)
+                return Z.instance.rankAdjustedModifier(this.cardData.cardId, this.arenaNumber, 0)
+            }
+            updateDamageOpacityVal() {
+                if (Z.instance.lastTickTimeInMilliseconds > 0) {
+                    let e = (new Date).getTime() - Z.instance.lastTickTimeInMilliseconds;
+                    this.damageOpacityVal = 1 - e / 1e3
+                }
+            }
+            damageTakenStyle() {
+                return this.sanitizer.bypassSecurityTrustStyle("opacity: " + (this.foughtInLastTick ? this.damageOpacityVal : 0))
+            }
+            getMonsterBoostCard() {
+                let e = Q(this.arenaNumber, Z.instance.gameState["arena" + this.arenaNumber].cardSlots[this.slotNumber]);
+                return e && e.cardInSlot ? s(e.cardInSlot.id) : null
             }
         }
-        var gr = r["\u0275crt"]({
+        var _r = r["\u0275crt"]({
             encapsulation: 0,
             styles: [[""]],
             data: {}
         });
-        function yr(e) {
+        function Sr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 4, "div", [["class", "card-hp"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (e()(),
@@ -32502,45 +33663,66 @@
                 e(t, 2, 0, t.component.currentHP)
             })
         }
-        function br(e) {
+        function kr(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, fr, hr)), r["\u0275did"](1, 114688, null, 0, $n, [], {
+            r["\u0275eld"](0, 0, null, null, 1, "div", [["class", "card-damage-taken"]], [[8, "style", 2]], null, null, null, null)), (e()(),
+            r["\u0275ted"](1, null, [" -", " "]))], null, function(e, t) {
+                var n = t.component;
+                e(t, 0, 0, n.damageTakenStyle()),
+                e(t, 1, 0, n.damageTakenThisRound)
+            })
+        }
+        function xr(e) {
+            return r["\u0275vid"](0, [(e()(),
+            r["\u0275eld"](0, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, gr, mr)), r["\u0275did"](1, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null)], function(e, t) {
                 e(t, 1, 0, "star")
             }, null)
         }
-        function vr(e) {
+        function Ir(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, fr, hr)), r["\u0275did"](1, 114688, null, 0, $n, [], {
+            r["\u0275eld"](0, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, gr, mr)), r["\u0275did"](1, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null)], function(e, t) {
                 e(t, 1, 0, "star")
             }, null)
         }
-        function wr(e) {
+        function Er(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, fr, hr)), r["\u0275did"](1, 114688, null, 0, $n, [], {
+            r["\u0275eld"](0, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, gr, mr)), r["\u0275did"](1, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null)], function(e, t) {
                 e(t, 1, 0, "star")
             }, null)
         }
-        function _r(e) {
+        function Tr(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, fr, hr)), r["\u0275did"](1, 114688, null, 0, $n, [], {
+            r["\u0275eld"](0, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, gr, mr)), r["\u0275did"](1, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null)], function(e, t) {
                 e(t, 1, 0, "star")
             }, null)
         }
-        function Cr(e) {
+        function Ar(e) {
+            return r["\u0275vid"](0, [(e()(),
+            r["\u0275eld"](0, 0, null, null, 1, "loot-drop-animation", [], null, null, null, vr, br)), r["\u0275did"](1, 49152, null, 0, yr, [bt], {
+                cardData: [0, "cardData"],
+                secondsRemainingInAnimation: [1, "secondsRemainingInAnimation"],
+                arenaNumber: [2, "arenaNumber"],
+                monsterBoostCard: [3, "monsterBoostCard"]
+            }, null)], function(e, t) {
+                var n = t.component;
+                e(t, 1, 0, n.cardData, n.damageOpacityVal, n.arenaNumber, n.getMonsterBoostCard())
+            }, null)
+        }
+        function Mr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 0, "div", [["class", "break-float"]], null, null, null, null, null))], null, null)
         }
-        function xr(e) {
+        function Or(e) {
             return r["\u0275vid"](0, [r["\u0275pid"](0, j, []), (e()(),
-            r["\u0275eld"](1, 0, null, null, 22, "div", [["class", "card left-float"], ["draggable", ""], ["droppable", ""], ["style", "position: relative;"]], [[4, "backgroundImage", null], [2, "clickable", null], [2, "card-being-placed", null], [2, "in-collection", null], [2, "green-effect-border", null], [2, "yellow-effect-border", null], [2, "red-effect-border", null], [8, "draggable", 0]], [[null, "onDrop"], [null, "click"], [null, "mouseover"], [null, "mouseout"], [null, "dragstart"], [null, "dragend"], [null, "mousedown"], [null, "touchstart"], [null, "drop"]], function(e, t, n) {
+            r["\u0275eld"](1, 0, null, null, 26, "div", [["class", "card left-float"], ["draggable", ""], ["droppable", ""], ["style", "position: relative;"]], [[4, "backgroundImage", null], [2, "clickable", null], [2, "card-being-placed", null], [2, "in-collection", null], [2, "green-effect-border", null], [2, "yellow-effect-border", null], [2, "red-effect-border", null], [8, "draggable", 0]], [[null, "onDrop"], [null, "click"], [null, "mouseover"], [null, "mouseout"], [null, "dragstart"], [null, "dragend"], [null, "mousedown"], [null, "touchstart"], [null, "drop"]], function(e, t, n) {
                 var i = !0
                   , l = e.component;
                 return "dragstart" === t && (i = !1 !== r["\u0275nov"](e, 2).dragStart(n) && i),
@@ -32553,111 +33735,119 @@
                 "mouseover" === t && (i = !1 !== l.mouseOver() && i),
                 "mouseout" === t && (i = !1 !== l.mouseOut() && i),
                 i
-            }, null, null)), r["\u0275did"](2, 212992, null, 0, pr.Draggable, [r.ElementRef, r.Renderer2, Vn.NgDragDropService, r.NgZone], {
+            }, null, null)), r["\u0275did"](2, 212992, null, 0, wr.Draggable, [r.ElementRef, r.Renderer2, Bn.NgDragDropService, r.NgZone], {
                 dragData: [0, "dragData"],
                 dragTransitClass: [1, "dragTransitClass"]
-            }, null), r["\u0275did"](3, 212992, null, 0, Dn.Droppable, [r.ElementRef, r.Renderer2, Vn.NgDragDropService, r.NgZone], {
+            }, null), r["\u0275did"](3, 212992, null, 0, jn.Droppable, [r.ElementRef, r.Renderer2, Bn.NgDragDropService, r.NgZone], {
                 dragOverClass: [0, "dragOverClass"]
             }, {
                 onDrop: "onDrop"
             }), (e()(),
             r["\u0275eld"](4, 0, null, null, 1, "div", [["class", "card-name"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](5, null, ["", ""])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, yr)), r["\u0275did"](7, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Sr)), r["\u0275did"](7, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275eld"](8, 0, null, null, 1, "div", [["class", "card-rank"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](9, null, ["", ""])), (e()(),
-            r["\u0275eld"](10, 0, null, null, 10, "div", [["class", "card-rarity"]], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](11, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black);"]], null, null, null, fr, hr)), r["\u0275did"](12, 114688, null, 0, $n, [], {
+            r["\u0275and"](16777216, null, null, 1, null, kr)), r["\u0275did"](11, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
+                ngIf: [0, "ngIf"]
+            }, null), (e()(),
+            r["\u0275eld"](12, 0, null, null, 10, "div", [["class", "card-rarity"]], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](13, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black);"]], null, null, null, gr, mr)), r["\u0275did"](14, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, br)), r["\u0275did"](14, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, xr)), r["\u0275did"](16, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, vr)), r["\u0275did"](16, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ir)), r["\u0275did"](18, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, wr)), r["\u0275did"](18, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Er)), r["\u0275did"](20, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, _r)), r["\u0275did"](20, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Tr)), r["\u0275did"](22, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275eld"](21, 0, null, null, 2, "div", [["class", "card-quantity"]], null, null, null, null, null)), (e()(),
-            r["\u0275ted"](22, null, ["", ""])), r["\u0275ppd"](23, 1), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Cr)), r["\u0275did"](25, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275eld"](23, 0, null, null, 2, "div", [["class", "card-quantity"]], null, null, null, null, null)), (e()(),
+            r["\u0275ted"](24, null, ["", ""])), r["\u0275ppd"](25, 1), (e()(),
+            r["\u0275and"](16777216, null, null, 1, null, Ar)), r["\u0275did"](27, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
+                ngIf: [0, "ngIf"]
+            }, null), (e()(),
+            r["\u0275and"](16777216, null, null, 1, null, Mr)), r["\u0275did"](29, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
                 e(t, 2, 0, n.getDragData(), "card-being-dragged"),
                 e(t, 3, 0, "drag-target-border"),
                 e(t, 7, 0, !(n.isCollectionCard || n.isBoosterResultCard || "hero" != n.cardData.cardType && "monster" != n.cardData.cardType)),
-                e(t, 12, 0, "star"),
-                e(t, 14, 0, n.cardData.rarity > 1),
-                e(t, 16, 0, n.cardData.rarity > 2),
-                e(t, 18, 0, n.cardData.rarity > 3),
-                e(t, 20, 0, n.cardData.rarity > 4),
-                e(t, 25, 0, n.x == n.cardsPerRow - 1)
+                e(t, 11, 0, n.damageTakenThisRound),
+                e(t, 14, 0, "star"),
+                e(t, 16, 0, n.cardData.rarity > 1),
+                e(t, 18, 0, n.cardData.rarity > 2),
+                e(t, 20, 0, n.cardData.rarity > 3),
+                e(t, 22, 0, n.cardData.rarity > 4),
+                e(t, 27, 0, n.droppedLootLastTick),
+                e(t, 29, 0, n.x == n.cardsPerRow - 1)
             }, function(e, t) {
                 var n = t.component;
                 e(t, 1, 0, n.backgroundImageVal(), n.clickable && !n.isBeingPlaced, n.isBeingPlaced, n.isCollectionCard, n.shouldShowGreenEffectBorder(), n.shouldShowYellowEffectBorder(), n.shouldShowRedEffectBorder(), r["\u0275nov"](t, 2).dragEnabled),
                 e(t, 5, 0, n.cardData.name),
                 e(t, 9, 0, n.rank > 1 ? "Lv. " + n.rank : "\xa0");
-                var i = n.isCollectionCard || n.quantity > 1 ? "Qty: " + r["\u0275unv"](t, 22, 0, e(t, 23, 0, r["\u0275nov"](t, 0), n.quantity)) : "";
-                e(t, 22, 0, i)
+                var i = n.isCollectionCard || n.quantity > 1 ? "Qty: " + r["\u0275unv"](t, 24, 0, e(t, 25, 0, r["\u0275nov"](t, 0), n.quantity)) : "";
+                e(t, 24, 0, i)
             })
         }
-        var kr = {
+        var Rr = {
             arena1: [],
             arena2: [],
             arena3: [],
             arena4: []
         };
-        class Sr {
+        class Nr {
             constructor(e) {
                 this.sanitizer = e,
                 this.subtab = "ascend",
                 this.showConfirmationScreen = !1,
-                kr.arena1[0] = {
+                Rr.arena1[0] = {
                     gold: 1e6
                 };
                 for (var t = 1; t < 50; t++)
-                    kr.arena1[t] = {
-                        gold: kr.arena1[0].gold * Math.pow(t + 1, 2.5)
+                    Rr.arena1[t] = {
+                        gold: Rr.arena1[0].gold * Math.pow(t + 1, 2.5)
                     };
-                for (kr.arena2[0] = {
+                for (Rr.arena2[0] = {
                     wood: 1e6,
                     iron: 2e6
                 },
                 t = 1; t < 50; t++)
-                    kr.arena2[t] = {
-                        wood: kr.arena2[0].wood * Math.pow(t + 1, 2.5),
-                        iron: kr.arena2[0].iron * Math.pow(t + 1, 2.5)
+                    Rr.arena2[t] = {
+                        wood: Rr.arena2[0].wood * Math.pow(t + 1, 2.5),
+                        iron: Rr.arena2[0].iron * Math.pow(t + 1, 2.5)
                     };
-                for (kr.arena3[0] = {
+                for (Rr.arena3[0] = {
                     ether: 3e6,
                     skulls: 3e6,
                     feathers: 3e6
                 },
                 t = 1; t < 50; t++)
-                    kr.arena3[t] = {
-                        ether: kr.arena3[0].ether * Math.pow(t + 1, 2.5),
-                        skulls: kr.arena3[0].skulls * Math.pow(t + 1, 2.5),
-                        feathers: kr.arena3[0].feathers * Math.pow(t + 1, 2.5)
+                    Rr.arena3[t] = {
+                        ether: Rr.arena3[0].ether * Math.pow(t + 1, 2.5),
+                        skulls: Rr.arena3[0].skulls * Math.pow(t + 1, 2.5),
+                        feathers: Rr.arena3[0].feathers * Math.pow(t + 1, 2.5)
                     };
-                for (kr.arena4[0] = {
+                for (Rr.arena4[0] = {
                     gold: 1e6,
                     wood: 1e6
                 },
                 t = 1; t < 50; t++)
-                    kr.arena4[t] = {
-                        gold: kr.arena4[0].gold * Math.pow(t + 1, 2.5),
-                        wood: kr.arena4[0].wood * Math.pow(t + 1, 2.5)
+                    Rr.arena4[t] = {
+                        gold: Rr.arena4[0].gold * Math.pow(t + 1, 2.5),
+                        wood: Rr.arena4[0].wood * Math.pow(t + 1, 2.5)
                     }
             }
             ngOnInit() {
-                this.appComponent = q.instance
+                this.appComponent = Z.instance
             }
             resourceTypesInArena() {
                 return Object.keys(this.appComponent.gameState.lifetimeResourcesEarned["arena" + this.arenaNumber])
@@ -32668,30 +33858,30 @@
                 const e = this.amountsNeededForNextGem();
                 var t = 1;
                 for (const [n,r] of Object.entries(e)) {
-                    let e = q.instance.gameState.lifetimeGemsReceived[this.arenaNumber]
+                    let e = Z.instance.gameState.lifetimeGemsReceived[this.arenaNumber]
                       , i = 0;
-                    e >= 1 && (i = kr["arena" + this.arenaNumber][e - 1][n]);
+                    e >= 1 && (i = Rr["arena" + this.arenaNumber][e - 1][n]);
                     let l = (this.lifetimeResourcesEarnedPlusAchievementBoost(n) - i) / (r - i);
                     l < t && (t = l)
                 }
                 return t
             }
             amountsNeededForNextGem() {
-                return this.hasReceivedAllGemsFromArena() ? 0 : kr["arena" + this.arenaNumber][q.instance.gameState.lifetimeGemsReceived[this.arenaNumber] + this.amountOfGemsThatWouldBeEarnedViaAscension() + 1]
+                return this.hasReceivedAllGemsFromArena() ? 0 : Rr["arena" + this.arenaNumber][Z.instance.gameState.lifetimeGemsReceived[this.arenaNumber] + this.amountOfGemsThatWouldBeEarnedViaAscension() + 1]
             }
             hasReceivedAllGemsFromArena() {
-                return q.instance.gameState.lifetimeGemsReceived[this.arenaNumber] >= kr.arena1.length
+                return Z.instance.gameState.lifetimeGemsReceived[this.arenaNumber] >= Rr.arena1.length
             }
             baseLifetimeAmountEarned(e) {
                 return this.appComponent.gameState.lifetimeResourcesEarned["arena" + this.arenaNumber][e]
             }
             amountOfGemsThatWouldBeEarnedViaAscension() {
                 let e = 0;
-                for (var t = q.instance.gameState.lifetimeGemsReceived[this.arenaNumber]; t < kr["arena" + this.arenaNumber].length; t++) {
+                for (var t = Z.instance.gameState.lifetimeGemsReceived[this.arenaNumber]; t < Rr["arena" + this.arenaNumber].length; t++) {
                     let n = this.resourceTypesInArena()
                       , r = !0;
                     for (let e of n)
-                        kr["arena" + this.arenaNumber][t][e] > this.lifetimeResourcesEarnedPlusAchievementBoost(e) && (r = !1);
+                        Rr["arena" + this.arenaNumber][t][e] > this.lifetimeResourcesEarnedPlusAchievementBoost(e) && (r = !1);
                     if (!r)
                         break;
                     e++
@@ -32699,43 +33889,45 @@
                 return e
             }
             lifetimeResourcesEarnedPlusAchievementBoost(e) {
-                return this.baseLifetimeAmountEarned(e) * (1 + Y() / 50)
+                return this.baseLifetimeAmountEarned(e) * (1 + K() / 50)
             }
             achievementMultiplierPercentageDisplay() {
-                return (Y() / 50 * 100).toFixed(0) + "%"
+                return (K() / 50 * 100).toFixed(0) + "%"
             }
             progressBarForegroundStyle() {
                 return this.sanitizer.bypassSecurityTrustStyle("width: " + Math.floor(200 * this.percentageToNextGem()) + "px")
             }
             resourcesInThisArena() {
-                return Object.keys(kr["arena" + this.arenaNumber][0])
+                return Object.keys(Rr["arena" + this.arenaNumber][0])
             }
             ascendConfirmed() {
                 let e = this.amountOfGemsThatWouldBeEarnedViaAscension();
-                q.instance.gameState.gems += e,
-                q.instance.gameState.lifetimeGemsReceived[this.arenaNumber] += e,
+                Z.instance.gameState.gems += e,
+                Z.instance.gameState.lifetimeGemsReceived[this.arenaNumber] += e,
                 this.showConfirmationScreen = !1,
-                W(8) || e >= 1 && G(8),
-                q.instance.stopChoosingEmptySlotForCard(),
-                q.instance.resetRealm(this.arenaNumber)
+                W(8) || e >= 1 && $(8),
+                Z.instance.stopChoosingEmptySlotForCard(),
+                Z.instance.removeAllCardsFromGrid(),
+                Z.instance.tryToRankUpAllCards(this.arenaNumber),
+                Z.instance.resetRealm(this.arenaNumber)
             }
             priceForOfflineUpgrade() {
                 return 1
             }
             buyOfflineUpgrade() {
-                if (q.instance.gameState.gems < this.priceForOfflineUpgrade())
+                if (Z.instance.gameState.gems < this.priceForOfflineUpgrade())
                     o.instance.show("You don't have enough <img src='assets/images/resources/gem.png' title='Gem' alt='Gem'>");
-                else if (q.instance.gameState.maxOfflineTime >= 86400)
+                else if (Z.instance.gameState.maxOfflineTime >= 86400)
                     o.instance.show("You've already reached the maximum cap of 24 hours.");
                 else {
-                    q.instance.gameState.gems--,
-                    q.instance.gameState.maxOfflineTime += 14400;
-                    let e = this.secondsToTimeString(q.instance.gameState.maxOfflineTime);
+                    Z.instance.gameState.gems--,
+                    Z.instance.gameState.maxOfflineTime += 14400;
+                    let e = this.secondsToTimeString(Z.instance.gameState.maxOfflineTime);
                     o.instance.show("Offline cap increased to " + e)
                 }
             }
             currentOfflineCap() {
-                return this.secondsToTimeString(q.instance.gameState.maxOfflineTime)
+                return this.secondsToTimeString(Z.instance.gameState.maxOfflineTime)
             }
             secondsToTimeString(e) {
                 let t = e
@@ -32748,21 +33940,21 @@
                 i + ((t -= 60 * r) + " seconds")
             }
             lifetimeGemsReceived() {
-                return q.instance.gameState.lifetimeGemsReceived[this.arenaNumber]
+                return Z.instance.gameState.lifetimeGemsReceived[this.arenaNumber]
             }
         }
-        var Ir = r["\u0275crt"]({
+        var Pr = r["\u0275crt"]({
             encapsulation: 0,
             styles: [[".progress-bar[_ngcontent-%COMP%]{background:red;width:200px;z-index:5;border:1px solid #000}.progress-bar-foreground[_ngcontent-%COMP%]{background:green;z-index:6}.progress-bar-text[_ngcontent-%COMP%]{color:#fff}"]],
             data: {}
         });
-        function Er(e) {
+        function Dr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "p", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["You have mastered this arena and received all of its ascension gems."]))], null, null)
         }
-        function Tr(e) {
+        function Fr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 8, "div", [["style", "display: flex;"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Earnings: \xa0 "])), (e()(),
@@ -32780,7 +33972,7 @@
                 e(t, 7, 0, s)
             })
         }
-        function Ar(e) {
+        function Vr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 22, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Ascension resets the current realm (except card levels), but you gain "])), (e()(),
@@ -32802,7 +33994,7 @@
             r["\u0275eld"](17, 0, null, null, 3, "div", [["class", "progress-bar-foreground"]], [[8, "style", 2]], null, null, null, null)), (e()(),
             r["\u0275eld"](18, 0, null, null, 2, "div", [["class", "progress-bar-text"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](19, null, ["", "%"])), r["\u0275ppd"](20, 1), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Tr)), r["\u0275did"](22, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, Fr)), r["\u0275did"](22, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null), (e()(),
             r["\u0275eld"](23, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
@@ -32830,20 +34022,20 @@
                 e(t, 29, 0, n.amountOfGemsThatWouldBeEarnedViaAscension())
             })
         }
-        function Or(e) {
+        function jr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 5, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "h2", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Ascend"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Er)), r["\u0275did"](4, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Dr)), r["\u0275did"](4, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"],
                 ngIfElse: [1, "ngIfElse"]
             }, null), (e()(),
-            r["\u0275and"](0, [["ascension_form", 2]], null, 0, null, Ar))], function(e, t) {
+            r["\u0275and"](0, [["ascension_form", 2]], null, 0, null, Vr))], function(e, t) {
                 e(t, 4, 0, t.component.hasReceivedAllGemsFromArena(), r["\u0275nov"](t, 5))
             }, null)
         }
-        function Nr(e) {
+        function Br(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 28, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "h2", [], null, null, null, null, null)), (e()(),
@@ -32884,7 +34076,7 @@
                 e(t, 24, 0, n.appComponent.gameState.gems)
             })
         }
-        function Rr(e) {
+        function Hr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 23, "div", [["class", "ascend-confirmation-screen"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Are you sure? "])), (e()(),
@@ -32921,7 +34113,7 @@
                 e(t, 10, 0, t.component.amountOfGemsThatWouldBeEarnedViaAscension())
             })
         }
-        function Mr(e) {
+        function Lr(e) {
             return r["\u0275vid"](0, [r["\u0275pid"](0, j, []), (e()(),
             r["\u0275eld"](1, 0, null, null, 4, "div", [["class", "sub-tab-bar"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](2, 0, null, null, 1, "div", [["class", "sub-tab"]], [[2, "active", null]], [[null, "click"]], function(e, t, n) {
@@ -32937,13 +34129,13 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Ascension Shop"])), (e()(),
             r["\u0275eld"](6, 0, null, null, 4, "div", [["style", "padding: 10px;"]], [[2, "white-text", null]], null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Or)), r["\u0275did"](8, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, jr)), r["\u0275did"](8, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Nr)), r["\u0275did"](10, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Br)), r["\u0275did"](10, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Rr)), r["\u0275did"](12, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Hr)), r["\u0275did"](12, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -32957,7 +34149,7 @@
                 e(t, 6, 0, n.appComponent.arenaHasDarkBackground())
             })
         }
-        const Pr = (()=>{
+        const Ur = (()=>{
             class e {
                 constructor(t) {
                     this.sanitizer = t,
@@ -32969,9 +34161,9 @@
                     e.instance = this
                 }
                 start(e, t) {
-                    this.hasPurchasedCardsBefore = 1 == q.instance.gameState.hasPurchasedCardsBefore,
-                    q.instance.gameState.hasPurchasedCardsBefore = !0,
-                    this.skipAnimations = !q.instance.gameState.enableAnimations,
+                    this.hasPurchasedCardsBefore = 1 == Z.instance.gameState.hasPurchasedCardsBefore,
+                    Z.instance.gameState.hasPurchasedCardsBefore = !0,
+                    this.skipAnimations = !Z.instance.gameState.enableAnimations,
                     this.imageFilename = e,
                     this.cardsReceived = t,
                     this.isActive = !0,
@@ -33007,7 +34199,7 @@
             e
         }
         )();
-        class Dr {
+        class zr {
             constructor(e, t) {
                 this.sanitizer = e,
                 this.niceNumber = t,
@@ -33016,7 +34208,7 @@
                 this.displaySize = 3
             }
             clicked() {
-                Pr.instance.isActive || this.canAfford() && this.purchase()
+                Ur.instance.isActive || this.canAfford() && this.purchase()
             }
             purchase() {
                 var e = 1;
@@ -33052,14 +34244,14 @@
                         let e = null;
                         t[e = 1 == r.length ? r[0] : r[Math.floor(Math.random() * r.length)]].quantity++
                     }
-                    q.instance.gameState.resources["arena" + this.arenaNumber][this.currency] -= this.price,
-                    this.price2 > 0 && (q.instance.gameState.resources["arena" + this.arenaNumber][this.currency2] -= this.price2),
-                    this.price3 > 0 && (q.instance.gameState.resources["arena" + this.arenaNumber][this.currency3] -= this.price3)
+                    Z.instance.gameState.resources["arena" + this.arenaNumber][this.currency] -= this.price,
+                    this.price2 > 0 && (Z.instance.gameState.resources["arena" + this.arenaNumber][this.currency2] -= this.price2),
+                    this.price3 > 0 && (Z.instance.gameState.resources["arena" + this.arenaNumber][this.currency3] -= this.price3)
                 }
                 t = t.filter(e=>e.quantity > 0),
-                5 == this.cardCount && e >= 1e5 && (W(6) || G(6)),
-                q.instance.addCardsToCollection(t, q.instance.gameState.selectedArenaNumber),
-                Pr.instance.start(this.imageFilename, t)
+                5 == this.cardCount && e >= 1e5 && (W(6) || $(6)),
+                Z.instance.addCardsToCollection(t, Z.instance.gameState.selectedArenaNumber),
+                Ur.instance.start(this.imageFilename, t)
             }
             getCardFromArray(e, t) {
                 for (var n = 0; n < e.length; n++)
@@ -33068,9 +34260,9 @@
                 return null
             }
             maxAmountAffordable() {
-                let e = Math.floor(q.instance.gameState.resources["arena" + this.arenaNumber][this.currency] / this.price);
-                return this.price2 > 0 && (e = Math.min(e, Math.floor(q.instance.gameState.resources["arena" + this.arenaNumber][this.currency2] / this.price2))),
-                this.price3 > 0 && (e = Math.min(e, Math.floor(q.instance.gameState.resources["arena" + this.arenaNumber][this.currency3] / this.price3))),
+                let e = Math.floor(Z.instance.gameState.resources["arena" + this.arenaNumber][this.currency] / this.price);
+                return this.price2 > 0 && (e = Math.min(e, Math.floor(Z.instance.gameState.resources["arena" + this.arenaNumber][this.currency2] / this.price2))),
+                this.price3 > 0 && (e = Math.min(e, Math.floor(Z.instance.gameState.resources["arena" + this.arenaNumber][this.currency3] / this.price3))),
                 e
             }
             canAfford() {
@@ -33095,7 +34287,7 @@
                 return e
             }
             useWhiteText() {
-                return q.instance.arenaHasDarkBackground()
+                return Z.instance.arenaHasDarkBackground()
             }
             getMargin() {
                 switch (this.displaySize) {
@@ -33115,12 +34307,12 @@
                 this.sanitizer.bypassSecurityTrustHtml(e)
             }
         }
-        var Vr = r["\u0275crt"]({
+        var Gr = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function Fr(e) {
+        function $r(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 4, "div", [["style", "text-align: center;"]], [[4, "margin", null], [2, "white-text", null]], null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 0, "div", [["class", "booster-pack-purchaser"]], [[4, "backgroundImage", null], [2, "booster-pack-purchaser-small", null], [2, "booster-pack-purchaser-smallest", null]], [[null, "click"], [null, "mouseover"], [null, "mouseout"]], function(e, t, n) {
@@ -33142,14 +34334,14 @@
                 e(t, 4, 0, 2 == n.displaySize, 1 == n.displaySize, n.getPriceDisplay())
             })
         }
-        var jr = r["\u0275crt"]({
+        var Wr = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function Br(e) {
+        function Kr(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, xr, gr)), r["\u0275did"](1, 49152, null, 0, mr, [mt, j], {
+            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, Or, _r)), r["\u0275did"](1, 245760, null, 0, Cr, [bt, j], {
                 clickable: [0, "clickable"],
                 isBoosterResultCard: [1, "isBoosterResultCard"],
                 cardData: [2, "cardData"],
@@ -33159,26 +34351,26 @@
                 e(t, 1, 0, !1, !0, t.context.$implicit.data, 0, t.context.$implicit.quantity)
             }, null)
         }
-        function Hr(e) {
+        function Yr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 14, "div", [["style", "margin-left: 150px; font-size: 0.8em"]], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](1, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 20px;"]], null, null, null, fr, hr)), r["\u0275did"](2, 114688, null, 0, $n, [], {
+            r["\u0275eld"](1, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 20px;"]], null, null, null, gr, mr)), r["\u0275did"](2, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null), (e()(),
             r["\u0275ted"](-1, null, [" = common \xa0\xa0\xa0 "])), (e()(),
-            r["\u0275eld"](4, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, fr, hr)), r["\u0275did"](5, 114688, null, 0, $n, [], {
+            r["\u0275eld"](4, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, gr, mr)), r["\u0275did"](5, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null), (e()(),
-            r["\u0275eld"](6, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, fr, hr)), r["\u0275did"](7, 114688, null, 0, $n, [], {
+            r["\u0275eld"](6, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, gr, mr)), r["\u0275did"](7, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null), (e()(),
-            r["\u0275eld"](8, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, fr, hr)), r["\u0275did"](9, 114688, null, 0, $n, [], {
+            r["\u0275eld"](8, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, gr, mr)), r["\u0275did"](9, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null), (e()(),
-            r["\u0275eld"](10, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, fr, hr)), r["\u0275did"](11, 114688, null, 0, $n, [], {
+            r["\u0275eld"](10, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, gr, mr)), r["\u0275did"](11, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null), (e()(),
-            r["\u0275eld"](12, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, fr, hr)), r["\u0275did"](13, 114688, null, 0, $n, [], {
+            r["\u0275eld"](12, 0, null, null, 1, "fa", [["name", "star"], ["style", "color: white; filter: drop-shadow(1px 1px 1px black); margin-left: 2px;"]], null, null, null, gr, mr)), r["\u0275did"](13, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null), (e()(),
             r["\u0275ted"](-1, null, [" = rare "]))], function(e, t) {
@@ -33190,14 +34382,14 @@
                 e(t, 13, 0, "star")
             }, null)
         }
-        function Lr(e) {
+        function qr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 0, "div", [["class", "booster-pack-opening"]], [[4, "transform", null], [4, "backgroundImage", null], [4, "opacity", null]], null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 10, "div", [["class", "booster-pack-cards-received"]], [[4, "display", null], [4, "opacity", null]], null, null, null, null)), (e()(),
             r["\u0275eld"](2, 0, null, null, 1, "p", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Cards received:"])), (e()(),
             r["\u0275eld"](4, 0, null, null, 2, "div", [["style", "display: flex; height: 150px; overflow-y: auto;"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Br)), r["\u0275did"](6, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, Kr)), r["\u0275did"](6, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null), (e()(),
             r["\u0275eld"](7, 0, null, null, 2, "div", [["style", "margin-top: 5px;"]], null, null, null, null, null)), (e()(),
@@ -33207,7 +34399,7 @@
                 r
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["OK"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Hr)), r["\u0275did"](11, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Yr)), r["\u0275did"](11, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -33219,9 +34411,9 @@
                 e(t, 1, 0, n.isActive && (n.timer > 1500 || n.skipAnimations) ? "block" : "none", n.cardsReceivedOpacityVal())
             })
         }
-        class Ur {
+        class Qr {
             getAppComponent() {
-                return q.instance
+                return Z.instance
             }
             showTooltipForNextRealm() {
                 D.instance.showTooltip("Coming in a future update...")
@@ -33230,8 +34422,8 @@
                 D.instance.hideTooltip()
             }
             tryToUnlockNextExpansion() {
-                q.instance.gameState.resources.arena1.gold < 1e5 || (q.instance.gameState.resources.arena1.gold -= 1e5,
-                q.instance.unlockArena(2))
+                Z.instance.gameState.resources.arena1.gold < 1e5 || (Z.instance.gameState.resources.arena1.gold -= 1e5,
+                Z.instance.unlockArena(2))
             }
             purchaseMultiplierUpdated() {
                 if (this.getAppComponent().buyMaxChecked)
@@ -33246,12 +34438,12 @@
                 }
             }
         }
-        var zr = r["\u0275crt"]({
+        var Zr = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function $r(e) {
+        function Xr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "button", [["style", "margin-left: 120px; margin-top: -30px"]], [[8, "disabled", 0]], [[null, "click"]], function(e, t, n) {
                 var r = !0;
@@ -33262,7 +34454,7 @@
                 e(t, 0, 0, t.component.getAppComponent().gameState.resources.arena1.gold < 1e5)
             })
         }
-        function Gr(e) {
+        function Jr(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 16, "div", [["class", "purchase-multiplier"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Buy x "])), (e()(),
@@ -33279,14 +34471,14 @@
                 "ngModelChange" === t && (i = !1 !== (l.getAppComponent().purchaseMultiplier = n) && i),
                 "change" === t && (i = !1 !== l.purchaseMultiplierUpdated() && i),
                 i
-            }, null, null)), r["\u0275did"](3, 16384, null, 0, Mt, [r.Renderer2, r.ElementRef, [2, Rt]], null, null), r["\u0275did"](4, 16384, null, 0, qt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e, t) {
+            }, null, null)), r["\u0275did"](3, 16384, null, 0, Ft, [r.Renderer2, r.ElementRef, [2, Dt]], null, null), r["\u0275did"](4, 16384, null, 0, Zt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e, t) {
                 return [e, t]
-            }, [Mt, qt]), r["\u0275did"](6, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Ft, Zt]), r["\u0275did"](6, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 isDisabled: [0, "isDisabled"],
                 model: [1, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](8, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](8, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275eld"](9, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](10, 0, null, null, 5, "input", [["type", "checkbox"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "change"], [null, "blur"]], function(e, t, n) {
                 var i = !0
@@ -33296,18 +34488,18 @@
                 "ngModelChange" === t && (i = !1 !== (l.getAppComponent().buyMaxChecked = n) && i),
                 "change" === t && (i = !1 !== l.purchaseMultiplierUpdated() && i),
                 i
-            }, null, null)), r["\u0275did"](11, 16384, null, 0, Nt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](11, 16384, null, 0, Pt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [Nt]), r["\u0275did"](13, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Pt]), r["\u0275did"](13, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](15, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](15, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275ted"](-1, null, [" Buy max\n"])), (e()(),
             r["\u0275eld"](17, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](18, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](19, 0, null, null, 18, "div", [["style", "display: flex; padding: 50px;"]], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](20, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "1"], ["currency", "gold"], ["description", "The worst card of all time.  Gives +1 Gold/sec."], ["imageFilename", "assets/images/cards/ghoul.png"], ["name", "Ghoul card"], ["price", "10"]], null, null, null, Fr, Vr)), r["\u0275did"](21, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](20, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "1"], ["currency", "gold"], ["description", "The worst card of all time.  Gives +1 Gold/sec."], ["imageFilename", "assets/images/cards/ghoul.png"], ["name", "Ghoul card"], ["price", "10"]], null, null, null, $r, Gr)), r["\u0275did"](21, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 name: [2, "name"],
@@ -33318,7 +34510,7 @@
                 purchaseMultiplier: [7, "purchaseMultiplier"],
                 arenaNumber: [8, "arenaNumber"]
             }, null), r["\u0275pad"](22, 1), (e()(),
-            r["\u0275eld"](23, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "1"], ["currency", "gold"], ["description", "Contains a random Tier 1 card. Hopefully not a Ghoul."], ["imageFilename", "assets/images/packs/1.png"], ["name", "Mini Pack"], ["price", "50"]], null, null, null, Fr, Vr)), r["\u0275did"](24, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](23, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "1"], ["currency", "gold"], ["description", "Contains a random Tier 1 card. Hopefully not a Ghoul."], ["imageFilename", "assets/images/packs/1.png"], ["name", "Mini Pack"], ["price", "50"]], null, null, null, $r, Gr)), r["\u0275did"](24, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 name: [2, "name"],
@@ -33329,7 +34521,7 @@
                 purchaseMultiplier: [7, "purchaseMultiplier"],
                 arenaNumber: [8, "arenaNumber"]
             }, null), r["\u0275pad"](25, 14), (e()(),
-            r["\u0275eld"](26, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "3"], ["currency", "gold"], ["description", "Contains 3 random Tier 1 cards. There are 14 card possibilities in Tier 1."], ["imageFilename", "assets/images/packs/2.png"], ["name", "Regular Pack"], ["price", "125"]], null, null, null, Fr, Vr)), r["\u0275did"](27, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](26, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "3"], ["currency", "gold"], ["description", "Contains 3 random Tier 1 cards. There are 14 card possibilities in Tier 1."], ["imageFilename", "assets/images/packs/2.png"], ["name", "Regular Pack"], ["price", "125"]], null, null, null, $r, Gr)), r["\u0275did"](27, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 name: [2, "name"],
@@ -33340,7 +34532,7 @@
                 purchaseMultiplier: [7, "purchaseMultiplier"],
                 arenaNumber: [8, "arenaNumber"]
             }, null), r["\u0275pad"](28, 14), (e()(),
-            r["\u0275eld"](29, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "5"], ["currency", "gold"], ["description", "Contains 5 random Tier 1 cards. There are 14 card possibilities in Tier 1."], ["imageFilename", "assets/images/packs/2-big.png"], ["name", "Big Pack"], ["price", "200"]], null, null, null, Fr, Vr)), r["\u0275did"](30, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](29, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "5"], ["currency", "gold"], ["description", "Contains 5 random Tier 1 cards. There are 14 card possibilities in Tier 1."], ["imageFilename", "assets/images/packs/2-big.png"], ["name", "Big Pack"], ["price", "200"]], null, null, null, $r, Gr)), r["\u0275did"](30, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 name: [2, "name"],
@@ -33351,7 +34543,7 @@
                 purchaseMultiplier: [7, "purchaseMultiplier"],
                 arenaNumber: [8, "arenaNumber"]
             }, null), r["\u0275pad"](31, 14), (e()(),
-            r["\u0275eld"](32, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "3"], ["currency", "gold"], ["description", "Contains 3 random Tier 2 cards. There are 9 card possibilities in Tier 2."], ["imageFilename", "assets/images/packs/3.png"], ["name", "Super Pack"], ["price", "10000"]], null, null, null, Fr, Vr)), r["\u0275did"](33, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](32, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "3"], ["currency", "gold"], ["description", "Contains 3 random Tier 2 cards. There are 9 card possibilities in Tier 2."], ["imageFilename", "assets/images/packs/3.png"], ["name", "Super Pack"], ["price", "10000"]], null, null, null, $r, Gr)), r["\u0275did"](33, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 name: [2, "name"],
@@ -33362,7 +34554,7 @@
                 purchaseMultiplier: [7, "purchaseMultiplier"],
                 arenaNumber: [8, "arenaNumber"]
             }, null), r["\u0275pad"](34, 9), (e()(),
-            r["\u0275eld"](35, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "5"], ["currency", "gold"], ["description", "Contains 5 random Tier 2 cards. There are 9 card possibilities in Tier 2."], ["imageFilename", "assets/images/packs/4.png"], ["name", "Super Pack+"], ["price", "15000"]], null, null, null, Fr, Vr)), r["\u0275did"](36, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](35, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "1"], ["cardCount", "5"], ["currency", "gold"], ["description", "Contains 5 random Tier 2 cards. There are 9 card possibilities in Tier 2."], ["imageFilename", "assets/images/packs/4.png"], ["name", "Super Pack+"], ["price", "15000"]], null, null, null, $r, Gr)), r["\u0275did"](36, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 name: [2, "name"],
@@ -33373,10 +34565,10 @@
                 purchaseMultiplier: [7, "purchaseMultiplier"],
                 arenaNumber: [8, "arenaNumber"]
             }, null), r["\u0275pad"](37, 9), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, $r)), r["\u0275did"](39, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Xr)), r["\u0275did"](39, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275eld"](40, 0, null, null, 1, "booster-pack-opening", [], null, null, null, Lr, jr)), r["\u0275did"](41, 49152, null, 0, Pr, [mt], null, null)], function(e, t) {
+            r["\u0275eld"](40, 0, null, null, 1, "booster-pack-opening", [], null, null, null, qr, Wr)), r["\u0275did"](41, 49152, null, 0, Ur, [bt], null, null)], function(e, t) {
                 var n = t.component;
                 e(t, 6, 0, n.getAppComponent().buyMaxChecked, n.getAppComponent().purchaseMultiplier),
                 e(t, 13, 0, n.getAppComponent().buyMaxChecked);
@@ -33398,9 +34590,9 @@
                 e(t, 10, 0, r["\u0275nov"](t, 15).ngClassUntouched, r["\u0275nov"](t, 15).ngClassTouched, r["\u0275nov"](t, 15).ngClassPristine, r["\u0275nov"](t, 15).ngClassDirty, r["\u0275nov"](t, 15).ngClassValid, r["\u0275nov"](t, 15).ngClassInvalid, r["\u0275nov"](t, 15).ngClassPending)
             })
         }
-        class Wr {
+        class ei {
             getAppComponent() {
-                return q.instance
+                return Z.instance
             }
             showTooltipForNextRealm() {
                 D.instance.showTooltip("Coming in a future update...")
@@ -33414,9 +34606,9 @@
                 this.getAppComponent().gameState.resources.arena2.wood < 25e6 || this.getAppComponent().gameState.resources.arena2.iron < 1e8
             }
             tryToUnlockNextExpansion() {
-                this.getAppComponent().gameState.resources.arena2.wood < 25e6 || this.getAppComponent().gameState.resources.arena2.iron < 1e8 || (q.instance.gameState.resources.arena2.iron -= 1e8,
-                q.instance.gameState.resources.arena2.wood -= 25e6,
-                q.instance.unlockArena(3))
+                this.getAppComponent().gameState.resources.arena2.wood < 25e6 || this.getAppComponent().gameState.resources.arena2.iron < 1e8 || (Z.instance.gameState.resources.arena2.iron -= 1e8,
+                Z.instance.gameState.resources.arena2.wood -= 25e6,
+                Z.instance.unlockArena(3))
             }
             purchaseMultiplierUpdated() {
                 if (this.getAppComponent().buyMaxChecked)
@@ -33431,12 +34623,12 @@
                 }
             }
         }
-        var Yr = r["\u0275crt"]({
+        var ti = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function qr(e) {
+        function ni(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "button", [["style", "margin-left: 215px; margin-top: -30px"]], null, [[null, "click"]], function(e, t, n) {
                 var r = !0;
@@ -33445,12 +34637,12 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Unlock next expansion "]))], null, null)
         }
-        function Kr(e) {
+        function ri(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "span", [["class", "white-text"], ["style", "margin-left: 220px"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["(25M wood, 100M iron)"]))], null, null)
         }
-        function Qr(e) {
+        function ii(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 16, "div", [["class", "purchase-multiplier white-text"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Buy x "])), (e()(),
@@ -33467,14 +34659,14 @@
                 "ngModelChange" === t && (i = !1 !== (l.getAppComponent().purchaseMultiplier = n) && i),
                 "change" === t && (i = !1 !== l.purchaseMultiplierUpdated() && i),
                 i
-            }, null, null)), r["\u0275did"](3, 16384, null, 0, Mt, [r.Renderer2, r.ElementRef, [2, Rt]], null, null), r["\u0275did"](4, 16384, null, 0, qt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e, t) {
+            }, null, null)), r["\u0275did"](3, 16384, null, 0, Ft, [r.Renderer2, r.ElementRef, [2, Dt]], null, null), r["\u0275did"](4, 16384, null, 0, Zt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e, t) {
                 return [e, t]
-            }, [Mt, qt]), r["\u0275did"](6, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Ft, Zt]), r["\u0275did"](6, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 isDisabled: [0, "isDisabled"],
                 model: [1, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](8, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](8, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275eld"](9, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](10, 0, null, null, 5, "input", [["type", "checkbox"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "change"], [null, "blur"]], function(e, t, n) {
                 var i = !0
@@ -33484,18 +34676,18 @@
                 "ngModelChange" === t && (i = !1 !== (l.getAppComponent().buyMaxChecked = n) && i),
                 "change" === t && (i = !1 !== l.purchaseMultiplierUpdated() && i),
                 i
-            }, null, null)), r["\u0275did"](11, 16384, null, 0, Nt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](11, 16384, null, 0, Pt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [Nt]), r["\u0275did"](13, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Pt]), r["\u0275did"](13, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](15, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](15, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275ted"](-1, null, [" Buy max\n"])), (e()(),
             r["\u0275eld"](17, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](18, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](19, 0, null, null, 21, "div", [["style", "display: flex; padding: 50px;"]], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](20, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "1"], ["currency", "wood"], ["description", "Can barely chop a twig.  But he tries.  +1 wood/sec"], ["displaySize", "2"], ["imageFilename", "assets/images/cards/lil_lumberjack.png"], ["name", "Lil' Lumberjack"], ["price", "10"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](21, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](20, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "1"], ["currency", "wood"], ["description", "Can barely chop a twig.  But he tries.  +1 wood/sec"], ["displaySize", "2"], ["imageFilename", "assets/images/cards/lil_lumberjack.png"], ["name", "Lil' Lumberjack"], ["price", "10"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](21, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 name: [2, "name"],
@@ -33508,7 +34700,7 @@
                 displaySize: [9, "displaySize"],
                 arenaNumber: [10, "arenaNumber"]
             }, null), r["\u0275pad"](22, 1), (e()(),
-            r["\u0275eld"](23, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "1"], ["currency", "wood"], ["description", "Contains a random Tier 1 card. There are 28 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest1.png"], ["name", "Mini Pack"], ["price", "75"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](24, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](23, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "1"], ["currency", "wood"], ["description", "Contains a random Tier 1 card. There are 28 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest1.png"], ["name", "Mini Pack"], ["price", "75"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](24, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 name: [2, "name"],
@@ -33521,7 +34713,7 @@
                 displaySize: [9, "displaySize"],
                 arenaNumber: [10, "arenaNumber"]
             }, null), r["\u0275pad"](25, 28), (e()(),
-            r["\u0275eld"](26, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "3"], ["currency", "wood"], ["description", "Contains 3 random Tier 1 cards. There are 28 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest2.png"], ["name", "Regular Pack"], ["price", "200"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](27, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](26, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "3"], ["currency", "wood"], ["description", "Contains 3 random Tier 1 cards. There are 28 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest2.png"], ["name", "Regular Pack"], ["price", "200"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](27, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 name: [2, "name"],
@@ -33534,7 +34726,7 @@
                 displaySize: [9, "displaySize"],
                 arenaNumber: [10, "arenaNumber"]
             }, null), r["\u0275pad"](28, 28), (e()(),
-            r["\u0275eld"](29, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "5"], ["currency", "wood"], ["description", "Contains 5 random Tier 1 cards. There are 28 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest4.png"], ["name", "Regular Pack XL"], ["price", "300"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](30, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](29, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "5"], ["currency", "wood"], ["description", "Contains 5 random Tier 1 cards. There are 28 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest4.png"], ["name", "Regular Pack XL"], ["price", "300"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](30, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 name: [2, "name"],
@@ -33547,7 +34739,7 @@
                 displaySize: [9, "displaySize"],
                 arenaNumber: [10, "arenaNumber"]
             }, null), r["\u0275pad"](31, 28), (e()(),
-            r["\u0275eld"](32, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "1"], ["currency", "wood"], ["currency2", "iron"], ["description", "Contains 1 random Tier 2 card. There are 17 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest3.png"], ["name", "Mini Metal Pack"], ["price", "5000"], ["price2", "75000"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](33, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](32, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "1"], ["currency", "wood"], ["currency2", "iron"], ["description", "Contains 1 random Tier 2 card. There are 17 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest3.png"], ["name", "Mini Metal Pack"], ["price", "5000"], ["price2", "75000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](33, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33562,7 +34754,7 @@
                 displaySize: [11, "displaySize"],
                 arenaNumber: [12, "arenaNumber"]
             }, null), r["\u0275pad"](34, 17), (e()(),
-            r["\u0275eld"](35, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "3"], ["currency", "wood"], ["currency2", "iron"], ["description", "Contains 3 random Tier 2 cards. There are 17 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest3.png"], ["name", "Metal Pack"], ["price", "7000"], ["price2", "125000"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](36, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](35, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "3"], ["currency", "wood"], ["currency2", "iron"], ["description", "Contains 3 random Tier 2 cards. There are 17 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest3.png"], ["name", "Metal Pack"], ["price", "7000"], ["price2", "125000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](36, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33577,7 +34769,7 @@
                 displaySize: [11, "displaySize"],
                 arenaNumber: [12, "arenaNumber"]
             }, null), r["\u0275pad"](37, 17), (e()(),
-            r["\u0275eld"](38, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "5"], ["currency", "wood"], ["currency2", "iron"], ["description", "Contains 5 random Tier 2 cards. There are 17 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest3.png"], ["name", "Metal Pack XL"], ["price", "11000"], ["price2", "200000"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](39, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](38, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "2"], ["cardCount", "5"], ["currency", "wood"], ["currency2", "iron"], ["description", "Contains 5 random Tier 2 cards. There are 17 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/forest3.png"], ["name", "Metal Pack XL"], ["price", "11000"], ["price2", "200000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](39, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33592,14 +34784,14 @@
                 displaySize: [11, "displaySize"],
                 arenaNumber: [12, "arenaNumber"]
             }, null), r["\u0275pad"](40, 17), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, qr)), r["\u0275did"](42, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ni)), r["\u0275did"](42, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275eld"](43, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Kr)), r["\u0275did"](45, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ri)), r["\u0275did"](45, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275eld"](46, 0, null, null, 1, "booster-pack-opening", [], null, null, null, Lr, jr)), r["\u0275did"](47, 49152, null, 0, Pr, [mt], null, null)], function(e, t) {
+            r["\u0275eld"](46, 0, null, null, 1, "booster-pack-opening", [], null, null, null, qr, Wr)), r["\u0275did"](47, 49152, null, 0, Ur, [bt], null, null)], function(e, t) {
                 var n = t.component;
                 e(t, 6, 0, n.getAppComponent().buyMaxChecked, n.getAppComponent().purchaseMultiplier),
                 e(t, 13, 0, n.getAppComponent().buyMaxChecked);
@@ -33624,9 +34816,9 @@
                 e(t, 10, 0, r["\u0275nov"](t, 15).ngClassUntouched, r["\u0275nov"](t, 15).ngClassTouched, r["\u0275nov"](t, 15).ngClassPristine, r["\u0275nov"](t, 15).ngClassDirty, r["\u0275nov"](t, 15).ngClassValid, r["\u0275nov"](t, 15).ngClassInvalid, r["\u0275nov"](t, 15).ngClassPending)
             })
         }
-        class Zr {
+        class li {
             getAppComponent() {
-                return q.instance
+                return Z.instance
             }
             showTooltipForNextRealm() {
                 D.instance.showTooltip("Coming in a future update...")
@@ -33638,7 +34830,10 @@
                 return !1
             }
             tryToUnlockNextExpansion() {
-                console.log("coming soon")
+                this.getAppComponent().gameState.resources.arena3.ether < 1e9 || this.getAppComponent().gameState.resources.arena3.skulls < 1e9 || this.getAppComponent().gameState.resources.arena3.feathers < 1e9 || (Z.instance.gameState.resources.arena3.ether -= 1e9,
+                Z.instance.gameState.resources.arena3.feathers -= 1e9,
+                Z.instance.gameState.resources.arena3.skulls -= 1e9,
+                Z.instance.unlockArena(4))
             }
             purchaseMultiplierUpdated() {
                 if (this.getAppComponent().buyMaxChecked)
@@ -33653,12 +34848,12 @@
                 }
             }
         }
-        var Xr = r["\u0275crt"]({
+        var si = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function Jr(e) {
+        function oi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "button", [], null, [[null, "click"]], function(e, t, n) {
                 var r = !0;
@@ -33667,7 +34862,7 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Unlock next expansion "]))], null, null)
         }
-        function ei(e) {
+        function ai(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 16, "div", [["class", "purchase-multiplier white-text"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Buy x "])), (e()(),
@@ -33684,14 +34879,14 @@
                 "ngModelChange" === t && (i = !1 !== (l.getAppComponent().purchaseMultiplier = n) && i),
                 "change" === t && (i = !1 !== l.purchaseMultiplierUpdated() && i),
                 i
-            }, null, null)), r["\u0275did"](3, 16384, null, 0, Mt, [r.Renderer2, r.ElementRef, [2, Rt]], null, null), r["\u0275did"](4, 16384, null, 0, qt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e, t) {
+            }, null, null)), r["\u0275did"](3, 16384, null, 0, Ft, [r.Renderer2, r.ElementRef, [2, Dt]], null, null), r["\u0275did"](4, 16384, null, 0, Zt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e, t) {
                 return [e, t]
-            }, [Mt, qt]), r["\u0275did"](6, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Ft, Zt]), r["\u0275did"](6, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 isDisabled: [0, "isDisabled"],
                 model: [1, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](8, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](8, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275eld"](9, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](10, 0, null, null, 5, "input", [["type", "checkbox"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "change"], [null, "blur"]], function(e, t, n) {
                 var i = !0
@@ -33701,16 +34896,16 @@
                 "ngModelChange" === t && (i = !1 !== (l.getAppComponent().buyMaxChecked = n) && i),
                 "change" === t && (i = !1 !== l.purchaseMultiplierUpdated() && i),
                 i
-            }, null, null)), r["\u0275did"](11, 16384, null, 0, Nt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](11, 16384, null, 0, Pt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [Nt]), r["\u0275did"](13, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Pt]), r["\u0275did"](13, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](15, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](15, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275ted"](-1, null, [" Buy max\n"])), (e()(),
             r["\u0275eld"](17, 0, null, null, 21, "div", [["style", "display: flex; padding: 50px;"]], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](18, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "1"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Hosts ceremonies for you. The result: ether, skulls, and feathers."], ["displaySize", "2"], ["imageFilename", "assets/images/cards/priestess.png"], ["name", "Priestess"], ["price", "10"], ["price2", "10"], ["price3", "10"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](19, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](18, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "1"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Hosts ceremonies for you. The result: ether, skulls, and feathers."], ["displaySize", "2"], ["imageFilename", "assets/images/cards/priestess.png"], ["name", "Priestess"], ["price", "10"], ["price2", "10"], ["price3", "10"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](19, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33727,7 +34922,7 @@
                 displaySize: [13, "displaySize"],
                 arenaNumber: [14, "arenaNumber"]
             }, null), r["\u0275pad"](20, 1), (e()(),
-            r["\u0275eld"](21, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "1"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains a random Tier 1 card. There are 19 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld1.png"], ["name", "Mini Pack"], ["price", "100"], ["price2", "100"], ["price3", "100"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](22, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](21, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "1"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains a random Tier 1 card. There are 19 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld1.png"], ["name", "Mini Pack"], ["price", "100"], ["price2", "100"], ["price3", "100"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](22, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33744,7 +34939,7 @@
                 displaySize: [13, "displaySize"],
                 arenaNumber: [14, "arenaNumber"]
             }, null), r["\u0275pad"](23, 19), (e()(),
-            r["\u0275eld"](24, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "3"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 3 random Tier 1 cards. There are 19 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld2.png"], ["name", "Regular Pack"], ["price", "250"], ["price2", "250"], ["price3", "250"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](25, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](24, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "3"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 3 random Tier 1 cards. There are 19 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld2.png"], ["name", "Regular Pack"], ["price", "250"], ["price2", "250"], ["price3", "250"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](25, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33761,7 +34956,7 @@
                 displaySize: [13, "displaySize"],
                 arenaNumber: [14, "arenaNumber"]
             }, null), r["\u0275pad"](26, 19), (e()(),
-            r["\u0275eld"](27, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "5"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 5 random Tier 1 cards. There are 19 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld3.png"], ["name", "Regular Pack XL"], ["price", "400"], ["price2", "400"], ["price3", "400"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](28, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](27, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "5"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 5 random Tier 1 cards. There are 19 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld3.png"], ["name", "Regular Pack XL"], ["price", "400"], ["price2", "400"], ["price3", "400"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](28, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33778,7 +34973,7 @@
                 displaySize: [13, "displaySize"],
                 arenaNumber: [14, "arenaNumber"]
             }, null), r["\u0275pad"](29, 19), (e()(),
-            r["\u0275eld"](30, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "1"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 1 random Tier 2 card. There are 20 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld4.png"], ["name", "Mini Hell Pack"], ["price", "10000"], ["price2", "10000"], ["price3", "10000"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](31, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](30, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "1"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 1 random Tier 2 card. There are 20 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld4.png"], ["name", "Mini Hell Pack"], ["price", "10000"], ["price2", "10000"], ["price3", "10000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](31, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33795,7 +34990,7 @@
                 displaySize: [13, "displaySize"],
                 arenaNumber: [14, "arenaNumber"]
             }, null), r["\u0275pad"](32, 20), (e()(),
-            r["\u0275eld"](33, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "3"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 3 random Tier 2 cards. There are 20 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld5.png"], ["name", "Hell Pack"], ["price", "25000"], ["price2", "25000"], ["price3", "25000"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](34, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](33, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "3"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 3 random Tier 2 cards. There are 20 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld5.png"], ["name", "Hell Pack"], ["price", "25000"], ["price2", "25000"], ["price3", "25000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](34, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33812,7 +35007,7 @@
                 displaySize: [13, "displaySize"],
                 arenaNumber: [14, "arenaNumber"]
             }, null), r["\u0275pad"](35, 20), (e()(),
-            r["\u0275eld"](36, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "5"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 5 random Tier 2 cards. There are 20 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld6.png"], ["name", "Hell Pack XL"], ["price", "40000"], ["price2", "40000"], ["price3", "40000"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](37, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](36, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "5"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 5 random Tier 2 cards. There are 20 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld6.png"], ["name", "Hell Pack XL"], ["price", "40000"], ["price2", "40000"], ["price3", "40000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](37, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33830,7 +35025,7 @@
                 arenaNumber: [14, "arenaNumber"]
             }, null), r["\u0275pad"](38, 20), (e()(),
             r["\u0275eld"](39, 0, null, null, 15, "div", [["style", "display: flex; padding: 50px; margin-top: -100px"]], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](40, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "1"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains a random Tier 3 card. There are 15 card possibilities in Tier 3."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld7.png"], ["name", "Mini Nightmare Pack"], ["price", "500000"], ["price2", "500000"], ["price3", "500000"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](41, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](40, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "1"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains a random Tier 3 card. There are 15 card possibilities in Tier 3."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld7.png"], ["name", "Mini Nightmare Pack"], ["price", "500000"], ["price2", "500000"], ["price3", "500000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](41, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33847,7 +35042,7 @@
                 displaySize: [13, "displaySize"],
                 arenaNumber: [14, "arenaNumber"]
             }, null), r["\u0275pad"](42, 15), (e()(),
-            r["\u0275eld"](43, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "3"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 3 random Tier 3 cards. There are 15 card possibilities in Tier 3."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld8.png"], ["name", "Nightmare Pack"], ["price", "1250000"], ["price2", "1250000"], ["price3", "1250000"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](44, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](43, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "3"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 3 random Tier 3 cards. There are 15 card possibilities in Tier 3."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld8.png"], ["name", "Nightmare Pack"], ["price", "1250000"], ["price2", "1250000"], ["price3", "1250000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](44, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33864,7 +35059,7 @@
                 displaySize: [13, "displaySize"],
                 arenaNumber: [14, "arenaNumber"]
             }, null), r["\u0275pad"](45, 15), (e()(),
-            r["\u0275eld"](46, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "5"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 5 random Tier 3 cards. There are 15 card possibilities in Tier 3."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld9.png"], ["name", "Nightmare Pack XL"], ["price", "2000000"], ["price2", "2000000"], ["price3", "2000000"], ["textColor", "white"]], null, null, null, Fr, Vr)), r["\u0275did"](47, 49152, null, 0, Dr, [mt, j], {
+            r["\u0275eld"](46, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "3"], ["cardCount", "5"], ["currency", "ether"], ["currency2", "skulls"], ["currency3", "feathers"], ["description", "Contains 5 random Tier 3 cards. There are 15 card possibilities in Tier 3."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld9.png"], ["name", "Nightmare Pack XL"], ["price", "2000000"], ["price2", "2000000"], ["price3", "2000000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](47, 49152, null, 0, zr, [bt, j], {
                 currency: [0, "currency"],
                 price: [1, "price"],
                 currency2: [2, "currency2"],
@@ -33882,14 +35077,14 @@
                 arenaNumber: [14, "arenaNumber"]
             }, null), r["\u0275pad"](48, 15), (e()(),
             r["\u0275eld"](49, 0, null, null, 5, "div", [["style", "margin-left: 200px; margin-top: 40px;"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Jr)), r["\u0275did"](51, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, oi)), r["\u0275did"](51, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275eld"](52, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](53, 0, null, null, 1, "span", [["class", "white-text"]], null, null, null, null, null)), (e()(),
-            r["\u0275ted"](-1, null, ["(1B ether, 1B skulls, 1B feathers - coming soon)"])), (e()(),
+            r["\u0275ted"](-1, null, ["(1B ether, 1B skulls, 1B feathers)"])), (e()(),
             r["\u0275eld"](55, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](56, 0, null, null, 1, "booster-pack-opening", [], null, null, null, Lr, jr)), r["\u0275did"](57, 49152, null, 0, Pr, [mt], null, null)], function(e, t) {
+            r["\u0275eld"](56, 0, null, null, 1, "booster-pack-opening", [], null, null, null, qr, Wr)), r["\u0275did"](57, 49152, null, 0, Ur, [bt], null, null)], function(e, t) {
                 var n = t.component;
                 e(t, 6, 0, n.getAppComponent().buyMaxChecked, n.getAppComponent().purchaseMultiplier),
                 e(t, 13, 0, n.getAppComponent().buyMaxChecked);
@@ -33919,7 +35114,259 @@
                 e(t, 10, 0, r["\u0275nov"](t, 15).ngClassUntouched, r["\u0275nov"](t, 15).ngClassTouched, r["\u0275nov"](t, 15).ngClassPristine, r["\u0275nov"](t, 15).ngClassDirty, r["\u0275nov"](t, 15).ngClassValid, r["\u0275nov"](t, 15).ngClassInvalid, r["\u0275nov"](t, 15).ngClassPending)
             })
         }
-        class ti {
+        class ui {
+            getAppComponent() {
+                return Z.instance
+            }
+            showTooltipForNextRealm() {
+                D.instance.showTooltip("Coming in a future update...")
+            }
+            hideTooltip() {
+                D.instance.hideTooltip()
+            }
+            shouldDisableNextExpansionUnlockButton() {
+                return console.log("Wood: " + this.getAppComponent().gameState.resources.arena2.wood),
+                console.log("Iron: " + this.getAppComponent().gameState.resources.arena2.iron),
+                this.getAppComponent().gameState.resources.arena2.wood < 25e6 || this.getAppComponent().gameState.resources.arena2.iron < 1e8
+            }
+            tryToUnlockNextExpansion() {}
+            purchaseMultiplierUpdated() {
+                if (this.getAppComponent().buyMaxChecked)
+                    this.getAppComponent().purchaseMultiplier = null;
+                else {
+                    try {
+                        this.getAppComponent().purchaseMultiplier = parseInt(this.getAppComponent().purchaseMultiplier + "")
+                    } catch (e) {
+                        this.getAppComponent().purchaseMultiplier = 1
+                    }
+                    this.getAppComponent().purchaseMultiplier < 1 && (this.getAppComponent().purchaseMultiplier = 1)
+                }
+            }
+        }
+        var ci = r["\u0275crt"]({
+            encapsulation: 2,
+            styles: [],
+            data: {}
+        });
+        function di(e) {
+            return r["\u0275vid"](0, [(e()(),
+            r["\u0275eld"](0, 0, null, null, 1, "button", [], null, [[null, "click"]], function(e, t, n) {
+                var r = !0;
+                return "click" === t && (r = !1 !== e.component.tryToUnlockNextExpansion() && r),
+                r
+            }, null, null)), (e()(),
+            r["\u0275ted"](-1, null, [" Unlock next expansion "]))], null, null)
+        }
+        function hi(e) {
+            return r["\u0275vid"](0, [(e()(),
+            r["\u0275eld"](0, 0, null, null, 16, "div", [["class", "purchase-multiplier"]], null, null, null, null, null)), (e()(),
+            r["\u0275ted"](-1, null, [" Buy x "])), (e()(),
+            r["\u0275eld"](2, 0, null, null, 6, "input", [["class", "black-text"], ["max", "100000"], ["min", "1"], ["type", "number"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "change"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function(e, t, n) {
+                var i = !0
+                  , l = e.component;
+                return "input" === t && (i = !1 !== r["\u0275nov"](e, 3)._handleInput(n.target.value) && i),
+                "blur" === t && (i = !1 !== r["\u0275nov"](e, 3).onTouched() && i),
+                "compositionstart" === t && (i = !1 !== r["\u0275nov"](e, 3)._compositionStart() && i),
+                "compositionend" === t && (i = !1 !== r["\u0275nov"](e, 3)._compositionEnd(n.target.value) && i),
+                "change" === t && (i = !1 !== r["\u0275nov"](e, 4).onChange(n.target.value) && i),
+                "input" === t && (i = !1 !== r["\u0275nov"](e, 4).onChange(n.target.value) && i),
+                "blur" === t && (i = !1 !== r["\u0275nov"](e, 4).onTouched() && i),
+                "ngModelChange" === t && (i = !1 !== (l.getAppComponent().purchaseMultiplier = n) && i),
+                "change" === t && (i = !1 !== l.purchaseMultiplierUpdated() && i),
+                i
+            }, null, null)), r["\u0275did"](3, 16384, null, 0, Ft, [r.Renderer2, r.ElementRef, [2, Dt]], null, null), r["\u0275did"](4, 16384, null, 0, Zt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e, t) {
+                return [e, t]
+            }, [Ft, Zt]), r["\u0275did"](6, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
+                isDisabled: [0, "isDisabled"],
+                model: [1, "model"]
+            }, {
+                update: "ngModelChange"
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](8, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
+            r["\u0275eld"](9, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](10, 0, null, null, 5, "input", [["type", "checkbox"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "change"], [null, "blur"]], function(e, t, n) {
+                var i = !0
+                  , l = e.component;
+                return "change" === t && (i = !1 !== r["\u0275nov"](e, 11).onChange(n.target.checked) && i),
+                "blur" === t && (i = !1 !== r["\u0275nov"](e, 11).onTouched() && i),
+                "ngModelChange" === t && (i = !1 !== (l.getAppComponent().buyMaxChecked = n) && i),
+                "change" === t && (i = !1 !== l.purchaseMultiplierUpdated() && i),
+                i
+            }, null, null)), r["\u0275did"](11, 16384, null, 0, Pt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
+                return [e]
+            }, [Pt]), r["\u0275did"](13, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
+                model: [0, "model"]
+            }, {
+                update: "ngModelChange"
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](15, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
+            r["\u0275ted"](-1, null, [" Buy max\n"])), (e()(),
+            r["\u0275eld"](17, 0, null, null, 18, "div", [["style", "display: flex; padding: 50px;"]], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](18, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "4"], ["cardCount", "1"], ["currency", "gold"], ["description", "Contains either a Swordsman or a Goblin."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld1.png"], ["name", "Noob Pack"], ["price", "25"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](19, 49152, null, 0, zr, [bt, j], {
+                currency: [0, "currency"],
+                price: [1, "price"],
+                name: [2, "name"],
+                description: [3, "description"],
+                imageFilename: [4, "imageFilename"],
+                cardCount: [5, "cardCount"],
+                possibleCardIds: [6, "possibleCardIds"],
+                textColor: [7, "textColor"],
+                purchaseMultiplier: [8, "purchaseMultiplier"],
+                displaySize: [9, "displaySize"],
+                arenaNumber: [10, "arenaNumber"]
+            }, null), r["\u0275pad"](20, 2), (e()(),
+            r["\u0275eld"](21, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "4"], ["cardCount", "3"], ["currency", "gold"], ["description", "Contains 3 random Tier 1 cards. There are 22 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld1.png"], ["name", "Regular Pack"], ["price", "600"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](22, 49152, null, 0, zr, [bt, j], {
+                currency: [0, "currency"],
+                price: [1, "price"],
+                name: [2, "name"],
+                description: [3, "description"],
+                imageFilename: [4, "imageFilename"],
+                cardCount: [5, "cardCount"],
+                possibleCardIds: [6, "possibleCardIds"],
+                textColor: [7, "textColor"],
+                purchaseMultiplier: [8, "purchaseMultiplier"],
+                displaySize: [9, "displaySize"],
+                arenaNumber: [10, "arenaNumber"]
+            }, null), r["\u0275pad"](23, 22), (e()(),
+            r["\u0275eld"](24, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "4"], ["cardCount", "5"], ["currency", "gold"], ["description", "Contains 5 random Tier 1 cards. There are 22 card possibilities in Tier 1."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld1.png"], ["name", "Big Pack"], ["price", "1000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](25, 49152, null, 0, zr, [bt, j], {
+                currency: [0, "currency"],
+                price: [1, "price"],
+                name: [2, "name"],
+                description: [3, "description"],
+                imageFilename: [4, "imageFilename"],
+                cardCount: [5, "cardCount"],
+                possibleCardIds: [6, "possibleCardIds"],
+                textColor: [7, "textColor"],
+                purchaseMultiplier: [8, "purchaseMultiplier"],
+                displaySize: [9, "displaySize"],
+                arenaNumber: [10, "arenaNumber"]
+            }, null), r["\u0275pad"](26, 22), (e()(),
+            r["\u0275eld"](27, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "4"], ["cardCount", "1"], ["currency", "gold"], ["currency2", "wood"], ["description", "Contains a random Tier 2 card. There are 21 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld2.png"], ["name", "Mini War Pack"], ["price", "100000"], ["price2", "200000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](28, 49152, null, 0, zr, [bt, j], {
+                currency: [0, "currency"],
+                price: [1, "price"],
+                currency2: [2, "currency2"],
+                price2: [3, "price2"],
+                name: [4, "name"],
+                description: [5, "description"],
+                imageFilename: [6, "imageFilename"],
+                cardCount: [7, "cardCount"],
+                possibleCardIds: [8, "possibleCardIds"],
+                textColor: [9, "textColor"],
+                purchaseMultiplier: [10, "purchaseMultiplier"],
+                displaySize: [11, "displaySize"],
+                arenaNumber: [12, "arenaNumber"]
+            }, null), r["\u0275pad"](29, 21), (e()(),
+            r["\u0275eld"](30, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "4"], ["cardCount", "3"], ["currency", "gold"], ["currency2", "wood"], ["description", "Contains 3 random Tier 2 cards. There are 21 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld2.png"], ["name", "War Pack"], ["price", "200000"], ["price2", "400000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](31, 49152, null, 0, zr, [bt, j], {
+                currency: [0, "currency"],
+                price: [1, "price"],
+                currency2: [2, "currency2"],
+                price2: [3, "price2"],
+                name: [4, "name"],
+                description: [5, "description"],
+                imageFilename: [6, "imageFilename"],
+                cardCount: [7, "cardCount"],
+                possibleCardIds: [8, "possibleCardIds"],
+                textColor: [9, "textColor"],
+                purchaseMultiplier: [10, "purchaseMultiplier"],
+                displaySize: [11, "displaySize"],
+                arenaNumber: [12, "arenaNumber"]
+            }, null), r["\u0275pad"](32, 21), (e()(),
+            r["\u0275eld"](33, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "4"], ["cardCount", "5"], ["currency", "gold"], ["currency2", "wood"], ["description", "Contains 5 random Tier 2 cards. There are 21 card possibilities in Tier 2."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld2.png"], ["name", "War Pack XL"], ["price", "300000"], ["price2", "500000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](34, 49152, null, 0, zr, [bt, j], {
+                currency: [0, "currency"],
+                price: [1, "price"],
+                currency2: [2, "currency2"],
+                price2: [3, "price2"],
+                name: [4, "name"],
+                description: [5, "description"],
+                imageFilename: [6, "imageFilename"],
+                cardCount: [7, "cardCount"],
+                possibleCardIds: [8, "possibleCardIds"],
+                textColor: [9, "textColor"],
+                purchaseMultiplier: [10, "purchaseMultiplier"],
+                displaySize: [11, "displaySize"],
+                arenaNumber: [12, "arenaNumber"]
+            }, null), r["\u0275pad"](35, 21), (e()(),
+            r["\u0275eld"](36, 0, null, null, 15, "div", [["style", "display: flex; padding: 50px; margin-top: -100px"]], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](37, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "4"], ["cardCount", "1"], ["currency", "gold"], ["currency2", "wood"], ["description", "Contains a random Tier 3 card. There are 16 card possibilities in Tier 3."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld3.png"], ["name", "Mini Power Pack"], ["price", "5000000"], ["price2", "1000000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](38, 49152, null, 0, zr, [bt, j], {
+                currency: [0, "currency"],
+                price: [1, "price"],
+                currency2: [2, "currency2"],
+                price2: [3, "price2"],
+                name: [4, "name"],
+                description: [5, "description"],
+                imageFilename: [6, "imageFilename"],
+                cardCount: [7, "cardCount"],
+                possibleCardIds: [8, "possibleCardIds"],
+                textColor: [9, "textColor"],
+                purchaseMultiplier: [10, "purchaseMultiplier"],
+                displaySize: [11, "displaySize"],
+                arenaNumber: [12, "arenaNumber"]
+            }, null), r["\u0275pad"](39, 16), (e()(),
+            r["\u0275eld"](40, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "4"], ["cardCount", "3"], ["currency", "gold"], ["currency2", "wood"], ["description", "Contains 3 random Tier 3 cards. There are 16 card possibilities in Tier 3."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld3.png"], ["name", "Power Pack"], ["price", "12500000"], ["price2", "2500000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](41, 49152, null, 0, zr, [bt, j], {
+                currency: [0, "currency"],
+                price: [1, "price"],
+                currency2: [2, "currency2"],
+                price2: [3, "price2"],
+                name: [4, "name"],
+                description: [5, "description"],
+                imageFilename: [6, "imageFilename"],
+                cardCount: [7, "cardCount"],
+                possibleCardIds: [8, "possibleCardIds"],
+                textColor: [9, "textColor"],
+                purchaseMultiplier: [10, "purchaseMultiplier"],
+                displaySize: [11, "displaySize"],
+                arenaNumber: [12, "arenaNumber"]
+            }, null), r["\u0275pad"](42, 16), (e()(),
+            r["\u0275eld"](43, 0, null, null, 2, "booster-pack-purchaser", [["arenaNumber", "4"], ["cardCount", "5"], ["currency", "gold"], ["currency2", "wood"], ["description", "Contains 5 random Tier 3 cards. There are 16 card possibilities in Tier 3."], ["displaySize", "2"], ["imageFilename", "assets/images/packs/underworld3.png"], ["name", "Power Pack"], ["price", "17500000"], ["price2", "3500000"], ["textColor", "white"]], null, null, null, $r, Gr)), r["\u0275did"](44, 49152, null, 0, zr, [bt, j], {
+                currency: [0, "currency"],
+                price: [1, "price"],
+                currency2: [2, "currency2"],
+                price2: [3, "price2"],
+                name: [4, "name"],
+                description: [5, "description"],
+                imageFilename: [6, "imageFilename"],
+                cardCount: [7, "cardCount"],
+                possibleCardIds: [8, "possibleCardIds"],
+                textColor: [9, "textColor"],
+                purchaseMultiplier: [10, "purchaseMultiplier"],
+                displaySize: [11, "displaySize"],
+                arenaNumber: [12, "arenaNumber"]
+            }, null), r["\u0275pad"](45, 16), (e()(),
+            r["\u0275eld"](46, 0, null, null, 5, "div", [["style", "margin-left: 200px; margin-top: 40px;"]], null, null, null, null, null)), (e()(),
+            r["\u0275and"](16777216, null, null, 1, null, di)), r["\u0275did"](48, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
+                ngIf: [0, "ngIf"]
+            }, null), (e()(),
+            r["\u0275eld"](49, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](50, 0, null, null, 1, "span", [], null, null, null, null, null)), (e()(),
+            r["\u0275ted"](-1, null, ["(coming late December)"])), (e()(),
+            r["\u0275eld"](52, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](53, 0, null, null, 1, "booster-pack-opening", [], null, null, null, qr, Wr)), r["\u0275did"](54, 49152, null, 0, Ur, [bt], null, null)], function(e, t) {
+                var n = t.component;
+                e(t, 6, 0, n.getAppComponent().buyMaxChecked, n.getAppComponent().purchaseMultiplier),
+                e(t, 13, 0, n.getAppComponent().buyMaxChecked);
+                var r = e(t, 20, 0, 123, 124);
+                e(t, 19, 1, ["gold", "25", "Noob Pack", "Contains either a Swordsman or a Goblin.", "assets/images/packs/underworld1.png", "1", r, "white", n.getAppComponent().purchaseMultiplier, "2", "4"]);
+                var i = e(t, 23, 1, [123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144]);
+                e(t, 22, 1, ["gold", "600", "Regular Pack", "Contains 3 random Tier 1 cards. There are 22 card possibilities in Tier 1.", "assets/images/packs/underworld1.png", "3", i, "white", n.getAppComponent().purchaseMultiplier, "2", "4"]);
+                var l = e(t, 26, 1, [123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144]);
+                e(t, 25, 1, ["gold", "1000", "Big Pack", "Contains 5 random Tier 1 cards. There are 22 card possibilities in Tier 1.", "assets/images/packs/underworld1.png", "5", l, "white", n.getAppComponent().purchaseMultiplier, "2", "4"]);
+                var s = e(t, 29, 1, [145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165]);
+                e(t, 28, 1, ["gold", "100000", "wood", "200000", "Mini War Pack", "Contains a random Tier 2 card. There are 21 card possibilities in Tier 2.", "assets/images/packs/underworld2.png", "1", s, "white", n.getAppComponent().purchaseMultiplier, "2", "4"]);
+                var o = e(t, 32, 1, [145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165]);
+                e(t, 31, 1, ["gold", "200000", "wood", "400000", "War Pack", "Contains 3 random Tier 2 cards. There are 21 card possibilities in Tier 2.", "assets/images/packs/underworld2.png", "3", o, "white", n.getAppComponent().purchaseMultiplier, "2", "4"]);
+                var a = e(t, 35, 1, [145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165]);
+                e(t, 34, 1, ["gold", "300000", "wood", "500000", "War Pack XL", "Contains 5 random Tier 2 cards. There are 21 card possibilities in Tier 2.", "assets/images/packs/underworld2.png", "5", a, "white", n.getAppComponent().purchaseMultiplier, "2", "4"]);
+                var u = e(t, 39, 1, [166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181]);
+                e(t, 38, 1, ["gold", "5000000", "wood", "1000000", "Mini Power Pack", "Contains a random Tier 3 card. There are 16 card possibilities in Tier 3.", "assets/images/packs/underworld3.png", "1", u, "white", n.getAppComponent().purchaseMultiplier, "2", "4"]);
+                var c = e(t, 42, 1, [166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181]);
+                e(t, 41, 1, ["gold", "12500000", "wood", "2500000", "Power Pack", "Contains 3 random Tier 3 cards. There are 16 card possibilities in Tier 3.", "assets/images/packs/underworld3.png", "3", c, "white", n.getAppComponent().purchaseMultiplier, "2", "4"]);
+                var d = e(t, 45, 1, [166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181]);
+                e(t, 44, 1, ["gold", "17500000", "wood", "3500000", "Power Pack", "Contains 5 random Tier 3 cards. There are 16 card possibilities in Tier 3.", "assets/images/packs/underworld3.png", "5", d, "white", n.getAppComponent().purchaseMultiplier, "2", "4"]),
+                e(t, 48, 0, n.getAppComponent().gameState.highestUnlockedArena < 5)
+            }, function(e, t) {
+                e(t, 2, 0, r["\u0275nov"](t, 8).ngClassUntouched, r["\u0275nov"](t, 8).ngClassTouched, r["\u0275nov"](t, 8).ngClassPristine, r["\u0275nov"](t, 8).ngClassDirty, r["\u0275nov"](t, 8).ngClassValid, r["\u0275nov"](t, 8).ngClassInvalid, r["\u0275nov"](t, 8).ngClassPending),
+                e(t, 10, 0, r["\u0275nov"](t, 15).ngClassUntouched, r["\u0275nov"](t, 15).ngClassTouched, r["\u0275nov"](t, 15).ngClassPristine, r["\u0275nov"](t, 15).ngClassDirty, r["\u0275nov"](t, 15).ngClassValid, r["\u0275nov"](t, 15).ngClassInvalid, r["\u0275nov"](t, 15).ngClassPending)
+            })
+        }
+        class fi {
             mouseOver() {
                 D.instance.showTooltip((this.isUnlocked ? "[X] " : "[ ] ") + this.achievementData.title + ": " + this.achievementData.description)
             }
@@ -33927,12 +35374,12 @@
                 D.instance.hideTooltip()
             }
         }
-        var ni = r["\u0275crt"]({
+        var pi = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function ri(e) {
+        function mi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "div", [["class", "achievement-icon"], ["style", "width: 100px; height: 100px;"]], [[2, "locked", null]], [[null, "mouseover"], [null, "mouseout"]], function(e, t, n) {
                 var r = !0
@@ -33947,36 +35394,36 @@
                 e(t, 1, 0, r["\u0275inlineInterpolate"](1, "assets/images/achievements/", n.achievementData.imageFilename, ""), n.achievementData.title, n.achievementData.title)
             })
         }
-        class ii {
+        class gi {
             constructor() {
                 this.subtab = "achievements"
             }
             ngOnInit() {
-                this.appComponent = q.instance
+                this.appComponent = Z.instance
             }
             getAllAchievements() {
-                return $
+                return G
             }
             achievementIsUnlocked(e) {
                 return W(e)
             }
         }
-        var li = r["\u0275crt"]({
+        var yi = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function si(e) {
+        function bi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 2, "div", [["class", "left-float"]], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](1, 0, null, null, 1, "achievement-icon", [], null, null, null, ri, ni)), r["\u0275did"](2, 49152, null, 0, ti, [], {
+            r["\u0275eld"](1, 0, null, null, 1, "achievement-icon", [], null, null, null, mi, pi)), r["\u0275did"](2, 49152, null, 0, fi, [], {
                 isUnlocked: [0, "isUnlocked"],
                 achievementData: [1, "achievementData"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.component.achievementIsUnlocked(t.context.$implicit.id), t.context.$implicit)
             }, null)
         }
-        function oi(e) {
+        function vi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 9, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "h2", [], null, null, null, null, null)), (e()(),
@@ -33986,13 +35433,13 @@
             r["\u0275eld"](5, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](6, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](7, 0, null, null, 2, "div", [["style", "width: 500px; height: 370px; overflow: auto;"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, si)), r["\u0275did"](9, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, bi)), r["\u0275did"](9, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 e(t, 9, 0, t.component.getAllAchievements())
             }, null)
         }
-        function ai(e) {
+        function wi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "a", [["style", "cursor: pointer; color: blue"]], null, [[null, "click"]], function(e, t, n) {
                 var r = !0;
@@ -34001,12 +35448,12 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Eternal Exodus"]))], null, null)
         }
-        function ui(e) {
+        function Ci(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "span", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Eternal Exodus"]))], null, null)
         }
-        function ci(e) {
+        function _i(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "a", [["style", "cursor: pointer; color: blue"]], null, [[null, "click"]], function(e, t, n) {
                 var r = !0;
@@ -34015,12 +35462,12 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Emerald Shores"]))], null, null)
         }
-        function di(e) {
+        function Si(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "span", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Emerald Shores"]))], null, null)
         }
-        function hi(e) {
+        function ki(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "a", [["style", "cursor: pointer; color: blue"]], null, [[null, "click"]], function(e, t, n) {
                 var r = !0;
@@ -34029,35 +35476,35 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Super Blackout"]))], null, null)
         }
-        function fi(e) {
+        function xi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "span", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Super Blackout"]))], null, null)
         }
-        function pi(e) {
+        function Ii(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 17, "div", [["style", "position: absolute; top: 70px; left: 20px;"]], [[2, "white-text", null]], null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "a", [["href", "http://fordesoft.com"], ["target", "_blank"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](2, 0, null, null, 0, "img", [["alt", "Fordesoft"], ["src", "assets/images/fordesoft.png"], ["title", "Fordesoft"], ["width", "150"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["\xa0\xa0\xa0\xa0 "])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ai)), r["\u0275did"](5, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, wi)), r["\u0275did"](5, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ui)), r["\u0275did"](7, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
-                ngIf: [0, "ngIf"]
-            }, null), (e()(),
-            r["\u0275ted"](-1, null, [" | "])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ci)), r["\u0275did"](10, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
-                ngIf: [0, "ngIf"]
-            }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, di)), r["\u0275did"](12, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ci)), r["\u0275did"](7, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275ted"](-1, null, [" | "])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, hi)), r["\u0275did"](15, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, _i)), r["\u0275did"](10, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, fi)), r["\u0275did"](17, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Si)), r["\u0275did"](12, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
+                ngIf: [0, "ngIf"]
+            }, null), (e()(),
+            r["\u0275ted"](-1, null, [" | "])), (e()(),
+            r["\u0275and"](16777216, null, null, 1, null, ki)), r["\u0275did"](15, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
+                ngIf: [0, "ngIf"]
+            }, null), (e()(),
+            r["\u0275and"](16777216, null, null, 1, null, xi)), r["\u0275did"](17, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -34071,7 +35518,7 @@
                 e(t, 0, 0, t.component.appComponent.arenaHasDarkBackground())
             })
         }
-        function mi(e) {
+        function Ei(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 14, "div", [["style", "padding: 30px;"]], [[2, "white-text", null]], null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "a", [["href", "http://www.eternalexodus.com/"], ["target", "_blank"]], null, null, null, null, null)), (e()(),
@@ -34091,7 +35538,7 @@
                 e(t, 0, 0, t.component.appComponent.arenaHasDarkBackground())
             })
         }
-        function gi(e) {
+        function Ti(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 15, "div", [["style", "padding: 30px;"]], [[2, "white-text", null]], null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "a", [["href", "http://www.fordesoft.com/games"], ["target", "_blank"]], null, null, null, null, null)), (e()(),
@@ -34112,7 +35559,7 @@
                 e(t, 0, 0, t.component.appComponent.arenaHasDarkBackground())
             })
         }
-        function yi(e) {
+        function Ai(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 18, "div", [["style", "padding: 30px;"]], [[2, "white-text", null]], null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "a", [["href", "http://www.fordesoft.com/games"], ["target", "_blank"]], null, null, null, null, null)), (e()(),
@@ -34136,7 +35583,7 @@
                 e(t, 0, 0, t.component.appComponent.arenaHasDarkBackground())
             })
         }
-        function bi(e) {
+        function Mi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 4, "div", [["class", "sub-tab-bar"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [["class", "sub-tab"]], [[2, "active", null]], [[null, "click"]], function(e, t, n) {
@@ -34152,19 +35599,19 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["More games by Josh Forde"])), (e()(),
             r["\u0275eld"](5, 0, null, null, 10, "div", [["style", "padding: 10px;"]], [[2, "white-text", null]], null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, oi)), r["\u0275did"](7, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, vi)), r["\u0275did"](7, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, pi)), r["\u0275did"](9, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ii)), r["\u0275did"](9, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, mi)), r["\u0275did"](11, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ei)), r["\u0275did"](11, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, gi)), r["\u0275did"](13, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ti)), r["\u0275did"](13, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, yi)), r["\u0275did"](15, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ai)), r["\u0275did"](15, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -34180,29 +35627,29 @@
                 e(t, 5, 0, n.appComponent.arenaHasDarkBackground())
             })
         }
-        class vi {
+        class Oi {
             constructor() {
                 this.purchaseMultiplier = 1
             }
             getAppComponent() {
-                return q.instance
+                return Z.instance
             }
             getPurchasableKongregateItems() {
-                return q.instance.kongregateMicrotransactionList
+                return Z.instance.kongregateMicrotransactionList
             }
             getIsOnKongregate() {
-                return q.instance.isOnKongregate
+                return Z.instance.isOnKongregate
             }
             purchaseKongregateItem(e) {
                 u.instance.buyMicrotransaction(e, null)
             }
         }
-        var wi = r["\u0275crt"]({
+        var Ri = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function _i(e) {
+        function Ni(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 9, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [["class", "kongregate-item-name"]], null, null, null, null, null)), (e()(),
@@ -34223,50 +35670,50 @@
                 e(t, 6, 0, t.context.$implicit.price)
             })
         }
-        function Ci(e) {
+        function Pi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Kongregate shop: "])), (e()(),
             r["\u0275eld"](2, 0, null, null, 2, "div", [["style", "display: flex;"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, _i)), r["\u0275did"](4, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, Ni)), r["\u0275did"](4, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 e(t, 4, 0, t.component.getPurchasableKongregateItems())
             }, null)
         }
-        function xi(e) {
+        function Di(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ci)), r["\u0275did"](1, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Pi)), r["\u0275did"](1, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 1, 0, t.component.getIsOnKongregate())
             }, null)
         }
-        var ki = r["\u0275crt"]({
+        var Fi = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function Si(e) {
+        function Vi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 0, "span", [], [[8, "innerHTML", 1]], null, null, null, null))], null, function(e, t) {
                 e(t, 0, 0, t.component.currentString)
             })
         }
-        var Ii = r["\u0275crt"]({
+        var ji = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function Ei(e) {
+        function Bi(e) {
             return r["\u0275vid"](0, [], null, null)
         }
-        var Ti = r["\u0275crt"]({
+        var Hi = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function Ai(e) {
+        function Li(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 3, "div", [["style", "display: flex"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 0, "img", [["class", "resource-icon"]], [[8, "src", 4]], null, null, null, null)), (e()(),
@@ -34277,19 +35724,19 @@
                 e(t, 2, 0, i)
             })
         }
-        function Oi(e) {
+        function Ui(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "strong", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Intro Realm:"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ai)), r["\u0275did"](4, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, Li)), r["\u0275did"](4, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 var n = t.component;
                 e(t, 4, 0, n.objectKeys(n.resourcesEarned.arena1))
             }, null)
         }
-        function Ni(e) {
+        function zi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 3, "div", [["style", "display: flex;"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 0, "img", [["class", "resource-icon"]], [[8, "src", 4]], null, null, null, null)), (e()(),
@@ -34300,19 +35747,19 @@
                 e(t, 2, 0, i)
             })
         }
-        function Ri(e) {
+        function Gi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "strong", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Haunted Woods:"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ni)), r["\u0275did"](4, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, zi)), r["\u0275did"](4, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 var n = t.component;
                 e(t, 4, 0, n.objectKeys(n.resourcesEarned.arena2))
             }, null)
         }
-        function Mi(e) {
+        function $i(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 3, "div", [["style", "display: flex;"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 0, "img", [["class", "resource-icon"]], [[8, "src", 4]], null, null, null, null)), (e()(),
@@ -34323,21 +35770,44 @@
                 e(t, 2, 0, i)
             })
         }
-        function Pi(e) {
+        function Wi(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "strong", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Underworld:"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Mi)), r["\u0275did"](4, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, $i)), r["\u0275did"](4, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 var n = t.component;
                 e(t, 4, 0, n.objectKeys(n.resourcesEarned.arena3))
             }, null)
         }
-        function Di(e) {
+        function Ki(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 16, "div", [["class", "offline-progress"]], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](0, 0, null, null, 3, "div", [["style", "display: flex;"]], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](1, 0, null, null, 0, "img", [["class", "resource-icon"]], [[8, "src", 4]], null, null, null, null)), (e()(),
+            r["\u0275ted"](2, null, [" ", " "])), r["\u0275ppd"](3, 1)], null, function(e, t) {
+                var n = t.component;
+                e(t, 1, 0, r["\u0275inlineInterpolate"](1, "assets/images/resources/", t.context.$implicit, ".png"));
+                var i = r["\u0275unv"](t, 2, 0, e(t, 3, 0, r["\u0275nov"](t.parent.parent.parent, 0), n.resourcesEarned.arena4[t.context.$implicit]));
+                e(t, 2, 0, i)
+            })
+        }
+        function Yi(e) {
+            return r["\u0275vid"](0, [(e()(),
+            r["\u0275eld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](1, 0, null, null, 1, "strong", [], null, null, null, null, null)), (e()(),
+            r["\u0275ted"](-1, null, ["Plains of War:"])), (e()(),
+            r["\u0275and"](16777216, null, null, 1, null, Ki)), r["\u0275did"](4, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+                ngForOf: [0, "ngForOf"]
+            }, null)], function(e, t) {
+                var n = t.component;
+                e(t, 4, 0, n.objectKeys(n.resourcesEarned.arena4))
+            }, null)
+        }
+        function qi(e) {
+            return r["\u0275vid"](0, [(e()(),
+            r["\u0275eld"](0, 0, null, null, 18, "div", [["class", "offline-progress"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 4, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["You were away for "])), (e()(),
             r["\u0275eld"](3, 0, null, null, 1, "strong", [], null, null, null, null, null)), (e()(),
@@ -34345,17 +35815,20 @@
             r["\u0275ted"](5, null, [" ", ""])), (e()(),
             r["\u0275eld"](6, 0, null, null, 1, "div", [["style", "margin-top: 30px; margin-bottom: 30px;"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["While you were away, you earned..."])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Oi)), r["\u0275did"](9, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ui)), r["\u0275did"](9, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ri)), r["\u0275did"](11, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Gi)), r["\u0275did"](11, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Pi)), r["\u0275did"](13, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Wi)), r["\u0275did"](13, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275eld"](14, 0, null, null, 2, "div", [], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](15, 0, null, null, 1, "button", [], null, [[null, "click"]], function(e, t, n) {
+            r["\u0275and"](16777216, null, null, 1, null, Yi)), r["\u0275did"](15, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
+                ngIf: [0, "ngIf"]
+            }, null), (e()(),
+            r["\u0275eld"](16, 0, null, null, 2, "div", [], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](17, 0, null, null, 1, "button", [], null, [[null, "click"]], function(e, t, n) {
                 var r = !0;
                 return "click" === t && (r = !1 !== e.component.pressedOk() && r),
                 r
@@ -34364,31 +35837,32 @@
                 var n = t.component;
                 e(t, 9, 0, n.resourcesEarned.arena1),
                 e(t, 11, 0, n.resourcesEarned.arena2),
-                e(t, 13, 0, n.resourcesEarned.arena3)
+                e(t, 13, 0, n.resourcesEarned.arena3),
+                e(t, 15, 0, n.resourcesEarned.arena4)
             }, function(e, t) {
                 var n = t.component;
                 e(t, 4, 0, n.timePassedString),
                 e(t, 5, 0, n.hitMaximumTime ? " (maximum away time reached!)" : "")
             })
         }
-        function Vi(e) {
+        function Qi(e) {
             return r["\u0275vid"](0, [r["\u0275pid"](0, j, []), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Di)), r["\u0275did"](2, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, qi)), r["\u0275did"](2, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.component.isVisible)
             }, null)
         }
-        var Fi = r["\u0275crt"]({
+        var Zi = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function ji(e) {
+        function Xi(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 3, "option", [], null, null, null, null, null)), r["\u0275did"](1, 147456, null, 0, tn, [r.ElementRef, r.Renderer2, [2, en]], {
+            r["\u0275eld"](0, 0, null, null, 3, "option", [], null, null, null, null, null)), r["\u0275did"](1, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [2, rn]], {
                 value: [0, "value"]
-            }, null), r["\u0275did"](2, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [8, null]], {
+            }, null), r["\u0275did"](2, 147456, null, 0, an, [r.ElementRef, r.Renderer2, [8, null]], {
                 value: [0, "value"]
             }, null), (e()(),
             r["\u0275ted"](3, null, [" ", " "]))], function(e, t) {
@@ -34398,7 +35872,7 @@
                 e(t, 3, 0, t.context.$implicit.name)
             })
         }
-        function Bi(e) {
+        function Ji(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "button", [], null, [[null, "click"]], function(e, t, n) {
                 var r = !0;
@@ -34407,7 +35881,7 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Delete selected layout"]))], null, null)
         }
-        function Hi(e) {
+        function el(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 15, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Slot to save in: "])), (e()(),
@@ -34419,23 +35893,23 @@
                 "ngModelChange" === t && (i = !1 !== (l.selectedLayoutIndex = n) && i),
                 "change" === t && (i = !1 !== l.selectedLayoutChanged() && i),
                 i
-            }, null, null)), r["\u0275did"](3, 16384, null, 0, en, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](3, 16384, null, 0, rn, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [en]), r["\u0275did"](5, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [rn]), r["\u0275did"](5, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](7, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
-            r["\u0275eld"](8, 0, null, null, 3, "option", [], null, null, null, null, null)), r["\u0275did"](9, 147456, null, 0, tn, [r.ElementRef, r.Renderer2, [2, en]], {
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](7, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
+            r["\u0275eld"](8, 0, null, null, 3, "option", [], null, null, null, null, null)), r["\u0275did"](9, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [2, rn]], {
                 value: [0, "value"]
-            }, null), r["\u0275did"](10, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [8, null]], {
+            }, null), r["\u0275did"](10, 147456, null, 0, an, [r.ElementRef, r.Renderer2, [8, null]], {
                 value: [0, "value"]
             }, null), (e()(),
             r["\u0275ted"](-1, null, ["(Save as new layout)"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ji)), r["\u0275did"](13, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, Xi)), r["\u0275did"](13, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Bi)), r["\u0275did"](15, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ji)), r["\u0275did"](15, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -34448,10 +35922,10 @@
                 e(t, 2, 0, r["\u0275nov"](t, 7).ngClassUntouched, r["\u0275nov"](t, 7).ngClassTouched, r["\u0275nov"](t, 7).ngClassPristine, r["\u0275nov"](t, 7).ngClassDirty, r["\u0275nov"](t, 7).ngClassValid, r["\u0275nov"](t, 7).ngClassInvalid, r["\u0275nov"](t, 7).ngClassPending)
             })
         }
-        function Li(e) {
+        function tl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 21, "div", [["class", "save-layout-dialog"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Hi)), r["\u0275did"](2, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, el)), r["\u0275did"](2, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275eld"](3, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
@@ -34467,17 +35941,17 @@
                 "compositionend" === t && (i = !1 !== r["\u0275nov"](e, 8)._compositionEnd(n.target.value) && i),
                 "ngModelChange" === t && (i = !1 !== (l.newLayoutName = n) && i),
                 i
-            }, null, null)), r["\u0275did"](8, 16384, null, 0, Mt, [r.Renderer2, r.ElementRef, [2, Rt]], null, null), r["\u0275did"](9, 540672, null, 0, Rn, [], {
+            }, null, null)), r["\u0275did"](8, 16384, null, 0, Ft, [r.Renderer2, r.ElementRef, [2, Dt]], null, null), r["\u0275did"](9, 540672, null, 0, Dn, [], {
                 maxlength: [0, "maxlength"]
-            }, null), r["\u0275prd"](1024, null, Ht, function(e) {
+            }, null), r["\u0275prd"](1024, null, zt, function(e) {
                 return [e]
-            }, [Rn]), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, [Dn]), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [Mt]), r["\u0275did"](12, 671744, null, 0, Nn, [[8, null], [6, Ht], [8, null], [6, Ot]], {
+            }, [Ft]), r["\u0275did"](12, 671744, null, 0, Pn, [[8, null], [6, zt], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](14, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](14, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275eld"](15, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](16, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](17, 0, null, null, 1, "button", [], [[8, "disabled", 0]], [[null, "click"]], function(e, t, n) {
@@ -34503,20 +35977,20 @@
                 e(t, 17, 0, 0 == n.newLayoutName.length)
             })
         }
-        function Ui(e) {
+        function nl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Li)), r["\u0275did"](1, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, tl)), r["\u0275did"](1, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 1, 0, t.component.isVisible)
             }, null)
         }
-        var zi = r["\u0275crt"]({
+        var rl = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function $i(e) {
+        function il(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 4, "div", [["class", "error-message"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 0, "div", [], [[8, "innerHTML", 1]], null, null, null, null)), (e()(),
@@ -34530,20 +36004,20 @@
                 e(t, 1, 0, t.component.getMessage())
             })
         }
-        function Gi(e) {
+        function ll(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275and"](16777216, null, null, 1, null, $i)), r["\u0275did"](1, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, il)), r["\u0275did"](1, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 1, 0, t.component.isVisible)
             }, null)
         }
-        var Wi = r["\u0275crt"]({
+        var sl = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function Yi(e) {
+        function ol(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Last chance to change your mind..."])), (e()(),
@@ -34555,7 +36029,7 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Permanently reset game"]))], null, null)
         }
-        function qi(e) {
+        function al(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 8, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Are you sure? EVERYTHING will be lost, and the game will return to its starting position."])), (e()(),
@@ -34568,13 +36042,13 @@
                 r
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Yes"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Yi)), r["\u0275did"](8, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ol)), r["\u0275did"](8, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 8, 0, t.component.showResetConfirmation2)
             }, null)
         }
-        function Ki(e) {
+        function ul(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 58, "div", [["class", "options-panel"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 6, "div", [["style", "margin-left: 400px; display: flex;"]], null, null, null, null, null)), (e()(),
@@ -34591,14 +36065,14 @@
                 "blur" === t && (i = !1 !== r["\u0275nov"](e, 9).onTouched() && i),
                 "ngModelChange" === t && (i = !1 !== (l.getAppComponent().gameState.enableSoundEffects = n) && i),
                 i
-            }, null, null)), r["\u0275did"](9, 16384, null, 0, Nt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](9, 16384, null, 0, Pt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [Nt]), r["\u0275did"](11, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Pt]), r["\u0275did"](11, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 name: [0, "name"],
                 model: [1, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](13, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](13, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275eld"](14, 0, null, null, 1, "label", [["for", "enablesound"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Enable sound effects"])), (e()(),
             r["\u0275eld"](16, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
@@ -34611,14 +36085,14 @@
                 "ngModelChange" === t && (i = !1 !== (l.getAppComponent().gameState.enableMusic = n) && i),
                 "change" === t && (i = !1 !== l.musicSettingChanged() && i),
                 i
-            }, null, null)), r["\u0275did"](19, 16384, null, 0, Nt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](19, 16384, null, 0, Pt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [Nt]), r["\u0275did"](21, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Pt]), r["\u0275did"](21, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 name: [0, "name"],
                 model: [1, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](23, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](23, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275eld"](24, 0, null, null, 1, "label", [["for", "enablemusic"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Enable music"])), (e()(),
             r["\u0275eld"](26, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
@@ -34630,14 +36104,14 @@
                 "blur" === t && (i = !1 !== r["\u0275nov"](e, 29).onTouched() && i),
                 "ngModelChange" === t && (i = !1 !== (l.getAppComponent().gameState.enableAnimations = n) && i),
                 i
-            }, null, null)), r["\u0275did"](29, 16384, null, 0, Nt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](29, 16384, null, 0, Pt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [Nt]), r["\u0275did"](31, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Pt]), r["\u0275did"](31, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 name: [0, "name"],
                 model: [1, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](33, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](33, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275eld"](34, 0, null, null, 1, "label", [["for", "enableanimations"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Enable animations"])), (e()(),
             r["\u0275eld"](36, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
@@ -34668,7 +36142,7 @@
                 r
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Reset game"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, qi)), r["\u0275did"](53, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, al)), r["\u0275did"](53, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275eld"](54, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
@@ -34691,20 +36165,20 @@
                 e(t, 28, 0, r["\u0275nov"](t, 33).ngClassUntouched, r["\u0275nov"](t, 33).ngClassTouched, r["\u0275nov"](t, 33).ngClassPristine, r["\u0275nov"](t, 33).ngClassDirty, r["\u0275nov"](t, 33).ngClassValid, r["\u0275nov"](t, 33).ngClassInvalid, r["\u0275nov"](t, 33).ngClassPending)
             })
         }
-        function Qi(e) {
+        function cl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ki)), r["\u0275did"](1, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ul)), r["\u0275did"](1, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 1, 0, t.component.isVisible)
             }, null)
         }
-        var Zi = r["\u0275crt"]({
+        var dl = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function Xi(e) {
+        function hl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 5, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "h3", [], null, null, null, null, null)), (e()(),
@@ -34717,9 +36191,19 @@
             r["\u0275ted"](-1, null, ["Upgrade with 5 Kreds"])), (e()(),
             r["\u0275eld"](5, 0, null, null, 0, "br", [], null, null, null, null, null))], null, null)
         }
-        function Ji(e) {
+        function fl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 33, "div", [["class", "upgrade-window"]], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](1, 0, null, null, 1, "button", [], null, [[null, "click"]], function(e, t, n) {
+                var r = !0;
+                return "click" === t && (r = !1 !== e.component.reduceLevel() && r),
+                r
+            }, null, null)), (e()(),
+            r["\u0275ted"](-1, null, ["Downgrade"]))], null, null)
+        }
+        function pl(e) {
+            return r["\u0275vid"](0, [(e()(),
+            r["\u0275eld"](0, 0, null, null, 37, "div", [["class", "upgrade-window"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "h3", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Current level"])), (e()(),
             r["\u0275ted"](3, null, [" Lv. ", " "])), (e()(),
@@ -34757,19 +36241,26 @@
             r["\u0275ted"](-1, null, [" You currently have "])), (e()(),
             r["\u0275eld"](25, 0, null, null, 0, "img", [["alt", "Gem"], ["class", "resource-icon"], ["src", "assets/images/resources/gem.png"], ["title", "Gem"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](26, null, [" ", ". "])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Xi)), r["\u0275did"](28, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, hl)), r["\u0275did"](28, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275eld"](29, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](30, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](31, 0, null, null, 2, "div", [], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](32, 0, null, null, 1, "button", [], null, [[null, "click"]], function(e, t, n) {
+            r["\u0275and"](16777216, null, null, 1, null, fl)), r["\u0275did"](32, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
+                ngIf: [0, "ngIf"]
+            }, null), (e()(),
+            r["\u0275eld"](33, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](34, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](35, 0, null, null, 2, "div", [], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](36, 0, null, null, 1, "button", [], null, [[null, "click"]], function(e, t, n) {
                 var r = !0;
                 return "click" === t && (r = !1 !== e.component.pressedOk() && r),
                 r
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Close"]))], function(e, t) {
-                e(t, 28, 0, t.component.appComponent.showPremiumShop)
+                var n = t.component;
+                e(t, 28, 0, n.appComponent.showPremiumShop),
+                e(t, 32, 0, n.isMonsterCard && n.appComponent.getCurrentCardRank(n.arenaNumber, n.cardId) > 1)
             }, function(e, t) {
                 var n = t.component;
                 e(t, 3, 0, n.appComponent.getCurrentCardRank(n.arenaNumber, n.cardId));
@@ -34778,20 +36269,20 @@
                 e(t, 26, 0, n.gemCount())
             })
         }
-        function el(e) {
+        function ml(e) {
             return r["\u0275vid"](0, [r["\u0275pid"](0, j, []), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ji)), r["\u0275did"](2, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, pl)), r["\u0275did"](2, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.component.isVisible)
             }, null)
         }
-        var tl = r["\u0275crt"]({
+        var gl = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function nl(e) {
+        function yl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 10, "div", [["class", "achievement-shower"]], [[8, "style", 2]], null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [["style", "float: right; font-size: 10px; padding-left: 80px;"]], null, null, null, null, null)), (e()(),
@@ -34811,28 +36302,28 @@
                 e(t, 10, 0, n.currentAchievement.description)
             })
         }
-        function rl(e) {
+        function bl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275and"](16777216, null, null, 1, null, nl)), r["\u0275did"](1, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, yl)), r["\u0275did"](1, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 1, 0, null != t.component.currentAchievement)
             }, null)
         }
-        var il = r["\u0275crt"]({
+        var vl = r["\u0275crt"]({
             encapsulation: 2,
             styles: [],
             data: {}
         });
-        function ll(e) {
+        function wl(e) {
             return r["\u0275vid"](0, [], null, null)
         }
-        var sl = r["\u0275crt"]({
+        var Cl = r["\u0275crt"]({
             encapsulation: 0,
             styles: [[".header[_ngcontent-%COMP%]{width:100%;margin:0 0 10px;border:2px solid #000;position:absolute;display:flex;top:0;left:0;background:#5b3723;color:#fff}.header-resource[_ngcontent-%COMP%]{min-width:250px;display:flex}.header-resource-small[_ngcontent-%COMP%]{min-width:170px}.header-arena-selector[_ngcontent-%COMP%]{width:200px}.main-container[_ngcontent-%COMP%]{width:100%;margin:0;position:absolute;top:30px;left:0;-ms-user-select:none;user-select:none;-moz-user-select:none;-webkit-user-select:none}.card[_ngcontent-%COMP%]{width:100px;height:140px}.tooltip-container[_ngcontent-%COMP%]{text-align:center;width:100%;height:20px;border:2px solid #000;position:absolute;top:559px;left:0;background:#5b3723;color:#fff}.collection-controls-container[_ngcontent-%COMP%], .playmat-controls-container[_ngcontent-%COMP%]{position:absolute;top:452px;height:55px;padding:5px;background:#5b3723;border:2px solid #3f271a;border-radius:2px}.playmat-controls-container[_ngcontent-%COMP%]{left:10px;width:270px}.collection-controls-container[_ngcontent-%COMP%]{left:310px;width:300px}.cards-in-play-container[_ngcontent-%COMP%]{display:flex}.card-collection-container[_ngcontent-%COMP%]{position:absolute;top:35px;left:305px;width:330px;height:410px;display:block;overflow-y:auto}.card-collection-controls[_ngcontent-%COMP%]{display:flex;position:absolute;top:367px;left:303px;width:268px;height:40px;z-index:1000;background:#5b3723;border:3px solid #2b2016;border-radius:1px;padding:5px}"]],
             data: {}
         });
-        function ol(e) {
+        function _l(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 6, "div", [["class", "header-resource"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (e()(),
@@ -34845,12 +36336,12 @@
                 e(t, 4, 0, i, l)
             })
         }
-        function al(e) {
+        function Sl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "div", [["class", "header-resource"]], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" \xa0 "]))], null, null)
         }
-        function ul(e) {
+        function kl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 6, "div", [["class", "header-resource"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (e()(),
@@ -34864,7 +36355,7 @@
                 e(t, 4, 0, i, l, s)
             })
         }
-        function cl(e) {
+        function xl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 6, "div", [["class", "header-resource"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (e()(),
@@ -34877,7 +36368,7 @@
                 e(t, 4, 0, i, l)
             })
         }
-        function dl(e) {
+        function Il(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 6, "div", [["class", "header-resource header-resource-small"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (e()(),
@@ -34891,7 +36382,7 @@
                 e(t, 4, 0, i, l, s)
             })
         }
-        function hl(e) {
+        function El(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 6, "div", [["class", "header-resource header-resource-small"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (e()(),
@@ -34905,7 +36396,7 @@
                 e(t, 4, 0, i, l, s)
             })
         }
-        function fl(e) {
+        function Tl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 6, "div", [["class", "header-resource header-resource-small"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (e()(),
@@ -34919,7 +36410,7 @@
                 e(t, 4, 0, i, l, s)
             })
         }
-        function pl(e) {
+        function Al(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 5, "div", [["class", "header-resource"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (e()(),
@@ -34931,7 +36422,7 @@
                 e(t, 4, 0, i, n.getEstimatedResourcePerSecondForBattleArena(4, "gold"))
             })
         }
-        function ml(e) {
+        function Ml(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 5, "div", [["class", "header-resource"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (e()(),
@@ -34943,11 +36434,11 @@
                 e(t, 4, 0, i, n.getEstimatedResourcePerSecondForBattleArena(4, "wood"))
             })
         }
-        function gl(e) {
+        function Ol(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 3, "option", [], null, null, null, null, null)), r["\u0275did"](1, 147456, null, 0, tn, [r.ElementRef, r.Renderer2, [2, en]], {
+            r["\u0275eld"](0, 0, null, null, 3, "option", [], null, null, null, null, null)), r["\u0275did"](1, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [2, rn]], {
                 value: [0, "value"]
-            }, null), r["\u0275did"](2, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [8, null]], {
+            }, null), r["\u0275did"](2, 147456, null, 0, an, [r.ElementRef, r.Renderer2, [8, null]], {
                 value: [0, "value"]
             }, null), (e()(),
             r["\u0275ted"](3, null, ["", ""]))], function(e, t) {
@@ -34957,7 +36448,7 @@
                 e(t, 3, 0, t.context.$implicit.name)
             })
         }
-        function yl(e) {
+        function Rl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 8, "div", [["class", "header-arena-selector"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 7, "select", [], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "change"], [null, "blur"]], function(e, t, n) {
@@ -34968,14 +36459,14 @@
                 "ngModelChange" === t && (i = !1 !== (l.gameState.selectedArenaNumber = n) && i),
                 "change" === t && (i = !1 !== l.arenaSelectionChanged() && i),
                 i
-            }, null, null)), r["\u0275did"](2, 16384, null, 0, en, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](2, 16384, null, 0, rn, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [en]), r["\u0275did"](4, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [rn]), r["\u0275did"](4, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](6, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, gl)), r["\u0275did"](8, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](6, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
+            r["\u0275and"](16777216, null, null, 1, null, Ol)), r["\u0275did"](8, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -34985,7 +36476,7 @@
                 e(t, 1, 0, r["\u0275nov"](t, 6).ngClassUntouched, r["\u0275nov"](t, 6).ngClassTouched, r["\u0275nov"](t, 6).ngClassPristine, r["\u0275nov"](t, 6).ngClassDirty, r["\u0275nov"](t, 6).ngClassValid, r["\u0275nov"](t, 6).ngClassInvalid, r["\u0275nov"](t, 6).ngClassPending)
             })
         }
-        function bl(e) {
+        function Nl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "div", [["class", "tab"]], [[2, "active", null]], [[null, "click"]], function(e, t, n) {
                 var r = !0
@@ -34998,7 +36489,7 @@
                 e(t, 0, 0, "premium" == t.component.currentTab)
             })
         }
-        function vl(e) {
+        function Pl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "div", [["class", "tab"]], [[2, "active", null]], [[null, "click"]], function(e, t, n) {
                 var r = !0
@@ -35011,7 +36502,7 @@
                 e(t, 0, 0, "debug" == t.component.currentTab)
             })
         }
-        function wl(e) {
+        function Dl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 2, "div", [["style", "margin-left: 90px; margin-top: 3px;"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "button", [], null, [[null, "click"], [null, "mouseover"], [null, "mouseout"]], function(e, t, n) {
@@ -35024,9 +36515,9 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Upgrade"]))], null, null)
         }
-        function _l(e) {
+        function Fl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, zn, jn)), r["\u0275did"](1, 49152, null, 0, Fn, [mt], {
+            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, Wn, Ln)), r["\u0275did"](1, 49152, null, 0, Hn, [bt], {
                 arenaNumber: [0, "arenaNumber"],
                 slotNumber: [1, "slotNumber"],
                 isUnlocked: [2, "isUnlocked"],
@@ -35037,9 +36528,9 @@
                 e(t, 1, 0, 1, t.parent.context.index, !0, t.component.isSelectingEmptySlot, t.parent.context.$implicit.x, t.parent.context.$implicit.y)
             }, null)
         }
-        function Cl(e) {
+        function Vl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, zn, jn)), r["\u0275did"](1, 49152, null, 0, Fn, [mt], {
+            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, Wn, Ln)), r["\u0275did"](1, 49152, null, 0, Hn, [bt], {
                 arenaNumber: [0, "arenaNumber"],
                 slotNumber: [1, "slotNumber"],
                 isUnlocked: [2, "isUnlocked"],
@@ -35051,9 +36542,9 @@
                 e(t, 1, 0, 1, t.parent.context.index, !1, t.component.getUnlockSlotText(t.parent.context.$implicit), !0, t.parent.context.$implicit.x, t.parent.context.$implicit.y)
             }, null)
         }
-        function xl(e) {
+        function jl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, xr, gr)), r["\u0275did"](1, 49152, null, 0, mr, [mt, j], {
+            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, Or, _r)), r["\u0275did"](1, 245760, null, 0, Cr, [bt, j], {
                 clickable: [0, "clickable"],
                 cardData: [1, "cardData"],
                 slotNumber: [2, "slotNumber"],
@@ -35066,16 +36557,16 @@
                 e(t, 1, 0, !0, n.GetCardById(t.parent.context.$implicit.cardInSlot.id), t.parent.context.index, 1, t.parent.context.$implicit.x, t.parent.context.$implicit.y, n.getCurrentCardRank(n.gameState.selectedArenaNumber, t.parent.context.$implicit.cardInSlot.id))
             }, null)
         }
-        function kl(e) {
+        function Bl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 6, "div", [], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, _l)), r["\u0275did"](2, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Fl)), r["\u0275did"](2, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Cl)), r["\u0275did"](4, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Vl)), r["\u0275did"](4, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, xl)), r["\u0275did"](6, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, jl)), r["\u0275did"](6, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.context.$implicit.slotIsUnlocked && null == t.context.$implicit.cardInSlot),
@@ -35083,18 +36574,18 @@
                 e(t, 6, 0, null != t.context.$implicit.cardInSlot)
             }, null)
         }
-        function Sl(e) {
+        function Hl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 2, "div", [["class", "cards-in-play-container"], ["style", "display: block;"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, kl)), r["\u0275did"](2, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, Bl)), r["\u0275did"](2, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.component.gameState.arena1.cardSlots)
             }, null)
         }
-        function Il(e) {
+        function Ll(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, zn, jn)), r["\u0275did"](1, 49152, null, 0, Fn, [mt], {
+            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, Wn, Ln)), r["\u0275did"](1, 49152, null, 0, Hn, [bt], {
                 arenaNumber: [0, "arenaNumber"],
                 slotNumber: [1, "slotNumber"],
                 isUnlocked: [2, "isUnlocked"],
@@ -35106,9 +36597,9 @@
                 e(t, 1, 0, 2, t.parent.context.index, !0, t.component.isSelectingEmptySlot, t.parent.context.$implicit.x, t.parent.context.$implicit.y, 4)
             }, null)
         }
-        function El(e) {
+        function Ul(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, zn, jn)), r["\u0275did"](1, 49152, null, 0, Fn, [mt], {
+            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, Wn, Ln)), r["\u0275did"](1, 49152, null, 0, Hn, [bt], {
                 arenaNumber: [0, "arenaNumber"],
                 slotNumber: [1, "slotNumber"],
                 isUnlocked: [2, "isUnlocked"],
@@ -35121,9 +36612,9 @@
                 e(t, 1, 0, 2, t.parent.context.index, !1, t.component.getUnlockSlotText(t.parent.context.$implicit), !0, t.parent.context.$implicit.x, t.parent.context.$implicit.y, 4)
             }, null)
         }
-        function Tl(e) {
+        function zl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, xr, gr)), r["\u0275did"](1, 49152, null, 0, mr, [mt, j], {
+            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, Or, _r)), r["\u0275did"](1, 245760, null, 0, Cr, [bt, j], {
                 clickable: [0, "clickable"],
                 cardData: [1, "cardData"],
                 slotNumber: [2, "slotNumber"],
@@ -35137,16 +36628,16 @@
                 e(t, 1, 0, !0, n.GetCardById(t.parent.context.$implicit.cardInSlot.id), t.parent.context.index, 2, t.parent.context.$implicit.x, t.parent.context.$implicit.y, 4, n.getCurrentCardRank(n.gameState.selectedArenaNumber, t.parent.context.$implicit.cardInSlot.id))
             }, null)
         }
-        function Al(e) {
+        function Gl(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 6, "div", [], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Il)), r["\u0275did"](2, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ll)), r["\u0275did"](2, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, El)), r["\u0275did"](4, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ul)), r["\u0275did"](4, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Tl)), r["\u0275did"](6, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, zl)), r["\u0275did"](6, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.context.$implicit.slotIsUnlocked && null == t.context.$implicit.cardInSlot),
@@ -35154,18 +36645,18 @@
                 e(t, 6, 0, null != t.context.$implicit.cardInSlot)
             }, null)
         }
-        function Ol(e) {
+        function $l(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 2, "div", [["class", "cards-in-play-container card-scale-small"], ["style", "display: block;"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Al)), r["\u0275did"](2, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, Gl)), r["\u0275did"](2, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.component.gameState.arena2.cardSlots)
             }, null)
         }
-        function Nl(e) {
+        function Wl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, zn, jn)), r["\u0275did"](1, 49152, null, 0, Fn, [mt], {
+            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, Wn, Ln)), r["\u0275did"](1, 49152, null, 0, Hn, [bt], {
                 arenaNumber: [0, "arenaNumber"],
                 slotNumber: [1, "slotNumber"],
                 isUnlocked: [2, "isUnlocked"],
@@ -35177,9 +36668,9 @@
                 e(t, 1, 0, 3, t.parent.context.index, !0, t.component.isSelectingEmptySlot, t.parent.context.$implicit.x, t.parent.context.$implicit.y, 5)
             }, null)
         }
-        function Rl(e) {
+        function Kl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, zn, jn)), r["\u0275did"](1, 49152, null, 0, Fn, [mt], {
+            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, Wn, Ln)), r["\u0275did"](1, 49152, null, 0, Hn, [bt], {
                 arenaNumber: [0, "arenaNumber"],
                 slotNumber: [1, "slotNumber"],
                 isUnlocked: [2, "isUnlocked"],
@@ -35192,9 +36683,9 @@
                 e(t, 1, 0, 3, t.parent.context.index, !1, t.component.getUnlockSlotText(t.parent.context.$implicit), !0, t.parent.context.$implicit.x, t.parent.context.$implicit.y, 5)
             }, null)
         }
-        function Ml(e) {
+        function Yl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, xr, gr)), r["\u0275did"](1, 49152, null, 0, mr, [mt, j], {
+            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, Or, _r)), r["\u0275did"](1, 245760, null, 0, Cr, [bt, j], {
                 clickable: [0, "clickable"],
                 cardData: [1, "cardData"],
                 slotNumber: [2, "slotNumber"],
@@ -35208,16 +36699,16 @@
                 e(t, 1, 0, !0, n.GetCardById(t.parent.context.$implicit.cardInSlot.id), t.parent.context.index, 3, t.parent.context.$implicit.x, t.parent.context.$implicit.y, 5, n.getCurrentCardRank(n.gameState.selectedArenaNumber, t.parent.context.$implicit.cardInSlot.id))
             }, null)
         }
-        function Pl(e) {
+        function ql(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 6, "div", [], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Nl)), r["\u0275did"](2, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Wl)), r["\u0275did"](2, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Rl)), r["\u0275did"](4, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Kl)), r["\u0275did"](4, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ml)), r["\u0275did"](6, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Yl)), r["\u0275did"](6, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.context.$implicit.slotIsUnlocked && null == t.context.$implicit.cardInSlot),
@@ -35225,18 +36716,18 @@
                 e(t, 6, 0, null != t.context.$implicit.cardInSlot)
             }, null)
         }
-        function Dl(e) {
+        function Ql(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 2, "div", [["class", "cards-in-play-container card-scale-smallest"], ["style", "display: block;"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Pl)), r["\u0275did"](2, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, ql)), r["\u0275did"](2, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.component.gameState.arena3.cardSlots)
             }, null)
         }
-        function Vl(e) {
+        function Zl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, zn, jn)), r["\u0275did"](1, 49152, null, 0, Fn, [mt], {
+            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, Wn, Ln)), r["\u0275did"](1, 49152, null, 0, Hn, [bt], {
                 arenaNumber: [0, "arenaNumber"],
                 slotNumber: [1, "slotNumber"],
                 isUnlocked: [2, "isUnlocked"],
@@ -35249,9 +36740,9 @@
                 e(t, 1, 0, 4, t.parent.context.index, !0, t.component.isSelectingEmptySlot, t.parent.context.$implicit.x, t.parent.context.$implicit.y, 4, t.parent.context.$implicit.slotType)
             }, null)
         }
-        function Fl(e) {
+        function Xl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, zn, jn)), r["\u0275did"](1, 49152, null, 0, Fn, [mt], {
+            r["\u0275eld"](0, 0, null, null, 1, "empty-card-slot", [], null, null, null, Wn, Ln)), r["\u0275did"](1, 49152, null, 0, Hn, [bt], {
                 arenaNumber: [0, "arenaNumber"],
                 slotNumber: [1, "slotNumber"],
                 isUnlocked: [2, "isUnlocked"],
@@ -35265,9 +36756,9 @@
                 e(t, 1, 0, 4, t.parent.context.index, !1, t.component.getUnlockSlotText(t.parent.context.$implicit), !0, t.parent.context.$implicit.x, t.parent.context.$implicit.y, 4, t.parent.context.$implicit.slotType)
             }, null)
         }
-        function jl(e) {
+        function Jl(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, xr, gr)), r["\u0275did"](1, 49152, null, 0, mr, [mt, j], {
+            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, Or, _r)), r["\u0275did"](1, 245760, null, 0, Cr, [bt, j], {
                 clickable: [0, "clickable"],
                 cardData: [1, "cardData"],
                 slotNumber: [2, "slotNumber"],
@@ -35276,22 +36767,25 @@
                 y: [5, "y"],
                 cardsPerRow: [6, "cardsPerRow"],
                 rank: [7, "rank"],
-                currentHP: [8, "currentHP"]
+                currentHP: [8, "currentHP"],
+                damageTakenThisRound: [9, "damageTakenThisRound"],
+                foughtInLastTick: [10, "foughtInLastTick"],
+                droppedLootLastTick: [11, "droppedLootLastTick"]
             }, null)], function(e, t) {
                 var n = t.component;
-                e(t, 1, 0, !0, n.GetCardById(t.parent.context.$implicit.cardInSlot.id), t.parent.context.index, 4, t.parent.context.$implicit.x, t.parent.context.$implicit.y, 4, n.getCurrentCardRank(n.gameState.selectedArenaNumber, t.parent.context.$implicit.cardInSlot.id), n.getCurrentCardHP(n.gameState.selectedArenaNumber, t.parent.context.index))
+                e(t, 1, 1, [!0, n.GetCardById(t.parent.context.$implicit.cardInSlot.id), t.parent.context.index, 4, t.parent.context.$implicit.x, t.parent.context.$implicit.y, 4, n.getCurrentCardRank(n.gameState.selectedArenaNumber, t.parent.context.$implicit.cardInSlot.id), n.getCurrentCardHP(n.gameState.selectedArenaNumber, t.parent.context.index), t.parent.context.$implicit.damageTakenThisRound, t.parent.context.$implicit.foughtInLastTick, t.parent.context.$implicit.droppedLootLastTick])
             }, null)
         }
-        function Bl(e) {
+        function es(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 6, "div", [], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Vl)), r["\u0275did"](2, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Zl)), r["\u0275did"](2, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Fl)), r["\u0275did"](4, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Xl)), r["\u0275did"](4, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, jl)), r["\u0275did"](6, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Jl)), r["\u0275did"](6, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.context.$implicit.slotIsUnlocked && null == t.context.$implicit.cardInSlot),
@@ -35299,20 +36793,20 @@
                 e(t, 6, 0, null != t.context.$implicit.cardInSlot)
             }, null)
         }
-        function Hl(e) {
+        function ts(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 2, "div", [["class", "cards-in-play-container card-scale-small"], ["style", "display: block;"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Bl)), r["\u0275did"](2, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, es)), r["\u0275did"](2, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 e(t, 2, 0, t.component.gameState.arena4.cardSlots)
             }, null)
         }
-        function Ll(e) {
+        function ns(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 3, "option", [], null, null, null, null, null)), r["\u0275did"](1, 147456, null, 0, tn, [r.ElementRef, r.Renderer2, [2, en]], {
+            r["\u0275eld"](0, 0, null, null, 3, "option", [], null, null, null, null, null)), r["\u0275did"](1, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [2, rn]], {
                 value: [0, "value"]
-            }, null), r["\u0275did"](2, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [8, null]], {
+            }, null), r["\u0275did"](2, 147456, null, 0, an, [r.ElementRef, r.Renderer2, [8, null]], {
                 value: [0, "value"]
             }, null), (e()(),
             r["\u0275ted"](3, null, [" ", " "]))], function(e, t) {
@@ -35322,7 +36816,7 @@
                 e(t, 3, 0, t.context.$implicit.name)
             })
         }
-        function Ul(e) {
+        function rs(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 17, "div", [["style", "display: flex; margin-top: 5px;"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (e()(),
@@ -35338,20 +36832,20 @@
                 "ngModelChange" === t && (i = !1 !== (l.selectedLayoutSlotToLoad = n) && i),
                 "change" === t && (i = !1 !== l.loadLayout() && i),
                 i
-            }, null, null)), r["\u0275did"](7, 16384, null, 0, en, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](7, 16384, null, 0, rn, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [en]), r["\u0275did"](9, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [rn]), r["\u0275did"](9, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](11, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
-            r["\u0275eld"](12, 0, null, null, 3, "option", [["value", "-1"]], null, null, null, null, null)), r["\u0275did"](13, 147456, null, 0, tn, [r.ElementRef, r.Renderer2, [2, en]], {
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](11, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
+            r["\u0275eld"](12, 0, null, null, 3, "option", [["value", "-1"]], null, null, null, null, null)), r["\u0275did"](13, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [2, rn]], {
                 value: [0, "value"]
-            }, null), r["\u0275did"](14, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [8, null]], {
+            }, null), r["\u0275did"](14, 147456, null, 0, an, [r.ElementRef, r.Renderer2, [8, null]], {
                 value: [0, "value"]
             }, null), (e()(),
             r["\u0275ted"](-1, null, ["---"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ll)), r["\u0275did"](17, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, ns)), r["\u0275did"](17, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -35363,19 +36857,19 @@
                 e(t, 6, 0, r["\u0275nov"](t, 11).ngClassUntouched, r["\u0275nov"](t, 11).ngClassTouched, r["\u0275nov"](t, 11).ngClassPristine, r["\u0275nov"](t, 11).ngClassDirty, r["\u0275nov"](t, 11).ngClassValid, r["\u0275nov"](t, 11).ngClassInvalid, r["\u0275nov"](t, 11).ngClassPending)
             })
         }
-        function zl(e) {
+        function is(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 18, "div", [], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Sl)), r["\u0275did"](2, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Hl)), r["\u0275did"](2, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ol)), r["\u0275did"](4, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, $l)), r["\u0275did"](4, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Dl)), r["\u0275did"](6, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ql)), r["\u0275did"](6, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Hl)), r["\u0275did"](8, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ts)), r["\u0275did"](8, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275eld"](9, 0, null, null, 9, "div", [["class", "playmat-controls-container white-text"]], null, null, null, null, null)), (e()(),
@@ -35394,7 +36888,7 @@
                 r
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Clear board"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ul)), r["\u0275did"](18, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, rs)), r["\u0275did"](18, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -35405,7 +36899,7 @@
                 e(t, 18, 0, n.gameState.savedLayouts["arena" + n.gameState.selectedArenaNumber].length > 0)
             }, null)
         }
-        function $l(e) {
+        function ls(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 12, "div", [], [[2, "white-text", null]], null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
@@ -35427,7 +36921,7 @@
                 e(t, 0, 0, t.component.arenaHasDarkBackground())
             })
         }
-        function Gl(e) {
+        function ss(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 7, "div", [], [[2, "white-text", null]], null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 0, "br", [], null, null, null, null, null)), (e()(),
@@ -35440,23 +36934,23 @@
                 e(t, 0, 0, t.component.arenaHasDarkBackground())
             })
         }
-        function Wl(e) {
+        function os(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "span", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" To play a card: click it, or drag it to an open slot on the left. "]))], null, null)
         }
-        function Yl(e) {
+        function as(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "span", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, [" Click a slot to the left. "]))], null, null)
         }
-        function ql(e) {
+        function us(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Wl)), r["\u0275did"](2, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, os)), r["\u0275did"](2, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Yl)), r["\u0275did"](4, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, as)), r["\u0275did"](4, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -35464,9 +36958,9 @@
                 e(t, 4, 0, n.isSelectingEmptySlot)
             }, null)
         }
-        function Kl(e) {
+        function cs(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, xr, gr)), r["\u0275did"](1, 49152, null, 0, mr, [mt, j], {
+            r["\u0275eld"](0, 0, null, null, 1, "card", [], null, null, null, Or, _r)), r["\u0275did"](1, 245760, null, 0, Cr, [bt, j], {
                 clickable: [0, "clickable"],
                 isCollectionCard: [1, "isCollectionCard"],
                 cardData: [2, "cardData"],
@@ -35481,7 +36975,7 @@
                 e(t, 1, 0, !0, !0, n.GetCardById(t.context.$implicit), t.context.index, n.gameState.cardCollection["arena" + n.gameState.selectedArenaNumber][t.context.$implicit], 1 == n.gameState.selectedArenaNumber ? 3 : 4, n.isSelectingEmptySlot && n.cardIdToPutInEmptySlot == t.context.$implicit, 1 == n.gameState.selectedArenaNumber ? 3 : 2, n.getCurrentCardRank(n.gameState.selectedArenaNumber, t.context.$implicit))
             }, null)
         }
-        function Ql(e) {
+        function ds(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 10, "div", [["class", "card-collection-container"], ["droppable", ""]], null, [[null, "onDrop"], [null, "drop"]], function(e, t, n) {
                 var i = !0
@@ -35489,20 +36983,20 @@
                 return "drop" === t && (i = !1 !== r["\u0275nov"](e, 1).drop(n) && i),
                 "onDrop" === t && (i = !1 !== l.droppedCardOntoCollection(n) && i),
                 i
-            }, null, null)), r["\u0275did"](1, 212992, null, 0, Dn.Droppable, [r.ElementRef, r.Renderer2, Vn.NgDragDropService, r.NgZone], null, {
+            }, null, null)), r["\u0275did"](1, 212992, null, 0, jn.Droppable, [r.ElementRef, r.Renderer2, Bn.NgDragDropService, r.NgZone], null, {
                 onDrop: "onDrop"
             }), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, $l)), r["\u0275did"](3, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ls)), r["\u0275did"](3, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Gl)), r["\u0275did"](5, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ss)), r["\u0275did"](5, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ql)), r["\u0275did"](7, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, us)), r["\u0275did"](7, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275eld"](8, 0, null, null, 2, "div", [["class", "card-collection"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Kl)), r["\u0275did"](10, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            r["\u0275and"](16777216, null, null, 1, null, cs)), r["\u0275did"](10, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -35513,11 +37007,11 @@
                 e(t, 10, 0, n.gameState.cardCollectionOrders["arena" + n.gameState.selectedArenaNumber])
             }, null)
         }
-        function Zl(e) {
+        function hs(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 3, "option", [], null, null, null, null, null)), r["\u0275did"](1, 147456, null, 0, tn, [r.ElementRef, r.Renderer2, [2, en]], {
+            r["\u0275eld"](0, 0, null, null, 3, "option", [], null, null, null, null, null)), r["\u0275did"](1, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [2, rn]], {
                 value: [0, "value"]
-            }, null), r["\u0275did"](2, 147456, null, 0, ln, [r.ElementRef, r.Renderer2, [8, null]], {
+            }, null), r["\u0275did"](2, 147456, null, 0, an, [r.ElementRef, r.Renderer2, [8, null]], {
                 value: [0, "value"]
             }, null), (e()(),
             r["\u0275ted"](3, null, [" ", " "]))], function(e, t) {
@@ -35527,7 +37021,7 @@
                 e(t, 3, 0, t.context.$implicit)
             })
         }
-        function Xl(e) {
+        function fs(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 5, "input", [["type", "checkbox"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "change"], [null, "blur"]], function(e, t, n) {
                 var i = !0
@@ -35537,24 +37031,24 @@
                 "ngModelChange" === t && (i = !1 !== (l.gameState.filters.showTier.tier3 = n) && i),
                 "change" === t && (i = !1 !== l.sortCardCollection(l.gameState.selectedArenaNumber) && i),
                 i
-            }, null, null)), r["\u0275did"](1, 16384, null, 0, Nt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](1, 16384, null, 0, Pt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [Nt]), r["\u0275did"](3, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Pt]), r["\u0275did"](3, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](5, 16384, null, 0, jt, [[4, Ft]], null, null)], function(e, t) {
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](5, 16384, null, 0, Lt, [[4, Ht]], null, null)], function(e, t) {
                 e(t, 3, 0, t.component.gameState.filters.showTier.tier3)
             }, function(e, t) {
                 e(t, 0, 0, r["\u0275nov"](t, 5).ngClassUntouched, r["\u0275nov"](t, 5).ngClassTouched, r["\u0275nov"](t, 5).ngClassPristine, r["\u0275nov"](t, 5).ngClassDirty, r["\u0275nov"](t, 5).ngClassValid, r["\u0275nov"](t, 5).ngClassInvalid, r["\u0275nov"](t, 5).ngClassPending)
             })
         }
-        function Jl(e) {
+        function ps(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 1, "span", [], null, null, null, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Tier 3"]))], null, null)
         }
-        function es(e) {
+        function ms(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 35, "div", [["class", "collection-controls-container white-text"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 10, "div", [["style", "display: flex"]], null, null, null, null, null)), (e()(),
@@ -35568,14 +37062,14 @@
                 "ngModelChange" === t && (i = !1 !== (l.gameState.selectedSortOption = n) && i),
                 "change" === t && (i = !1 !== l.sortCardCollection(l.gameState.selectedArenaNumber) && i),
                 i
-            }, null, null)), r["\u0275did"](5, 16384, null, 0, en, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](5, 16384, null, 0, rn, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [en]), r["\u0275did"](7, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [rn]), r["\u0275did"](7, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](9, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Zl)), r["\u0275did"](11, 278528, null, 0, ae, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](9, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
+            r["\u0275and"](16777216, null, null, 1, null, hs)), r["\u0275did"](11, 278528, null, 0, de, [r.ViewContainerRef, r.TemplateRef, r.IterableDiffers], {
                 ngForOf: [0, "ngForOf"]
             }, null), (e()(),
             r["\u0275eld"](12, 0, null, null, 23, "div", [["style", "display: flex; margin-top: 10px;"]], null, null, null, null, null)), (e()(),
@@ -35592,13 +37086,13 @@
                 "ngModelChange" === t && (i = !1 !== (l.gameState.filters.showTier.tier1 = n) && i),
                 "change" === t && (i = !1 !== l.sortCardCollection(l.gameState.selectedArenaNumber) && i),
                 i
-            }, null, null)), r["\u0275did"](19, 16384, null, 0, Nt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](19, 16384, null, 0, Pt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [Nt]), r["\u0275did"](21, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Pt]), r["\u0275did"](21, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](23, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](23, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275ted"](-1, null, ["Tier 1 "])), (e()(),
             r["\u0275eld"](25, 0, null, null, 5, "input", [["type", "checkbox"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "change"], [null, "blur"]], function(e, t, n) {
                 var i = !0
@@ -35608,18 +37102,18 @@
                 "ngModelChange" === t && (i = !1 !== (l.gameState.filters.showTier.tier2 = n) && i),
                 "change" === t && (i = !1 !== l.sortCardCollection(l.gameState.selectedArenaNumber) && i),
                 i
-            }, null, null)), r["\u0275did"](26, 16384, null, 0, Nt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Ot, function(e) {
+            }, null, null)), r["\u0275did"](26, 16384, null, 0, Pt, [r.Renderer2, r.ElementRef], null, null), r["\u0275prd"](1024, null, Nt, function(e) {
                 return [e]
-            }, [Nt]), r["\u0275did"](28, 671744, null, 0, Nn, [[8, null], [8, null], [8, null], [6, Ot]], {
+            }, [Pt]), r["\u0275did"](28, 671744, null, 0, Pn, [[8, null], [8, null], [8, null], [6, Nt]], {
                 model: [0, "model"]
             }, {
                 update: "ngModelChange"
-            }), r["\u0275prd"](2048, null, Ft, null, [Nn]), r["\u0275did"](30, 16384, null, 0, jt, [[4, Ft]], null, null), (e()(),
+            }), r["\u0275prd"](2048, null, Ht, null, [Pn]), r["\u0275did"](30, 16384, null, 0, Lt, [[4, Ht]], null, null), (e()(),
             r["\u0275ted"](-1, null, ["Tier 2 "])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Xl)), r["\u0275did"](33, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, fs)), r["\u0275did"](33, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Jl)), r["\u0275did"](35, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ps)), r["\u0275did"](35, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null)], function(e, t) {
                 var n = t.component;
@@ -35627,49 +37121,53 @@
                 e(t, 11, 0, n.collectionSortOptions),
                 e(t, 21, 0, n.gameState.filters.showTier.tier1),
                 e(t, 28, 0, n.gameState.filters.showTier.tier2),
-                e(t, 33, 0, 3 == n.gameState.selectedArenaNumber),
-                e(t, 35, 0, 3 == n.gameState.selectedArenaNumber)
+                e(t, 33, 0, 3 == n.gameState.selectedArenaNumber || 4 == n.gameState.selectedArenaNumber),
+                e(t, 35, 0, 3 == n.gameState.selectedArenaNumber || 4 == n.gameState.selectedArenaNumber)
             }, function(e, t) {
                 e(t, 4, 0, r["\u0275nov"](t, 9).ngClassUntouched, r["\u0275nov"](t, 9).ngClassTouched, r["\u0275nov"](t, 9).ngClassPristine, r["\u0275nov"](t, 9).ngClassDirty, r["\u0275nov"](t, 9).ngClassValid, r["\u0275nov"](t, 9).ngClassInvalid, r["\u0275nov"](t, 9).ngClassPending),
                 e(t, 18, 0, r["\u0275nov"](t, 23).ngClassUntouched, r["\u0275nov"](t, 23).ngClassTouched, r["\u0275nov"](t, 23).ngClassPristine, r["\u0275nov"](t, 23).ngClassDirty, r["\u0275nov"](t, 23).ngClassValid, r["\u0275nov"](t, 23).ngClassInvalid, r["\u0275nov"](t, 23).ngClassPending),
                 e(t, 25, 0, r["\u0275nov"](t, 30).ngClassUntouched, r["\u0275nov"](t, 30).ngClassTouched, r["\u0275nov"](t, 30).ngClassPristine, r["\u0275nov"](t, 30).ngClassDirty, r["\u0275nov"](t, 30).ngClassValid, r["\u0275nov"](t, 30).ngClassInvalid, r["\u0275nov"](t, 30).ngClassPending)
             })
         }
-        function ts(e) {
+        function gs(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 0, "div", [["class", "card-collection-controls"]], null, null, null, null, null))], null, null)
         }
-        function ns(e) {
+        function ys(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "ascend-tab", [], null, null, null, Mr, Ir)), r["\u0275did"](1, 114688, null, 0, Sr, [mt], {
+            r["\u0275eld"](0, 0, null, null, 1, "ascend-tab", [], null, null, null, Lr, Pr)), r["\u0275did"](1, 114688, null, 0, Nr, [bt], {
                 arenaNumber: [0, "arenaNumber"]
             }, null)], function(e, t) {
                 e(t, 1, 0, t.component.gameState.selectedArenaNumber)
             }, null)
         }
-        function rs(e) {
+        function bs(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "shop-arena1", [], null, null, null, Gr, zr)), r["\u0275did"](1, 49152, null, 0, Ur, [], null, null)], null, null)
+            r["\u0275eld"](0, 0, null, null, 1, "shop-arena1", [], null, null, null, Jr, Zr)), r["\u0275did"](1, 49152, null, 0, Qr, [], null, null)], null, null)
         }
-        function is(e) {
+        function vs(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "shop-arena2", [], null, null, null, Qr, Yr)), r["\u0275did"](1, 49152, null, 0, Wr, [], null, null)], null, null)
+            r["\u0275eld"](0, 0, null, null, 1, "shop-arena2", [], null, null, null, ii, ti)), r["\u0275did"](1, 49152, null, 0, ei, [], null, null)], null, null)
         }
-        function ls(e) {
+        function ws(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "shop-arena3", [], null, null, null, ei, Xr)), r["\u0275did"](1, 49152, null, 0, Zr, [], null, null)], null, null)
+            r["\u0275eld"](0, 0, null, null, 1, "shop-arena3", [], null, null, null, ai, si)), r["\u0275did"](1, 49152, null, 0, li, [], null, null)], null, null)
         }
-        function ss(e) {
+        function Cs(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "other-tab", [], null, null, null, bi, li)), r["\u0275did"](1, 114688, null, 0, ii, [], null, null)], function(e, t) {
+            r["\u0275eld"](0, 0, null, null, 1, "shop-arena4", [], null, null, null, hi, ci)), r["\u0275did"](1, 49152, null, 0, ui, [], null, null)], null, null)
+        }
+        function _s(e) {
+            return r["\u0275vid"](0, [(e()(),
+            r["\u0275eld"](0, 0, null, null, 1, "other-tab", [], null, null, null, Mi, yi)), r["\u0275did"](1, 114688, null, 0, gi, [], null, null)], function(e, t) {
                 e(t, 1, 0)
             }, null)
         }
-        function os(e) {
+        function Ss(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "premium-shop", [], null, null, null, xi, wi)), r["\u0275did"](1, 49152, null, 0, vi, [], null, null)], null, null)
+            r["\u0275eld"](0, 0, null, null, 1, "premium-shop", [], null, null, null, Di, Ri)), r["\u0275did"](1, 49152, null, 0, Oi, [], null, null)], null, null)
         }
-        function as(e) {
+        function ks(e) {
             return r["\u0275vid"](0, [(e()(),
             r["\u0275eld"](0, 0, null, null, 18, "div", [], null, null, null, null, null)), (e()(),
             r["\u0275eld"](1, 0, null, null, 1, "button", [], null, [[null, "click"]], function(e, t, n) {
@@ -35727,35 +37225,35 @@
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Reset game"]))], null, null)
         }
-        function us(e) {
+        function xs(e) {
             return r["\u0275vid"](0, [r["\u0275pid"](0, j, []), (e()(),
-            r["\u0275eld"](1, 0, null, null, 81, "div", [["class", "app-container"]], [[4, "background-image", null]], null, null, null, null)), (e()(),
+            r["\u0275eld"](1, 0, null, null, 83, "div", [["class", "app-container"]], [[4, "background-image", null]], null, null, null, null)), (e()(),
             r["\u0275eld"](2, 0, null, null, 23, "div", [["class", "header"]], null, null, null, null, null)), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ol)), r["\u0275did"](4, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, _l)), r["\u0275did"](4, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, al)), r["\u0275did"](6, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Sl)), r["\u0275did"](6, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ul)), r["\u0275did"](8, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, kl)), r["\u0275did"](8, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, cl)), r["\u0275did"](10, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, xl)), r["\u0275did"](10, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, dl)), r["\u0275did"](12, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Il)), r["\u0275did"](12, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, hl)), r["\u0275did"](14, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, El)), r["\u0275did"](14, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, fl)), r["\u0275did"](16, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Tl)), r["\u0275did"](16, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, pl)), r["\u0275did"](18, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Al)), r["\u0275did"](18, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ml)), r["\u0275did"](20, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ml)), r["\u0275did"](20, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275eld"](21, 0, null, null, 2, "div", [["class", "header-options"]], null, null, null, null, null)), (e()(),
@@ -35763,13 +37261,13 @@
                 var r = !0;
                 return "click" === t && (r = !1 !== e.component.showOptionsPanel() && r),
                 r
-            }, fr, hr)), r["\u0275did"](23, 114688, null, 0, $n, [], {
+            }, gr, mr)), r["\u0275did"](23, 114688, null, 0, Kn, [], {
                 name: [0, "name"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, yl)), r["\u0275did"](25, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Rl)), r["\u0275did"](25, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275eld"](26, 0, null, null, 37, "div", [["class", "main-container"]], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](26, 0, null, null, 39, "div", [["class", "main-container"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](27, 0, null, null, 14, "div", [["class", "tab-bar"]], null, null, null, null, null)), (e()(),
             r["\u0275eld"](28, 0, null, null, 1, "div", [["class", "tab"]], [[2, "active", null]], [[null, "click"]], function(e, t, n) {
                 var r = !0
@@ -35795,7 +37293,7 @@
                 r
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Ascension"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, bl)), r["\u0275did"](35, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Nl)), r["\u0275did"](35, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
             r["\u0275eld"](36, 0, null, null, 1, "div", [["class", "tab"]], [[2, "active", null]], [[null, "click"]], function(e, t, n) {
@@ -35806,55 +37304,58 @@
                 r
             }, null, null)), (e()(),
             r["\u0275ted"](-1, null, ["Other"])), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, vl)), r["\u0275did"](39, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Pl)), r["\u0275did"](39, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, wl)), r["\u0275did"](41, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Dl)), r["\u0275did"](41, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, zl)), r["\u0275did"](43, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, is)), r["\u0275did"](43, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, Ql)), r["\u0275did"](45, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ds)), r["\u0275did"](45, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, es)), r["\u0275did"](47, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ms)), r["\u0275did"](47, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ts)), r["\u0275did"](49, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, gs)), r["\u0275did"](49, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ns)), r["\u0275did"](51, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ys)), r["\u0275did"](51, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, rs)), r["\u0275did"](53, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, bs)), r["\u0275did"](53, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, is)), r["\u0275did"](55, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, vs)), r["\u0275did"](55, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ls)), r["\u0275did"](57, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, ws)), r["\u0275did"](57, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, ss)), r["\u0275did"](59, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Cs)), r["\u0275did"](59, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, os)), r["\u0275did"](61, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, _s)), r["\u0275did"](61, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275and"](16777216, null, null, 1, null, as)), r["\u0275did"](63, 16384, null, 0, ce, [r.ViewContainerRef, r.TemplateRef], {
+            r["\u0275and"](16777216, null, null, 1, null, Ss)), r["\u0275did"](63, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
                 ngIf: [0, "ngIf"]
             }, null), (e()(),
-            r["\u0275eld"](64, 0, null, null, 2, "div", [["class", "tooltip-container"]], null, null, null, null, null)), (e()(),
-            r["\u0275eld"](65, 0, null, null, 1, "tooltip", [], null, null, null, Si, ki)), r["\u0275did"](66, 49152, null, 0, D, [mt], null, null), (e()(),
-            r["\u0275eld"](67, 0, null, null, 1, "kongregate", [], null, null, null, Ei, Ii)), r["\u0275did"](68, 114688, null, 0, u, [], null, null), (e()(),
-            r["\u0275eld"](69, 0, null, null, 1, "offline-progress", [], null, null, null, Vi, Ti)), r["\u0275did"](70, 49152, null, 0, V, [], null, null), (e()(),
-            r["\u0275eld"](71, 0, null, null, 1, "save-layout-dialog", [], null, null, null, Ui, Fi)), r["\u0275did"](72, 49152, null, 0, F, [], null, null), (e()(),
-            r["\u0275eld"](73, 0, null, null, 1, "error-message", [], null, null, null, Gi, zi)), r["\u0275did"](74, 49152, null, 0, o, [mt], null, null), (e()(),
-            r["\u0275eld"](75, 0, null, null, 1, "options-panel", [], null, null, null, Qi, Wi)), r["\u0275did"](76, 49152, null, 0, U, [], null, null), (e()(),
-            r["\u0275eld"](77, 0, null, null, 1, "upgrade-window", [], null, null, null, el, Zi)), r["\u0275did"](78, 114688, null, 0, a, [], null, null), (e()(),
-            r["\u0275eld"](79, 0, null, null, 1, "achievement-shower", [], null, null, null, rl, tl)), r["\u0275did"](80, 114688, null, 0, z, [mt], null, null), (e()(),
-            r["\u0275eld"](81, 0, null, null, 1, "sound-effect-manager", [], null, null, null, ll, il)), r["\u0275did"](82, 114688, null, 0, L, [], null, null)], function(e, t) {
+            r["\u0275and"](16777216, null, null, 1, null, ks)), r["\u0275did"](65, 16384, null, 0, fe, [r.ViewContainerRef, r.TemplateRef], {
+                ngIf: [0, "ngIf"]
+            }, null), (e()(),
+            r["\u0275eld"](66, 0, null, null, 2, "div", [["class", "tooltip-container"]], null, null, null, null, null)), (e()(),
+            r["\u0275eld"](67, 0, null, null, 1, "tooltip", [], null, null, null, Vi, Fi)), r["\u0275did"](68, 49152, null, 0, D, [bt], null, null), (e()(),
+            r["\u0275eld"](69, 0, null, null, 1, "kongregate", [], null, null, null, Bi, ji)), r["\u0275did"](70, 114688, null, 0, u, [], null, null), (e()(),
+            r["\u0275eld"](71, 0, null, null, 1, "offline-progress", [], null, null, null, Qi, Hi)), r["\u0275did"](72, 49152, null, 0, F, [], null, null), (e()(),
+            r["\u0275eld"](73, 0, null, null, 1, "save-layout-dialog", [], null, null, null, nl, Zi)), r["\u0275did"](74, 49152, null, 0, V, [], null, null), (e()(),
+            r["\u0275eld"](75, 0, null, null, 1, "error-message", [], null, null, null, ll, rl)), r["\u0275did"](76, 49152, null, 0, o, [bt], null, null), (e()(),
+            r["\u0275eld"](77, 0, null, null, 1, "options-panel", [], null, null, null, cl, sl)), r["\u0275did"](78, 49152, null, 0, U, [], null, null), (e()(),
+            r["\u0275eld"](79, 0, null, null, 1, "upgrade-window", [], null, null, null, ml, dl)), r["\u0275did"](80, 114688, null, 0, a, [], null, null), (e()(),
+            r["\u0275eld"](81, 0, null, null, 1, "achievement-shower", [], null, null, null, bl, gl)), r["\u0275did"](82, 114688, null, 0, z, [bt], null, null), (e()(),
+            r["\u0275eld"](83, 0, null, null, 1, "sound-effect-manager", [], null, null, null, wl, vl)), r["\u0275did"](84, 114688, null, 0, L, [], null, null)], function(e, t) {
                 var n = t.component;
                 e(t, 4, 0, 1 == n.gameState.selectedArenaNumber),
                 e(t, 6, 0, 1 == n.gameState.selectedArenaNumber),
@@ -35878,13 +37379,14 @@
                 e(t, 53, 0, "shop" == n.currentTab && 1 == n.gameState.selectedArenaNumber),
                 e(t, 55, 0, "shop" == n.currentTab && 2 == n.gameState.selectedArenaNumber),
                 e(t, 57, 0, "shop" == n.currentTab && 3 == n.gameState.selectedArenaNumber),
-                e(t, 59, 0, "other" == n.currentTab),
-                e(t, 61, 0, "premium" == n.currentTab),
-                e(t, 63, 0, "debug" == n.currentTab),
-                e(t, 68, 0),
-                e(t, 78, 0),
+                e(t, 59, 0, "shop" == n.currentTab && 4 == n.gameState.selectedArenaNumber),
+                e(t, 61, 0, "other" == n.currentTab),
+                e(t, 63, 0, "premium" == n.currentTab),
+                e(t, 65, 0, "debug" == n.currentTab),
+                e(t, 70, 0),
                 e(t, 80, 0),
-                e(t, 82, 0)
+                e(t, 82, 0),
+                e(t, 84, 0)
             }, function(e, t) {
                 var n = t.component;
                 e(t, 1, 0, "url(assets/images/backgrounds/" + n.gameState.selectedArenaNumber + ".png)"),
@@ -35894,28 +37396,28 @@
                 e(t, 36, 0, "other" == n.currentTab)
             })
         }
-        function cs(e) {
+        function Is(e) {
             return r["\u0275vid"](0, [(e()(),
-            r["\u0275eld"](0, 0, null, null, 1, "app-root", [], null, null, null, us, sl)), r["\u0275did"](1, 114688, null, 0, q, [mt, j], null, null)], function(e, t) {
+            r["\u0275eld"](0, 0, null, null, 1, "app-root", [], null, null, null, xs, Cl)), r["\u0275did"](1, 114688, null, 0, Z, [bt, j], null, null)], function(e, t) {
                 e(t, 1, 0)
             }, null)
         }
-        var ds = r["\u0275ccf"]("app-root", q, cs, {}, {}, [])
-          , hs = n("xHUD")
-          , fs = r["\u0275cmf"](i, [q], function(e) {
-            return r["\u0275mod"]([r["\u0275mpd"](512, r.ComponentFactoryResolver, r["\u0275CodegenComponentFactoryResolver"], [[8, [ds]], [3, r.ComponentFactoryResolver], r.NgModuleRef]), r["\u0275mpd"](5120, r.LOCALE_ID, r["\u0275angular_packages_core_core_q"], [[3, r.LOCALE_ID]]), r["\u0275mpd"](4608, te, ne, [r.LOCALE_ID, [2, ee]]), r["\u0275mpd"](5120, r["\u0275angular_packages_core_core_bb"], r["\u0275angular_packages_core_core_s"], [r.NgZone]), r["\u0275mpd"](4608, r.Compiler, r.Compiler, []), r["\u0275mpd"](5120, r.APP_ID, r["\u0275angular_packages_core_core_f"], []), r["\u0275mpd"](5120, r.IterableDiffers, r["\u0275angular_packages_core_core_o"], []), r["\u0275mpd"](5120, r.KeyValueDiffers, r["\u0275angular_packages_core_core_p"], []), r["\u0275mpd"](4608, mt, gt, [pe]), r["\u0275mpd"](6144, r.Sanitizer, null, [mt]), r["\u0275mpd"](4608, at, ct, []), r["\u0275mpd"](5120, De, function(e, t, n, r, i, l, s, o) {
-                return [new st(e,t,n), new pt(r), new dt(i,l,s,o)]
-            }, [pe, r.NgZone, r.PLATFORM_ID, pe, pe, at, r["\u0275Console"], [2, ut]]), r["\u0275mpd"](4608, Ve, Ve, [De, r.NgZone]), r["\u0275mpd"](135680, Be, Be, [pe]), r["\u0275mpd"](4608, We, We, [Ve, Be, r.APP_ID]), r["\u0275mpd"](6144, r.RendererFactory2, null, [We]), r["\u0275mpd"](6144, je, null, [Be]), r["\u0275mpd"](4608, r.Testability, r.Testability, [r.NgZone]), r["\u0275mpd"](4608, Gn, Gn, []), r["\u0275mpd"](4608, Kt, Kt, []), r["\u0275mpd"](4608, Vn.NgDragDropService, Vn.NgDragDropService, []), r["\u0275mpd"](4608, j, j, []), r["\u0275mpd"](1073742336, fe, fe, []), r["\u0275mpd"](1024, r.ErrorHandler, St, []), r["\u0275mpd"](1024, r.APP_INITIALIZER, function(e) {
+        var Es = r["\u0275ccf"]("app-root", Z, Is, {}, {}, [])
+          , Ts = n("xHUD")
+          , As = r["\u0275cmf"](i, [Z], function(e) {
+            return r["\u0275mod"]([r["\u0275mpd"](512, r.ComponentFactoryResolver, r["\u0275CodegenComponentFactoryResolver"], [[8, [Es]], [3, r.ComponentFactoryResolver], r.NgModuleRef]), r["\u0275mpd"](5120, r.LOCALE_ID, r["\u0275angular_packages_core_core_q"], [[3, r.LOCALE_ID]]), r["\u0275mpd"](4608, ie, le, [r.LOCALE_ID, [2, re]]), r["\u0275mpd"](5120, r["\u0275angular_packages_core_core_bb"], r["\u0275angular_packages_core_core_s"], [r.NgZone]), r["\u0275mpd"](4608, r.Compiler, r.Compiler, []), r["\u0275mpd"](5120, r.APP_ID, r["\u0275angular_packages_core_core_f"], []), r["\u0275mpd"](5120, r.IterableDiffers, r["\u0275angular_packages_core_core_o"], []), r["\u0275mpd"](5120, r.KeyValueDiffers, r["\u0275angular_packages_core_core_p"], []), r["\u0275mpd"](4608, bt, vt, [ye]), r["\u0275mpd"](6144, r.Sanitizer, null, [bt]), r["\u0275mpd"](4608, dt, ft, []), r["\u0275mpd"](5120, je, function(e, t, n, r, i, l, s, o) {
+                return [new ut(e,t,n), new yt(r), new pt(i,l,s,o)]
+            }, [ye, r.NgZone, r.PLATFORM_ID, ye, ye, dt, r["\u0275Console"], [2, ht]]), r["\u0275mpd"](4608, Be, Be, [je, r.NgZone]), r["\u0275mpd"](135680, Ue, Ue, [ye]), r["\u0275mpd"](4608, qe, qe, [Be, Ue, r.APP_ID]), r["\u0275mpd"](6144, r.RendererFactory2, null, [qe]), r["\u0275mpd"](6144, Le, null, [Ue]), r["\u0275mpd"](4608, r.Testability, r.Testability, [r.NgZone]), r["\u0275mpd"](4608, Yn, Yn, []), r["\u0275mpd"](4608, Xt, Xt, []), r["\u0275mpd"](4608, Bn.NgDragDropService, Bn.NgDragDropService, []), r["\u0275mpd"](4608, j, j, []), r["\u0275mpd"](1073742336, ge, ge, []), r["\u0275mpd"](1024, r.ErrorHandler, Tt, []), r["\u0275mpd"](1024, r.APP_INITIALIZER, function(e) {
                 return [(t = e,
-                Re("probe", Pe),
-                Re("coreTokens", Object.assign({}, Me, (t || []).reduce((e,t)=>(e[t.name] = t.token,
+                De("probe", Ve),
+                De("coreTokens", Object.assign({}, Fe, (t || []).reduce((e,t)=>(e[t.name] = t.token,
                 e), {}))),
-                ()=>Pe)];
+                ()=>Ve)];
                 var t
-            }, [[2, r.NgProbeToken]]), r["\u0275mpd"](512, r.ApplicationInitStatus, r.ApplicationInitStatus, [[2, r.APP_INITIALIZER]]), r["\u0275mpd"](131584, r.ApplicationRef, r.ApplicationRef, [r.NgZone, r["\u0275Console"], r.Injector, r.ErrorHandler, r.ComponentFactoryResolver, r.ApplicationInitStatus]), r["\u0275mpd"](1073742336, r.ApplicationModule, r.ApplicationModule, [r.ApplicationRef]), r["\u0275mpd"](1073742336, It, It, [[3, It]]), r["\u0275mpd"](1073742336, dr, dr, []), r["\u0275mpd"](1073742336, Mn, Mn, []), r["\u0275mpd"](1073742336, Pn, Pn, []), r["\u0275mpd"](1073742336, hs.NgDragDropModule, hs.NgDragDropModule, []), r["\u0275mpd"](1073742336, i, i, []), r["\u0275mpd"](256, r["\u0275APP_ROOT"], !0, [])])
+            }, [[2, r.NgProbeToken]]), r["\u0275mpd"](512, r.ApplicationInitStatus, r.ApplicationInitStatus, [[2, r.APP_INITIALIZER]]), r["\u0275mpd"](131584, r.ApplicationRef, r.ApplicationRef, [r.NgZone, r["\u0275Console"], r.Injector, r.ErrorHandler, r.ComponentFactoryResolver, r.ApplicationInitStatus]), r["\u0275mpd"](1073742336, r.ApplicationModule, r.ApplicationModule, [r.ApplicationRef]), r["\u0275mpd"](1073742336, At, At, [[3, At]]), r["\u0275mpd"](1073742336, pr, pr, []), r["\u0275mpd"](1073742336, Fn, Fn, []), r["\u0275mpd"](1073742336, Vn, Vn, []), r["\u0275mpd"](1073742336, Ts.NgDragDropModule, Ts.NgDragDropModule, []), r["\u0275mpd"](1073742336, i, i, []), r["\u0275mpd"](256, r["\u0275APP_ROOT"], !0, [])])
         });
         Object(r.enableProdMode)(),
-        kt().bootstrapModuleFactory(fs).catch(e=>console.error(e))
+        Et().bootstrapModuleFactory(As).catch(e=>console.error(e))
     },
     zn8P: function(e, t) {
         function n(e) {
