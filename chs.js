@@ -437,6 +437,7 @@ var cnExcludePostfix = [
 //小数点：([\d\.]+)
 //原样输出的字段：(.+)
 var cnRegReplace = new Map([
+    [/^(.+) seconds$/, '$1 秒'],
     [/^(.+) \(\+(.+)\/sec$/, '$1 \(\+$2\/秒'],
     [/^Contains a random Tier (.+) card. Hopefully not a Ghoul.$/, '包含一张随机的$1级卡片。 希望不是食尸鬼。'],
     [/^Contains (.+) random Tier (.+) cards. There are (.+) card possibilities in Tier (.+).$/, '包含$1张随机$2级卡。 第$4级可能有$3种卡。'],
