@@ -370,9 +370,9 @@ var cnItems = {
     'Clicking also shows more options.': '点击会显示更多选项。',
     'Import from Kongregate': '从Kongregate导入存档',
     'Kongregate username': 'Kongregate 用户名',
-    '': '',
-    '': '',
-    '': '',
+    'coming in January': '一月份推出',
+    '[ ] Cityscape: Unlock the Cityscape expansion': '[ ] 城市景观:解锁城市景观扩展',
+    '   Drops': '掉落',
     '': '',
     '': '',
     '': '',
@@ -431,7 +431,8 @@ var cnExcludePostfix = [
 //小数点：([\d\.]+)
 //原样输出的字段：(.+)
 var cnRegReplace = new Map([
-    [/^(.+) seconds$/, '$1 秒'],
+    [/^(\d+) seconds$/, '$1 秒'],
+    [/^(\d+) minutes, (\d+) seconds$$/, '$1 分钟，$2 秒'],
     [/^(.+) \(\+(.+)\/sec$/, '$1 \(\+$2\/秒'],
     [/^Contains a random Tier (.+) card. Hopefully not a Ghoul.$/, '包含1张随机 T$1 卡。 希望不是食尸鬼。'],
     [/^Contains (.+) random Tier (.+) cards. There are (.+) card possibilities in Tier (.+).$/, '包含 $1张 随机 T$2 卡。 T$4 有$3种卡。'],
