@@ -22,7 +22,7 @@ var cnItems = {
     'Sort by': '排序方式',
     'Shop': '商店',
     'Tier': '等级',
-    'Unlock slot': '解锁插槽',
+    'Unlock slot': '解锁',
     'Level (descending': '等级（降序',
     'Producers first': '生产者优先',
     'Filter by': '过滤',
